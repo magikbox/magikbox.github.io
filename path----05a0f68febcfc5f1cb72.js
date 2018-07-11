@@ -1,0 +1,2 @@
+webpackJsonp([60335399758886],{169:function(e,t){e.exports={data:{site:{siteMetadata:{title:"GO-JEK TECH",description:"GO-JEK is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest growing unicorn building an on-demand empire.",siteUrl:"http://gojek.io",siteImage:"http://www.gojek.io/images/go-jek-tech.png",twitter:"@gojektech"}}},layoutContext:{}}}});
+//# sourceMappingURL=path----05a0f68febcfc5f1cb72.js.map

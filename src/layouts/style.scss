@@ -655,6 +655,12 @@ li {
 }
 
 /* job-title styles */
+.text-elipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
 .job-title:hover {
     color: #000;
     text-decoration: none;
@@ -691,7 +697,7 @@ li {
 }
 .contact-banner {
     background-image: url(/../images/contact/banner.jpg);   
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 .gojek-expansion {
@@ -770,4 +776,10 @@ input[type="file"] {
 }
 .loading {
     opacity: 0.5;
+}
+.text-white.bg-green:hover {
+    color: #fff !important;
+}
+.home-slider .carousel-caption {
+    bottom: 25%;
 }

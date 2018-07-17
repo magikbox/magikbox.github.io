@@ -2,7 +2,7 @@ import React from "react";
 import axios from 'axios';
 import { Helmet } from "react-helmet";
 import Link, { navigateTo } from 'gatsby-link';
-import swal from 'sweetalert2/dist/sweetalert2.all.min.js';
+import swal from 'sweetalert/dist/sweetalert.min.js';
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -17,7 +17,8 @@ export default class Contact extends React.Component {
         resume: '',
         active: false,
         loaded: false,
-        loading: false
+        loading: false,
+        fileLabel: "Drag & Drop Your Resume"
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -51,6 +52,7 @@ export default class Contact extends React.Component {
           { "key" : "candidate_email", "value" : this.state.candidate_email},
           { "key" : "candidate_phone", "value" : this.state.candidate_phone},
           { "key" : "how_did_you_hear_about_us", "value" : this.state.sourceFrom},
+          { "key" : "github_profile", "value" : this.state.githubLink},
           { "key" : "years_of_experience", "value" : this.state.years_of_experience},
           { "key" : "resume", "value": {
             "encoded_data" :  this.state.resume.split(",").slice(-1)[0],
@@ -62,7 +64,7 @@ export default class Contact extends React.Component {
     
     axios({
         method: 'post',
-        url: 'https://jsapi.recruiterbox.com/v1/openings/fk0fx88/apply?client_name=gojek',
+        url: 'https://jsapi.recruiterbox.com/v1/openings/' + this.props.location.state.jobId + '/apply?client_name=gojek',
         headers: {
             'Content-Type': 'application/json',
         },
@@ -83,7 +85,6 @@ export default class Contact extends React.Component {
   };
 
   onDragEnter(e) {
-      console.log(e);
     this.setState({ active: true });
 }
 
@@ -99,13 +100,16 @@ onDrop(e) {
     e.preventDefault();
     this.setState({ active: false });
     this.onFileChange(e, e.dataTransfer.files[0]);
+    console.log(e.dataTransfer.files[0]);
 }
 
 onFileChange(e, file) {
+    
     var file = file || e.target.files[0],
-        reader = new FileReader();
-       
+    reader = new FileReader();
+    
     this.setState({ loaded: false });
+    this.setState({ fileLabel: e.target.files[0].name });
     
     reader.onload = (e) => {
         this.setState({ 
@@ -127,7 +131,6 @@ getFileString() {
 
   render() {
     const data = this.props.location.state;
-    console.log(data)
     
     return (
         <section className=
@@ -135,16 +138,16 @@ getFileString() {
         >
 
         <Helmet>
-		    <title> GO-JEK TECH </title>
+		    <title> GO-JEK TECH - Apply</title>
 		</Helmet>
 
 		<div className="container text-center py-5">
 			<p>
 				<span className="raleway-extrabold font-xl text-black mb-0">
-					{ data === undefined ? '' : data.name }</span>
+					{ data !== undefined ? data.name : '' }</span>
 				<br/>
 				<span className="font-sm raleway-bold text-success text-uppercase">
-                { data === undefined ? '' : data.place }</span>
+                { data !== undefined ? data.place : '' }</span>
 			</p>
 		</div>
 		<div className="container">
@@ -175,7 +178,14 @@ getFileString() {
 
 					</div>
 					<div className="col-md-5 col-12">
-						<input type="text" className="mt-3 form-control custom-form-control roboto-regular" id="validationCustom02" placeholder="Last name" />
+                        <input 
+                                type="text" 
+                                className="mt-3 form-control custom-form-control roboto-regular" 
+                                placeholder="Last name"
+                                required 
+                                onChange={this.handleChange} 
+                                name="candidate_last_name"
+                            />
 
 					</div>
 				</div>
@@ -196,24 +206,7 @@ getFileString() {
 					</div>
 
                     <div className="col-md-5 col-12">
-						<input 
-                            type="text" 
-                            className="mt-3 form-control custom-form-control roboto-regular" 
-                            placeholder="Years of experience"
-                            required  
-                            onChange={this.handleChange} 
-                            name="years_of_experience"
-                        />
-						<div className="invalid-feedback">
-							Invalid Value.
-						</div>
-					</div>
-				</div>
-                
-
-				<div className="d-flex flex-row flex-wrap justify-content-around mt-md-5 mt-sm-0">
-					<div className="col-md-5 col-12">
-						<input 
+                        <input 
                             type="text" 
                             className="mt-3 form-control custom-form-control roboto-regular" 
                             placeholder="Enter contact number"
@@ -221,26 +214,15 @@ getFileString() {
                             onChange={this.handleChange} 
                             name="candidate_phone"
                         />
-					</div>
-
-                    {/* <div className="col-md-5 col-12">
-						<input 
-                            type="text" 
-                            className="mt-3 form-control custom-form-control roboto-regular" 
-                            placeholder="Years of experience"
-                            required  
-                            onChange={this.handleChange} 
-                            name="years_of_experience"
-                        />
 						<div className="invalid-feedback">
 							Invalid Value.
 						</div>
-					</div> */}
+					</div>
 				</div>
                 
                 <div className="d-flex flex-row flex-wrap justify-content-center px-3 py-5 mt-3" >
 					<div className="col-11 drag-and-drop">
-						<p className="text-muted text-center pt-3">Drag & Drop Your Resume <br />
+						<p className="text-muted text-center pt-3">{this.state.fileLabel} <br />
                         <i className="fa fa-file-o fa-2x mt-3 text-green"></i></p>
                         <div className="text-center pb-3">
                             <label 
@@ -257,12 +239,41 @@ getFileString() {
                         </div >
 					</div>
 				</div>
-				
-				<div className="d-flex flex-row flex-wrap justify-content-around">
+
+                <div className="d-flex flex-row flex-wrap justify-content-around">
 					<div className="col-md-5 col-12">
 						<input 
                             type="text" 
-                            className="my-3 text-success form-control custom-form-control roboto-regular" 
+                            className="mt-3 form-control custom-form-control roboto-regular" 
+                            placeholder="Years of experience"
+                            required  
+                            onChange={this.handleChange} 
+                            name="years_of_experience"
+                        />
+					</div>
+
+                    <div className="col-md-5 col-12">
+                    <select className="my-3 form-control custom-form-control roboto-regular postion-relative" name="preferred_location"
+                        onChange={this.handleChange}
+                        >
+								<option value="">Preferred Location
+								</option>
+								<option className="custom-options" value="Bangalore">Bangalore</option>
+								<option value="Jakarta">Jakarta</option>
+								<option value="Singapore">Singapore</option>
+							</select>
+							<i className="fa fa-chevron-down"></i>
+						<div className="invalid-feedback">
+							Invalid Value.
+						</div>
+					</div>
+				</div>
+				
+				<div className="d-flex flex-row flex-wrap justify-content-around mt-md-5 mt-sm-0">
+					<div className="col-md-5 col-12">
+						<input 
+                            type="text" 
+                            className="text-success form-control custom-form-control roboto-regular" 
                             placeholder="Github Profile Link"
                             onChange={this.handleChange}
                             name="githubLink"
@@ -277,18 +288,20 @@ getFileString() {
 								</option>
 								<option className="custom-options" value="Facebook">Facebook</option>
 								<option value="Twitter">Twitter</option>
-								<option value="Linkedin">Linkedin</option>
+								<option value="LinkedIn">LinkedIn</option>
+								<option value="Instagram">Instagram</option>
 								<option value="Blog">Blog</option>
-								<option value="Radio">Radio</option>
 								<option value="Hoarding/Print">Hoarding/Print</option>
-								<option value="Word of Mouth">Word of Mouth</option>
-								<option value="From a Friend">From a Friend</option>
+								<option value="Radio">Radio</option>
 								<option value="Google">Google</option>
+								{/* <option value="Word of Mouth">Word of Mouth</option> */}
+								<option value="From a Friend">From a Friend</option>
 							</select>
 							<i className="fa fa-chevron-down"></i>
 						</div>
 					</div>
 				</div>
+                
 				<div className="text-center mt-5 pb-5">
 					<button type="submit" className="btn btn-success px-5" >Submit</button>
 				</div>

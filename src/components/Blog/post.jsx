@@ -18,7 +18,7 @@ const Card = (post) => {
 
 	return (
 		<div className="card medium-blog border-0">
-		<p className="card-text text-success blog-date raleway-bold">
+		<p className="card-text text-success blog-date raleway-bold text-center text-md-left">
 
 			<Moment className="roboto-bold text-uppercase" format="MMMM DD, YYYY">
 				{post.post.pubDate}

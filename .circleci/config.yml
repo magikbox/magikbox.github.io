@@ -22,4 +22,6 @@ jobs:
       - run:
           name: Build and Deploy Pages
           command: |
+            git config user.email "varunnotkar59@gmail.com"
+            git config user.name "varun"
             npm run deploy

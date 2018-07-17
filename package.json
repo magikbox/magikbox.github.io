@@ -32,10 +32,12 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gatsby build && gh-pages -b master -d public"
   },
   "devDependencies": {
     "bootstrap": "^4.1.1",
+    "gh-pages": "^1.2.0",
     "prettier": "^1.13.5"
   },
   "repository": {

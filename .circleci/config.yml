@@ -20,6 +20,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run:
-          name: Build Pages
+          name: Build and Deploy Pages
           command: |
-            ./node_modules/.bin/gatsby build
+            npm run deploy

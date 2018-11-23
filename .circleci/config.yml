@@ -26,20 +26,20 @@ jobs:
       - deploy:
           name: Deploy
           command: |
-            if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
-              git config --global user.email $GH_EMAIL
-              git config --global user.name $GH_NAME
+            if [ gh-pages == master ]; then
+              git config --global user.email varunnotkar59@gmail.com
+              git config --global user.name varunnotkar59
 
-              git clone $CIRCLE_REPOSITORY_URL out
+              git clone $https://github.com/magikbox/go-jek.git out
 
               cd out
-              git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
+              git checkout gh-pages || git checkout --orphan gh-pages
               git rm -rf .
               cd ..
 
-              npm run build
+              ./node_modules/.bin/gatsby build
 
-              cp -a build/. out/.
+              cp -a public/. out/.
 
               mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
               cd out
@@ -47,5 +47,5 @@ jobs:
               git add -A
               git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
 
-              git push origin $TARGET_BRANCH
+              git push origin gh-pages
             fi

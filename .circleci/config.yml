@@ -39,7 +39,7 @@ jobs:
             cd out
 
             git add -A
-            git commit -m "Automated deployment to GitHub Pages --allow-empty
+            git commit -m "Automated deployment to GitHub Pages" --allow-empty
 
             git push origin gh-pages
             

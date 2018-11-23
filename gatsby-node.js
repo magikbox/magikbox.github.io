@@ -4,6 +4,18 @@ const path = require(`path`)
 const slug = require(`slug`)
 const slash = require(`slash`)
 
+exports.onCreateWebpackConfig = ({
+  stage
+}) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      optimization: {
+        minimize: false
+      }
+    });
+  }
+}
+
 exports.modifyWebpackConfig = ({ config, stage }) => {
   if (stage === "build-html") {
     config.loader("null", {

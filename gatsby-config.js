@@ -10,11 +10,17 @@ module.exports = {
   	},
   	plugins: [
 		{
+			resolve: `gatsby-plugin-google-analytics`,
+			options: {
+				trackingId: "UA-80421053-1",
+		        head: true,
+		    },
 			resolve: `gatsby-source-filesystem`,
 			options: {
 			  name: `data`,
 			  path: path.join(__dirname, `data`),
 			},
+
 		},
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-sass',

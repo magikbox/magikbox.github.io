@@ -20,8 +20,12 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run:
-          name: Build and Deploy Pages
+          name: Build Pages
           command: |
-            git config --global user.email "$GH_EMAIL" > /dev/null 2>&1
-            git config --global user.name "$GH_NAME" > /dev/null 2>&1
-            npm run deploy
+            ./node_modules/.bin/gatsby build
+
+workflows:
+  version: 2
+  publish:
+    jobs:
+      - build

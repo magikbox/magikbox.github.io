@@ -8,7 +8,7 @@ class Contact extends Component {
         return(
             <div className="first-section">
                 <Helmet>
-					<title> GO-JEK Contact Us </title>
+					<title> GO-JEK Tech Contact Us </title>
 				</Helmet>
 
                 <section className="first-section">

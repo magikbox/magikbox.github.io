@@ -22,7 +22,6 @@ module.exports = class HTML extends React.Component {
     }
     return (
       <html {...this.props.htmlAttributes}>
-       
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -34,6 +33,7 @@ module.exports = class HTML extends React.Component {
           {css}
         </head>
         <body {...this.props.bodyAttributes}>
+          {/* test */}
           {this.props.preBodyComponents}
           <div
             key={`body`}
@@ -41,8 +41,6 @@ module.exports = class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.5/jquery.pagepiling.js"></script>
         </body>
       </html>
     )

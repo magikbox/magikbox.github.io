@@ -11,7 +11,7 @@ class Blog extends Component {
         return(
             <div className="first-section">
                 <Helmet>
-					<title> GO-JEK Blog </title>
+					<title> GO-JEK Tech Blog </title>
 				</Helmet>  
 
                 <Heading

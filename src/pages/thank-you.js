@@ -19,7 +19,7 @@ class ThankYou extends Component {
         return(
             <div>
                 <Helmet>
-                    <title> GO-JEK TECH - Apply</title>
+                    <title> GO-JEK Tech</title>
                 </Helmet>
                 
                 <section className="first-section">

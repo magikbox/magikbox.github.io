@@ -22,26 +22,24 @@ jobs:
       - deploy:
           name: Deploy
           command: |
-            if [ gh-pages == gh-pages ]; then
-              git config --global user.email varunnotkar59@gmail.com
-              git config --global user.name varunnotkar59
+            git config --global user.email varunnotkar59@gmail.com
+            git config --global user.name varunnotkar59
 
-              git clone https://github.com/magikbox/go-jek.git out
+            git clone https://github.com/magikbox/go-jek.git out
+            cd out
+            git checkout gh-pages || git checkout --orphan gh-pages
+            git rm -rf .
+            cd ..
 
-              cd out
-              git checkout gh-pages || git checkout --orphan gh-pages
-              git rm -rf .
-              cd ..
+            ./node_modules/.bin/gatsby build
 
-              ./node_modules/.bin/gatsby build
+            cp -a public/. out/.
 
-              cp -a public/. out/.
+            mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
+            cd out
 
-              mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
-              cd out
+            git add -A
+            git commit -m "Automated deployment to GitHub Pages --allow-empty
 
-              git add -A
-              git commit -m "Automated deployment to GitHub Pages --allow-empty
-
-              git push origin gh-pages
-            fi
+            git push origin gh-pages
+            

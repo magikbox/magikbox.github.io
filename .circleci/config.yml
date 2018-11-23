@@ -1,22 +1,17 @@
 version: 2
+
 jobs:
   build:
-    branches:
-      ignore:
-        - gh-pages
     docker:
-      - image: circleci/node:8.11-stretch-browsers
+       - image: circleci/node:8.11-stretch-browsers
     working_directory: ~/repo
-    environment:
-      - SOURCE_BRANCH: master
-      - TARGET_BRANCH: gh-pages
     steps:
       - checkout
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
           - v1-dependencies-
-      -run:
+      - run:
           name: Install Dependencies
           command: |
             yarn install

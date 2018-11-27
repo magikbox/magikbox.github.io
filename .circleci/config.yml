@@ -31,7 +31,7 @@ jobs:
             git config --global user.email $GH_EMAIL
             git config --global user.name $GH_NAME
 
-            git clone https://github.com/magikbox/go-jek.git out
+            git clone https://github.com/magikbox/magikbox.github.io.git out
             cd out
             git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
             git rm -rf .

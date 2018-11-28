@@ -1,0 +1,51 @@
+version: 2
+
+jobs:
+  build:
+    branches:
+      ignore:
+        - gh-pages
+    docker:
+       - image: circleci/node:8.11-stretch-browsers
+    working_directory: ~/repo
+    environment:
+      - SOURCE_BRANCH: master
+      - TARGET_BRANCH: gh-pages
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+      - run:
+          name: Install Dependencies
+          command: |
+            yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - deploy:
+          name: Deploy
+          command: |
+            git config --global user.email "varunnotkar59@gmail.com"
+            git config --global user.name "varunnotkar59"
+
+            git clone https://github.com/magikbox/magikbox.github.io.git out
+            cd out
+            git checkout "gh-pages" || git checkout --orphan "gh-pages"
+            git rm -rf .
+            cd ..
+
+            ./node_modules/.bin/gatsby build
+
+            cp -a public/. out/.
+
+            mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
+            cd out
+
+            git add -A
+            git commit -m "Automated deployment to GitHub Pages" --allow-empty
+
+            git push origin "gh-pages"
+            

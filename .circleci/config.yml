@@ -9,8 +9,8 @@ jobs:
        - image: circleci/node:8.11-stretch-browsers
     working_directory: ~/repo
     environment:
-      - SOURCE_BRANCH: master
-      - TARGET_BRANCH: gh-pages
+      - SOURCE_BRANCH: gh-pages
+      - TARGET_BRANCH: master
     steps:
       - checkout
       - restore_cache:

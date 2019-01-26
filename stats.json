@@ -4,10 +4,6 @@
       "path---careers-engineering-lead-products-singapore-980550cf6cc970e84f7e.js",
       "path---careers-engineering-lead-products-singapore-980550cf6cc970e84f7e.js.map"
     ],
-    "component---src-pages-location-js": [
-      "component---src-pages-location-js-71751caaaf78cee7312b.js",
-      "component---src-pages-location-js-71751caaaf78cee7312b.js.map"
-    ],
     "path---careers-lead-product-manager": [
       "path---careers-lead-product-manager-9a027424ddf80027aa60.js",
       "path---careers-lead-product-manager-9a027424ddf80027aa60.js.map"
@@ -64,6 +60,10 @@
       "path---careers-full-stack-engineer-financial-platform-thailand-96a22be7403f17afdab2.js",
       "path---careers-full-stack-engineer-financial-platform-thailand-96a22be7403f17afdab2.js.map"
     ],
+    "path---open-positions": [
+      "path---open-positions-a0e39f21c11f6a62c5ab.js",
+      "path---open-positions-a0e39f21c11f6a62c5ab.js.map"
+    ],
     "component---src-pages-gojek-expansion-js": [
       "component---src-pages-gojek-expansion-js-ba36fd8d72476b1ae1c3.js",
       "component---src-pages-gojek-expansion-js-ba36fd8d72476b1ae1c3.js.map"
@@ -100,10 +100,6 @@
       "component---src-pages-go-jek-tech-to-hire-200-engineers-in-india-js-b0d2a0577f62da0e443e.js",
       "component---src-pages-go-jek-tech-to-hire-200-engineers-in-india-js-b0d2a0577f62da0e443e.js.map"
     ],
-    "path---location": [
-      "path---location-a0e39f21c11f6a62c5ab.js",
-      "path---location-a0e39f21c11f6a62c5ab.js.map"
-    ],
     "path---careers-backend-engineer-go-food": [
       "path---careers-backend-engineer-go-food-cd0069d047c601557a07.js",
       "path---careers-backend-engineer-go-food-cd0069d047c601557a07.js.map"
@@ -121,8 +117,8 @@
       "path---apply-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-templates-job-js": [
-      "component---src-templates-job-js-4307aaa1fb2f1b33a7a6.js",
-      "component---src-templates-job-js-4307aaa1fb2f1b33a7a6.js.map"
+      "component---src-templates-job-js-a09207900a95c33deb9d.js",
+      "component---src-templates-job-js-a09207900a95c33deb9d.js.map"
     ],
     "path---careers-full-stack-engineer-bangalore": [
       "path---careers-full-stack-engineer-bangalore-47a99a3a30c661d9ab71.js",
@@ -135,6 +131,10 @@
     "path---careers-full-stack-engineer-jakarta": [
       "path---careers-full-stack-engineer-jakarta-39d972beb244d2e3067b.js",
       "path---careers-full-stack-engineer-jakarta-39d972beb244d2e3067b.js.map"
+    ],
+    "component---src-pages-open-positions-js": [
+      "component---src-pages-open-positions-js-15f52f45913d7a65755e.js",
+      "component---src-pages-open-positions-js-15f52f45913d7a65755e.js.map"
     ],
     "path---index": [
       "path---index-a0e39f21c11f6a62c5ab.js",
@@ -177,12 +177,12 @@
       "component---src-pages-404-js-8377fa379f762825d776.js.map"
     ],
     "commons": [
-      "commons-11defbaf93dd9d609751.js",
-      "commons-11defbaf93dd9d609751.js.map"
+      "commons-11084668de949be90d8c.js",
+      "commons-11084668de949be90d8c.js.map"
     ],
     "component---src-pages-careers-js": [
-      "component---src-pages-careers-js-9cf61afbf115f4a41904.js",
-      "component---src-pages-careers-js-9cf61afbf115f4a41904.js.map"
+      "component---src-pages-careers-js-5a0e59f94760a4d08df5.js",
+      "component---src-pages-careers-js-5a0e59f94760a4d08df5.js.map"
     ],
     "path---careers-analytics-program-manager": [
       "path---careers-analytics-program-manager-a09be9affa03f25337b1.js",
@@ -209,8 +209,8 @@
       "path---careers-data-scientist-go-pay-485aad706fe7dc27f449.js.map"
     ],
     "component---src-pages-thank-you-js": [
-      "component---src-pages-thank-you-js-c6fe28e4f5922861e15c.js",
-      "component---src-pages-thank-you-js-c6fe28e4f5922861e15c.js.map"
+      "component---src-pages-thank-you-js-6acf2e414a16c0dc88c5.js",
+      "component---src-pages-thank-you-js-6acf2e414a16c0dc88c5.js.map"
     ],
     "path---news": [
       "path---news-a0e39f21c11f6a62c5ab.js",
@@ -245,12 +245,12 @@
       "path---careers-machine-learning-engineer-go-pay-68a81b898c683022b392.js.map"
     ],
     "app": [
-      "app-c44a14d5370163f439d6.js",
-      "app-c44a14d5370163f439d6.js.map"
+      "app-39dc2e27bd7329540d48.js",
+      "app-39dc2e27bd7329540d48.js.map"
     ],
     "component---src-pages-all-open-positions-js": [
-      "component---src-pages-all-open-positions-js-5a9ba2de2527970d575b.js",
-      "component---src-pages-all-open-positions-js-5a9ba2de2527970d575b.js.map"
+      "component---src-pages-all-open-positions-js-536e41496c2ea499d2dc.js",
+      "component---src-pages-all-open-positions-js-536e41496c2ea499d2dc.js.map"
     ],
     "path---careers-full-stack-engineer-thailand": [
       "path---careers-full-stack-engineer-thailand-3d4d7abc1c29fe524097.js",

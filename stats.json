@@ -8,6 +8,14 @@
       "path---careers-lead-product-manager-9a027424ddf80027aa60.js",
       "path---careers-lead-product-manager-9a027424ddf80027aa60.js.map"
     ],
+    "path---positions": [
+      "path---positions-a0e39f21c11f6a62c5ab.js",
+      "path---positions-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-positions-js": [
+      "component---src-pages-positions-js-21b34c20e0794fb78a0b.js",
+      "component---src-pages-positions-js-21b34c20e0794fb78a0b.js.map"
+    ],
     "path---careers-site-reliability-engineer": [
       "path---careers-site-reliability-engineer-c663b3a3e5b310124866.js",
       "path---careers-site-reliability-engineer-c663b3a3e5b310124866.js.map"
@@ -59,10 +67,6 @@
     "path---careers-full-stack-engineer-financial-platform-thailand": [
       "path---careers-full-stack-engineer-financial-platform-thailand-96a22be7403f17afdab2.js",
       "path---careers-full-stack-engineer-financial-platform-thailand-96a22be7403f17afdab2.js.map"
-    ],
-    "path---open-positions": [
-      "path---open-positions-a0e39f21c11f6a62c5ab.js",
-      "path---open-positions-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-gojek-expansion-js": [
       "component---src-pages-gojek-expansion-js-ba36fd8d72476b1ae1c3.js",
@@ -132,10 +136,6 @@
       "path---careers-full-stack-engineer-jakarta-39d972beb244d2e3067b.js",
       "path---careers-full-stack-engineer-jakarta-39d972beb244d2e3067b.js.map"
     ],
-    "component---src-pages-open-positions-js": [
-      "component---src-pages-open-positions-js-83107aa288c15eb76f27.js",
-      "component---src-pages-open-positions-js-83107aa288c15eb76f27.js.map"
-    ],
     "path---index": [
       "path---index-a0e39f21c11f6a62c5ab.js",
       "path---index-a0e39f21c11f6a62c5ab.js.map"
@@ -181,8 +181,8 @@
       "commons-11084668de949be90d8c.js.map"
     ],
     "component---src-pages-careers-js": [
-      "component---src-pages-careers-js-01f6d0188ca6051b84d4.js",
-      "component---src-pages-careers-js-01f6d0188ca6051b84d4.js.map"
+      "component---src-pages-careers-js-d33561dafaf238d70288.js",
+      "component---src-pages-careers-js-d33561dafaf238d70288.js.map"
     ],
     "path---careers-analytics-program-manager": [
       "path---careers-analytics-program-manager-a09be9affa03f25337b1.js",
@@ -245,12 +245,12 @@
       "path---careers-machine-learning-engineer-go-pay-68a81b898c683022b392.js.map"
     ],
     "app": [
-      "app-39dc2e27bd7329540d48.js",
-      "app-39dc2e27bd7329540d48.js.map"
+      "app-020001ab6c4ddff99266.js",
+      "app-020001ab6c4ddff99266.js.map"
     ],
     "component---src-pages-all-open-positions-js": [
-      "component---src-pages-all-open-positions-js-a5d48380fcf0f0fdd8e5.js",
-      "component---src-pages-all-open-positions-js-a5d48380fcf0f0fdd8e5.js.map"
+      "component---src-pages-all-open-positions-js-29036a76709a1a0da6c5.js",
+      "component---src-pages-all-open-positions-js-29036a76709a1a0da6c5.js.map"
     ],
     "path---careers-full-stack-engineer-thailand": [
       "path---careers-full-stack-engineer-thailand-3d4d7abc1c29fe524097.js",

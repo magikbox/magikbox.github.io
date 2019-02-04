@@ -8,6 +8,10 @@
       "path---careers-lead-product-manager-9a027424ddf80027aa60.js",
       "path---careers-lead-product-manager-9a027424ddf80027aa60.js.map"
     ],
+    "component---src-pages-google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round-js": [
+      "component---src-pages-google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round-js-4cd181e44a3b47b95496.js",
+      "component---src-pages-google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round-js-4cd181e44a3b47b95496.js.map"
+    ],
     "path---careers-site-reliability-engineer": [
       "path---careers-site-reliability-engineer-c663b3a3e5b310124866.js",
       "path---careers-site-reliability-engineer-c663b3a3e5b310124866.js.map"
@@ -57,8 +61,8 @@
       "component---src-pages-contact-js-cb0a117c4adf5150165c.js.map"
     ],
     "component---src-pages-news-js": [
-      "component---src-pages-news-js-52c0b8515beb0de5395b.js",
-      "component---src-pages-news-js-52c0b8515beb0de5395b.js.map"
+      "component---src-pages-news-js-a6e822c31eac5f37f464.js",
+      "component---src-pages-news-js-a6e822c31eac5f37f464.js.map"
     ],
     "path---careers-full-stack-engineer-financial-platform-thailand": [
       "path---careers-full-stack-engineer-financial-platform-thailand-96a22be7403f17afdab2.js",
@@ -109,8 +113,8 @@
       "path---careers-backend-engineer-go-food-cd0069d047c601557a07.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-72e4a97c4cffd9951931.js",
-      "component---src-layouts-index-js-72e4a97c4cffd9951931.js.map"
+      "component---src-layouts-index-js-feeb23609ef49364845c.js",
+      "component---src-layouts-index-js-feeb23609ef49364845c.js.map"
     ],
     "path---careers": [
       "path---careers-a0e39f21c11f6a62c5ab.js",
@@ -121,8 +125,8 @@
       "path---apply-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-templates-job-js": [
-      "component---src-templates-job-js-d33ece556e58b185218b.js",
-      "component---src-templates-job-js-d33ece556e58b185218b.js.map"
+      "component---src-templates-job-js-6ad297df30aa195b9232.js",
+      "component---src-templates-job-js-6ad297df30aa195b9232.js.map"
     ],
     "path---careers-full-stack-engineer-bangalore": [
       "path---careers-full-stack-engineer-bangalore-47a99a3a30c661d9ab71.js",
@@ -132,13 +136,17 @@
       "path---careers-recruitment-coordinator-dbcbaa952eaee682bba6.js",
       "path---careers-recruitment-coordinator-dbcbaa952eaee682bba6.js.map"
     ],
+    "path---google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round": [
+      "path---google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round-a0e39f21c11f6a62c5ab.js",
+      "path---google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round-a0e39f21c11f6a62c5ab.js.map"
+    ],
     "path---careers-full-stack-engineer-jakarta": [
       "path---careers-full-stack-engineer-jakarta-39d972beb244d2e3067b.js",
       "path---careers-full-stack-engineer-jakarta-39d972beb244d2e3067b.js.map"
     ],
     "component---src-pages-open-positions-js": [
-      "component---src-pages-open-positions-js-89f478565bcb65c72b4d.js",
-      "component---src-pages-open-positions-js-89f478565bcb65c72b4d.js.map"
+      "component---src-pages-open-positions-js-479f4335887bce96dd8c.js",
+      "component---src-pages-open-positions-js-479f4335887bce96dd8c.js.map"
     ],
     "path---index": [
       "path---index-a0e39f21c11f6a62c5ab.js",
@@ -155,6 +163,10 @@
     "path---careers-ux-engineer": [
       "path---careers-ux-engineer-477f2086085e516d1ef3.js",
       "path---careers-ux-engineer-477f2086085e516d1ef3.js.map"
+    ],
+    "path---careers-i-os-engineer-chat-platform": [
+      "path---careers-i-os-engineer-chat-platform-576b18b0ac4baaf5cb24.js",
+      "path---careers-i-os-engineer-chat-platform-576b18b0ac4baaf5cb24.js.map"
     ],
     "path---all-open-positions": [
       "path---all-open-positions-a0e39f21c11f6a62c5ab.js",
@@ -185,9 +197,9 @@
       "component---src-pages-404-js-a61aa8ed034f92e8b6cb.js.map"
     ],
     "commons": [
-      "commons-d53d6ba74f74af6e5ae4.js",
+      "commons-5799907d957d0c16193a.js",
       "build-js-styles.css",
-      "commons-d53d6ba74f74af6e5ae4.js.map",
+      "commons-5799907d957d0c16193a.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-pages-careers-js": [
@@ -255,14 +267,14 @@
       "path---careers-machine-learning-engineer-go-pay-68a81b898c683022b392.js.map"
     ],
     "app": [
-      "app-d76450fad7f26facc85a.js",
+      "app-4c04e850b3969a79fa30.js",
       "build-js-styles.css",
-      "app-d76450fad7f26facc85a.js.map",
+      "app-4c04e850b3969a79fa30.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-pages-all-open-positions-js": [
-      "component---src-pages-all-open-positions-js-b04f943791826b6333d7.js",
-      "component---src-pages-all-open-positions-js-b04f943791826b6333d7.js.map"
+      "component---src-pages-all-open-positions-js-59ae0f8acb9718411392.js",
+      "component---src-pages-all-open-positions-js-59ae0f8acb9718411392.js.map"
     ],
     "path---careers-full-stack-engineer-thailand": [
       "path---careers-full-stack-engineer-thailand-3d4d7abc1c29fe524097.js",

@@ -196,6 +196,10 @@
       "path---superapp-a0e39f21c11f6a62c5ab.js",
       "path---superapp-a0e39f21c11f6a62c5ab.js.map"
     ],
+    "component---src-pages-why-we-ask-for-code-js": [
+      "component---src-pages-why-we-ask-for-code-js-9ccc12d0b133cbe7ebab.js",
+      "component---src-pages-why-we-ask-for-code-js-9ccc12d0b133cbe7ebab.js.map"
+    ],
     "path---careers-ux-engineer": [
       "path---careers-ux-engineer-6616e2cedfb4f0e0484c.js",
       "path---careers-ux-engineer-6616e2cedfb4f0e0484c.js.map"
@@ -233,9 +237,9 @@
       "path---careers-technical-program-manager-financial-and-accounting-platforms-93227db9d9dbf823169e.js.map"
     ],
     "commons": [
-      "commons-95245d51bea10720960f.js",
+      "commons-44f98d188a9535765e1e.js",
       "build-js-styles.css",
-      "commons-95245d51bea10720960f.js.map",
+      "commons-44f98d188a9535765e1e.js.map",
       "build-js-styles.css.map"
     ],
     "path---careers-fraud-analyst-food": [
@@ -311,9 +315,9 @@
       "path---careers-machine-learning-engineer-go-pay-79a83d2991e9959d81a8.js.map"
     ],
     "app": [
-      "app-6ffbea86931f21b0c3e2.js",
+      "app-4fb6e9fca5056d7211fd.js",
       "build-js-styles.css",
-      "app-6ffbea86931f21b0c3e2.js.map",
+      "app-4fb6e9fca5056d7211fd.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-pages-all-open-positions-js": [
@@ -355,6 +359,10 @@
     "path---about": [
       "path---about-a0e39f21c11f6a62c5ab.js",
       "path---about-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---why-we-ask-for-code": [
+      "path---why-we-ask-for-code-a0e39f21c11f6a62c5ab.js",
+      "path---why-we-ask-for-code-a0e39f21c11f6a62c5ab.js.map"
     ]
   }
 }

@@ -13,15 +13,17 @@ class Location extends Component {
   }
 
   componentDidMount() {
-    this.props.history.replace(
-      (this.props.location.pathname === '/open-positions/'
-        ? '/open-positions'
-        : this.props.location.pathname) + this.props.location.search
-    )
-    const urlLocationName = window.location.search.split('&')[0].split('=')[1]
-    this.setState({
-      locationName: urlLocationName.toLowerCase(),
-    })
+    if (typeof window !== `undefined`) {
+      this.props.history.replace(
+        (this.props.location.pathname === '/open-positions/'
+          ? '/open-positions'
+          : this.props.location.pathname) + this.props.location.search
+      )
+      const urlLocationName = window.location.search.split('&')[0].split('=')[1]
+      this.setState({
+        locationName: urlLocationName.toLowerCase(),
+      })
+    }
   }
 
   getLocationName = () => {
@@ -32,8 +34,6 @@ class Location extends Component {
         .split('=')[1]
         .toLowerCase()
     }
-
-    // console.log('locationNAme', locationName)
     return locationName
   }
 

@@ -21,6 +21,7 @@
     "lodash": "^4.17.10",
     "popper.js": "^1.14.3",
     "react": "^16.6.3",
+    "react-awesome-modal": "^2.0.5",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
     "react-modal": "^3.6.1",

@@ -330,52 +330,52 @@ button.navbar-toggler {
 }
 
 .carrers-count-md {
-  height: 85px;
+  // height: 85px;
   width: 170px;
 }
 
-.carrers-count-sm {
-  height: 75px;
-  width: 155px;
-}
+// .carrers-count-sm {
+//   height: 75px;
+//   width: 155px;
+// }
 
 .careers-border {
   border-radius: 160px;
   height: 160px;
 }
 
-.careers-count-md-top {
-  border-radius: 160px 160px 0px 0px;
-}
+// .careers-count-md-top {
+//   border-radius: 160px 160px 0px 0px;
+// }
 
-.careers-count-md-bottom {
-  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
-  border-radius: 0px 0px 160px 160px;
-}
+// .careers-count-md-bottom {
+//   box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+//   border-radius: 0px 0px 160px 160px;
+// }
 
-.career-location:hover,
+.career-department:hover,
 .career-categories,
-.career-location,
+.career-department,
 .super-app-location {
   border-radius: 10px;
 }
 
-.career-location,
+.career-department,
 .super-app-location {
-  border: 2px solid #ebebeb;
+  border: 2px solid #fff;
 }
 
 .border-success,
-.career-location:hover,
+.career-department:hover,
 .careers-position:hover {
   border: 2px solid #009944;
 }
 
-.careers-position-unhighlight {
-  -webkit-box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.32);
-  -moz-box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.32);
-  box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.32);
-  border: 2px solid transparent;
+.careers-position-unhighlight  {
+  // -webkit-box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.32);
+  // -moz-box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.32);
+  // box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.32);
+  border: 2px solid #e1e1e1;
 }
 
 .singapore-banner {
@@ -906,6 +906,9 @@ input[type='file'] {
 .custom-search:focus {
   background-color: #f7f7f6;
 }
+.custom-search {
+  border: 1px solid #e1e1e1;
+}
 #keyword::placeholder {
   color: #bdbdbd;
   opacity: 1; /* Firefox */
@@ -974,6 +977,15 @@ input[type='file'] {
   background-color: #000;
 }
 
-.description-font span,.description-font li {
+.description-font span,
+.description-font li {
   font-size: 1rem !important;
+}
+
+.search-result {
+  max-height: 150px;
+  overflow-y: scroll;
+  border-bottom: 1px solid #e1e1e1;
+  border-left: 1px solid #e1e1e1;
+  box-shadow: 0px 4px 8px 2px rgba(17, 17, 17, 0.06);
 }

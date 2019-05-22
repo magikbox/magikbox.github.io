@@ -6,11 +6,12 @@ import BehindTheScenes from '../components/Careers/BehindTheScenes/index'
 import Advantages from '../components/Careers/Advantages/index'
 import EmployeeStories from '../components/Careers/EmployeeStories/index'
 import CountBanner from '../components/Careers/CountBanner/CountBanner'
-import CareerLocation from '../components/Careers/CareerLocation/CareerLocation'
+import CareerDepartment from '../components/Careers/CareerDepartment/CareerDepartment'
 import SearchBar from '../components/Careers/searchBar/searchBar'
 import jobs from '../../data/jobs.json'
 import { Link } from 'react-scroll'
 import axios from 'axios'
+import Slider from 'react-slick'
 
 var Scroll = require('react-scroll')
 var scroller = Scroll.scroller
@@ -59,7 +60,7 @@ class Careers extends Component {
   }
 
   getFilterdata = response => {
-    // console.log('before return', response)
+    // ('before return', response)
     let returnData = []
     returnData.push(
       response.data.filter((data, i) => {
@@ -186,6 +187,63 @@ class Careers extends Component {
   }
 
   render() {
+    var settings = {
+      infinite: true,
+      centerMode: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      centerPadding: '0px',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            dots: false,
+            arrows: true,
+            infinite: true,
+            centerMode: true,
+            slidesToShow: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            dots: false,
+            arrows: true,
+            infinite: true,
+            centerMode: true,
+            slidesToShow: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    }
+
+    const sliderData = [
+      {
+        imgsrc: 'careers-new-banner-image.png',
+      },
+      {
+        imgsrc: 'careers-new-banner-image.png',
+      },
+      {
+        imgsrc: 'careers-new-banner-image.png',
+      },
+      {
+        imgsrc: 'careers-new-banner-image.png',
+      },
+      {
+        imgsrc: 'careers-new-banner-image.png',
+      },
+      {
+        imgsrc: 'careers-new-banner-image.png',
+      },
+    ]
+
     return (
       <div className="first-section">
         <Helmet>
@@ -215,57 +273,47 @@ class Careers extends Component {
         </Helmet>
 
         {/* Main banner image */}
+        <SearchBar
+          props={this.props}
+          places={this.state.places}
+          searchResult={this.state.searchResult}
+          onChangeInputText={ev => this.onChangeInputText(ev)}
+          onClickLocation={name => this.onClickLocation(name)}
+          locationName={this.state.locationName}
+          inputText={this.state.inputText}
+          textColor={`${
+            this.state.searchResult !== null &&
+            this.state.searchResult.length !== 0
+              ? ' text-dark '
+              : ' text-white '
+          }`}
+          source="gojek.io"
+        />
+        <CountBanner props={this.props} bannerImage="careers-second-banner" />
         <section>
-          <div className="container-fluid px-0 careers-main-banner h-100 ">
-            <div
-              className="d-flex flex-row flex-wrap justify-content-center align-items-center position-relative"
-              style={{ height: '100vh' }}
+          <div className="container-fluid pt-5">
+            <Slider
+              {...settings}
+              className="row go-jek-slider lg-controls-dark custom-controls-dark "
             >
-              <SearchBar
-                props={this.props}
-                type="careers"
-                places={this.state.places}
-                searchResult={this.state.searchResult}
-                onChangeInputText={ev => this.onChangeInputText(ev)}
-                onClickLocation={name => this.onClickLocation(name)}
-                locationName={this.state.locationName}
-                inputText={this.state.inputText}
-                textColor={`${
-                  this.state.searchResult !== null &&
-                  this.state.searchResult.length !== 0
-                    ? ' text-dark '
-                    : ' text-white '
-                }`}
-                source="gojek.io"
-              />
-
-              <div
-                className="position-absolute"
-                style={{ bottom: '100px', left: '55%' }}
-              >
-                <Link
-                  to="career-banner-id"
-                  spy={true}
-                  smooth={true}
-                  className="scroll"
-                  offset={-50}
-                >
-                  <i className="fa fa-2x fa-chevron-down text-white scroll" />
-                </Link>
-              </div>
-            </div>
+              {sliderData.map((slide, i) => {
+                return (
+                  <div>
+                    <img
+                      height={'50vh'}
+                      src={`../images/careers/${slide.imgsrc}`}
+                      className="img-fluid"
+                    />
+                  </div>
+                )
+              })}
+            </Slider>
           </div>
         </section>
 
-        <CountBanner
-          props={this.props}
-          bannerImage="careers-second-banner"
-          height="300px"
-        />
-
         <BehindTheScenes />
 
-        <CareerLocation props={this.props} />
+        <CareerDepartment props={this.props} />
 
         <Advantages />
 

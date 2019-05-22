@@ -6,7 +6,7 @@ import BehindTheScenes from '../components/Careers/BehindTheScenes/index';
 import Advantages from '../components/Careers/Advantages/index';
 import EmployeeStories from '../components/Careers/EmployeeStories/index';
 import CountBanner from '../components/Careers/CountBanner/CountBanner';
-import CareerLocation from '../components/Careers/CareerLocation/CareerLocation';
+import CareerDepartment from '../components/Careers/CareerDepartment/CareerDepartment';
 import SearchBar from '../components/Careers/searchBar/searchBar';
 import jobs from '../../data/jobs.json';
 import { Link } from 'react-scroll';
@@ -155,7 +155,7 @@ class Careers extends Component {
 
 				<BehindTheScenes />
 
-				<CareerLocation props={this.props} />
+				<CareerDepartment props={this.props} />
 
 				<Advantages />
 

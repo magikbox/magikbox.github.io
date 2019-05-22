@@ -1,59 +1,106 @@
 import React, { Component } from 'react'
 import { Helmet } from 'react-helmet'
-import CountBanner from '../components/Careers/CountBanner/CountBanner'
-import CareerLocation from '../components/Careers/CareerLocation/CareerLocation'
-import SearchBar from '../components/Careers/searchBar/searchBar'
-// import jobs from '../../data/jobs.json';
-import Description from '../components/Careers/Description/Description'
-import Link from 'gatsby-link'
 import PositionCard from '../components/Careers/PositionCard/positionCard'
 import axios from 'axios'
+import OpenPositionDepartments from '../components/AllOpenPositions/OpenPositionDepartments'
 
+var Scroll = require('react-scroll')
+var scroll = Scroll.animateScroll
 class allpositions extends Component {
   constructor(props) {
     super(props)
-
     this.state = {
-      // locationId: '1',
+      filters: false,
+      departments: [],
+      teams: [],
+      positions: [],
+      jobsData: [],
       locationName: 'All',
-      intervalId: 0,
       scrollTop: 'd-none ',
       inputText: '',
       places: [],
-      tempPositions: null,
-      positionId: null,
-      positionname: null,
-      deletePositionId: null,
-      positionData: null,
-      jobsData: [],
+      placeSelected: 'All',
+      departmentSelected: 'All',
+      reformatedData: [],
     }
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
+    if (typeof window !== `undefined`) {
+      window.addEventListener('scroll', this.handleScroll)
+    }
+    let departments = this.state.departments
     let places = this.state.places
-    let tempPositions = []
-
     axios
       .get(`https://api.lever.co/v0/postings/gojek?mode=json`)
       .then(response => {
         for (let i = 0; i < response.data.length; i++) {
-          let count = 0
-          if (places.includes(response.data[i].categories.location)) {
-            count = count + 1
+          let departmentCount = 0
+          let locationCount = 0
+
+          if (departments.includes(response.data[i].categories.department)) {
+            departmentCount = departmentCount + 1
           }
-          if (count === 0) {
+          if (places.includes(response.data[i].categories.location)) {
+            locationCount = locationCount + 1
+          }
+          if (departmentCount === 0) {
+            departments.push(response.data[i].categories.department)
+          }
+          if (locationCount === 0) {
             places.push(response.data[i].categories.location)
-            tempPositions.push(response.data[i].categories.location)
           }
         }
-        this.getPositions(places, this.getFilterdata(response))
+        this.getPositions(departments, places, this.getFilterdata(response))
       })
   }
 
-  getFilterdata = response => {
+  // this method is used to show the scroll to top button
+  handleScroll = () => {
+    if (typeof window !== `undefined`) {
+      const top = window.pageYOffset
+      if (top > 50) {
+        this.setState({
+          scrollTop: ' d-block ',
+        })
+      } else {
+        this.setState({
+          scrollTop: ' d-none ',
+        })
+      }
+    }
+  }
 
-    console.log("response",response)
+  // this method is used to get the teams array by passing departments array
+  getTeamsbyDepartment = departments => {
+    let teams = []
+    let teamsData = []
+
+    for (let i = 0; i < departments.length; i++) {
+      let teamCount = 0
+      if (teams.includes(departments[i].categories.team)) {
+        teamCount = teamCount + 1
+      }
+      if (teamCount === 0) {
+        teams.push(departments[i].categories.team)
+      }
+    }
+    teams.map((team, j) => {
+      teamsData.push({
+        teamName: team,
+        data: departments.filter((job, i) => {
+          if (job.categories.team === team) {
+            return job
+          }
+        }),
+      })
+    })
+
+    return teamsData
+  }
+
+  // this methos is used to (restrict the content when it is empty) and teams
+  getFilterdata = response => {
     let returnData = []
     returnData.push(
       response.data.filter((data, i) => {
@@ -93,215 +140,105 @@ class allpositions extends Component {
     return fd
   }
 
-  getPositions = (places, jobsData) => {
-    let screenWidth = null
-
-    if (typeof window !== `undefined`) {
-      screenWidth = window.innerWidth
-    }
-
+  // this method is used to set the positions array by department wise
+  getPositions = (departments, places, jobsData) => {
     this.setState(
       {
-        positionId: null,
         jobsData: jobsData,
+        departments: departments,
         places: places,
-        tempPlaces: places,
-        positions: places.map((place, i) => {
+        positions: departments.map((department, i) => {
           return jobsData.data.filter((job, j) => {
-            if (job.categories.location === place) {
+            if (job.categories.department === department) {
               return job
             }
           })
         }),
-        tempPositions: places.map((place, i) => {
-          return jobsData.data.filter((job, j) => {
-            if (job.categories.location === place) {
-              return job
-            }
-          })
-        }),
-        screenWidth: screenWidth,
       },
       () => {
-        if (window.location.search.split('&')[0]) {
-          this.onClickPosition(
-            window.location.search.split('&')[0].split('=')[1]
-          )
-        }
+        this.setState({
+          reformatedData: this.getReformatedData(this.state.positions),
+        })
       }
     )
   }
 
-  onChangeURL = id => {
-    const queryParams = []
-    queryParams.push(
-      encodeURIComponent('position') + '=' + encodeURIComponent(id)
+  // this method is used to get the final version of reformated jobs
+  getReformatedData = positionGroups => {
+    let returnData = []
+    for (let i = 0; i < positionGroups.length; i++) {
+      returnData.push({
+        deptName: positionGroups[i][0].categories.department,
+        openings: positionGroups[i].length,
+        teams: this.getTeamsbyDepartment(positionGroups[i]),
+      })
+    }
+
+    return returnData
+  }
+
+  // this method will return the location and department dropdowns
+  getLocationAndDepartment = (stateSlug, updateState) => {
+    return (
+      <React.Fragment>
+        <div className="dropdown position-relative">
+          <button
+            className="btn form-control custom-search  py-2  btn-block bg-white dropdown-toggle custom-dropdown text-left neosans-regular py-2 font-md "
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            {this.state[updateState]}
+          </button>
+          <i
+            className="fa fa-chevron-down position-absolute text-green"
+            style={{ right: '10px', top: '12px' }}
+          />
+          <div
+            className="dropdown-menu w-100"
+            aria-labelledby="dropdownMenuButton"
+          >
+            <button
+              onClick={() => this.setState({ [updateState]: 'All' })}
+              className="dropdown-item"
+              type="button"
+            >
+              All
+            </button>
+            {this.state[stateSlug].map((place, i) => {
+              return (
+                <button
+                  key={i}
+                  onClick={() => this.setState({ [updateState]: place })}
+                  className="dropdown-item"
+                  type="button"
+                >
+                  {place}
+                </button>
+              )
+            })}
+          </div>
+        </div>
+      </React.Fragment>
     )
-    const queryString = queryParams.join('&')
-    this.props.history.replace({
-      search: '?' + queryString,
-    })
-    this.onClickPosition(id)
   }
 
-  onClickPosition = id => {
-    const { deletePositionId } = this.state
-    const screenWidth =
-      this.state.screenWidth >= 1024 ? 4 : this.state.screenWidth >= 768 ? 3 : 2
-    let positions = this.state.positions
-    let indexes = []
-    let positionData = []
-    this.state.tempPositions.map((position, i) => {
-      position.map((data, j) => {
-        if (data.id === id) {
-          indexes.push({
-            firstIndex: i,
-            secondIndex: j,
-          })
-          positionData.push(data)
-        }
-      })
-    })
-    if (indexes.length > 0) {
-      let ceilValue =
-        Math.ceil((indexes[0].secondIndex + 1) / screenWidth) * screenWidth
-      const insertData = {
-        type: 'description',
+  // this method will return the filtered jobs
+  getAfterSearchPositions = () => {
+    const returnData = this.state.jobsData.data.filter((job, i) => {
+      if (
+        job.text.toLowerCase().includes(this.state.inputText.toLowerCase()) &&
+        (this.state.departmentSelected === 'All' ||
+          this.state.departmentSelected === job.categories.department) &&
+        (this.state.placeSelected === 'All' ||
+          this.state.placeSelected === job.categories.location)
+      ) {
+        return job
       }
-      this.removeData(deletePositionId, indexes, () => {
-        positions.map((position, i) => {
-          position.map((data, j) => {
-            if (data.id === id) {
-              position.splice(ceilValue, 0, insertData)
-            }
-          })
-        })
-      })
-      this.setState({
-        deletePositionId: ceilValue,
-        positionId: positionData[0].id,
-        positionName: name,
-        positionData: positionData,
-      })
-    } else {
-      // window.location.replace('/404')
-    }
-  }
-
-  removeData = (deletePositionId, indexes, callback) => {
-    deletePositionId !== null &&
-      this.state.positions.map((position, i) => {
-        position.map((data, j) => {
-          if (data.type) {
-            position.splice(j, 1)
-          }
-        })
-      })
-    callback()
-  }
-
-  onClickLocation = (name, index) => {
-    let tempPlaces = [name]
-    this.setState({
-      locationName: name,
-      positionId: null,
-      positions: this.state.places.map((place, i) => {
-        return this.state.jobsData.data.filter((job, j) => {
-          if (
-            job.categories.location === place &&
-            (job.text
-              .toLowerCase()
-              .includes(this.state.inputText.toLowerCase()) ||
-              this.state.inputText === '') &&
-            (job.categories.location.toLowerCase() === name.toLowerCase() ||
-              name.toLowerCase() === 'all')
-          ) {
-            return job
-          }
-        })
-      }),
-      tempPlaces: index === -1 ? this.state.places : tempPlaces,
     })
-  }
-
-  // this method is used to check the scroll event for scroll to top button
-  handleScroll = () => {
-    const top = window.pageYOffset
-    if (top > 50) {
-      this.setState({
-        scrollTop: ' d-block ',
-      })
-    } else {
-      this.setState({
-        scrollTop: ' d-none ',
-      })
-    }
-  }
-
-  onChangeInputText = searchText => {
-    let positions = this.state.places.map((place, i) => {
-      return this.state.jobsData.data.filter((job, j) => {
-        if (
-          job.categories.location === place &&
-          (job.text.toLowerCase().includes(searchText.toLowerCase()) ||
-            searchText === '') &&
-          (job.categories.location.toLowerCase() ===
-            this.state.locationName.toLowerCase() ||
-            this.state.locationName.toLowerCase() === 'all')
-        ) {
-          return job
-        }
-      })
-    })
-    this.setState({
-      inputText: searchText,
-      positions: positions,
-      tempPositions: positions,
-      positionId: null,
-    })
-  }
-
-  onClickViewPositions = (index, placeName) => {
-    const positions = this.state.places
-      .map((place, i) => {
-        return this.state.jobsData.data.filter((job, j) => {
-          if (job.categories.location === place) {
-            return job
-          }
-        })
-      })
-      .map((position, i) => {
-        return position.filter((data, j) => {
-          if (
-            data.categories.location.toLowerCase() === placeName.toLowerCase()
-          ) {
-            return data
-          }
-        })
-      })
-    this.state.positions.splice(index, 1)
-    this.state.positions.splice(index, 0, positions[index])
-    this.setState({
-      positions: this.state.positions,
-    })
-  }
-
-  onClickCloseButton = () => {
-    this.props.history.replace('/all-open-positions/')
-    this.onChangeInputText(this.state.inputText)
-    // this.getPositions(this.state.places)
-  }
-
-  scrollStep() {
-    if (window.pageYOffset === 0) {
-      clearInterval(this.state.intervalId)
-    }
-    window.scroll(0, window.pageYOffset - 50)
-  }
-
-  scrollToTop() {
-    let intervalId = setInterval(this.scrollStep.bind(this), 16.66)
-    this.setState({ intervalId: intervalId })
+    return returnData
   }
 
   render() {
@@ -332,127 +269,139 @@ class allpositions extends Component {
             content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
           />
         </Helmet>
-        <CountBanner
-          props={this.props}
-          bannerImage="job-illustration-banner"
-          height="70vh"
-        />
         <div className="container">
-          {/* search bar */}
-          <SearchBar
-            type="allPositions"
-            places={this.state.places}
-            onChangeInputText={ev => this.onChangeInputText(ev.target.value)}
-            onClickLocation={(name, index) => this.onClickLocation(name, index)}
-            locationName={this.state.locationName}
-            inputText={this.state.inputText}
-            textColor="#000"
-          />
-          <section>
-            <div>
-              {this.state.inputText === '' ? (
-                <h6 className="font-xl-l text-center raleway-bold">
-                  All Open Positions
-                </h6>
-              ) : (
-                <h6 className="font-xl-l text-center raleway-bold">
-                  Showing Results for '{this.state.inputText}'
-                </h6>
-              )}
-              {this.state.positions !== undefined &&
-                this.state.positions.map((position, i) => {
-                  return (
-                    <React.Fragment key={i}>
-                      {position.length > 0 ? (
-                        <React.Fragment>
-                          <h6 className="col-12 font-lg mb-0 mt-5 roboto-bold text-center text-black text-uppercase">
-                            {this.state.places[i]}
-                          </h6>
-                          <hr className="my-1" />
-                          <div className="d-flex flex-row flex-wrap justify-content-start my-3">
-                            {position.map((data, j) => {
-                              return data.team !== '' ? (
-                                <React.Fragment key={j}>
-                                  {!data.type && (
-                                    <PositionCard
-                                      id={data.id}
-                                      positionId={this.state.positionId}
-                                      onChangeURL={id => this.onChangeURL(id)}
-                                      heading={data.text}
-                                      subHeading={data.categories.team}
-                                    />
-                                  )}
-                                  {data.type === 'description' && (
-                                    <Description
-                                      positionName={this.state.positionname}
-                                      positionData={this.state.positionData}
-                                      onClickCloseButton={() =>
-                                        this.onClickCloseButton()
-                                      }
-                                    />
-                                  )}
-                                </React.Fragment>
-                              ) : (
-                                <React.Fragment key={i}>
-                                  <img
-                                    className=" col-md-4 col-12 mt-3 img-fluid mx-auto text-center"
-                                    src="../../images/careers/no-jobs-found.png"
-                                  />
-                                  <p className="col-12 text-center raleway-bold  font-lg mt-3">
-                                    Whoops! There are no open positions in ‘{
-                                      data.place
-                                    }’ currently
-                                  </p>
-                                </React.Fragment>
-                              )
-                            })}
-                          </div>
-                        </React.Fragment>
-                      ) : !this.state.tempPlaces.includes(
-                        this.state.locationName
-                      ) ? (
-                        <div className="d-flex flex-row flex-wrap justify-content-center">
-                          <h6 className="col-12 font-lg mb-0 mt-5 roboto-bold text-center text-black text-uppercase">
-                            {this.state.places[i]}
-                          </h6>
-                          <hr className="my-1" />
-                          <img
-                            className=" col-md-4 col-12 mt-3 img-fluid text-center"
-                            src="../../images/careers/no-jobs-found.png"
-                          />
-                          <h6 className="col-12 pt-3 text-center roboto-regular font-md">
-                            No matching jobs found for ‘{this.state.inputText}’
-                            in {this.state.places[i]}
-                          </h6>
-                          <button
-                            onClick={() =>
-                              this.onClickViewPositions(i, this.state.places[i])
-                            }
-                            className="col-md-4 col-12 btn btn-success"
-                          >
-                            View Other Positions in {this.state.places[i]}
-                          </button>
-                        </div>
-                      ) : null}
-                    </React.Fragment>
-                  )
-                })}
-            </div>
-          </section>
-          <div className={' scrolltop  d-none  d-md-block'}>
-            <div className="scroll-icon position-absolute scroll  text-secondary">
-              <i
-                onClick={() => {
-                  this.scrollToTop()
-                }}
-                className={
-                  this.state.scrollTop + ' fa fa-2x fa-arrow-circle-up'
+          <h1 className="text-center text-black font-xl-x raleway-bold pt-5">
+            {this.state.inputText === '' &&
+            this.state.placeSelected === 'All' &&
+            this.state.departmentSelected === 'All'
+              ? 'All Open Positions'
+              : 'Search Results'}
+          </h1>
+          <p
+            onClick={() =>
+              this.setState(prevState => {
+                return {
+                  filters: !prevState.filters,
                 }
-              />
+              })
+            }
+            className="d-md-none text-green roboto-bold font-md "
+          >
+            <i className="fa fa-filter" />&nbsp;Filters
+          </p>
+          {this.state.filters && (
+            <React.Fragment>
+              <div className="col-md-3 col-12 px-2 pt-3 pt-md-0  ">
+                {' '}
+                <p className="roboto-bold text-uppercase mb-1">Location:</p>
+                {this.getLocationAndDepartment('places', 'placeSelected')}
+              </div>
+              <div className="col-md-3 col-12 px-2 pt-3 pt-md-0  ">
+                {' '}
+                <p className="roboto-bold text-uppercase mb-1">Department:</p>
+                {this.getLocationAndDepartment(
+                  'departments',
+                  'departmentSelected'
+                )}
+              </div>
+            </React.Fragment>
+          )}
+          <div className="d-flex flex-row flex-wrap pb-5">
+            <div className="col-md-6 col-12 px-2 pt-3 pt-md-0 ">
+              <p className="roboto-bold text-uppercase mb-1">Search:</p>
+              <div className="position-relative">
+                <input
+                  onChange={ev => this.setState({ inputText: ev.target.value })}
+                  type="text"
+                  name="keyword"
+                  value={this.state.inputText}
+                  className="form-control py-2 custom-search"
+                  id="keyword"
+                  placeholder="eg.. Android Engineer"
+                  autoComplete="off"
+                />
+                <i
+                  className="fa fa-search position-absolute text-green"
+                  style={{ right: '10px', top: '10px' }}
+                />
+              </div>
+            </div>
+            <div className="col-md-3 col-12 pl-0 pt-3 pt-md-0  d-none d-md-block">
+              {' '}
+              <p className="roboto-bold text-uppercase mb-1">Location:</p>
+              {this.getLocationAndDepartment('places', 'placeSelected')}
+            </div>
+            <div className="col-md-3 col-12 pl-0 pr-2 pt-3 pt-md-0  d-none d-md-block">
+              {' '}
+              <p className="roboto-bold text-uppercase mb-1">Department:</p>
+              {this.getLocationAndDepartment(
+                'departments',
+                'departmentSelected'
+              )}
             </div>
           </div>
+          {this.state.reformatedData.length === 0 && (
+            <div
+              className="d-flex flex-row justify-content-center align-items-center"
+              style={{ height: '50vh' }}
+            >
+              <i className="fa text-green fa-spinner fa-2x fa-spin" />&nbsp;
+              <p className="font-xl-l raleway-bold mb-0">Loading...</p>{' '}
+            </div>
+          )}
+          {this.state.inputText === '' &&
+          this.state.placeSelected === 'All' &&
+          this.state.departmentSelected === 'All' ? (
+            <div style={{ minHeight: '50vh' }}>
+              <OpenPositionDepartments
+                departmentSelected={this.state.departmentSelected}
+                {...this.props}
+                reformatedData={this.state.reformatedData}
+              />
+            </div>
+          ) : (
+            <div style={{ minHeight: '50vh' }}>
+              <div className="d-flex flex-row flex-wrap d-md-none">
+                {this.state.placeSelected !== 'All' && (
+                  <p className="roboto-bold mb-0 font-md">
+                    Location:{this.state.placeSelected}
+                  </p>
+                )}
+                {this.state.departmentSelected !== 'All' && (
+                  <p className="roboto-bold mb-0 ml-auto font-md">
+                    Department:{this.state.departmentSelected}
+                  </p>
+                )}
+              </div>
+              <hr />
+              <div className="d-flex flex-row flex-wrap align-items-center px-2">
+                {' '}
+                {this.state.inputText.trimLeft() !== '' && (
+                  <h6 className="raleway-bold font-xl-l">
+                    '{this.state.inputText}'
+                  </h6>
+                )}
+                <p className="text-green ml-auto">
+                  {this.getAfterSearchPositions().length + ` `}Openings
+                </p>
+              </div>
+              <PositionCard
+                {...this.props}
+                jobsData={this.getAfterSearchPositions()}
+              />
+            </div>
+          )}
         </div>
-        <CareerLocation props={this.props} />
+        <div className={' scrolltop  '}>
+          <div className="scroll-icon position-absolute scroll  text-secondary">
+            <i
+              onClick={() => {
+                scroll.scrollToTop()
+              }}
+              className={this.state.scrollTop + ' fa fa-2x fa-arrow-circle-up'}
+            />
+          </div>
+        </div>
       </div>
     )
   }

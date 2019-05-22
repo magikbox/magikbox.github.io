@@ -13,7 +13,7 @@ import superAppOneIn from '../components/videos/superapp-1-in.mp4';
 import superApp1million from '../components/videos/superapp-1-million.mp4';
 import superAppFirst from '../components/videos/superapp-first.mp4';
 import '../layouts/superApp.css';
-import CareerLocation from '../components/Careers/CareerLocation/CareerLocation';
+import CareerDepartment from '../components/Careers/CareerDepartment/CareerDepartment';
 
 class SuperApp extends Component {
     componentWillMount() {
@@ -403,7 +403,7 @@ class SuperApp extends Component {
                     <h2 className="section-sub-head text-center mb-4 text-white mt-3">We have no dearth of Hard Technical Problems™,
                     jobs below:</h2>
                     <div className="pb-5" >
-                        <CareerLocation 
+                        <CareerDepartment 
                             props={this.props} 
                             color="text-white"  
                         />

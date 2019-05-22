@@ -137,9 +137,9 @@ class Categories extends Component {
           this.getDescription(
             window.location.search.split('&')[2].split('=')[1]
           )
-          window.scrollTo({
-            top: 1100,
-            behavior: 'smooth',
+          scroller.scrollTo(`${window.location.search.split('&')[2].split('=')[1]}`, {
+            smooth: 'easeInOutQuint',
+            offset: -100,
           })
         }
       }

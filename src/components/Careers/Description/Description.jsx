@@ -23,8 +23,8 @@ class Description extends Component {
     //   referer: 'https://www.gojek.io/',
     // }
     return (
-      <div className="py-5 my-5">
-        <p className="pt-4  roboto-bold text-black font-sm">Overview</p>
+      <div className="py-5 my-5 py-md-2 my-md-0">
+        <p className="pt-5  roboto-bold text-black font-sm">Overview</p>
         <div className=" description-font text-dark col-12 pl-1">
           {Parser(job.description)}
         </div>
@@ -45,7 +45,7 @@ class Description extends Component {
         {job.lists[0] !== undefined && (
           <React.Fragment>
             <p className="pt-3 roboto-bold text-black font-sm">Experience</p>
-            <div className=" description-font text-dark col-12 pl-0 ">
+            <div className=" description-font text-dark col-12 pl-0 pb-5 pb-md-0">
               <ul className="pl-3">
                 <div className=" job-points">
                   {Parser(job.lists[1].content)}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Parser from 'html-react-parser'
-import Modal from 'react-awesome-modal'
+import Modal from 'react-responsive-modal'
 import Description from '../Description/Description'
 import { getSlug } from '../../Common/utils/getSlug'
 var Scroll = require('react-scroll')
@@ -44,36 +44,38 @@ class PositionCard extends Component {
                 key={i}
                 className={`${
                   this.props.location.search.split('=')[3] === job.id
-                    ? 'col-lg-12'
+                    ? 'col-md-12'
                     : 'col-lg-4'
-                }   col-12  mt-4 mb-0 px-2`}
+                }   col-12 col-md-6 mt-4 mb-0 px-2`}
               >
                 {this.props.location.search.split('=')[3] === job.id &&
                 this.getCurrentWidth() < 768 ? (
                   <Modal
-                    visible={
+                    style={{
+                      width: this.getCurrentWidth().toString(),
+                      height: this.getCurrentHeight().toString(),
+                    }}
+                    className="sdvsdv"
+                    open={
                       this.state.visible ||
                       this.props.location.search.split('=')[3] === job.id
                     }
-                    width={this.getCurrentWidth().toString()}
-                    height={this.getCurrentHeight().toString()}
-                    effect="fadeInUp"
-                    onClickAway={() => {
-                      this.setState({ visible: false })
-                    }}
+                    onClose={() => {}}
+                    center
                   >
                     <div
                       style={{
                         maxHeight: this.getCurrentHeight(),
                         overflowY: 'scroll',
                       }}
-                      className=""
+                      className="charan"
                     >
                       {this.props.location.search.split('=')[3] === job.id && (
                         <div className="">
                           <div
                             style={{
-                              top: '30px',
+                              top: '55px',
+                              left: '0',
                               zIndex: '99',
                               boxShadow: '1px 7px 14px -5px rgba(0,0,0,.32)',
                             }}
@@ -131,7 +133,8 @@ class PositionCard extends Component {
                           <div
                             style={{
                               // position: 'fixed',
-                              bottom: '30px',
+                              bottom: '9px',
+                              left: '0',
                               zIndex: '99',
                               // paddingBottom: '53px',
                             }}
@@ -157,6 +160,21 @@ class PositionCard extends Component {
                     </div>
                   </Modal>
                 ) : (
+                  // <Modal
+                  //   visible={
+                  //     this.state.visible ||
+                  //     this.props.location.search.split('=')[3] === job.id
+                  //   }
+                  //   width={this.getCurrentWidth().toString()}
+                  //   height={this.getCurrentHeight().toString()}
+                  //   effect="fadeInUp"
+                  //   onClickAway={() => {
+                  //     this.setState({ visible: false })
+                  //   }}
+                  // >
+
+                  // </Modal>
+
                   <div
                     onClick={() => {
                       this.props.history.push({

@@ -67,17 +67,17 @@ class PositionCard extends Component {
                         maxHeight: this.getCurrentHeight(),
                         overflowY: 'scroll',
                       }}
-                      className="position-relative"
+                      className=""
                     >
                       {this.props.location.search.split('=')[3] === job.id && (
                         <div className="">
                           <div
                             style={{
-                              top: '0',
+                              top: '10px',
                               zIndex: '99',
                               boxShadow: '1px 7px 14px -5px rgba(0,0,0,.32)',
                             }}
-                            className="w-100 position-sticky bg-white py-4 "
+                            className="w-100 position-fixed bg-white py-4 "
                           >
                             <div className="d-flex flex-row ">
                               <h6 className=" px-4 roboto-regular font-md  text-dark ">
@@ -124,18 +124,18 @@ class PositionCard extends Component {
                             </a> */}
                           </div>
                           {
-                            <div className="pl-4 ">
+                            <div className="pl-4 pt-5">
                               <Description job={job} />
                             </div>
                           }
                           <div
                             style={{
                               // position: 'fixed',
-                              bottom: '0',
+                              bottom: '10px',
                               zIndex: '99',
                               // paddingBottom: '53px',
                             }}
-                            className="w-100 bg-green py-4 text-center position-sticky  raleway-bold font-sm"
+                            className="w-100 bg-green py-4 text-center position-fixed  raleway-bold font-sm"
                           >
                             <a
                               className="text-white"

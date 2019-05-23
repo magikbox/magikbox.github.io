@@ -54,7 +54,7 @@ class OpenPositionDepartments extends Component {
                       }`,
                       state: { teams: department.teams },
                     }}
-                    className="col-md-10 col-9 px-2"
+                    className="col-md-10 col-8 px-2"
                     replace={true}
                   >
                     <div>
@@ -70,7 +70,7 @@ class OpenPositionDepartments extends Component {
                       </p>
                     </div>
                   </Link>
-                  <div className="ml-auto col-">
+                  <div className=" col-">
                     <span className="text-green roboto-bold ">
                       {department.openings + ` `}Openings&nbsp;&nbsp;
                       <Link

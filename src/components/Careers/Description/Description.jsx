@@ -24,7 +24,7 @@ class Description extends Component {
     // }
     return (
       <div className="py-5 my-5">
-        <p className="roboto-bold text-black font-sm">Overview</p>
+        <p className="pt-4  roboto-bold text-black font-sm">Overview</p>
         <div className=" description-font text-dark col-12 pl-1">
           {Parser(job.description)}
         </div>

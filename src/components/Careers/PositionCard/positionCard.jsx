@@ -73,7 +73,7 @@ class PositionCard extends Component {
                         <div className="">
                           <div
                             style={{
-                              top: '10px',
+                              top: '30px',
                               zIndex: '99',
                               boxShadow: '1px 7px 14px -5px rgba(0,0,0,.32)',
                             }}
@@ -131,7 +131,7 @@ class PositionCard extends Component {
                           <div
                             style={{
                               // position: 'fixed',
-                              bottom: '10px',
+                              bottom: '30px',
                               zIndex: '99',
                               // paddingBottom: '53px',
                             }}

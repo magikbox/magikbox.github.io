@@ -69,16 +69,16 @@ class PositionCard extends Component {
                       }}
                     >
                       {this.props.location.search.split('=')[3] === job.id && (
-                        <div>
+                        <div className="">
                           <div
                             style={{
                               top: '0',
                               zIndex: '99',
                               boxShadow: '1px 7px 14px -5px rgba(0,0,0,.32)',
                             }}
-                            className="w-100 position-fixed bg-white py-3"
+                            className="w-100 position-fixed bg-white pb-3 "
                           >
-                            <div className="d-flex flex-row flex-wrap">
+                            <div className="d-flex flex-row  first-section">
                               <h6 className=" px-4 roboto-regular font-md  text-dark ">
                                 {job.text}
                               </h6>
@@ -109,9 +109,8 @@ class PositionCard extends Component {
                             </div>
                           </div>
                           {
-                            <div className="pl-4 my-5 py-5 ">
+                            <div style={{padding:'70px 0px'}} className="pl-4 my-5">
                               <Description job={job} />
-                              <div className="d-block text-center" />
                             </div>
                           }
                           <a
@@ -119,8 +118,9 @@ class PositionCard extends Component {
                               position: 'fixed',
                               bottom: '0',
                               zIndex: '99',
+                              paddingBottom:'53px'
                             }}
-                            className="w-100 bg-green py-4 text-center position-fixed text-white raleway-bold font-sm"
+                            className="w-100 bg-green pt-4 text-center position-fixed text-white raleway-bold font-sm"
                             target="_blank"
                             href={
                               job.hostedUrl +
@@ -161,7 +161,8 @@ class PositionCard extends Component {
                       }
                     }}
                     style={{
-                      minHeight: this.getCurrentWidth() >= 768 ? '95px' : '90px',
+                      minHeight:
+                        this.getCurrentWidth() >= 768 ? '95px' : '90px',
                       borderRadius: '10px',
                     }}
                     className={` scroll  d-flex flex-column flex-wrap justify-content-center careers-position careers-position-unhighlight ${

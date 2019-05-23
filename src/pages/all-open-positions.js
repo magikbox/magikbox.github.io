@@ -305,7 +305,7 @@ class allpositions extends Component {
               </div>
             </React.Fragment>
           )}
-          <div className="d-flex flex-row flex-wrap pb-5">
+          <div className="d-flex flex-row flex-wrap pb-5 pt-3">
             <div className="col-md-6 col-12 px-2 pt-3 pt-md-0 ">
               <p className="roboto-bold text-uppercase mb-1">Search:</p>
               <div className="position-relative">

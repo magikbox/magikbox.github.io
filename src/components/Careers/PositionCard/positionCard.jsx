@@ -32,7 +32,6 @@ class PositionCard extends Component {
     return screenHeight
   }
 
-
   render() {
     return (
       <div>
@@ -154,21 +153,20 @@ class PositionCard extends Component {
                         })
                       {
                         this.props.location.search.split('=')[3] !== job.id &&
-                          this.getCurrentWidth > 480
-                        scroller.scrollTo(job.id, {
-                          smooth: 'easeInOutQuint',
-                          offset: -200,
-                        })
+                          this.getCurrentWidth() > 480 &&
+                          scroller.scrollTo(job.id, {
+                            smooth: 'easeInOutQuint',
+                            offset: -200,
+                          })
                       }
                     }}
                     style={{
-                      minHeight: this.getCurrentWidth >= 768 ? '120px' : '90px',
+                      minHeight: this.getCurrentWidth() >= 768 ? '95px' : '90px',
                       borderRadius: '10px',
                     }}
-
                     className={` scroll  d-flex flex-column flex-wrap justify-content-center careers-position careers-position-unhighlight ${
                       this.props.location.search.split('=')[3] === job.id
-                        ? 'border-success pt-4'
+                        ? 'border-success pt-3'
                         : ''
                     }`}
                   >

@@ -293,19 +293,19 @@ class Careers extends Component {
         />
         <CountBanner props={this.props} bannerImage="careers-second-banner" />
         <section>
-          <div className="container-fluid pt-5">
+          <div className="container-fluid pt-5 pt-md-1">
             <Slider
               {...settings}
               className="row go-jek-slider lg-controls-dark custom-controls-dark "
             >
               {sliderData.map((slide, i) => {
                 return (
-                  <div>
-                    <img
-                      height={'50vh'}
+                  <div className="careers-main-banner">
+                    <div style={{ height: '50vh' }} />
+                    {/* <img
                       src={`../images/careers/${slide.imgsrc}`}
                       className="img-fluid"
-                    />
+                    /> */}
                   </div>
                 )
               })}

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import data from '../data.json'
-import TestApply from '../../../pages/apply.js'
 import Parser from 'html-react-parser'
 
 class Description extends Component {

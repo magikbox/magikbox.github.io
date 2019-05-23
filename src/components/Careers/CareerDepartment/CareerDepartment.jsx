@@ -88,7 +88,7 @@ class CareerDepartment extends Component {
                         ? 'super-app-location px-4 scroll d-flex flex-column justify-content-center align-items-center'
                         : 'career-department px-4 scroll d-flex flex-column justify-content-center align-items-center'
                     }
-                    style={{ minHeight: '160px' }}
+                    style={{ minHeight: '193px' }}
                   >
                     <div
                     // onClick={() =>

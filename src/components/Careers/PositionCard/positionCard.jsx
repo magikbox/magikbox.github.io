@@ -67,6 +67,7 @@ class PositionCard extends Component {
                         maxHeight: this.getCurrentHeight(),
                         overflowY: 'scroll',
                       }}
+                      className="position-relative"
                     >
                       {this.props.location.search.split('=')[3] === job.id && (
                         <div className="">
@@ -76,9 +77,9 @@ class PositionCard extends Component {
                               zIndex: '99',
                               boxShadow: '1px 7px 14px -5px rgba(0,0,0,.32)',
                             }}
-                            className="w-100 position-fixed bg-white pb-3 "
+                            className="w-100 position-sticky bg-white py-4 "
                           >
-                            <div className="d-flex flex-row  first-section">
+                            <div className="d-flex flex-row ">
                               <h6 className=" px-4 roboto-regular font-md  text-dark ">
                                 {job.text}
                               </h6>
@@ -107,32 +108,50 @@ class PositionCard extends Component {
                                 {job.categories.team}
                               </span>
                             </div>
+                            {/* <a
+                              target="_blank"
+                              href={
+                                job.hostedUrl +
+                                `/apply?lever-source[]=${
+                                  typeof localStorage !== `undefined`
+                                    ? localStorage.getItem('source')
+                                    : 'gojek.io'
+                                }`
+                              }
+                              className="apply btn bg-green text-white px-5 apply ml-4 my-2"
+                            >
+                              APPLY NOW
+                            </a> */}
                           </div>
                           {
-                            <div style={{padding:'70px 0px'}} className="pl-4 my-5">
+                            <div className="pl-4 ">
                               <Description job={job} />
                             </div>
                           }
-                          <a
+                          <div
                             style={{
-                              position: 'fixed',
+                              // position: 'fixed',
                               bottom: '0',
                               zIndex: '99',
-                              paddingBottom:'53px'
+                              // paddingBottom: '53px',
                             }}
-                            className="w-100 bg-green pt-4 text-center position-fixed text-white raleway-bold font-sm"
-                            target="_blank"
-                            href={
-                              job.hostedUrl +
-                              `/apply?lever-source[]=${
-                                typeof localStorage !== `undefined`
-                                  ? localStorage.getItem('source')
-                                  : 'gojek.io'
-                              }`
-                            }
+                            className="w-100 bg-green py-4 text-center position-sticky  raleway-bold font-sm"
                           >
-                            APPLY FOR THIS JOB{' '}
-                          </a>
+                            <a
+                              className="text-white"
+                              target="_blank"
+                              href={
+                                job.hostedUrl +
+                                `/apply?lever-source[]=${
+                                  typeof localStorage !== `undefined`
+                                    ? localStorage.getItem('source')
+                                    : 'gojek.io'
+                                }`
+                              }
+                            >
+                              APPLY FOR THIS JOB{' '}
+                            </a>
+                          </div>
                         </div>
                       )}
                     </div>

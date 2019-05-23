@@ -27,10 +27,11 @@ class PositionCard extends Component {
   getCurrentHeight = () => {
     let screenHeight = null
     if (typeof screen !== `undefined`) {
-      screenWidth = screen.height
+      screenHeight = screen.height
     }
     return screenHeight
   }
+
 
   render() {
     return (
@@ -124,9 +125,11 @@ class PositionCard extends Component {
                             target="_blank"
                             href={
                               job.hostedUrl +
-                              `/apply?lever-source[]=${localStorage.getItem(
-                                'source'
-                              )}`
+                              `/apply?lever-source[]=${
+                                typeof localStorage !== `undefined`
+                                  ? localStorage.getItem('source')
+                                  : 'gojek.io'
+                              }`
                             }
                           >
                             APPLY FOR THIS JOB{' '}
@@ -149,12 +152,20 @@ class PositionCard extends Component {
                         this.setState({
                           visible: true,
                         })
-                      scroller.scrollTo(job.id, {
-                        smooth: 'easeInOutQuint',
-                        offset: -200,
-                      })
+                      {
+                        this.props.location.search.split('=')[3] !== job.id &&
+                          this.getCurrentWidth > 480
+                        scroller.scrollTo(job.id, {
+                          smooth: 'easeInOutQuint',
+                          offset: -200,
+                        })
+                      }
                     }}
-                    style={{ minHeight: '120px', borderRadius: '10px' }}
+                    style={{
+                      minHeight: this.getCurrentWidth >= 768 ? '120px' : '90px',
+                      borderRadius: '10px',
+                    }}
+
                     className={` scroll  d-flex flex-column flex-wrap justify-content-center careers-position careers-position-unhighlight ${
                       this.props.location.search.split('=')[3] === job.id
                         ? 'border-success pt-4'
@@ -179,10 +190,9 @@ class PositionCard extends Component {
                       />
                     )}
                     {/* <Link to={{}} className=""> */}
-                    <h6 className=" px-4 roboto-regular font-sm   text-dark ">
+                    <h6 className=" px-4 roboto-regular font-sm text-dark ">
                       {job.text}
                     </h6>
-
                     <div className="d-flex flex-row flex-wrap roboto-black font-xs text-uppercase">
                       <span className="pl-4  text-green  col-">
                         {job.categories.location}
@@ -200,9 +210,11 @@ class PositionCard extends Component {
                               target="_blank"
                               href={
                                 job.hostedUrl +
-                                `/apply?lever-source[]=${localStorage.getItem(
-                                  'source'
-                                )}`
+                                `/apply?lever-source[]=${
+                                  typeof localStorage !== `undefined`
+                                    ? localStorage.getItem('source')
+                                    : 'gojek.io'
+                                }`
                               }
                               className="apply btn btn-success px-5 apply  my-2"
                             >
@@ -218,9 +230,11 @@ class PositionCard extends Component {
                             target="_blank"
                             href={
                               job.hostedUrl +
-                              `/apply?lever-source[]=${localStorage.getItem(
-                                'source'
-                              )}`
+                              `/apply?lever-source[]=${
+                                typeof localStorage !== `undefined`
+                                  ? localStorage.getItem('source')
+                                  : 'gojek.io'
+                              }`
                             }
                             className="apply btn btn-success px-5 apply col-6 col-md-4  my-5"
                           >

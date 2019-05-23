@@ -193,11 +193,13 @@ class Careers extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       centerPadding: '0px',
+      dots: true,
+
       responsive: [
         {
           breakpoint: 768,
           settings: {
-            dots: false,
+            dots: true,
             arrows: true,
             infinite: true,
             centerMode: true,
@@ -210,7 +212,7 @@ class Careers extends Component {
         {
           breakpoint: 480,
           settings: {
-            dots: false,
+            dots: true,
             arrows: true,
             infinite: true,
             centerMode: true,

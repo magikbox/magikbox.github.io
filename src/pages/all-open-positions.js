@@ -95,7 +95,6 @@ class allpositions extends Component {
         }),
       })
     })
-
     return teamsData
   }
 

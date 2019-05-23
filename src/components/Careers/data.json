@@ -536,7 +536,7 @@
         "employeeName": "Crystal Widjaja",
         "testimonial":
           "I'm actually blessed to be part of an org that has an innovative and inclusive culture. Our attitude is framed around solving difficult problems and inclusivity. This diversity of thought cuts across gender, ethnicities, and backgrounds allowing us to move fast and think different. I love that fact we are a very distributed and culturally dispersed team. I've witnessed interesting insights that I never would have without this diversity.",
-        "active": false
+        "active": true
       },
       {
         "id": "2",
@@ -544,7 +544,7 @@
         "employeeName": "Shobhit Srivastava",
         "testimonial":
           "GOJEK is multiple startups in one. We have the equivalents of foodtech, fintech, ride-sharing, home services, logistics and more. Because of the sheer size and scale we operate in, it's unlike any other startup. You get to ideate with multiple teams, empowered to take critical product decisions and work with a team that has ingrained the philosophy of working with a 'lean engineering mindset’.",
-        "active": true
+        "active": false
       },
       {
         "id": "3",

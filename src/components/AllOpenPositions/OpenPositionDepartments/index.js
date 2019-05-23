@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { getSlug } from '../../Common/utils/getSlug'
 import OpenPositionTeams from '../OpenPositionTeams'
-import { history } from '../../Common/utils/history'
 var Scroll = require('react-scroll')
 var Element = Scroll.Element
 var scroll = Scroll.animateScroll

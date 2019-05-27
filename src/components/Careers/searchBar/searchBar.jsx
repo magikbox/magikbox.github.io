@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import data from '../data.json'
 import { Link } from 'react-router-dom'
-import { getSlug } from '../../Common/utils/getSlug.js';
+import { getSlug } from '../../Common/utils/getSlug.js'
 
 class SearchBar extends Component {
   constructor(props) {
@@ -24,9 +24,7 @@ class SearchBar extends Component {
       this.props.props.history.push(
         `/all-open-positions?department=${getSlug(
           result[0].categories.department
-        )}&team=${getSlug(result[0].categories.team)}&position=${
-          result[0].id
-        }`
+        )}&team=${getSlug(result[0].categories.team)}&position=${result[0].id}`
       )
     }
   }
@@ -79,14 +77,14 @@ class SearchBar extends Component {
               <p className="roboto-bold text-uppercase mb-0">Where?</p>
               <div className="dropdown position-relative">
                 <button
-                  className="btn form-control custom-search  py-3  btn-block bg-white dropdown-toggle custom-dropdown text-left neosans-regular py-2 font-md "
+                  className="btn form-control custom-search  py-3  btn-block bg-white dropdown-toggle custom-dropdown text-left neosans-regular py-2  "
                   type="button"
                   id="dropdownMenuButton"
                   data-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  {this.props.locationName}
+                  <span>{this.props.locationName}</span>
                 </button>
                 <i
                   className="fa fa-chevron-down position-absolute text-green"
@@ -98,7 +96,7 @@ class SearchBar extends Component {
                 >
                   <button
                     onClick={() => this.props.onClickLocation('All', -1)}
-                    className="dropdown-item"
+                    className="dropdown-item "
                     type="button"
                   >
                     All
@@ -132,9 +130,9 @@ class SearchBar extends Component {
                         pathname: `/all-open-positions`,
                         search: `?department=${getSlug(
                           data.categories.department
-                        )}&team=${getSlug(
-                          data.categories.team
-                        )}&position=${data.id}`,
+                        )}&team=${getSlug(data.categories.team)}&position=${
+                          data.id
+                        }`,
                       }}
                       key={i}
                       onClick={() => this.onClickPositionFromSearch(data)}

@@ -70,7 +70,8 @@ class OpenPositionTeams extends Component {
 
           <div className="dropdown position-relative">
             <button
-              className="btn form-control custom-search  py-2  btn-block bg-white dropdown-toggle custom-dropdown text-left neosans-regular py-2 font-md text-uppercase"
+              style={{ boxShadow: 'none',borderBottom:'2px solid #009944' }}
+              className="btn text-green px-0 pb-1 pt-2 btn-block bg-white dropdown-toggle custom-dropdown text-left neosans-regular font-md  text-uppercase"
               type="button"
               id="dropdownMenuButton"
               data-toggle="dropdown"
@@ -89,7 +90,7 @@ class OpenPositionTeams extends Component {
             </button>
             <i
               className="fa fa-chevron-down position-absolute text-green"
-              style={{ right: '10px', top: '12px' }}
+              style={{ right: '0px', top: '8px' }}
             />
             <div
               className="dropdown-menu w-100"

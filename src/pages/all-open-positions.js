@@ -182,7 +182,7 @@ class allpositions extends Component {
       <React.Fragment>
         <div className="dropdown position-relative">
           <button
-            className="btn form-control custom-search  py-2  btn-block bg-white dropdown-toggle custom-dropdown text-left neosans-regular py-2 font-md "
+            className="btn form-control custom-search  py-2  btn-block bg-white dropdown-toggle custom-dropdown text-left neosans-regular py-2  "
             type="button"
             id="dropdownMenuButton"
             data-toggle="dropdown"
@@ -193,7 +193,7 @@ class allpositions extends Component {
           </button>
           <i
             className="fa fa-chevron-down position-absolute text-green"
-            style={{ right: '10px', top: '12px' }}
+            style={{ right: '10px', top: '10px' }}
           />
           <div
             className="dropdown-menu w-100"
@@ -284,7 +284,7 @@ class allpositions extends Component {
                 }
               })
             }
-            className="d-md-none text-green roboto-bold font-md "
+            className="d-md-none text-green roboto-bold font-md pl-2"
           >
             <i className="fa fa-filter" />&nbsp;Filters
           </p>
@@ -306,8 +306,29 @@ class allpositions extends Component {
             </React.Fragment>
           )}
           <div className="d-flex flex-row flex-wrap pb-5 pt-3">
-            <div className="col-md-6 col-12 px-2 pt-3 pt-md-0 ">
+            <div className="col-md-6 col-12 px-2  pt-md-0 ">
               <p className="roboto-bold text-uppercase mb-1">Search:</p>
+              {/* <div className="position-relative border-focus-none">
+                <input
+                  style={{
+                    boxShadow: 'none',
+                    border: 'none',
+                    borderBottom: '2px solid #000',
+                  }}
+                  onChange={ev => this.setState({ inputText: ev.target.value })}
+                  type="text"
+                  name="keyword"
+                  value={this.state.inputText}
+                  className="w-100 py-2 border-focus-none"
+                  id="keyword"
+                  placeholder="eg.. Android Engineer"
+                  autoComplete="off"
+                />
+                <i
+                  className="fa fa-search position-absolute text-green"
+                  style={{ right: '0px', top: '4px',fontSize:'20px' }}
+                />
+              </div> */}
               <div className="position-relative">
                 <input
                   onChange={ev => this.setState({ inputText: ev.target.value })}

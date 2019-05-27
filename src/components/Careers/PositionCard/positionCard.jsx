@@ -133,7 +133,7 @@ class PositionCard extends Component {
                           <div
                             style={{
                               // position: 'fixed',
-                              bottom: '2px',
+                              bottom: '0',
                               left: '0',
                               zIndex: '99',
                               // paddingBottom: '53px',

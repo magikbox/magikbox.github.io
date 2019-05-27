@@ -54,7 +54,7 @@ class OpenPositionDepartments extends Component {
                       }`,
                       state: { teams: department.teams },
                     }}
-                    className="col-md-10 col-8 px-2"
+                    className="col-md-10 col-6 px-2"
                     replace={true}
                   >
                     <div>
@@ -70,9 +70,9 @@ class OpenPositionDepartments extends Component {
                       </p>
                     </div>
                   </Link>
-                  <div className=" col-">
-                    <span className="text-green roboto-bold ">
-                      {department.openings + ` `}Openings&nbsp;&nbsp;
+                  <div className=" col- mb-3 mb-md-0">
+                    <span  className="text-green roboto-bold ">
+                      {department.openings + ` `}Openings
                       <Link
                         to={{
                           pathname: `/all-open-positions`,
@@ -91,9 +91,9 @@ class OpenPositionDepartments extends Component {
                         this.props.location.search
                           .split('&')[0]
                           .split('=')[1] ? (
-                          <i className="fa  fa-minus pt-3 mt-auto text-green" />
+                          <i style={{fontSize:'20px'}} className="fa pl-5 fa-minus pt-3 mt-auto text-green" />
                         ) : (
-                          <i className="fa   fa-plus pt-3 mt-auto text-green" />
+                          <i style={{fontSize:'20px'}} className="fa pl-5  fa-plus pt-3 mt-auto text-green" />
                         )}
                       </Link>
                     </span>

@@ -60,11 +60,11 @@ class CountBanner extends Component {
         subHeading: 'processed on an average every second',
       },
       {
-        heading: '1 million+',
+        heading: '2 million+',
         subHeading: 'driver partners on the platform',
       },
       {
-        heading: '18+',
+        heading: '20+',
         subHeading: 'products',
       },
       {

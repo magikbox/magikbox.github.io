@@ -88,7 +88,8 @@ class Careers extends Component {
           ![
             'b8984973-1b9a-410d-9366-4fe0cc17c954',
             'df136a0b-932d-41e9-80ae-106d20554445',
-          ].includes(data.id)
+          ].includes(data.id) &&
+          !['Corporate', 'University'].includes(data.categories.department)
         ) {
           return data
         }
@@ -227,22 +228,19 @@ class Careers extends Component {
 
     const sliderData = [
       {
-        imgsrc: 'careers-new-banner-image.png',
+        imgsrc: 'career-banner-1',
       },
       {
-        imgsrc: 'careers-new-banner-image.png',
+        imgsrc: 'career-banner-2',
       },
       {
-        imgsrc: 'careers-new-banner-image.png',
+        imgsrc: 'career-banner-3',
       },
       {
-        imgsrc: 'careers-new-banner-image.png',
+        imgsrc: 'career-banner-4',
       },
       {
-        imgsrc: 'careers-new-banner-image.png',
-      },
-      {
-        imgsrc: 'careers-new-banner-image.png',
+        imgsrc: 'career-banner-5',
       },
     ]
 
@@ -300,7 +298,10 @@ class Careers extends Component {
             >
               {sliderData.map((slide, i) => {
                 return (
-                  <div className="careers-main-banner">
+                  <div
+                    
+                    className={slide.imgsrc}
+                  >
                     <div style={{ height: '50vh' }} />
                     {/* <img
                       src={`../images/careers/${slide.imgsrc}`}

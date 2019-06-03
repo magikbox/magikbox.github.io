@@ -18,7 +18,7 @@ class CareerDepartment extends Component {
     const departmentData = [
       {
         label: 'Engineering',
-        imageLink: '../../images/careers/department/engineering.png',
+        imageLink: '../../images/careers/department/Engineering.png',
         departmentName: 'engineering',
       },
       {
@@ -36,14 +36,14 @@ class CareerDepartment extends Component {
         imageLink: '../../images/careers/department/product.png',
         departmentName: 'product',
       },
-      {
-        label: 'Corporate',
-        imageLink: '../../images/careers/department/people-and-culture.png',
-        departmentName: 'corporate',
-      },
+      // {
+      //   label: 'Corporate',
+      //   imageLink: '../../images/careers/department/people-and-culture.png',
+      //   departmentName: 'corporate',
+      // },
       {
         label: 'Program Management',
-        imageLink: '../../images/careers/department/science.png',
+        imageLink: '../../images/careers/department/Productmanagement.png',
         departmentName: 'program-management',
       },
       // {
@@ -71,13 +71,10 @@ class CareerDepartment extends Component {
           Choose a Department
         </h3>
         <div className="container px-0 pb-3 d-none d-md-block">
-          <div className="d-flex flex-row flex-wrap justify-content-center my-3 ">
+          <div className="d-flex flex-row flex-wrap justify-content-center my-3 col-lg-9 col-md-12 mx-auto">
             {departmentData.map((data, i) => {
               return (
-                <div
-                  key={i}
-                  className="col-lg-3 col-md-4 col-6 text-center my-2  "
-                >
+                <div key={i} className=" col-md-4 col-6 text-center my-2  ">
                   <Link
                     to={{
                       pathname: `/all-open-positions`,

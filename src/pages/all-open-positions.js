@@ -6,6 +6,8 @@ import OpenPositionDepartments from '../components/AllOpenPositions/OpenPosition
 
 var Scroll = require('react-scroll')
 var scroll = Scroll.animateScroll
+var scroller = Scroll.scroller
+
 class allpositions extends Component {
   constructor(props) {
     super(props)
@@ -71,6 +73,27 @@ class allpositions extends Component {
     }
   }
 
+  getShuffledData = array => {
+    console.log('datasdvsdvsdvsdv', array)
+
+    var currentIndex = array.length,
+      temporaryValue,
+      randomIndex
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex)
+      currentIndex -= 1
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex]
+      array[currentIndex] = array[randomIndex]
+      array[randomIndex] = temporaryValue
+    }
+    return array
+  }
+
   // this method is used to get the teams array by passing departments array
   getTeamsbyDepartment = departments => {
     let teams = []
@@ -88,11 +111,13 @@ class allpositions extends Component {
     teams.map((team, j) => {
       teamsData.push({
         teamName: team,
-        data: departments.filter((job, i) => {
-          if (job.categories.team === team) {
-            return job
-          }
-        }),
+        data: this.getShuffledData(
+          departments.filter((job, i) => {
+            if (job.categories.team === team) {
+              return job
+            }
+          })
+        ),
       })
     })
     return teamsData
@@ -103,6 +128,7 @@ class allpositions extends Component {
     let returnData = []
     returnData.push(
       response.data.filter((data, i) => {
+        console.log('sdvsdvsdvsdvsdvsdv', data)
         if (
           data.description !== '' &&
           data.lists.length !== 0 &&
@@ -127,7 +153,8 @@ class allpositions extends Component {
           ![
             'b8984973-1b9a-410d-9366-4fe0cc17c954',
             'df136a0b-932d-41e9-80ae-106d20554445',
-          ].includes(data.id)
+          ].includes(data.id) &&
+          !['Corporate', 'University'].includes(data.categories.department)
         ) {
           return data
         }
@@ -155,9 +182,32 @@ class allpositions extends Component {
         }),
       },
       () => {
-        this.setState({
-          reformatedData: this.getReformatedData(this.state.positions),
-        })
+        this.setState(
+          {
+            reformatedData: this.getReformatedData(this.state.positions),
+          },
+          () => {
+            if (
+              window.location.search.split('&')[2] &&
+              window.location.search.split('&')[2].split('=')[1]
+            ) {
+              console.log('scrollersadsadas')
+              scroller.scrollTo(
+                `${window.location.search.split('&')[2].split('=')[1]}`,
+                {
+                  smooth: 'easeInOutQuint',
+                  offset: -100,
+                }
+              )
+            } else {
+              console.log(':team', window.location.search.split('=')[1])
+              scroller.scrollTo(`${window.location.search.split('=')[1]}`, {
+                smooth: 'easeInOutQuint',
+                offset: -100,
+              })
+            }
+          }
+        )
       }
     )
   }
@@ -166,11 +216,12 @@ class allpositions extends Component {
   getReformatedData = positionGroups => {
     let returnData = []
     for (let i = 0; i < positionGroups.length; i++) {
-      returnData.push({
-        deptName: positionGroups[i][0].categories.department,
-        openings: positionGroups[i].length,
-        teams: this.getTeamsbyDepartment(positionGroups[i]),
-      })
+      positionGroups[i].length !== 0 &&
+        returnData.push({
+          deptName: positionGroups[i][0].categories.department,
+          openings: positionGroups[i].length,
+          teams: this.getTeamsbyDepartment(positionGroups[i]),
+        })
     }
 
     return returnData

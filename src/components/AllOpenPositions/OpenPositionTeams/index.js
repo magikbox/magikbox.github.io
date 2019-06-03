@@ -11,6 +11,26 @@ class OpenPositionTeams extends Component {
     }
   }
 
+  getShuffledData = array => {
+    var currentIndex = array.length,
+      temporaryValue,
+      randomIndex
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex)
+      currentIndex -= 1
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex]
+      array[currentIndex] = array[randomIndex]
+      array[randomIndex] = temporaryValue
+    }
+    console.log('datasdvsdvsdvsdv', array)
+    return array
+  }
+
   render() {
     return (
       <div className="py-4">
@@ -70,7 +90,7 @@ class OpenPositionTeams extends Component {
 
           <div className="dropdown position-relative">
             <button
-              style={{ boxShadow: 'none',borderBottom:'2px solid #009944' }}
+              style={{ boxShadow: 'none', borderBottom: '2px solid #009944' }}
               className="btn text-green px-0 pb-1 pt-2 btn-block bg-white dropdown-toggle custom-dropdown text-left neosans-regular font-md  text-uppercase"
               type="button"
               id="dropdownMenuButton"

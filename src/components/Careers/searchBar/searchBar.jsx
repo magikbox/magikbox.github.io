@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import data from '../data.json'
 import { Link } from 'react-router-dom'
 import { getSlug } from '../../Common/utils/getSlug.js'
+var Scroll = require('react-scroll')
+var scroller = Scroll.scroller
 
 class SearchBar extends Component {
   constructor(props) {
@@ -28,6 +30,7 @@ class SearchBar extends Component {
       )
     }
   }
+
 
   render() {
     if (typeof localStorage !== 'undefined') {
@@ -135,7 +138,7 @@ class SearchBar extends Component {
                         }`,
                       }}
                       key={i}
-                      onClick={() => this.onClickPositionFromSearch(data)}
+                      // onClick={() => this.onClickPositionFromSearch(data)}
                       className="text-left bg-white-hover-gray border-0 py-2 col-12 scroll"
                     >
                       <span className="roboto-regular font-sm text-dark ">

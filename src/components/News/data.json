@@ -3,16 +3,63 @@
     "heading": "In the News",
     "data": [
       {
+        "id": "17",
+        "link":
+          "https://techwireasia.com/2019/06/the-cloud-has-evolved-into-a-building-block-of-the-digital-era/",
+        "image": "../../images/news/Cloud-01.jpg",
+        "name":
+          "The cloud has evolved into a building block of the digital era",
+        "date": "JUNE 07 2019 ",
+        "text":
+          "CLOUD computing has been around for more than a decade, having first become a topic of discussion at IT conferences and seminars way back in 2006. Back then, it primarily referred to a new infrastructure that provided on-demand access to data storage and computing power.",
+        "mainBanner": true
+      },
+      {
+        "id": "16",
+        "link":
+          "https://www.analyticsindiamag.com/10-best-firms-in-india-for-data-scientists-to-work-for-2019/",
+        "image": "../../images/news/DataScientists-01.jpg",
+        "name": "10 Best Firms In India For Data Scientists To Work For – 2019",
+        "date": "JUNE 05 2019 ",
+        "text":
+          "With about 50 data scientists spread across geographies, GOJEK is built on the philosophy of speed, innovation and social impact. To encourage employee-friendliness, the company offers complete freedom to run experiments, challenge conventions and provide the necessary room for the team to feel empowered. Their zero-hierarchy model allows the employees to take quick decisions.",
+        "mainBanner": false
+      },
+      {
+        "id": "15",
+        "link":
+          "http://bwdisrupt.businessworld.in/article/GOJEK-Completes-10-Million-Trips-in-Six-Months-in-Singapore-/30-05-2019-171231/",
+        "image": "../../images/news/gojek-10million-trips.png",
+        "name": "GOJEK Completes 10 Million Trips in Six Months in Singapore",
+        "date": "MAY 30 2019 ",
+        "text":
+          "Indonesia based ride-hailing platform GOJEK announced that it has hit the milestone of 10 million completed trips in Singapore according to a statement. This announcement coincides with the company celebrating six months of operations in Singapore, after officially launching its ride-hailing service on November 29, 2018.",
+        "mainBanner": false
+      },
+      {
+        "id": "14",
+        "link":
+          "https://www.business-standard.com/article/companies/unlimited-leaves-and-meals-indonesia-s-go-jek-woos-india-talent-119052700016_1.html",
+        "image": "../../images/news/news-13.png",
+        "name":
+          "Unlimited leaves and meals: Indonesia's GOJEK woos India talent",
+        "date": "MAY 27 2019 ",
+        "text":
+          "Keto meals, personalised workspaces, airport pickups and drops, unlimited sick leaves, and casual leaves that don’t need any approvals — Indonesian ride-hailing company GOJEK is leaving no stone unturned in wooing talent for its India engineering centre. ",
+        "subText": "(This article is behind a paywall)",
+        "mainBanner": false
+      },
+      {
         "id": "13",
         "link":
           "/google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round",
-        "image": "../../images/news/News.jpg",
+        "image": "../../images/news/News-Investors.jpg",
         "name":
           "Google, JD.com, and Tencent lead first closing of GOJEK’s Series F funding round",
         "date": "FEBRUARY O1 2019 ",
         "text":
           "GOJEK has finalized the first closing of its ongoing Series F fundraise. This initial round was led by existing investors Google, JD.com, and Tencent, with Mitsubishi Corporation and Provident Capital among other investors",
-        "mainBanner": true
+        "mainBanner": false
       },
       {
         "id": "1",
@@ -22,7 +69,7 @@
         "name": "Pre-registration for drivers in Singapore commences",
         "date": " OCTOBER 29, 2018",
         "text":
-          "GOJEK has today launched a portal through which drivers can pre-register to use its platform. By signing up, drivers will have the opportunity to be among GO-JEK’s first driver-partners in Singapore.",
+          "GOJEK has today launched a portal through which drivers can pre-register to use its platform. By signing up, drivers will have the opportunity to be among GOJEK’s first driver-partners in Singapore.",
         "mainBanner": false
       },
       {

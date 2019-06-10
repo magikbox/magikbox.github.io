@@ -8,6 +8,10 @@
       "path---careers-analytics-programanager-e44942d4e0f46c183c9a.js",
       "path---careers-analytics-programanager-e44942d4e0f46c183c9a.js.map"
     ],
+    "component---src-pages-full-stack-dev-go-food-js": [
+      "component---src-pages-full-stack-dev-go-food-js-afef18ed3179d3b72509.js",
+      "component---src-pages-full-stack-dev-go-food-js-afef18ed3179d3b72509.js.map"
+    ],
     "path---careers-data-engineer-maps": [
       "path---careers-data-engineer-maps-7f973d6f9dfe2cb35065.js",
       "path---careers-data-engineer-maps-7f973d6f9dfe2cb35065.js.map"
@@ -31,6 +35,10 @@
     "path---careers-old": [
       "path---careers-old-a0e39f21c11f6a62c5ab.js",
       "path---careers-old-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---full-stack-dev-go-food": [
+      "path---full-stack-dev-go-food-a0e39f21c11f6a62c5ab.js",
+      "path---full-stack-dev-go-food-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-index-js": [
       "component---src-pages-index-js-455f07d7132ca8bc364e.js",
@@ -93,8 +101,8 @@
       "component---src-pages-contact-js-cb0a117c4adf5150165c.js.map"
     ],
     "component---src-pages-news-js": [
-      "component---src-pages-news-js-6060f461c43b086158f0.js",
-      "component---src-pages-news-js-6060f461c43b086158f0.js.map"
+      "component---src-pages-news-js-fa435be0d631f67b17cb.js",
+      "component---src-pages-news-js-fa435be0d631f67b17cb.js.map"
     ],
     "path---careers-full-stack-engineer-financial-platform-thailand": [
       "path---careers-full-stack-engineer-financial-platform-thailand-373756db63c2d8eeff04.js",
@@ -133,12 +141,12 @@
       "path---careers-data-analyst-go-pay-72d5fccaee1ffd89de11.js.map"
     ],
     "component---src-pages-open-source-js": [
-      "component---src-pages-open-source-js-74a24f941e6f9d34dc54.js",
-      "component---src-pages-open-source-js-74a24f941e6f9d34dc54.js.map"
+      "component---src-pages-open-source-js-25c763a45fd3ecb97acc.js",
+      "component---src-pages-open-source-js-25c763a45fd3ecb97acc.js.map"
     ],
     "component---src-pages-go-jek-tech-to-hire-200-engineers-in-india-js": [
-      "component---src-pages-go-jek-tech-to-hire-200-engineers-in-india-js-ea9707e30f8719f68c61.js",
-      "component---src-pages-go-jek-tech-to-hire-200-engineers-in-india-js-ea9707e30f8719f68c61.js.map"
+      "component---src-pages-go-jek-tech-to-hire-200-engineers-in-india-js-2c4a4820c014d6bc9db3.js",
+      "component---src-pages-go-jek-tech-to-hire-200-engineers-in-india-js-2c4a4820c014d6bc9db3.js.map"
     ],
     "path---careers-backend-engineer-go-food": [
       "path---careers-backend-engineer-go-food-ebd82d1df1acfb8eebeb.js",
@@ -275,8 +283,8 @@
       "path---careers-engineering-leads-5386a09e7a36fe7e2619.js.map"
     ],
     "component---src-pages-thank-you-js": [
-      "component---src-pages-thank-you-js-1beb506b82edde2ef61e.js",
-      "component---src-pages-thank-you-js-1beb506b82edde2ef61e.js.map"
+      "component---src-pages-thank-you-js-6943b895afb425abbb87.js",
+      "component---src-pages-thank-you-js-6943b895afb425abbb87.js.map"
     ],
     "path---news": [
       "path---news-a0e39f21c11f6a62c5ab.js",
@@ -307,9 +315,9 @@
       "path---careers-machine-learning-engineer-go-pay-79a83d2991e9959d81a8.js.map"
     ],
     "app": [
-      "app-5d423f4b04ab89927216.js",
+      "app-fc0a6d81fa8a5530bcc6.js",
       "build-js-styles.css",
-      "app-5d423f4b04ab89927216.js.map",
+      "app-fc0a6d81fa8a5530bcc6.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-pages-all-open-positions-js": [
@@ -329,8 +337,8 @@
       "path---404-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-gomakeimpact-js": [
-      "component---src-pages-gomakeimpact-js-438cd7363f5656d9f069.js",
-      "component---src-pages-gomakeimpact-js-438cd7363f5656d9f069.js.map"
+      "component---src-pages-gomakeimpact-js-1849290dadd9e3e41370.js",
+      "component---src-pages-gomakeimpact-js-1849290dadd9e3e41370.js.map"
     ],
     "path---careers-backend-engineer-jakarta-go-food": [
       "path---careers-backend-engineer-jakarta-go-food-3941d41fee03346cb730.js",

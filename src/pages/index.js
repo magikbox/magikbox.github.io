@@ -44,7 +44,7 @@ class IndexPage extends Component {
 				{/* BLog Section */}
 				<Posts 
 					heading = " Read what we do"
-					count="3"
+					count="4"
 				/>
 				{/* End Blog Section */}
 

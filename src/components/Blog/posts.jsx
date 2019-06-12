@@ -29,10 +29,10 @@ class Posts extends Component {
         const heading = this.props.heading ? this.props.heading : '';
 
         return(
-            <section className={count <= 3 ? 'py-5 py-md-3': 'py-5'}>
+            <section className={count <= 4 ? 'py-5 py-md-3': 'py-5'}>
                 <div className="container">
                     {
-                        count <= 3 &&
+                        count <= 4 &&
                         <div className="text-center text-lg-left font-xl-l">
                             <h2 className="h2">{heading}</h2>
                         </div>

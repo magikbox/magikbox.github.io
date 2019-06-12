@@ -3,6 +3,17 @@
     "heading": "In the News",
     "data": [
       {
+        "id": "18",
+        "link":
+          "https://blog.gojekengineering.com/gojek-acquires-aircto-expands-operations-in-india-d685c0b4db1c",
+        "image": "../../images/news/air-cto.jpeg",
+        "name": "GOJEK acquires AirCTO, expands operations in India",
+        "date": "JUNE 12 2019 ",
+        "text":
+          "GOJEK, the Super App of Southeast Asia, acquired AirCTO, a Bangalore-based Artificial Intelligence recruitment platform, and opened its second engineering and product development centre in Gurgaon. As part of the deal, the AirCTO team will be joining GOJEK with immediate effect and will be looking into building products that accelerate the recruitment of talent for GOJEK. The acquisition aligns with GOJEK’s focus on hiring premium talent to support the development of its ‘Super App’. Terms of the deal were not disclosed.",
+        "mainBanner": true
+      },
+      {
         "id": "17",
         "link":
           "https://techwireasia.com/2019/06/the-cloud-has-evolved-into-a-building-block-of-the-digital-era/",
@@ -12,7 +23,7 @@
         "date": "JUNE 07 2019 ",
         "text":
           "CLOUD computing has been around for more than a decade, having first become a topic of discussion at IT conferences and seminars way back in 2006. Back then, it primarily referred to a new infrastructure that provided on-demand access to data storage and computing power.",
-        "mainBanner": true
+        "mainBanner": false
       },
       {
         "id": "16",

@@ -152,9 +152,9 @@ class Careers extends Component {
         if (
           data.text.toLowerCase().includes(targetvalue.toLowerCase()) &&
           targetvalue !== '' &&
-          (data.categories.location.toLowerCase() ===
-            this.state.locationName.toLowerCase() ||
-            this.state.locationName.toLowerCase() === 'all')
+          ((this.state.locationName &&
+            this.state.locationName.toLowerCase() === 'all') ||
+            data.categories.location === this.state.locationName)
         ) {
           return data
         }
@@ -298,10 +298,7 @@ class Careers extends Component {
             >
               {sliderData.map((slide, i) => {
                 return (
-                  <div
-                    
-                    className={slide.imgsrc}
-                  >
+                  <div className={slide.imgsrc}>
                     <div style={{ height: '50vh' }} />
                     {/* <img
                       src={`../images/careers/${slide.imgsrc}`}

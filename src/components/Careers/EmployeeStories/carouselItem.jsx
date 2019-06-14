@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 class CarouselItem extends Component {
   render() {
     const { data } = this.props
-console.log("asdasdsad",data)
     return (
       <div
         className={'carousel-item ' + (data.active === true ? 'active' : '')}

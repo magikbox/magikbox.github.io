@@ -27,7 +27,6 @@ class OpenPositionTeams extends Component {
       array[currentIndex] = array[randomIndex]
       array[randomIndex] = temporaryValue
     }
-    console.log('datasdvsdvsdvsdv', array)
     return array
   }
 

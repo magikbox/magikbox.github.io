@@ -74,7 +74,6 @@ class allpositions extends Component {
   }
 
   getShuffledData = array => {
-    console.log('datasdvsdvsdvsdv', array)
 
     var currentIndex = array.length,
       temporaryValue,
@@ -128,7 +127,6 @@ class allpositions extends Component {
     let returnData = []
     returnData.push(
       response.data.filter((data, i) => {
-        console.log('sdvsdvsdvsdvsdvsdv', data)
         if (
           data.description !== '' &&
           data.lists.length !== 0 &&
@@ -191,7 +189,6 @@ class allpositions extends Component {
               window.location.search.split('&')[2] &&
               window.location.search.split('&')[2].split('=')[1]
             ) {
-              console.log('scrollersadsadas')
               scroller.scrollTo(
                 `${window.location.search.split('&')[2].split('=')[1]}`,
                 {
@@ -200,7 +197,6 @@ class allpositions extends Component {
                 }
               )
             } else {
-              console.log(':team', window.location.search.split('=')[1])
               scroller.scrollTo(`${window.location.search.split('=')[1]}`, {
                 smooth: 'easeInOutQuint',
                 offset: -100,

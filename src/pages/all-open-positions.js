@@ -74,7 +74,6 @@ class allpositions extends Component {
   }
 
   getShuffledData = array => {
-
     var currentIndex = array.length,
       temporaryValue,
       randomIndex

@@ -4,9 +4,66 @@ import Parser from 'html-react-parser'
 import Modal from 'react-responsive-modal'
 import Description from '../Description/Description'
 import { getSlug } from '../../Common/utils/getSlug'
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  TelegramShareButton,
+  WhatsappShareButton,
+  FacebookIcon,
+  TwitterIcon,
+  TelegramIcon,
+  WhatsappIcon,
+} from 'react-share'
+
 var Scroll = require('react-scroll')
 var Element = Scroll.Element
 var scroller = Scroll.scroller
+
+export const getShareButton = job => (
+  
+  <div className="dropdown pr-5">
+    <button
+      className="btn btn-outline-success dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <i className="fa fa-share-alt" /> &nbsp; Share Job
+    </button>
+    <div className="dropdown-menu py-0" aria-labelledby="dropdownMenuButton">
+      <FacebookShareButton url={window.location.href} quote={job.text}>
+        <button className="dropdown-item text-left btn  btn-block b-0 text-primary bg-white">
+          <i className=" fa fa-facebook-f " />
+          &nbsp;Facebook
+        </button>
+      </FacebookShareButton>
+      <TwitterShareButton url={window.location.href} quote={job.text}>
+        <button className="dropdown-item text-left btn o btn-block text-info bg-white">
+          <i className=" fa fa-twitter " />
+          &nbsp;Twitter
+        </button>
+      </TwitterShareButton>
+
+      <WhatsappShareButton url={window.location.href} quote={job.text}>
+        <button className="dropdown-item text-left btn  btn-block text-success bg-white">
+          <i className=" fa fa-whatsapp " />
+          &nbsp;Whatsapp
+        </button>
+      </WhatsappShareButton>
+      <TelegramShareButton url={window.location.href} quote={job.text}>
+        <button className=" dropdown-item text-left btn  btn-block text-info bg-white">
+          <i className=" fa fa-telegram " />
+          &nbsp;Telegram
+        </button>
+      </TelegramShareButton>
+    
+    
+    </div>
+  </div>
+
+)
 
 class PositionCard extends Component {
   constructor(props) {
@@ -242,21 +299,31 @@ class PositionCard extends Component {
                       <div>
                         {
                           <div className="pl-4 pt-3">
-                            <a
-                              target="_blank"
-                              href={
-                                job.hostedUrl +
-                                `/apply?lever-source[]=${
-                                  typeof localStorage !== `undefined`
-                                    ? localStorage.getItem('source')
-                                    : 'gojek.io'
-                                }`
-                              }
-                              className="apply btn btn-success px-5 apply  my-2"
-                            >
-                              APPLY NOW
-                            </a>
+                            <div className="row justify-content-between align-items-center pl-4">
+                              <a
+                                target="_blank"
+                                href={
+                                  job.hostedUrl +
+                                  `/apply?lever-source[]=${
+                                    typeof localStorage !== `undefined`
+                                      ? localStorage.getItem('source')
+                                      : 'gojek.io'
+                                  }`
+                                }
+                                className="apply btn btn-success px-5 apply  my-2"
+                              >
+                                APPLY NOW
+                              </a>
 
+                              {
+                                <div className="d-none d-md-block">
+                                  {getShareButton(job)}
+                                </div>
+                              }
+                            </div>
+
+                            {/* // <button className="btn btn-primary">sdf</button> */}
+                            {/* {console.log('sdfdsfdfdsf', window.location.href)} */}
                             <Description job={job} />
                             <div className="d-block text-center" />
                           </div>

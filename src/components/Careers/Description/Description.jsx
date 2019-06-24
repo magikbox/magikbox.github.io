@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import data from '../data.json'
 import Parser from 'html-react-parser'
+import { Helmet } from 'react-helmet'
+import { getShareButton } from '../PositionCard/positionCard.jsx';
 
 class Description extends Component {
   constructor(props) {
@@ -21,10 +23,35 @@ class Description extends Component {
     //   place: positionData[0].categories.location,
     //   jobId: positionData[0].id,
     //   referer: 'https://www.gojek.io/',
+    // console.log('dsfdsfsfddsf', job)
     // }
     return (
       <div className="py-5 my-5 py-md-2 my-md-0">
-        <p className="pt-5  roboto-bold text-black font-sm">Overview</p>
+        <Helmet>
+          <title>{'GOJEK Careers: '+job.text}</title>
+          <meta
+            property="og:title"
+            content={job.description}
+          />
+          <meta
+            name="twitter:title"
+            content={job.description}
+          />
+          <meta
+            name="description"
+            content={job.description}
+          />
+          <meta
+            name="twitter:description"
+            content={job.description}
+          />
+          <meta
+            property="og:description"
+            content={job.description}
+          />
+        </Helmet>
+        {<div className="pt-5 d-md-none">{getShareButton(job)}</div>}
+        <p className="  roboto-bold text-black font-sm">Overview</p>
         <div className=" description-font text-dark col-12 pl-1">
           {Parser(job.description)}
         </div>

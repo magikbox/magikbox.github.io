@@ -10,7 +10,7 @@ class CareerDepartment extends Component {
 
   onClickDepartment = departmentName => {
     this.props.props.history.push(
-      `/open-positions?department=${departmentName}`
+      `/open-positions?d=${departmentName}`
     )
   }
 
@@ -78,7 +78,7 @@ class CareerDepartment extends Component {
                   <Link
                     to={{
                       pathname: `/all-open-positions`,
-                      search: `?department=${data.departmentName}`,
+                      search: `?d=${data.departmentName}`,
                     }}
                     className={
                       this.props.color !== undefined
@@ -120,7 +120,7 @@ class CareerDepartment extends Component {
                 <Link
                   to={{
                     pathname: `/all-open-positions`,
-                    search: `?department=${data.departmentName}`,
+                    search: `?d=${data.departmentName}`,
                   }}
                   className="roboto-bold font-md text-center text-dark d-block"
                 >

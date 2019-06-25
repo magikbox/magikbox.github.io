@@ -43,13 +43,13 @@ class OpenPositionDepartments extends Component {
                       pathname: `/all-open-positions`,
                       search: `${
                         this.props.location.search === ''
-                          ? `?department=${getSlug(department.deptName)}`
+                          ? `?d=${getSlug(department.deptName)}`
                           : `${
                               this.props.location.search
                                 .split('&')[0]
                                 .split('=')[1] === getSlug(department.deptName)
                                 ? ``
-                                : `?department=${getSlug(department.deptName)}`
+                                : `?d=${getSlug(department.deptName)}`
                             }`
                       }`,
                       state: { teams: department.teams },
@@ -82,7 +82,7 @@ class OpenPositionDepartments extends Component {
                               .split('&')[0]
                               .split('=')[1]
                               ? ``
-                              : `?department=${getSlug(department.deptName)}`
+                              : `?d=${getSlug(department.deptName)}`
                           }`,
                         }}
                         className="scroll d-md-none"

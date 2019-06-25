@@ -34,28 +34,28 @@ export const getShareButton = job => (
     </button>
     <div className="dropdown-menu py-0" aria-labelledby="dropdownMenuButton">
       <FacebookShareButton url={window.location.href} quote={job.text}>
-        <button className="dropdown-item text-left btn  btn-block b-0 text-primary bg-white">
+        <button className="px-3 border-focus-none dropdown-item text-left btn  btn-block b-0 text-primary bg-white">
           <i className=" fa fa-facebook-f " />
-          &nbsp;Facebook
+          &nbsp;&nbsp;Facebook
         </button>
       </FacebookShareButton>
       <TwitterShareButton url={window.location.href} quote={job.text}>
-        <button className="dropdown-item text-left btn o btn-block text-info bg-white">
+        <button className="px-3 border-focus-none dropdown-item text-left btn o btn-block text-info bg-white">
           <i className=" fa fa-twitter " />
-          &nbsp;Twitter
+          &nbsp;&nbsp;Twitter
         </button>
       </TwitterShareButton>
 
       <WhatsappShareButton url={window.location.href} quote={job.text}>
-        <button className="dropdown-item text-left btn  btn-block text-success bg-white">
+        <button className="px-3 border-focus-none dropdown-item text-left btn  btn-block text-success bg-white">
           <i className=" fa fa-whatsapp " />
-          &nbsp;Whatsapp
+          &nbsp;&nbsp;Whatsapp
         </button>
       </WhatsappShareButton>
       <TelegramShareButton url={window.location.href} quote={job.text}>
-        <button className=" dropdown-item text-left btn  btn-block text-info bg-white">
+        <button className="px-3 border-focus-none  dropdown-item text-left btn  btn-block text-info bg-white">
           <i className=" fa fa-telegram " />
-          &nbsp;Telegram
+          &nbsp;&nbsp;Telegram
         </button>
       </TelegramShareButton>
     
@@ -147,9 +147,9 @@ class PositionCard extends Component {
                                   e.stopPropagation()
                                   this.props.history.push({
                                     pathname: `/all-open-positions`,
-                                    search: `?department=${getSlug(
+                                    search: `?d=${getSlug(
                                       job.categories.department
-                                    )}&team=${getSlug(job.categories.team)}`,
+                                    )}&t=${getSlug(job.categories.team)}`,
                                   }),
                                     this.setState({
                                       visible: false,
@@ -236,9 +236,9 @@ class PositionCard extends Component {
                     onClick={() => {
                       this.props.history.push({
                         pathname: `/all-open-positions`,
-                        search: `?department=${getSlug(
+                        search: `?d=${getSlug(
                           job.categories.department
-                        )}&team=${getSlug(job.categories.team)}&position=${
+                        )}&t=${getSlug(job.categories.team)}&p=${
                           job.id
                         }`,
                       }),
@@ -271,9 +271,9 @@ class PositionCard extends Component {
                           e.stopPropagation()
                           this.props.history.push({
                             pathname: `/all-open-positions`,
-                            search: `?department=${getSlug(
+                            search: `?d=${getSlug(
                               job.categories.department
-                            )}&team=${getSlug(job.categories.team)}`,
+                            )}&t=${getSlug(job.categories.team)}`,
                           }),
                             this.setState({
                               visible: false,

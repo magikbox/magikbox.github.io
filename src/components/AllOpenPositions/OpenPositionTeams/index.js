@@ -40,9 +40,9 @@ class OpenPositionTeams extends Component {
                 <Link
                   to={{
                     pathname: `/all-open-positions`,
-                    search: `?department=${
+                    search: `?d=${
                       this.props.location.search.split('=')[1].split('&')[0]
-                    }&team=${getSlug(team.teamName)}`,
+                    }&t=${getSlug(team.teamName)}`,
                   }}
                   onClick={() => this.setState({ teamIndex: i })}
                   replace={true}
@@ -123,9 +123,9 @@ class OpenPositionTeams extends Component {
                     // type="button"
                     to={{
                       pathname: `/all-open-positions`,
-                      search: `?department=${
+                      search: `?d=${
                         this.props.location.search.split('=')[1].split('&')[0]
-                      }&team=${getSlug(team.teamName)}`,
+                      }&t=${getSlug(team.teamName)}`,
                       //   state: { teams: this.props.teams },
                     }}
                   >

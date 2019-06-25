@@ -24,9 +24,9 @@ class SearchBar extends Component {
   onEnterPosition = result => {
     if (result.length > 0) {
       this.props.props.history.push(
-        `/all-open-positions?department=${getSlug(
+        `/all-open-positions?d=${getSlug(
           result[0].categories.department
-        )}&team=${getSlug(result[0].categories.team)}&position=${result[0].id}`
+        )}&t=${getSlug(result[0].categories.team)}&p=${result[0].id}`
       )
     }
   }
@@ -131,9 +131,9 @@ class SearchBar extends Component {
                     <Link
                       to={{
                         pathname: `/all-open-positions`,
-                        search: `?department=${getSlug(
+                        search: `?d=${getSlug(
                           data.categories.department
-                        )}&team=${getSlug(data.categories.team)}&position=${
+                        )}&t=${getSlug(data.categories.team)}&p=${
                           data.id
                         }`,
                       }}
@@ -153,7 +153,7 @@ class SearchBar extends Component {
               </div>
             )}
           <div className="pt-2">
-            <Link to="/all-open-positions?department=engineering" className="">
+            <Link to="/all-open-positions?d=engineering" className="">
               <u className=" text-green">I'd like to view all open positions</u>
             </Link>
           </div>

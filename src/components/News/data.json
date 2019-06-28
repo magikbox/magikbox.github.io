@@ -3,6 +3,17 @@
     "heading": "In the News",
     "data": [
       {
+        "id": "19",
+        "link": "",
+        "image": "../../images/news/AirCTO-03.jpg",
+        "name":
+          "GoJek acquires B’luru-based AirCTO, sets up tech centre in Gurgaon",
+        "date": "JUNE 13 2019 ",
+        "text":
+          "Bengaluru: GoJek, one of the hottest startups from Southeast Asia. has acquired AirCTO, a Bengaluru-based artificial intelligence (AI) recruitment platform. On Tuesday, it also announced it has opened its second engineering and product development centre in India, in Gurgaon, where it plans to hire over 100 people. The first centre is in Bengaluru.",
+        "mainBanner": true
+      },
+      {
         "id": "18",
         "link":
           "https://blog.gojekengineering.com/gojek-acquires-aircto-expands-operations-in-india-d685c0b4db1c",
@@ -10,8 +21,8 @@
         "name": "GOJEK acquires AirCTO, expands operations in India",
         "date": "JUNE 12 2019 ",
         "text":
-          "GOJEK, the Super App of Southeast Asia, acquired AirCTO, a Bangalore-based Artificial Intelligence recruitment platform, and opened its second engineering and product development centre in Gurgaon. As part of the deal, the AirCTO team will be joining GOJEK with immediate effect and will be looking into building products that accelerate the recruitment of talent for GOJEK. The acquisition aligns with GOJEK’s focus on hiring premium talent to support the development of its ‘Super App’. Terms of the deal were not disclosed.",
-        "mainBanner": true
+          "GOJEK, the Super App of Southeast Asia, acquired AirCTO, a Bangalore-based Artificial Intelligence recruitment platform, and opened its second engineering and product development centre in Gurgaon. As part of the deal, the AirCTO team will be joining GOJEK with immediate effect and will be looking into building products that accelerate the recruitment of talent for GOJEK.",
+        "mainBanner": false
       },
       {
         "id": "17",

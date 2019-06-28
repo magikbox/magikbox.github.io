@@ -234,6 +234,7 @@ class PositionCard extends Component {
 
                   <div
                     onClick={() => {
+                      console.log("sdfdsfdsf")
                       this.props.history.push({
                         pathname: `/all-open-positions`,
                         search: `?d=${getSlug(

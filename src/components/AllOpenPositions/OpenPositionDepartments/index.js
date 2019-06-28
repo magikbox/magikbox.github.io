@@ -12,7 +12,7 @@ class OpenPositionDepartments extends Component {
     this.state = {}
   }
 
-//   this method is used to get the teams by using URL
+  //   this method is used to get the teams by using URL
   getTeamsFromURL = () => {
     const departmentSlug = this.props.location.search
       .split('=')[1]
@@ -71,7 +71,7 @@ class OpenPositionDepartments extends Component {
                     </div>
                   </Link>
                   <div className=" col- mb-3 mb-md-0">
-                    <span  className="text-green roboto-bold ">
+                    <span className="text-green roboto-bold ">
                       {department.openings + ` `}Openings
                       <Link
                         to={{
@@ -91,16 +91,22 @@ class OpenPositionDepartments extends Component {
                         this.props.location.search
                           .split('&')[0]
                           .split('=')[1] ? (
-                          <i style={{fontSize:'20px'}} className="fa pl-5 fa-minus pt-3 mt-auto text-green" />
+                          <i
+                            style={{ fontSize: '20px' }}
+                            className="fa pl-5 fa-minus pt-3 mt-auto text-green"
+                          />
                         ) : (
-                          <i style={{fontSize:'20px'}} className="fa pl-5  fa-plus pt-3 mt-auto text-green" />
+                          <i
+                            style={{ fontSize: '20px' }}
+                            className="fa pl-5  fa-plus pt-3 mt-auto text-green"
+                          />
                         )}
                       </Link>
                     </span>
                   </div>
                 </div>
               </Element>
-
+              {console.log('sdfdsfdsfdsfdsfdsffds', this.props.location)}
               {getSlug(department.deptName) ===
                 this.props.location.search.split('&')[0].split('=')[1] && (
                 <OpenPositionTeams

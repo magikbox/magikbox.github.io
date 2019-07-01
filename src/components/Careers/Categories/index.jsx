@@ -137,10 +137,13 @@ class Categories extends Component {
           this.getDescription(
             window.location.search.split('&')[2].split('=')[1]
           )
-          scroller.scrollTo(`${window.location.search.split('&')[2].split('=')[1]}`, {
-            smooth: 'easeInOutQuint',
-            offset: -100,
-          })
+          scroller.scrollTo(
+            `${window.location.search.split('&')[2].split('=')[1]}`,
+            {
+              smooth: 'easeInOutQuint',
+              offset: -100,
+            }
+          )
         }
       }
     )
@@ -348,8 +351,7 @@ class Categories extends Component {
                         onChangeURL={id => this.onChangePosition(id)}
                         heading={data.text}
                         subHeading={''}
-                jobSelected={(job)=>console.log("job selcted",job)}
-
+                        jobSelected={job => this.props.jobSelected(job)}
                       />
                     )}
 

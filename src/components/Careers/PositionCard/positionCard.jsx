@@ -237,7 +237,9 @@ class PositionCard extends Component {
                           job.categories.department
                         )}&t=${getSlug(job.categories.team)}&p=${job.id}`,
                       }),
+                        //
                         this.props.jobSelected(job),
+                        //
                         this.setState({
                           visible: true,
                         })

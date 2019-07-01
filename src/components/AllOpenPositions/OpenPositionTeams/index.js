@@ -156,7 +156,7 @@ class OpenPositionTeams extends Component {
                   {...this.props}
                   key={i}
                   jobsData={this.props.teams[i].data}
-                  jobSelected={job => console.log('job selcted', job)}
+                  jobSelected={job => this.props.jobSelected(job)}
                 />
               )
           )

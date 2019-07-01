@@ -296,14 +296,14 @@ class allpositions extends Component {
           <title>
             {jobSelected === ''
               ? 'GOJEK Careers: Check out the current job openings at GOJEK Tech'
-              : jobSelected.text}
+              : 'GOJEK Careers:' + jobSelected.text}
           </title>
           <meta
             property="og:title"
             content={
               jobSelected === ''
                 ? 'GOJEK Careers: Check out the current job openings at GOJEK Tech'
-                : jobSelected.text
+                : 'GOJEK Careers:' + jobSelected.text
             }
           />
           <meta
@@ -311,7 +311,7 @@ class allpositions extends Component {
             content={
               jobSelected === ''
                 ? 'GOJEK Careers: Check out the current job openings at GOJEK Tech'
-                : jobSelected.text
+                : 'GOJEK Careers:' + jobSelected.text
             }
           />
           <meta
@@ -479,7 +479,7 @@ class allpositions extends Component {
               <PositionCard
                 {...this.props}
                 jobsData={this.getAfterSearchPositions()}
-                jobSelected={job => this.setState({ jobSelected: job })}
+                jobSelected={job =>{console.log("jobselected in main page"); this.setState({ jobSelected: job })}}
               />
             </div>
           )}

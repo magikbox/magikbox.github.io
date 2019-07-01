@@ -136,6 +136,7 @@ class SearchBar extends Component {
                         )}&t=${getSlug(data.categories.team)}&p=${
                           data.id
                         }`,
+                        state:{jobSelected:data}
                       }}
                       key={i}
                       // onClick={() => this.onClickPositionFromSearch(data)}

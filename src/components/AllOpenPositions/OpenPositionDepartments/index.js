@@ -111,11 +111,7 @@ class OpenPositionDepartments extends Component {
                 <OpenPositionTeams
                   {...this.props}
                   departmentSelected={this.props.departmentSelected}
-                  teams={
-                    this.props.location.state === undefined
-                      ? this.getTeamsFromURL()
-                      : this.props.location.state.teams
-                  }
+                  teams={this.getTeamsFromURL()}
                   jobSelected={job => this.props.jobSelected(job)}
                 />
               )}

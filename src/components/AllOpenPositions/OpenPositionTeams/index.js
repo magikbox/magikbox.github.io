@@ -35,6 +35,7 @@ class OpenPositionTeams extends Component {
       <div className="py-4">
         <div className="d-none d-md-block">
           <div className="d-flex flex-row flex-wrap px-2">
+            
             {this.props.teams.map((team, i) => {
               return (
                 <Link

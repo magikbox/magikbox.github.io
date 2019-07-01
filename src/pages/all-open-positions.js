@@ -28,6 +28,13 @@ class allpositions extends Component {
     }
   }
 
+  componentWillMount(){
+
+    if(this.props.location.state){
+      this.setState({jobSelected:this.props.location.state.jobSelected})
+    }
+  }
+
   componentDidMount() {
     if (typeof window !== `undefined`) {
       window.addEventListener('scroll', this.handleScroll)
@@ -288,7 +295,7 @@ class allpositions extends Component {
 
   render() {
     const { jobSelected } = this.state
-    // console.log('jobSelectedjobSelectedjobSelectedjobSelected', jobSelected)
+    // console.log('thia.props', this.props)
     return (
       <div className="first-section">
         <Helmet>
@@ -297,6 +304,8 @@ class allpositions extends Component {
               ? 'GOJEK Careers: Check out the current job openings at GOJEK Tech'
               : 'GOJEK Careers:' + jobSelected.text}
           </title>
+          <meta http-equiv="Cache-Control" content="no-cache" />
+
           <meta
             property="og:title"
             content={

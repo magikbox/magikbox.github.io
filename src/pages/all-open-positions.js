@@ -28,10 +28,9 @@ class allpositions extends Component {
     }
   }
 
-  componentWillMount(){
-
-    if(this.props.location.state){
-      this.setState({jobSelected:this.props.location.state.jobSelected})
+  componentWillMount() {
+    if (this.props.location.state) {
+      this.setState({ jobSelected: this.props.location.state.jobSelected })
     }
   }
 
@@ -295,12 +294,11 @@ class allpositions extends Component {
 
   render() {
     const { jobSelected } = this.state
-    // console.log('thia.props', this.props)
     return (
       <div className="first-section">
         <Helmet>
           <title>
-            {jobSelected === ''
+            {jobSelected === '' || jobSelected !== 'undefined'
               ? 'GOJEK Careers: Check out the current job openings at GOJEK Tech'
               : 'GOJEK Careers:' + jobSelected.text}
           </title>
@@ -309,15 +307,16 @@ class allpositions extends Component {
           <meta
             property="og:title"
             content={
-              jobSelected === ''
+              jobSelected === '' || jobSelected !== 'undefined'
                 ? 'GOJEK Careers: Check out the current job openings at GOJEK Tech'
                 : 'GOJEK Careers:' + jobSelected.text
             }
           />
+          <meta property="og:url" content={window.location.href} />
           <meta
             name="twitter:title"
             content={
-              jobSelected === ''
+              jobSelected === '' || jobSelected !== 'undefined'
                 ? 'GOJEK Careers: Check out the current job openings at GOJEK Tech'
                 : 'GOJEK Careers:' + jobSelected.text
             }
@@ -325,7 +324,7 @@ class allpositions extends Component {
           <meta
             name="description"
             content={
-              jobSelected === ''
+              jobSelected === '' || jobSelected !== 'undefined'
                 ? "GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
                 : jobSelected.descriptionPlain
             }
@@ -333,7 +332,7 @@ class allpositions extends Component {
           <meta
             name="twitter:description"
             content={
-              jobSelected === ''
+              jobSelected === '' || jobSelected !== 'undefined'
                 ? "GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
                 : jobSelected.descriptionPlain
             }
@@ -341,7 +340,7 @@ class allpositions extends Component {
           <meta
             property="og:description"
             content={
-              jobSelected === ''
+              jobSelected === '' || jobSelected !== 'undefined'
                 ? "GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
                 : jobSelected.descriptionPlain
             }

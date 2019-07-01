@@ -86,7 +86,7 @@ class Post extends Component {
         <div className="row">
           {posts.map((post, key) => {
             if (key < postCount) {
-              console.log('post', post)
+              // console.log('post', post)
 
               return (
                 post.title !==

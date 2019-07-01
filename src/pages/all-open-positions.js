@@ -219,7 +219,6 @@ class allpositions extends Component {
           teams: this.getTeamsbyDepartment(positionGroups[i]),
         })
     }
-
     return returnData
   }
 
@@ -289,7 +288,7 @@ class allpositions extends Component {
 
   render() {
     const { jobSelected } = this.state
-    console.log('jobSelectedjobSelectedjobSelectedjobSelected', jobSelected)
+    // console.log('jobSelectedjobSelectedjobSelectedjobSelected', jobSelected)
     return (
       <div className="first-section">
         <Helmet>
@@ -479,7 +478,9 @@ class allpositions extends Component {
               <PositionCard
                 {...this.props}
                 jobsData={this.getAfterSearchPositions()}
-                jobSelected={job =>{console.log("jobselected in main page"); this.setState({ jobSelected: job })}}
+                jobSelected={job => {
+                  this.setState({ jobSelected: job })
+                }}
               />
             </div>
           )}

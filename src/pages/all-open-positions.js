@@ -294,11 +294,9 @@ class allpositions extends Component {
       <div className="first-section">
         <Helmet>
           <title>
-          {
-              jobSelected === ''
-                ? 'GOJEK Careers: Check out the current job openings at GOJEK Tech'
-                : jobSelected.text
-            }
+            {jobSelected === ''
+              ? 'GOJEK Careers: Check out the current job openings at GOJEK Tech'
+              : jobSelected.text}
           </title>
           <meta
             property="og:title"
@@ -450,9 +448,7 @@ class allpositions extends Component {
                 departmentSelected={this.state.departmentSelected}
                 {...this.props}
                 reformatedData={this.state.reformatedData}
-                jobSelected={job =>
-                  console.log('OpenPositionDepartmentsdsdsdsdsd', job)
-                }
+                jobSelected={job => this.setState({ jobSelected: job })}
               />
             </div>
           ) : (
@@ -483,7 +479,7 @@ class allpositions extends Component {
               <PositionCard
                 {...this.props}
                 jobsData={this.getAfterSearchPositions()}
-                jobSelected={job => console.log('PositionCarddsdsdsdsd', job)}
+                jobSelected={job => this.setState({ jobSelected: job })}
               />
             </div>
           )}

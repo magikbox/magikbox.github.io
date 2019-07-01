@@ -293,7 +293,7 @@ class allpositions extends Component {
           <title>
             GOJEK Careers: Check out the current job openings at GOJEK Tech
           </title>
-          <meta
+          {/* <meta
             property="og:title"
             content="GOJEK Careers: Check out the current job openings at GOJEK Tech"
           />
@@ -312,7 +312,7 @@ class allpositions extends Component {
           <meta
             property="og:description"
             content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-          />
+          /> */}
         </Helmet>
         <div className="container">
           <h1 className="text-center text-black font-xl-x raleway-bold pt-5">

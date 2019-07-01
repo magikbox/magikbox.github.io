@@ -106,7 +106,6 @@ class OpenPositionDepartments extends Component {
                   </div>
                 </div>
               </Element>
-              {console.log('sdfdsfdsfdsfdsfdsffds', this.props.location)}
               {getSlug(department.deptName) ===
                 this.props.location.search.split('&')[0].split('=')[1] && (
                 <OpenPositionTeams
@@ -117,6 +116,7 @@ class OpenPositionDepartments extends Component {
                       ? this.getTeamsFromURL()
                       : this.props.location.state.teams
                   }
+                  jobSelected={job => this.props.jobSelected(job)}
                 />
               )}
 

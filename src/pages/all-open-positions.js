@@ -24,6 +24,7 @@ class allpositions extends Component {
       placeSelected: 'All',
       departmentSelected: 'All',
       reformatedData: [],
+      jobSelected: '',
     }
   }
 
@@ -287,32 +288,54 @@ class allpositions extends Component {
   }
 
   render() {
+    const { jobSelected } = this.state;
+    console.log("jobSelectedjobSelectedjobSelectedjobSelected",jobSelected)
     return (
       <div className="first-section">
         <Helmet>
           <title>
             GOJEK Careers: Check out the current job openings at GOJEK Tech
           </title>
-          {/* <meta
+          <meta
             property="og:title"
-            content="GOJEK Careers: Check out the current job openings at GOJEK Tech"
+            content={
+              jobSelected === ''
+                ? 'GOJEK Careers: Check out the current job openings at GOJEK Tech'
+                : jobSelected.text
+            }
           />
           <meta
             name="twitter:title"
-            content="GOJEK Careers: Check out the current job openings at GOJEK Tech"
+            content={
+              jobSelected === ''
+                ? 'GOJEK Careers: Check out the current job openings at GOJEK Tech'
+                : jobSelected.text
+            }
           />
           <meta
             name="description"
-            content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+            content={
+              jobSelected === ''
+                ? "GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+                : jobSelected.descriptionPlain
+            }
           />
           <meta
             name="twitter:description"
-            content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+            content={
+              jobSelected === ''
+                ? "GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+                : jobSelected.descriptionPlain
+            }
           />
           <meta
             property="og:description"
-            content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-          /> */}
+            content={
+              jobSelected === ''
+                ? "GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+                : jobSelected.descriptionPlain
+            }
+          />
         </Helmet>
         <div className="container">
           <h1 className="text-center text-black font-xl-x raleway-bold pt-5">
@@ -423,6 +446,7 @@ class allpositions extends Component {
                 departmentSelected={this.state.departmentSelected}
                 {...this.props}
                 reformatedData={this.state.reformatedData}
+                jobSelected={job => this.setState({ jobSelected: job })}
               />
             </div>
           ) : (
@@ -454,6 +478,7 @@ class allpositions extends Component {
               <PositionCard
                 {...this.props}
                 jobsData={this.getAfterSearchPositions()}
+                jobSelected={job => this.setState({ jobSelected: job })}
               />
             </div>
           )}

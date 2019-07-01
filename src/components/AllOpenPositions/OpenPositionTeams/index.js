@@ -146,6 +146,7 @@ class OpenPositionTeams extends Component {
               {...this.props}
               key={i}
               jobsData={this.props.teams[0].data}
+              jobSelected={job => this.props.jobSelected(job)}
             />
           ) : (
             this.props.location.search.split('=')[2] &&
@@ -155,6 +156,7 @@ class OpenPositionTeams extends Component {
                   {...this.props}
                   key={i}
                   jobsData={this.props.teams[i].data}
+                  jobSelected={job => console.log('job selcted', job)}
                 />
               )
           )

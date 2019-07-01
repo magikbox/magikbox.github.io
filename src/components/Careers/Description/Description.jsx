@@ -23,7 +23,7 @@ class Description extends Component {
     //   place: positionData[0].categories.location,
     //   jobId: positionData[0].id,
     //   referer: 'https://www.gojek.io/',
-    console.log('dsfdsfsfddsf', job)
+    // console.log('dsfdsfsfddsf', job)
     // }
     return (
       <div className="py-5 my-5 py-md-2 my-md-0">

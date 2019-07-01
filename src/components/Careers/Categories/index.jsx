@@ -348,6 +348,8 @@ class Categories extends Component {
                         onChangeURL={id => this.onChangePosition(id)}
                         heading={data.text}
                         subHeading={''}
+                jobSelected={(job)=>console.log("job selcted",job)}
+
                       />
                     )}
 

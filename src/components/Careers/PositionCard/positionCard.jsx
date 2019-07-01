@@ -20,7 +20,6 @@ var Element = Scroll.Element
 var scroller = Scroll.scroller
 
 export const getShareButton = job => (
-  
   <div className="dropdown pr-5">
     <button
       className="btn btn-outline-success dropdown-toggle"
@@ -58,11 +57,8 @@ export const getShareButton = job => (
           &nbsp;&nbsp;Telegram
         </button>
       </TelegramShareButton>
-    
-    
     </div>
   </div>
-
 )
 
 class PositionCard extends Component {
@@ -125,7 +121,6 @@ class PositionCard extends Component {
                         maxHeight: this.getCurrentHeight(),
                         overflowY: 'scroll',
                       }}
-                      className="charan"
                     >
                       {this.props.location.search.split('=')[3] === job.id && (
                         <div className="">
@@ -153,7 +148,8 @@ class PositionCard extends Component {
                                   }),
                                     this.setState({
                                       visible: false,
-                                    })
+                                    }),
+                                    this.props.jobSelected('')
                                 }}
                                 className="fa scroll ml-auto pr-4 fa-minus fa-2x pt-1 mt-auto text-green "
                               />
@@ -234,15 +230,14 @@ class PositionCard extends Component {
 
                   <div
                     onClick={() => {
-                      console.log("sdfdsfdsf")
+                      console.log('sdfdsfdsf')
                       this.props.history.push({
                         pathname: `/all-open-positions`,
                         search: `?d=${getSlug(
                           job.categories.department
-                        )}&t=${getSlug(job.categories.team)}&p=${
-                          job.id
-                        }`,
+                        )}&t=${getSlug(job.categories.team)}&p=${job.id}`,
                       }),
+                        this.props.jobSelected(job),
                         this.setState({
                           visible: true,
                         })
@@ -278,7 +273,8 @@ class PositionCard extends Component {
                           }),
                             this.setState({
                               visible: false,
-                            })
+                            }),
+                            this.props.jobSelected('')
                         }}
                         className="fa scroll ml-auto pr-5 fa-minus  mt-auto text-green "
                       />

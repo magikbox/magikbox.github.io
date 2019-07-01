@@ -27,11 +27,11 @@ class Description extends Component {
     // }
     return (
       <div className="py-5 my-5 py-md-2 my-md-0">
-        <Helmet>
+        {/* <Helmet>
           <title>{'GOJEK Careers: '+job.text}</title>
           <meta
             property="og:title"
-            content={'GOJEK Careers: '+job.text}
+            content={'GOJEK Careers: '+ 'Test meta'}
           />
           <meta
             name="twitter:title"
@@ -49,7 +49,7 @@ class Description extends Component {
             property="og:description"
             content={job.descriptionPlain}
           />
-        </Helmet>
+        </Helmet> */}
         {<div className="pt-5 d-md-none">{getShareButton(job)}</div>}
         <p className="  roboto-bold text-black font-sm">Overview</p>
         <div className=" description-font text-dark col-12 pl-1">

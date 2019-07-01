@@ -288,13 +288,17 @@ class allpositions extends Component {
   }
 
   render() {
-    const { jobSelected } = this.state;
-    console.log("jobSelectedjobSelectedjobSelectedjobSelected",jobSelected)
+    const { jobSelected } = this.state
+    console.log('jobSelectedjobSelectedjobSelectedjobSelected', jobSelected)
     return (
       <div className="first-section">
         <Helmet>
           <title>
-            GOJEK Careers: Check out the current job openings at GOJEK Tech
+          {
+              jobSelected === ''
+                ? 'GOJEK Careers: Check out the current job openings at GOJEK Tech'
+                : jobSelected.text
+            }
           </title>
           <meta
             property="og:title"
@@ -446,7 +450,9 @@ class allpositions extends Component {
                 departmentSelected={this.state.departmentSelected}
                 {...this.props}
                 reformatedData={this.state.reformatedData}
-                jobSelected={job => this.setState({ jobSelected: job })}
+                jobSelected={job =>
+                  console.log('OpenPositionDepartmentsdsdsdsdsd', job)
+                }
               />
             </div>
           ) : (
@@ -465,7 +471,6 @@ class allpositions extends Component {
               </div>
               <hr />
               <div className="d-flex flex-row flex-wrap align-items-center px-2">
-                {' '}
                 {this.state.inputText.trimLeft() !== '' && (
                   <h6 className="raleway-bold font-xl-l">
                     '{this.state.inputText}'
@@ -478,7 +483,7 @@ class allpositions extends Component {
               <PositionCard
                 {...this.props}
                 jobsData={this.getAfterSearchPositions()}
-                jobSelected={job => this.setState({ jobSelected: job })}
+                jobSelected={job => console.log('PositionCarddsdsdsdsd', job)}
               />
             </div>
           )}

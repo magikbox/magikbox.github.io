@@ -140,6 +140,10 @@
       "path---careers-data-analyst-go-pay-72d5fccaee1ffd89de11.js",
       "path---careers-data-analyst-go-pay-72d5fccaee1ffd89de11.js.map"
     ],
+    "path---description": [
+      "path---description-a0e39f21c11f6a62c5ab.js",
+      "path---description-a0e39f21c11f6a62c5ab.js.map"
+    ],
     "component---src-pages-open-source-js": [
       "component---src-pages-open-source-js-25c763a45fd3ecb97acc.js",
       "component---src-pages-open-source-js-25c763a45fd3ecb97acc.js.map"
@@ -185,8 +189,8 @@
       "path---careers-full-stack-engineer-jakarta-349d6d7bd973845815ba.js.map"
     ],
     "component---src-pages-open-positions-js": [
-      "component---src-pages-open-positions-js-da110f16e918de22239b.js",
-      "component---src-pages-open-positions-js-da110f16e918de22239b.js.map"
+      "component---src-pages-open-positions-js-b9472c8ee2721b7f013d.js",
+      "component---src-pages-open-positions-js-b9472c8ee2721b7f013d.js.map"
     ],
     "path---index": [
       "path---index-a0e39f21c11f6a62c5ab.js",
@@ -229,8 +233,8 @@
       "component---src-pages-404-js-a61aa8ed034f92e8b6cb.js.map"
     ],
     "component---src-pages-careers-old-js": [
-      "component---src-pages-careers-old-js-472f425f0b4c7fdccee0.js",
-      "component---src-pages-careers-old-js-472f425f0b4c7fdccee0.js.map"
+      "component---src-pages-careers-old-js-bc2d5588ee215cc9f84a.js",
+      "component---src-pages-careers-old-js-bc2d5588ee215cc9f84a.js.map"
     ],
     "path---careers-technical-program-manager-financial-and-accounting-platforms": [
       "path---careers-technical-program-manager-financial-and-accounting-platforms-93227db9d9dbf823169e.js",
@@ -247,8 +251,8 @@
       "path---careers-fraud-analyst-food-78e9baabfc132ac5e82f.js.map"
     ],
     "component---src-pages-careers-js": [
-      "component---src-pages-careers-js-145cb9fe5bfac8c3c809.js",
-      "component---src-pages-careers-js-145cb9fe5bfac8c3c809.js.map"
+      "component---src-pages-careers-js-cff17fd4c94d141818a7.js",
+      "component---src-pages-careers-js-cff17fd4c94d141818a7.js.map"
     ],
     "path---careers-android-engineer-jakarta": [
       "path---careers-android-engineer-jakarta-0abca1b54f027b2f47c0.js",
@@ -315,14 +319,18 @@
       "path---careers-machine-learning-engineer-go-pay-79a83d2991e9959d81a8.js.map"
     ],
     "app": [
-      "app-fc0a6d81fa8a5530bcc6.js",
+      "app-0a9f9bdf81e304966370.js",
       "build-js-styles.css",
-      "app-fc0a6d81fa8a5530bcc6.js.map",
+      "app-0a9f9bdf81e304966370.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-pages-all-open-positions-js": [
-      "component---src-pages-all-open-positions-js-ce0149d4b0924c84e026.js",
-      "component---src-pages-all-open-positions-js-ce0149d4b0924c84e026.js.map"
+      "component---src-pages-all-open-positions-js-4371a1d4bf37a85ba452.js",
+      "component---src-pages-all-open-positions-js-4371a1d4bf37a85ba452.js.map"
+    ],
+    "component---src-pages-description-js": [
+      "component---src-pages-description-js-dbc8761d0ac1e6443b94.js",
+      "component---src-pages-description-js-dbc8761d0ac1e6443b94.js.map"
     ],
     "path---careers-full-stack-engineer-thailand": [
       "path---careers-full-stack-engineer-thailand-2d812add3ed91cbd84b2.js",

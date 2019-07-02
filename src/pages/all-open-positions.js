@@ -313,7 +313,6 @@ class allpositions extends Component {
                 : 'GOJEK Careers:' + jobSelected.text
             }
           />
-          <meta property="og:url" content={window.location.href} />
           <meta
             name="twitter:title"
             content={

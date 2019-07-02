@@ -28,15 +28,9 @@ class Description extends Component {
       <div className="py-5 my-5 py-md-2 my-md-0">
         {job !== undefined && (
           <Helmet>
-            <title>{'GOJEK Careers: ' + job !== undefined && job.text}</title>
-            <meta
-              property="og:title"
-              content={'GOJEK Careers: ' + job !== undefined && job.text}
-            />
-            <meta
-              name="twitter:title"
-              content={'GOJEK Careers: ' + job !== undefined && job.text}
-            />
+            <title>{'GOJEK Careers: ' + job.text}</title>
+            <meta property="og:title" content={'GOJEK Careers: ' + job.text} />
+            <meta name="twitter:title" content={'GOJEK Careers: ' + job.text} />
             <meta name="description" content={job.descriptionPlain} />
             <meta name="twitter:description" content={job.descriptionPlain} />
             <meta property="og:description" content={job.descriptionPlain} />

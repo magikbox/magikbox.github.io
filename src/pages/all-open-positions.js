@@ -295,33 +295,23 @@ class allpositions extends Component {
 
           <meta
             property="og:title"
-            content={
-              'GOJEK Careers: Check out the current job openings at GOJEK Tech'
-            }
+            content="GOJEK Careers: Check out the current job openings at GOJEK Tech"
           />
           <meta
             name="twitter:title"
-            content={
-              'GOJEK Careers: Check out the current job openings at GOJEK Tech'
-            }
+            content="GOJEK Careers: Check out the current job openings at GOJEK Tech"
           />
           <meta
             name="description"
-            content={
-              "GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-            }
+            content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
           />
           <meta
             name="twitter:description"
-            content={
-              "GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-            }
+            content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
           />
           <meta
             property="og:description"
-            content={
-              "GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-            }
+            content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
           />
         </Helmet>
         <div className="container">
@@ -463,7 +453,6 @@ class allpositions extends Component {
               <PositionCard
                 {...this.props}
                 jobsData={this.getAfterSearchPositions()}
-               
               />
             </div>
           )}

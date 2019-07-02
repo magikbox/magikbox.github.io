@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Parser from 'html-react-parser'
 import Modal from 'react-responsive-modal'
-import Description from '../Description/Description'
+import Description from '../../../pages/description'
 import { getSlug } from '../../Common/utils/getSlug'
 import {
   FacebookShareButton,

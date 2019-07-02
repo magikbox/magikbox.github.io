@@ -293,22 +293,23 @@ class allpositions extends Component {
   }
 
   render() {
-    const { jobSelected } = this.state
+    const { jobSelected } = this.state;
+    console.log("jobSelectedjobSelectedjobSelected",jobSelected)
+    console.log('sdfdsfdsfdsf', jobSelected === '' || jobSelected !== 'undefined')
     return (
       <div className="first-section">
         <Helmet>
           <title>
             {jobSelected === '' || jobSelected !== 'undefined'
-              ? 'GOJEK Careers: Check out the current job openings at GOJEK Tech'
+              ? 'iOS Engineer (GO-LIFE/New Product)'
               : 'GOJEK Careers:' + jobSelected.text}
           </title>
-          <meta http-equiv="Cache-Control" content="no-cache" />
 
           <meta
             property="og:title"
             content={
               jobSelected === '' || jobSelected !== 'undefined'
-                ? 'GOJEK Careers: Check out the current job openings at GOJEK Tech'
+                ? 'iOS Engineer (GO-LIFE/New Product)'
                 : 'GOJEK Careers:' + jobSelected.text
             }
           />
@@ -317,7 +318,7 @@ class allpositions extends Component {
             name="twitter:title"
             content={
               jobSelected === '' || jobSelected !== 'undefined'
-                ? 'GOJEK Careers: Check out the current job openings at GOJEK Tech'
+                ? 'iOS Engineer (GO-LIFE/New Product)'
                 : 'GOJEK Careers:' + jobSelected.text
             }
           />

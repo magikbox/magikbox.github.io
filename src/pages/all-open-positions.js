@@ -24,13 +24,6 @@ class allpositions extends Component {
       placeSelected: 'All',
       departmentSelected: 'All',
       reformatedData: [],
-      jobSelected: '',
-    }
-  }
-
-  componentWillMount() {
-    if (this.props.location.state) {
-      this.setState({ jobSelected: this.props.location.state.jobSelected })
     }
   }
 
@@ -293,55 +286,41 @@ class allpositions extends Component {
   }
 
   render() {
-    const { jobSelected } = this.state;
-    console.log('sdfdsfdsfdsf', jobSelected === '' || jobSelected !== 'undefined')
     return (
       <div className="first-section">
         <Helmet>
           <title>
-            {jobSelected === '' || jobSelected !== 'undefined'
-              ? 'GOJEK Careers: Check out the current job openings at GOJEK Tech'
-              : 'GOJEK Careers:' + jobSelected.text}
+            GOJEK Careers: Check out the current job openings at GOJEK Tech
           </title>
 
           <meta
             property="og:title"
             content={
-              jobSelected === '' || jobSelected !== 'undefined'
-                ? 'GOJEK Careers: Check out the current job openings at GOJEK Tech'
-                : 'GOJEK Careers:' + jobSelected.text
+              'GOJEK Careers: Check out the current job openings at GOJEK Tech'
             }
           />
           <meta
             name="twitter:title"
             content={
-              jobSelected === '' || jobSelected !== 'undefined'
-                ? 'GOJEK Careers: Check out the current job openings at GOJEK Tech'
-                : 'GOJEK Careers:' + jobSelected.text
+              'GOJEK Careers: Check out the current job openings at GOJEK Tech'
             }
           />
           <meta
             name="description"
             content={
-              jobSelected === '' || jobSelected !== 'undefined'
-                ? "GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-                : jobSelected.descriptionPlain
+              "GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
             }
           />
           <meta
             name="twitter:description"
             content={
-              jobSelected === '' || jobSelected !== 'undefined'
-                ? "GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-                : jobSelected.descriptionPlain
+              "GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
             }
           />
           <meta
             property="og:description"
             content={
-              jobSelected === '' || jobSelected !== 'undefined'
-                ? "GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-                : jobSelected.descriptionPlain
+              "GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
             }
           />
         </Helmet>
@@ -454,7 +433,6 @@ class allpositions extends Component {
                 departmentSelected={this.state.departmentSelected}
                 {...this.props}
                 reformatedData={this.state.reformatedData}
-                jobSelected={job => this.setState({ jobSelected: job })}
               />
             </div>
           ) : (
@@ -485,9 +463,7 @@ class allpositions extends Component {
               <PositionCard
                 {...this.props}
                 jobsData={this.getAfterSearchPositions()}
-                jobSelected={job => {
-                  this.setState({ jobSelected: job })
-                }}
+               
               />
             </div>
           )}

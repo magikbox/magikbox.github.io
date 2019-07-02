@@ -31,33 +31,35 @@ export const getShareButton = job => (
     >
       <i className="fa fa-share-alt" /> &nbsp; Share Job
     </button>
-    <div className="dropdown-menu py-0" aria-labelledby="dropdownMenuButton">
-      <FacebookShareButton url={window.location.href} quote={job.text}>
-        <button className="px-3 border-focus-none dropdown-item text-left btn  btn-block b-0 text-primary bg-white">
-          <i className=" fa fa-facebook-f " />
-          &nbsp;&nbsp;Facebook
-        </button>
-      </FacebookShareButton>
-      <TwitterShareButton url={window.location.href} quote={job.text}>
-        <button className="px-3 border-focus-none dropdown-item text-left btn o btn-block text-info bg-white">
-          <i className=" fa fa-twitter " />
-          &nbsp;&nbsp;Twitter
-        </button>
-      </TwitterShareButton>
+    {typeof window !== `undefined` && (
+      <div className="dropdown-menu py-0" aria-labelledby="dropdownMenuButton">
+        <FacebookShareButton url={window.location.href} quote={job.text}>
+          <button className="px-3 border-focus-none dropdown-item text-left btn  btn-block b-0 text-primary bg-white">
+            <i className=" fa fa-facebook-f " />
+            &nbsp;&nbsp;Facebook
+          </button>
+        </FacebookShareButton>
+        <TwitterShareButton url={window.location.href} quote={job.text}>
+          <button className="px-3 border-focus-none dropdown-item text-left btn o btn-block text-info bg-white">
+            <i className=" fa fa-twitter " />
+            &nbsp;&nbsp;Twitter
+          </button>
+        </TwitterShareButton>
 
-      <WhatsappShareButton url={window.location.href} quote={job.text}>
-        <button className="px-3 border-focus-none dropdown-item text-left btn  btn-block text-success bg-white">
-          <i className=" fa fa-whatsapp " />
-          &nbsp;&nbsp;Whatsapp
-        </button>
-      </WhatsappShareButton>
-      <TelegramShareButton url={window.location.href} quote={job.text}>
-        <button className="px-3 border-focus-none  dropdown-item text-left btn  btn-block text-info bg-white">
-          <i className=" fa fa-telegram " />
-          &nbsp;&nbsp;Telegram
-        </button>
-      </TelegramShareButton>
-    </div>
+        <WhatsappShareButton url={window.location.href} quote={job.text}>
+          <button className="px-3 border-focus-none dropdown-item text-left btn  btn-block text-success bg-white">
+            <i className=" fa fa-whatsapp " />
+            &nbsp;&nbsp;Whatsapp
+          </button>
+        </WhatsappShareButton>
+        <TelegramShareButton url={window.location.href} quote={job.text}>
+          <button className="px-3 border-focus-none  dropdown-item text-left btn  btn-block text-info bg-white">
+            <i className=" fa fa-telegram " />
+            &nbsp;&nbsp;Telegram
+          </button>
+        </TelegramShareButton>
+      </div>
+    )}
   </div>
 )
 
@@ -148,8 +150,7 @@ class PositionCard extends Component {
                                   }),
                                     this.setState({
                                       visible: false,
-                                    }),
-                                    this.props.jobSelected('')
+                                    })
                                 }}
                                 className="fa scroll ml-auto pr-4 fa-minus fa-2x pt-1 mt-auto text-green "
                               />
@@ -238,7 +239,6 @@ class PositionCard extends Component {
                         )}&t=${getSlug(job.categories.team)}&p=${job.id}`,
                       }),
                         //
-                        this.props.jobSelected(job),
                         //
                         this.setState({
                           visible: true,
@@ -275,8 +275,7 @@ class PositionCard extends Component {
                           }),
                             this.setState({
                               visible: false,
-                            }),
-                            this.props.jobSelected('')
+                            })
                         }}
                         className="fa scroll ml-auto pr-5 fa-minus  mt-auto text-green "
                       />

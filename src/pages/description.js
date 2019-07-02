@@ -23,47 +23,63 @@ class Description extends Component {
     //   place: positionData[0].categories.location,
     //   jobId: positionData[0].id,
     //   referer: 'https://www.gojek.io/',
-    // console.log('dsfdsfsfddsf', job)
     // }
     return (
       <div className="py-5 my-5 py-md-2 my-md-0">
-        <Helmet>
-          <title>{'GOJEK Careers: ' + job.text}</title>
-          <meta property="og:title" content={'GOJEK Careers: ' + job.text} />
-          <meta name="twitter:title" content={'GOJEK Careers: ' + job.text} />
-          <meta name="description" content={job.descriptionPlain} />
-          <meta name="twitter:description" content={job.descriptionPlain} />
-          <meta property="og:description" content={job.descriptionPlain} />
-        </Helmet>
+        {job !== undefined && (
+          <Helmet>
+            <title>{'GOJEK Careers: ' + job !== undefined && job.text}</title>
+            <meta
+              property="og:title"
+              content={'GOJEK Careers: ' + job !== undefined && job.text}
+            />
+            <meta
+              name="twitter:title"
+              content={'GOJEK Careers: ' + job !== undefined && job.text}
+            />
+            <meta name="description" content={job.descriptionPlain} />
+            <meta name="twitter:description" content={job.descriptionPlain} />
+            <meta property="og:description" content={job.descriptionPlain} />
+          </Helmet>
+        )}
+
         {<div className="pt-5 d-md-none">{getShareButton(job)}</div>}
         <p className="  roboto-bold text-black font-sm">Overview</p>
-        <div className=" description-font text-dark col-12 pl-1">
-          {Parser(job.description)}
-        </div>
-        {job.lists[0] !== undefined && (
-          <React.Fragment>
-            <p className="pt-3 roboto-bold text-black font-sm">
-              Responsibilities
-            </p>
-            <div className=" description-font text-dark col-12 pl-0">
-              <ul className="pl-3">
-                <div className=" job-points">
-                  {Parser(job.lists[0].content)}
-                </div>
-              </ul>
-            </div>
-          </React.Fragment>
+        {job !== undefined && (
+          <div className=" description-font text-dark col-12 pl-1">
+            {Parser(job.description)}
+          </div>
         )}
-        {job.lists[0] !== undefined && (
+        {job !== undefined && (
           <React.Fragment>
-            <p className="pt-3 roboto-bold text-black font-sm">Experience</p>
-            <div className=" description-font text-dark col-12 pl-0 pb-5 pb-md-0">
-              <ul className="pl-3">
-                <div className=" job-points">
-                  {Parser(job.lists[1].content)}
+            {job.lists[0] !== undefined && (
+              <React.Fragment>
+                <p className="pt-3 roboto-bold text-black font-sm">
+                  Responsibilities
+                </p>
+                <div className=" description-font text-dark col-12 pl-0">
+                  <ul className="pl-3">
+                    <div className=" job-points">
+                      {Parser(job.lists[0].content)}
+                    </div>
+                  </ul>
                 </div>
-              </ul>
-            </div>
+              </React.Fragment>
+            )}
+            {job.lists[0] !== undefined && (
+              <React.Fragment>
+                <p className="pt-3 roboto-bold text-black font-sm">
+                  Experience
+                </p>
+                <div className=" description-font text-dark col-12 pl-0 pb-5 pb-md-0">
+                  <ul className="pl-3">
+                    <div className=" job-points">
+                      {Parser(job.lists[1].content)}
+                    </div>
+                  </ul>
+                </div>
+              </React.Fragment>
+            )}
           </React.Fragment>
         )}
       </div>

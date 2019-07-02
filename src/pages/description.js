@@ -15,25 +15,33 @@ class Description extends Component {
 
   render() {
     const { job } = this.props
-    // const { positionData } = this.props
-    // const applyData = {
-    //   id: positionData[0].id,
-    //   path: positionData[0].id,
-    //   name: positionData[0].text,
-    //   place: positionData[0].categories.location,
-    //   jobId: positionData[0].id,
-    //   referer: 'https://www.gojek.io/',
-    // }
+  
     return (
       <div className="py-5 my-5 py-md-2 my-md-0">
         {job !== undefined && (
           <Helmet>
             <title>{'GOJEK Careers: ' + job.text}</title>
-            <meta property="og:title" content={'GOJEK Careers: ' + job.text} />
+            <meta
+              data-react-helmet="true"
+              property="og:title"
+              content={'GOJEK Careers: ' + job.text}
+            />
             <meta name="twitter:title" content={'GOJEK Careers: ' + job.text} />
-            <meta name="description" content={job.descriptionPlain} />
-            <meta name="twitter:description" content={job.descriptionPlain} />
-            <meta property="og:description" content={job.descriptionPlain} />
+            <meta
+              data-react-helmet="true"
+              name="description"
+              content={job.descriptionPlain}
+            />
+            <meta
+              data-react-helmet="true"
+              name="twitter:description"
+              content={job.descriptionPlain}
+            />
+            <meta
+              data-react-helmet="true"
+              property="og:description"
+              content={job.descriptionPlain}
+            />
           </Helmet>
         )}
 

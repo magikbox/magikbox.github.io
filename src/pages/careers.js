@@ -79,8 +79,9 @@ class Careers extends Component {
             'Expansion',
             'Growth',
             'Accounting and Finance',
+            'Business Operations',
+            'Research and Insights',
             'Business Operations - Community',
-            'Marketplace',
             'International Operations - Expansion',
             'Business operations - Growth',
             'Marketing and Communications - Digital',
@@ -89,7 +90,7 @@ class Careers extends Component {
             'b8984973-1b9a-410d-9366-4fe0cc17c954',
             'df136a0b-932d-41e9-80ae-106d20554445',
           ].includes(data.id) &&
-          !['Corporate', 'University'].includes(data.categories.department)
+          !['University'].includes(data.categories.department)
         ) {
           return data
         }
@@ -298,7 +299,7 @@ class Careers extends Component {
             >
               {sliderData.map((slide, i) => {
                 return (
-                  <div className={slide.imgsrc}>
+                  <div key={i} className={slide.imgsrc}>
                     <div style={{ height: '50vh' }} />
                     {/* <img
                       src={`../images/careers/${slide.imgsrc}`}

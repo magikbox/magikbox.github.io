@@ -62,7 +62,7 @@
       {
         "id": "9",
         "name": "kubehandler",
-        "link": "https://github.com/gojektech/palantir",
+        "link": "https://github.com/gojektech/kubehandler",
         "description": "A framework for writing Kubernetes controllers"
       },
       {

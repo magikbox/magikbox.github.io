@@ -63,7 +63,7 @@ class IndexPage extends Component {
         <TechFacts />
 
         {/* BLog Section */}
-        <Posts heading=" Read what we do" count="4" />
+        <Posts heading=" Read what we do" count="3" />
         {/* End Blog Section */}
 
         {/* Open Source */}

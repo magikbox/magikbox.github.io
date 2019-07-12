@@ -55,7 +55,7 @@ const Card = (post, src) => {
 class Post extends Component {
   render() {
     const { posts } = this.props
-
+    console.log('sdfdsfsdfdsfdsf', posts)
     var settings = {
       slidesToShow: 3,
       slidesToScroll: 1,
@@ -81,7 +81,7 @@ class Post extends Component {
     }
     const postCount = this.props.count
 
-    if (postCount > 4) {
+    if (postCount > 3) {
       return (
         <div className="row">
           {posts.map((post, key) => {

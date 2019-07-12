@@ -3,16 +3,27 @@
     "heading": "In the News",
     "data": [
       {
+        "id": "20",
+        "link":
+          "https://blog.gojekengineering.com/gojek-secures-investment-from-scb-in-thailand-db245cbe5f27",
+        "image": "../../images/news/Blog Banner_News Announcement.jpg",
+        "name": "GOJEK secures investment from SCB in Thailand",
+        "date": "JULY 12 2019 ",
+        "text":
+          "GOJEK, Southeast Asia’s leading mobile on-demand service and payments platform, announced an investment from leading Thai bank, SCB. The investment is part of GOJEK’s ongoing Series F funding round. As part of the agreement, SCB will partner with GOJEK’s local affiliate, GET, to enable seamless payment experiences and create a more vibrant ecosystem for GET users, drivers, merchants, and partners in Thailand.",
+        "mainBanner": true
+      },
+      {
         "id": "19",
         "link":
           "https://timesofindia.indiatimes.com/business/india-business/gojek-acquires-bluru-based-aircto-sets-up-tech-centre-in-gurgaon/articleshow/69775814.cms",
         "image": "../../images/news/AirCTO-03.jpg",
         "name":
-          "GoJek acquires B’luru-based AirCTO, sets up tech centre in Gurgaon",
+          "GOJEK acquires B’luru-based AirCTO, sets up tech centre in Gurgaon",
         "date": "JUNE 13 2019 ",
         "text":
-          "Bengaluru: GoJek, one of the hottest startups from Southeast Asia. has acquired AirCTO, a Bengaluru-based artificial intelligence (AI) recruitment platform. On Tuesday, it also announced it has opened its second engineering and product development centre in India, in Gurgaon, where it plans to hire over 100 people. The first centre is in Bengaluru.",
-        "mainBanner": true
+          "Bengaluru: GOJEK, one of the hottest startups from Southeast Asia. has acquired AirCTO, a Bengaluru-based artificial intelligence (AI) recruitment platform. On Tuesday, it also announced it has opened its second engineering and product development centre in India, in Gurgaon, where it plans to hire over 100 people. The first centre is in Bengaluru.",
+        "mainBanner": false
       },
       {
         "id": "18",

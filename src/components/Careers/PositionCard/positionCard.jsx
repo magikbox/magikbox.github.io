@@ -31,35 +31,39 @@ export const getShareButton = job => (
     >
       <i className="fa fa-share-alt" /> &nbsp; Share Job
     </button>
-    {typeof window !== `undefined` && (
-      <div className="dropdown-menu py-0" aria-labelledby="dropdownMenuButton">
-        <FacebookShareButton url={window.location.href} quote={job.text}>
-          <button className="px-3 border-focus-none dropdown-item text-left btn  btn-block b-0 text-primary bg-white">
-            <i className=" fa fa-facebook-f " />
-            &nbsp;&nbsp;Facebook
-          </button>
-        </FacebookShareButton>
-        <TwitterShareButton url={window.location.href} quote={job.text}>
-          <button className="px-3 border-focus-none dropdown-item text-left btn o btn-block text-info bg-white">
-            <i className=" fa fa-twitter " />
-            &nbsp;&nbsp;Twitter
-          </button>
-        </TwitterShareButton>
+    {typeof window !== `undefined` &&
+      job !== undefined && (
+        <div
+          className="dropdown-menu py-0"
+          aria-labelledby="dropdownMenuButton"
+        >
+          <FacebookShareButton url={window.location.href} quote={job.text}>
+            <button className="px-3 border-focus-none dropdown-item text-left btn  btn-block b-0 text-primary bg-white">
+              <i className=" fa fa-facebook-f " />
+              &nbsp;&nbsp;Facebook
+            </button>
+          </FacebookShareButton>
+          <TwitterShareButton url={window.location.href} quote={job.text}>
+            <button className="px-3 border-focus-none dropdown-item text-left btn o btn-block text-info bg-white">
+              <i className=" fa fa-twitter " />
+              &nbsp;&nbsp;Twitter
+            </button>
+          </TwitterShareButton>
 
-        <WhatsappShareButton url={window.location.href} quote={job.text}>
-          <button className="px-3 border-focus-none dropdown-item text-left btn  btn-block text-success bg-white">
-            <i className=" fa fa-whatsapp " />
-            &nbsp;&nbsp;Whatsapp
-          </button>
-        </WhatsappShareButton>
-        <TelegramShareButton url={window.location.href} quote={job.text}>
-          <button className="px-3 border-focus-none  dropdown-item text-left btn  btn-block text-info bg-white">
-            <i className=" fa fa-telegram " />
-            &nbsp;&nbsp;Telegram
-          </button>
-        </TelegramShareButton>
-      </div>
-    )}
+          <WhatsappShareButton url={window.location.href} quote={job.text}>
+            <button className="px-3 border-focus-none dropdown-item text-left btn  btn-block text-success bg-white">
+              <i className=" fa fa-whatsapp " />
+              &nbsp;&nbsp;Whatsapp
+            </button>
+          </WhatsappShareButton>
+          <TelegramShareButton url={window.location.href} quote={job.text}>
+            <button className="px-3 border-focus-none  dropdown-item text-left btn  btn-block text-info bg-white">
+              <i className=" fa fa-telegram " />
+              &nbsp;&nbsp;Telegram
+            </button>
+          </TelegramShareButton>
+        </div>
+      )}
   </div>
 )
 

@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Parser from 'html-react-parser'
 import { Helmet } from 'react-helmet'
 import { getShareButton } from '../components/Careers/PositionCard/positionCard.jsx'
+import MetaTags from 'react-meta-tags'
 
 class Description extends Component {
   constructor(props) {
@@ -15,34 +16,18 @@ class Description extends Component {
 
   render() {
     const { job } = this.props
-  
+
     return (
       <div className="py-5 my-5 py-md-2 my-md-0">
         {job !== undefined && (
-          <Helmet>
+          <MetaTags>
             <title>{'GOJEK Careers: ' + job.text}</title>
-            <meta
-              data-react-helmet="true"
-              property="og:title"
-              content={'GOJEK Careers: ' + job.text}
-            />
+            <meta property="og:title" content={'GOJEK Careers: ' + job.text} />
             <meta name="twitter:title" content={'GOJEK Careers: ' + job.text} />
-            <meta
-              data-react-helmet="true"
-              name="description"
-              content={job.descriptionPlain}
-            />
-            <meta
-              data-react-helmet="true"
-              name="twitter:description"
-              content={job.descriptionPlain}
-            />
-            <meta
-              data-react-helmet="true"
-              property="og:description"
-              content={job.descriptionPlain}
-            />
-          </Helmet>
+            <meta name="description" content={job.descriptionPlain} />
+            <meta name="twitter:description" content={job.descriptionPlain} />
+            <meta property="og:description" content={job.descriptionPlain} />
+          </MetaTags>
         )}
 
         {<div className="pt-5 d-md-none">{getShareButton(job)}</div>}

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import PositionCard from '../components/Careers/PositionCard/positionCard'
 import axios from 'axios'
 import OpenPositionDepartments from '../components/AllOpenPositions/OpenPositionDepartments'
+import MetaTags from 'react-meta-tags'
 
 var Scroll = require('react-scroll')
 var scroll = Scroll.animateScroll
@@ -289,7 +290,7 @@ class allpositions extends Component {
   render() {
     return (
       <div className="first-section">
-        <Helmet>
+        <MetaTags>
           <title>
             GOJEK Careers: Check out the current job openings at GOJEK Tech
           </title>
@@ -297,29 +298,24 @@ class allpositions extends Component {
           <meta
             property="og:title"
             content="GOJEK Careers: Check out the current job openings at GOJEK Tech"
-            data-react-helmet="true"
           />
           <meta
             name="twitter:title"
             content="GOJEK Careers: Check out the current job openings at GOJEK Tech"
-            data-react-helmet="true"
           />
           <meta
             name="description"
             content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-            data-react-helmet="true"
           />
           <meta
             name="twitter:description"
             content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-            data-react-helmet="true"
           />
           <meta
             property="og:description"
             content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-            data-react-helmet="true"
           />
-        </Helmet>
+        </MetaTags>
         <div className="container">
           <h1 className="text-center text-black font-xl-x raleway-bold pt-5">
             {this.state.inputText === '' &&

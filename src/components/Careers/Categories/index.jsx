@@ -358,6 +358,7 @@ class Categories extends Component {
 
                   {data.type === 'description' && (
                     <Description
+                      {...this.props.props}
                       positionName={this.state.positionname}
                       positionData={this.state.positionData}
                       onClickCloseButton={this.onClickCloseButton}

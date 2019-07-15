@@ -185,7 +185,7 @@ class PositionCard extends Component {
                           </div>
                           {
                             <div className="pl-4 pt-5">
-                              <Description job={job} />
+                              <Description  {...this.props} job={job} />
                             </div>
                           }
                           <div

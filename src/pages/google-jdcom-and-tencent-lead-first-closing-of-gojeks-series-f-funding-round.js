@@ -12,10 +12,12 @@ class GojekViet extends Component {
             funding round{' '}
           </title>
           <meta
+            data-react-helmet="true"
             property="og:title"
             content="Google, JD.com, and Tencent lead first closing of GOJEK’s Series F funding round"
           />
           <meta
+            data-react-helmet="true"
             name="twitter:title"
             content="Google, JD.com, and Tencent lead first closing of GOJEK’s Series F funding round"
           />

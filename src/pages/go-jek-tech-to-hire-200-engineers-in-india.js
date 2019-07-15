@@ -8,10 +8,12 @@ class GojekViet extends Component {
         <Helmet>
           <title> GOJEK Tech to hire 200 engineers in India </title>
           <meta
+            data-react-helmet="true"
             property="og:title"
             content="GOJEK Tech to hire 200 engineers in India"
           />
           <meta
+            data-react-helmet="true"
             name="twitter:title"
             content="GOJEK Tech to hire 200 engineers in India"
           />

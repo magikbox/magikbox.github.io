@@ -45,22 +45,27 @@ class Location extends Component {
             GOJEK Careers: Check out the current job openings at GOJEK Tech
           </title>
           <meta
+            data-react-helmet="true"
             property="og:title"
             content="GOJEK Careers: Check out the current job openings at GOJEK Tech"
           />
           <meta
+            data-react-helmet="true"
             name="twitter:title"
             content="GOJEK Careers: Check out the current job openings at GOJEK Tech"
           />
           <meta
+            data-react-helmet="true"
             name="description"
             content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
           />
           <meta
+            data-react-helmet="true"
             name="twitter:description"
             content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
           />
           <meta
+            data-react-helmet="true"
             property="og:description"
             content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
           />

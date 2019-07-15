@@ -7,11 +7,11 @@ class GojekBlog extends Component {
       <section className="first-section pt-3">
         <Helmet>
           <title> Why we ask for code- GO-JEK Product + Tech </title>
-          <meta
+          <meta data-react-helmet="true"
             property="og:title"
             content="Why we ask for code- GO-JEK Product + Tech"
           />
-          <meta
+          <meta data-react-helmet="true"
             name="twitter:title"
             content="Why we ask for code- GO-JEK Product + Tech"
           />

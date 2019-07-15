@@ -4,24 +4,23 @@ import { Link } from 'react-scroll'
 import OpenPositions from '../components/Careers/OpenPositions/index'
 import Card from '../components/GoMakeImpact/index'
 import { Player } from 'video-react'
+import MetaTags from 'react-meta-tags'
 
 class GoMakeImpact extends Component {
   render() {
     return (
       <div className="first-section">
-        <Helmet>
+        <MetaTags>
           <title> GO-JEK - Gomakeimpact </title>
           <meta
-            data-react-helmet="true"
             content="yes"
             name="apple-mobile-web-app-capable"
           />
           <meta
-            data-react-helmet="true"
             name="description"
             content="GO-JEK is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest growing unicorn building an on-demand empire."
           />
-        </Helmet>
+        </MetaTags>
 
         {/* impact on Scale section */}
         <section className="first-section">

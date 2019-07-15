@@ -9,47 +9,48 @@ import TechFacts from '../components/Home/TechFacts/index'
 import OpenSource from '../components/Home/OpenSource/index'
 import ImpactStories from '../components/Home/Impact/index'
 import Posts from '../components/Blog/posts'
+import MetaTags from 'react-meta-tags'
 
 class IndexPage extends Component {
   render() {
     return (
       <div>
-        <Helmet>
+        <MetaTags>
           <title>
             GOJEK: On-Demand Services for Transport, Payment, Food Delivery,
             etc.
           </title>
           <meta
-            data-react-helmet="true"
+            
             property="og:title"
             content="GOJEK: On-Demand Services for Transport, Payment, Food Delivery, etc."
           />
           <meta
-            data-react-helmet="true"
+            
             property="og:title"
             content="GOJEK: On-Demand Services for Transport, Payment, Food Delivery, etc."
           />
           <meta
-            data-react-helmet="true"
+            
             name="twitter:title"
             content="GOJEK: On-Demand Services for Transport, Payment, Food Delivery, etc."
           />
           <meta
-            data-react-helmet="true"
+            
             name="description"
             content="GOJEK is a Super App. It's one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia's first and fastest growing unicorn building an on-demand empire."
           />
           <meta
-            data-react-helmet="true"
+            
             name="twitter:description"
             content="GOJEK is a Super App. It's one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia's first and fastest growing unicorn building an on-demand empire."
           />
           <meta
-            data-react-helmet="true"
+            
             property="og:description"
             content="GOJEK is a Super App. It's one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia's first and fastest growing unicorn building an on-demand empire."
           />
-        </Helmet>
+        </MetaTags>
 
         <Carousel />
 

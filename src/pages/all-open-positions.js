@@ -292,7 +292,7 @@ class allpositions extends Component {
 
     return (
       <div className="first-section">
-        <Helmet preserved={false}>
+        <Helmet >
           <title>
             GOJEK Careers: Check out the current job openings at GOJEK Tech
           </title>

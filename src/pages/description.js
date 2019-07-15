@@ -15,9 +15,9 @@ class Description extends Component {
   }
 
   render() {
-    const { job } = this.props
-    const { siteMetadata: metaData } = this.props.data.site
+    const { job } = this.props;
 
+    const { siteMetadata: metaData } = this.props.data.site
     return (
       <div className="py-5 my-5 py-md-2 my-md-0">
         {job !== undefined && (

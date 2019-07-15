@@ -326,7 +326,7 @@ class PositionCard extends Component {
 
                             {/* // <button className="btn btn-primary">sdf</button> */}
                             {/* {console.log('sdfdsfdfdsf', window.location.href)} */}
-                            <Description job={job} />
+                            <Description {...this.props} job={job} />
                             <div className="d-block text-center" />
                           </div>
                         }

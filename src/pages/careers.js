@@ -12,7 +12,6 @@ import jobs from '../../data/jobs.json'
 import { Link } from 'react-scroll'
 import axios from 'axios'
 import Slider from 'react-slick'
-import MetaTags from 'react-meta-tags'
 
 var Scroll = require('react-scroll')
 var scroller = Scroll.scroller
@@ -248,7 +247,7 @@ class Careers extends Component {
 
     return (
       <div className="first-section">
-        <MetaTags>
+        <Helmet>
           <title>
             GOJEK Careers: Check out the current job openings at GOJEK Tech
           </title>
@@ -272,7 +271,7 @@ class Careers extends Component {
             property="og:description"
             content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
           />
-        </MetaTags>
+        </Helmet>
 
         {/* Main banner image */}
         <SearchBar

@@ -288,34 +288,76 @@ class allpositions extends Component {
   }
 
   render() {
+    const { siteMetadata: metaData } = this.props.data.site
+
     return (
       <div className="first-section">
-        <MetaTags>
+        <Helmet>
           <title>
             GOJEK Careers: Check out the current job openings at GOJEK Tech
           </title>
-
           <meta
-            property="og:title"
-            content="GOJEK Careers: Check out the current job openings at GOJEK Tech"
+            data-react-helmet="true"
+            content="yes"
+            name="apple-mobile-web-app-capable"
           />
           <meta
+            data-react-helmet="true"
+            name="description"
+            content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+          />
+
+          {/* Twitter meta tags */}
+          <meta
+            data-react-helmet="true"
+            name="twitter:card"
+            content="summary"
+          />
+          <meta
+            data-react-helmet="true"
+            name="twitter:site"
+            content={metaData.twitter}
+          />
+          <meta
+            data-react-helmet="true"
             name="twitter:title"
             content="GOJEK Careers: Check out the current job openings at GOJEK Tech"
           />
           <meta
-            name="description"
-            content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-          />
-          <meta
+            data-react-helmet="true"
             name="twitter:description"
             content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
           />
           <meta
+            data-react-helmet="true"
+            name="twitter:image"
+            content={metaData.siteImage}
+          />
+
+          {/* og meta tags */}
+          <meta
+            data-react-helmet="true"
+            property="og:title"
+            content="GOJEK Careers: Check out the current job openings at GOJEK Tech"
+          />
+          <meta data-react-helmet="true" property="og:type" content="website" />
+          <meta
+            data-react-helmet="true"
+            property="og:url"
+            content={metaData.siteUrl}
+          />
+          <meta
+            data-react-helmet="true"
+            property="og:image"
+            content={metaData.siteImage}
+          />
+          <meta
+            data-react-helmet="true"
             property="og:description"
             content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
           />
-        </MetaTags>
+        </Helmet>
+
         <div className="container">
           <h1 className="text-center text-black font-xl-x raleway-bold pt-5">
             {this.state.inputText === '' &&
@@ -475,3 +517,17 @@ class allpositions extends Component {
 }
 
 export default allpositions
+
+export const query = graphql`
+  query SiteTitleQuery {
+    site {
+      siteMetadata {
+        title
+        description
+        siteUrl
+        siteImage
+        twitter
+      }
+    }
+  }
+`

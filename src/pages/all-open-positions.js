@@ -519,7 +519,7 @@ class allpositions extends Component {
 export default allpositions
 
 export const query = graphql`
-  query SiteTitleQuery {
+  query SiteTitleQuery2 {
     site {
       siteMetadata {
         title

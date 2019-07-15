@@ -279,7 +279,7 @@ class Description extends Component {
 export default Description
 
 export const query = graphql`
-  query SiteTitleQuery {
+  query SiteTitleQuery1 {
     site {
       siteMetadata {
         title

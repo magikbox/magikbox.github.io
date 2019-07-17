@@ -5,13 +5,24 @@
       {
         "id": "20",
         "link":
+          "https://blog.gojekengineering.com/visa-and-gojek-join-hands-for-financial-inclusion-in-se-asia-613366120e0e",
+        "image": "../../images/news/visa-gojek.jpeg",
+        "name": "Visa and GOJEK Join Hands for Financial Inclusion in SE Asia",
+        "date": "JULY 17 2019 ",
+        "text":
+          "The digital payments technology company has invested in GOJEK’s Series F funding round. The partnership will help GOJEK accelerate rollout of cashless payment solutions in the region.",
+        "mainBanner": true
+      },
+      {
+        "id": "20",
+        "link":
           "https://blog.gojekengineering.com/gojek-secures-investment-from-scb-in-thailand-db245cbe5f27",
         "image": "../../images/news/Blog Banner_News Announcement.jpg",
         "name": "GOJEK secures investment from SCB in Thailand",
         "date": "JULY 12 2019 ",
         "text":
           "GOJEK, Southeast Asia’s leading mobile on-demand service and payments platform, announced an investment from leading Thai bank, SCB. The investment is part of GOJEK’s ongoing Series F funding round. As part of the agreement, SCB will partner with GOJEK’s local affiliate, GET, to enable seamless payment experiences and create a more vibrant ecosystem for GET users, drivers, merchants, and partners in Thailand.",
-        "mainBanner": true
+        "mainBanner": false
       },
       {
         "id": "19",

@@ -18,22 +18,22 @@ class CareerDepartment extends Component {
     const departmentData = [
       {
         label: 'Engineering',
-        imageLink: '../../images/careers/department/Engineering.png',
+        imageLink: '../../images/careers/department/Engineering-new.png',
         departmentName: 'engineering',
       },
       {
         label: 'People & Culture',
-        imageLink: '../../images/careers/department/people-and-culture.png',
+        imageLink: '../../images/careers/department/people-and-culture-new.png',
         departmentName: 'people-and-culture',
       },
       {
         label: 'Science',
-        imageLink: '../../images/careers/department/science.png',
+        imageLink: '../../images/careers/department/science-new.png',
         departmentName: 'science',
       },
       {
         label: 'Product',
-        imageLink: '../../images/careers/department/product.png',
+        imageLink: '../../images/careers/department/product-new.png',
         departmentName: 'product',
       },
       // {
@@ -43,14 +43,14 @@ class CareerDepartment extends Component {
       // },
       {
         label: 'Program Management',
-        imageLink: '../../images/careers/department/Productmanagement.png',
+        imageLink: '../../images/careers/department/Productmanagement-new.png',
         departmentName: 'program-management',
       },
-      // {
-      //   label: 'Design',
-      //   imageLink: '../../images/careers/department/design.png',
-      //   departmentName: 'design',
-      // },
+      {
+        label: 'Design',
+        imageLink: '../../images/careers/department/design-new.png',
+        departmentName: 'design',
+      },
       // {
       //   label: 'Finance, Legal & Tax',
       //   imageLink: '../../images/careers/department/product.png',
@@ -90,7 +90,7 @@ class CareerDepartment extends Component {
                         ? 'super-app-location px-4 scroll d-flex flex-column justify-content-center align-items-center'
                         : 'career-department px-4 scroll d-flex flex-column justify-content-center align-items-center'
                     }
-                    style={{ minHeight: '193px' }}
+                    style={{ minHeight: '160px' }}
                   >
                     <div
                     // onClick={() =>

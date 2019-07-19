@@ -88,7 +88,7 @@ class Contact extends Component {
 
           <div className="container">
             <section>
-              <div className="row">
+              <div className="row py-3">
                 <div className="col-md-5 bg-green">
                   <h5 className="h5 text-uppercase raleway-extrabold text-white text-center pt-5 pb-4 contact">
                     Careers
@@ -112,7 +112,7 @@ class Contact extends Component {
                     href="mailto:contact@gojek.io"
                     className="text-green roboto-regular font-md"
                   >
-                    <u>contact@gojek.io</u>
+                    <u>work@gojek.io</u>
                   </a>
 
                   <p className="pt-4 text-uppercase mb-0 roboto-black contact">
@@ -145,8 +145,7 @@ class Contact extends Component {
                     </li>
                     <li className="list-inline-item">
                       <a
-                        href="https://www.linkedin.com/company/go-jek-india/
-                                            "
+                        href="https://www.linkedin.com/company/gojektech/"
                         target="_blank"
                       >
                         <i
@@ -158,15 +157,15 @@ class Contact extends Component {
                   </ul>
                 </div>
 
-                <div className="col-md-7 p-0">
+                {/* <div className="col-md-7 p-0">
                   <div className="gojek-expansion go-jek-work-gradient background-img relative-position" />
-                </div>
-                <div className="contact-bg col-md-5 d-flex align-items-center pb-5">
+                </div> */}
+                {/* <div className="contact-bg col-md-12 d-flex align-items-center pb-5">
                   <h4 className="text-white pt-5 pt-md-0 raleway-bold  h2">
                     GOJEK expands to 4 new markets - Thailand, Vietnam,
                     Singapore & Phillippines
                   </h4>
-                </div>
+                </div> */}
               </div>
             </section>
           </div>

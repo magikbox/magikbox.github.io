@@ -32,7 +32,7 @@ class Articles extends Component {
                 >
                   <img
                     className="img-fluid"
-                    src="../../images/careers/ask-for-code.png"
+                    src="../../images/careers/ask-for-code-new.png"
                   />
                   <h6 className="font-lg position-absolute text-white article-position">
                     Why We <br />Ask for<br />Code
@@ -46,7 +46,7 @@ class Articles extends Component {
                 >
                   <img
                     className="img-fluid"
-                    src="../../images/careers/full-stack-engineer.png"
+                    src="../../images/careers/full-stack-engineer-new.png"
                   />
                   <h6 className="font-lg position-absolute text-white article-position">
                     Who is a<br />Full Stack <br />Engineer?
@@ -61,7 +61,7 @@ class Articles extends Component {
               >
                 <img
                   className="img-fluid"
-                  src="../../images/careers/recruiting-devs.png"
+                  src="../../images/careers/recruiting-devs-new.png"
                 />
                 <h6 className="font-lg position-absolute text-white article-position">
                   How We Go<br />about Recruiting<br />a Developer

@@ -17,14 +17,17 @@ $link-hover-decoration: none !default;
 
 // Font classes
 .raleway-regular {
-  font-family: $ralewayRegular;
+  // font-family: $ralewayRegular;
+  font-family: $maisonNeueRegular;
 }
 
 .raleway-bold {
-  font-family: $ralewayBold;
+  font-family: $maisonNeueBold;
+  // font-family: $ralewayBold;
 }
 .raleway-extrabold {
-  font-family: $ralewayExtraBold;
+  font-family: $maisonNeueExtraBold;
+  // font-family: $ralewayExtraBold;
 }
 
 .roboto-bold {
@@ -47,11 +50,13 @@ $link-hover-decoration: none !default;
 }
 
 .neosans-regular {
-  font-family: $regularFont;
+  // font-family: $regularFont;
+  font-family: $maisonNeueRegular;
 }
 
 .neosans-bold {
-  font-family: $boldFont;
+  // font-family: $boldFont;
+  font-family: $maisonNeueBold;
 }
 
 body {
@@ -65,7 +70,7 @@ body {
 .display-4,
 .card-title {
   color: #000;
-  font-family: 'RaleWayBold', sans-serif;
+  font-family: 'MaisonNeueBold', sans-serif;
 }
 
 .font-xs {
@@ -680,7 +685,7 @@ html {
   }
   #go-jek-slider .carousel-btn {
     top: 76%;
-    font-family: $ralewayExtraBold;
+    font-family: $maisonNeueExtraBold;
     z-index: 99;
   }
   html {
@@ -942,7 +947,8 @@ input[type='file'] {
 }
 .careers-form .form-control::placeholder,
 .careers-form .custom-select {
-  font-family: 'RaleWayRegular', sans-serif;
+  font-family: 'MaisonNeueRegular', sans-serif;
+  // font-family: 'RaleWayRegular', sans-serif;
 }
 .form-border {
   border: 1px solid #ccc !important;

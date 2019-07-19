@@ -229,7 +229,7 @@ class allpositions extends Component {
       <React.Fragment>
         <div className="dropdown position-relative">
           <button
-            className="btn form-control custom-search  py-2  btn-block bg-white dropdown-toggle custom-dropdown text-left neosans-regular py-2  "
+            className="btn form-control custom-search  py-2  btn-block bg-white dropdown-toggle custom-dropdown text-left roboto-regular py-2  "
             type="button"
             id="dropdownMenuButton"
             data-toggle="dropdown"

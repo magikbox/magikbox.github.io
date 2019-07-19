@@ -60,7 +60,7 @@
     "data": [
       {
         "id": "1",
-        "image": "../../images/careers/ask-for-code.png",
+        "image": "../../images/careers/ask-for-code-new.png",
         "link": "http://bit.ly/ArtofFullStack",
         "type": "image",
         "title": "Who is a Full Stack Engineer?",
@@ -69,7 +69,7 @@
       },
       {
         "id": "2",
-        "image": "../../images/careers/full-stack-engineer.png",
+        "image": "../../images/careers/full-stack-engineer-new.png",
         "link":
           "https://blog.gojekengineering.com/why-we-ask-for-code-b276b45ea790",
         "type": "image",
@@ -79,7 +79,7 @@
       },
       {
         "id": "3",
-        "image": "../../images/careers/recruiting-devs.png",
+        "image": "../../images/careers/recruiting-devs-new.png",
         "link": "http://bit.ly/GOJEKRecProcess",
         "type": "image",
         "title": "FAQs: How we go about recruiting a developer",

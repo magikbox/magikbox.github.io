@@ -53,7 +53,7 @@
     "data": [
       {
         "type": "image",
-        "content": "../../images/gojek-work/gojek-growth.jpg",
+        "content": "../../images/gojek-work/gojek-growth-new.jpg",
         "theme": "dark-green-bg",
         "justify": "around",
         "col": "5",
@@ -71,7 +71,7 @@
       },
       {
         "type": "image",
-        "content": "../../images/gojek-work/gojek-rider.jpg",
+        "content": "../../images/gojek-work/gojek-rider-new.jpg",
         "theme": "rider-bg",
         "justify": "center",
         "col": "2",
@@ -90,7 +90,7 @@
       },
       {
         "type": "image",
-        "content": "../../images/gojek-work/orders.jpg",
+        "content": "../../images/gojek-work/orders-new.jpg",
         "theme": "order-bg",
         "justify": "around",
         "col": "2",
@@ -117,7 +117,7 @@
       },
       {
         "type": "image",
-        "content": "../../images/gojek-work/gojek-engineers.png",
+        "content": "../../images/gojek-work/gojek-engineers-new.jpg",
         "theme": "developer-bg",
         "justify": "around",
         "col": "5",
@@ -127,7 +127,7 @@
     ],
     "responsiveData": [
       {
-        "image": "../../images/gojek-work/gojek-growth.jpg",
+        "image": "../../images/gojek-work/gojek-growth-new.jpg",
         "heading": "6600x",
         "text": "total order volume growth in 3 years",
         "alt": "GoJek Growth",
@@ -136,7 +136,7 @@
         "bgTheme": "bg-white"
       },
       {
-        "image": "../../images/gojek-work/orders.jpg",
+        "image": "../../images/gojek-work/orders-new.jpg",
         "heading": "3 million+",
         "text": "orders every day",
         "alt": "GoJek order",
@@ -145,7 +145,7 @@
         "bgTheme": "bg-white"
       },
       {
-        "image": "../../images/gojek-work/gojek-rider.jpg",
+        "image": "../../images/gojek-work/gojek-rider-new.jpg",
         "heading": "2 million+",
         "text":
           "drivers. More daily rides than India's largest ride-sharing service",
@@ -155,7 +155,7 @@
         "bgTheme": "bg-white"
       },
       {
-        "image": "../../images/gojek-work/gojek-engineers.png",
+        "image": "../../images/gojek-work/gojek-engineers-new.jpg",
         "heading": "20+ Products",
         "text": "200+ Engineers",
         "alt": "GoJek Engineers",
@@ -218,20 +218,20 @@
     "data": [
       {
         "id": "1",
-        "image": "../../images/tech-facts/fact-1.jpg",
+        "image": "../../images/tech-facts/fact-new-1.jpg",
         "alt": "30 orders on an average every second",
         "text": "We process an average of 35 orders every second."
       },
       {
         "id": "2",
-        "image": "../../images/tech-facts/fact-2.jpg",
+        "image": "../../images/tech-facts/fact-new-2.png",
         "alt": "200 million internel API calls per second",
         "text":
           "We process more than 350 million internal API calls per second."
       },
       {
         "id": "3",
-        "image": "../../images/tech-facts/fact-3.jpg",
+        "image": "../../images/tech-facts/fact-new-3.png",
         "alt": "Ruby, Java and Go clusters",
         "text": "We run one of the largest JRuby, Java and Go clusters in Asia."
       }

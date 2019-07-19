@@ -8,7 +8,7 @@ class Footer extends Component {
 					<div className="row text-uppercase">
 						<div className="col-md-4">
 							<a href="/">
-								<img src="../../images/FooterLogo.png" alt="GOJEK LOGO" title="GOJEK" />
+								<img src="../../images/gojek-logo-footer.png" alt="GOJEK LOGO" title="GOJEK" />
 							</a>
 						</div>
 						<div className="col-md-8">

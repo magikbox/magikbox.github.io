@@ -9,7 +9,7 @@ class Button extends Component {
             <div className={"align-self-center text-center " + (data.position === 'left' ? 'text-md-left' : '')}>
                 <a 
                     href = {data.link} 
-                    className={"custom-btn btn raleway-bold text-uppercase my-1 font-md " + (data.type === 'outline' ? 'btn-outline-light' : 'btn-success')}> 
+                    className={"custom-btn btn maison-bold text-uppercase my-1 font-md " + (data.type === 'outline' ? 'btn-outline-light' : 'btn-success')}> 
                     { data.text }  
                 </a>
             </div>

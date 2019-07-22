@@ -10,9 +10,9 @@ class Footer extends Component {
               <a href="/">
                 <img
                   width="80%"
-                  src="../../images/gojek-logo-footer-new.png"
-                  alt="GOJEK LOGO"
-                  title="GOJEK"
+                  src="../../images/gojek-logo-footer.png"
+                  alt="Gojek LOGO"
+                  title="Gojek"
                 />
               </a>
             </div>
@@ -53,7 +53,7 @@ class Footer extends Component {
                   <ul className="list-unstyled">
                     <li className="pb-4 text-left mx-0 ">
                       <a
-                        className="green-apply-btn btn btn-success raleway-bold rounded-1 text-white px-lg-5 px-md-3"
+                        className="green-apply-btn btn btn-success maison-bold rounded-1 text-white px-lg-5 px-md-3"
                         href="/all-open-positions/"
                       >
                         Open Positions

@@ -9,7 +9,7 @@ class ThankYou extends Component {
     return (
       <div>
         <Helmet>
-          <title> GO-JEK Tech</title>
+          <title> Gojek Tech</title>
         </Helmet>
 
         <section className="first-section">
@@ -21,13 +21,13 @@ class ThankYou extends Component {
 
         <section>
           <div className="d-flex flex-row flex-wrap justify-content-center py-5 align-items-center">
-            <p className="text-center font-xl raleway-bold text-black text-uppercase col-10">
+            <p className="text-center font-xl maison-bold text-black text-uppercase col-10">
               We have received your application!
             </p>
             <div className="col-md-7 text-center roboto-regular">
               <p>
                 Thanks for taking the time to apply for our position. We
-                appreciate your interest in GO-JEK.
+                appreciate your interest in Gojek.
               </p>
               <p>
                 We're currently in the process of taking applications for this

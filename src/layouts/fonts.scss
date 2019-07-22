@@ -1,24 +1,24 @@
 // Import all the fonts used
 
-@font-face {
-  font-family: NeoSansBold;
-  src: url('../fonts/NeoSansPro-Bold.ttf');
-}
+// @font-face {
+//   font-family: NeoSansBold;
+//   src: url('../fonts/NeoSansPro-Bold.ttf');
+// }
 
-@font-face {
-  font-family: NeoSansLight;
-  src: url('../fonts/NeoSansPro-Light.ttf');
-}
+// @font-face {
+//   font-family: NeoSansLight;
+//   src: url('../fonts/NeoSansPro-Light.ttf');
+// }
 
-@font-face {
-  font-family: NeoSans;
-  src: url('../fonts/NeoSansPro-Regular.ttf');
-}
+// @font-face {
+//   font-family: NeoSans;
+//   src: url('../fonts/NeoSansPro-Regular.ttf');
+// }
 
-@font-face {
-  font-family: NeoSansMedium;
-  src: url('../fonts/NeoSans-Medium.otf');
-}
+// @font-face {
+//   font-family: NeoSansMedium;
+//   src: url('../fonts/NeoSans-Medium.otf');
+// }
 
 @font-face {
   font-family: RobotoBold;
@@ -45,30 +45,30 @@
   src: url('../fonts/Roboto-Light.ttf');
 }
 
-@font-face {
-  font-family: RaleWayRegular;
-  src: url('../fonts/Raleway-Regular.ttf');
-}
+// @font-face {
+//   font-family: RaleWayRegular;
+//   src: url('../fonts/maison-Regular.ttf');
+// }
 
-@font-face {
-  font-family: RaleWayMedium;
-  src: url('../fonts/Raleway-Medium.ttf');
-}
+// @font-face {
+//   font-family: RaleWayMedium;
+//   src: url('../fonts/maison-Medium.ttf');
+// }
 
-@font-face {
-  font-family: RaleWayBold;
-  src: url('../fonts/Raleway-Bold.ttf');
-}
+// @font-face {
+//   font-family: RaleWayBold;
+//   src: url('../fonts/maison-Bold.ttf');
+// }
 
-@font-face {
-  font-family: RaleWaySemiBold;
-  src: url('../fonts/Raleway-SemiBold.ttf');
-}
+// @font-face {
+//   font-family: RaleWaySemiBold;
+//   src: url('../fonts/maison-SemiBold.ttf');
+// }
 
-@font-face {
-  font-family: RaleWayExtraBold;
-  src: url('../fonts/Raleway-ExtraBold.ttf');
-}
+// @font-face {
+//   font-family: RaleWayExtraBold;
+//   src: url('../fonts/maison-ExtraBold.ttf');
+// }
 
 @font-face {
   font-family: MaisonNeueRegular;
@@ -88,15 +88,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
 
-$lightFont: 'NeoSansLight', sans-serif;
-$boldFont: 'NeoSansBold', sans-serif;
-$regularFont: 'NeoSans', sans-serif;
-$mediumFont: 'NeoSansMedium', sans-serif;
+// $lightFont: 'NeoSansLight', sans-serif;
+// $boldFont: 'NeoSansBold', sans-serif;
+// $regularFont: 'NeoSans', sans-serif;
+// $mediumFont: 'NeoSansMedium', sans-serif;
 
-// Raleway font variables
-$ralewayRegular: 'RalewayRegular', sans-serif;
-$ralewayBold: 'RalewayBold', sans-serif;
-$ralewayExtraBold: 'RaleWayExtraBold', sans-serif;
+// // Raleway font variables
+// $ralewayRegular: 'RalewayRegular', sans-serif;
+// $ralewayBold: 'RalewayBold', sans-serif;
+// $ralewayExtraBold: 'RaleWayExtraBold', sans-serif;
 
 // MaisonNeue font variables
 $maisonNeueRegular: 'MaisonNeueRegular', sans-serif;

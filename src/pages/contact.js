@@ -8,16 +8,16 @@ class Contact extends Component {
     return (
       <div className="first-section">
         <Helmet>
-          <title>GOJEK: Contact Us</title>
+          <title>Gojek: Contact Us</title>
           <meta
             data-react-helmet="true"
             property="og:title"
-            content="GOJEK: Contact Us"
+            content="Gojek: Contact Us"
           />
           <meta
             data-react-helmet="true"
             name="twitter:title"
-            content="GOJEK: Contact Us"
+            content="Gojek: Contact Us"
           />
           <meta
             data-react-helmet="true"
@@ -40,7 +40,7 @@ class Contact extends Component {
           <div className="container-fluid">
             <div className="row align-items-center bg-green">
               <div className="col-md-5 p-md-0 p-5">
-                <h1 className="raleway-bold text-center text-white">
+                <h1 className="maison-bold text-center text-white">
                   Contact Us
                 </h1>
               </div>
@@ -55,8 +55,8 @@ class Contact extends Component {
           <section className="my-md-5 py-md-0 py-5">
             <div className="row">
               <div className="col-md-4">
-                <p className="font-md text-green text-uppercase   raleway-bold place pb-1">
-                  GOJEK Head Office (Jakarta):
+                <p className="font-md text-green text-uppercase   maison-bold place pb-1">
+                  Gojek Head Office (Jakarta):
                 </p>
                 <p className="roboto-regular address text-black">
                   Pasaraya Blok M Gedung B Lt. 6,<br />
@@ -67,16 +67,16 @@ class Contact extends Component {
                 </p>
               </div>
               <div className="col-md-4">
-                <p className="font-md text-green text-uppercase  raleway-bold place pb-4">
-                  GOJEK Singapore:
+                <p className="font-md text-green text-uppercase  maison-bold place pb-4">
+                  Gojek Singapore:
                 </p>
                 <p className="roboto-regular address text-black">
                   8 Shenton Way,<br /> AXA Tower, <br />Singapore 068811
                 </p>
               </div>
               <div className="col-md-4">
-                <p className="font-md text-green text-uppercase  raleway-bold place pb-4">
-                  GOJEK India:
+                <p className="font-md text-green text-uppercase  maison-bold place pb-4">
+                  Gojek India:
                 </p>
                 <p className="roboto-regular address text-black">
                   4th & 6th Floor Tower B,<br /> Diamond District, HAL Old
@@ -90,7 +90,7 @@ class Contact extends Component {
             <section>
               <div className="row py-3">
                 <div className="col-md-5 bg-green">
-                  <h5 className="h5 text-uppercase raleway-extrabold text-white text-center pt-5 pb-4 contact">
+                  <h5 className="h5 text-uppercase maison-extrabold text-white text-center pt-5 pb-4 contact">
                     Careers
                   </h5>
                   <CallToAction
@@ -102,8 +102,8 @@ class Contact extends Component {
                 </div>
 
                 <div className="col-md-7 gray-bg text-black text-center">
-                  <h5 className="raleway-extrabold text-uppercase h5 pt-5 pb-4">
-                    gojek tech contact
+                  <h5 className="maison-extrabold text-uppercase h5 pt-5 pb-4">
+                    Gojek tech contact
                   </h5>
                   <p className=" text-uppercase mb-0 roboto-black contact">
                     Mail
@@ -161,7 +161,7 @@ class Contact extends Component {
                   <div className="gojek-expansion go-jek-work-gradient background-img relative-position" />
                 </div> */}
                 {/* <div className="contact-bg col-md-12 d-flex align-items-center pb-5">
-                  <h4 className="text-white pt-5 pt-md-0 raleway-bold  h2">
+                  <h4 className="text-white pt-5 pt-md-0 maison-bold  h2">
                     GOJEK expands to 4 new markets - Thailand, Vietnam,
                     Singapore & Phillippines
                   </h4>

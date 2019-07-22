@@ -86,7 +86,7 @@ class OpenPositionTeams extends Component {
           </div>
         </div>
         <div className="d-md-none col-12 px-2">
-          <p className="mb-0 font-sm raleway-bold text-black">TEAM:</p>
+          <p className="mb-0 font-sm maison-bold text-black">TEAM:</p>
 
           <div className="dropdown position-relative">
             <button

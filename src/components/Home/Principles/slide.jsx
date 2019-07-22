@@ -32,7 +32,7 @@ class Slide extends Component {
             href={data.link}
             target="_blank"
           >
-            <h4 className="card-title font-md raleway-bold ">{text}</h4>
+            <h4 className="card-title font-md maison-bold ">{text}</h4>
           </a>
 
           <p className="font-xs-l">{data.text}</p>

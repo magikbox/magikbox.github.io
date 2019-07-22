@@ -10,14 +10,14 @@ class GoMakeImpact extends Component {
     return (
       <div className="first-section">
         <Helmet>
-          <title> GO-JEK - Gomakeimpact </title>
+          <title> Gojek - Gomakeimpact </title>
           <meta
             content="yes"
             name="apple-mobile-web-app-capable"
           />
           <meta
             name="description"
-            content="GO-JEK is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest growing unicorn building an on-demand empire."
+            content="Gojek is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest growing unicorn building an on-demand empire."
           />
         </Helmet>
 
@@ -33,12 +33,12 @@ class GoMakeImpact extends Component {
               <img
                 className="img-fluid"
                 src="../../images/gomakeimpact/impact-on-scale-banner.jpg"
-                alt="Impact on scale - GO-JEK"
+                alt="Impact on scale - Gojek"
               />
             </picture>
 
             <div className="text-block text-white text-center pt-5 mt-5 position-absolute">
-              <h1 className="text-uppercase mt-lg-5 mt-md-0 mt-5 pb-3 raleway-extrabold open-position-heading custom-letter-spacing">
+              <h1 className="text-uppercase mt-lg-5 mt-md-0 mt-5 pb-3 maison-extrabold open-position-heading custom-letter-spacing">
                 Impact at Scale
               </h1>
               <p
@@ -48,9 +48,9 @@ class GoMakeImpact extends Component {
                 {/* At GO-JEK, everything is big. Whether it's engineering, product or design, our platform is filled with
                                 challenges that are at scale, new and complex. See how GO-JEK is changing the lives of millions of
                                 people in Indonesia. */}
-                In less than 3 years, GOJEK grew from a few hundred orders to
+                In less than 3 years, Gojek grew from a few hundred orders to
                 more than 100 million every month. Be it engineering, product,
-                or design, GOJEK has no dearth of hard complex problems™ at
+                or design, Gojek has no dearth of hard complex problems™ at
                 scale. We’re changing the lives of millions in Indonesia and now
                 have our eyes set on the entirety of Southeast Asia.
               </p>
@@ -70,7 +70,7 @@ class GoMakeImpact extends Component {
             <i className="fa fa-chevron-down text-success bg-white shadow  position-absolute rounded-circle scroll-down d-none d-md-block" />
           </Link>
 
-          <h1 className="text-uppercase text-center h1 py-lg-5 pb-md-4 pt-md-5 pt-4 pb-3 text-dark raleway-extrabold">
+          <h1 className="text-uppercase text-center h1 py-lg-5 pb-md-4 pt-md-5 pt-4 pb-3 text-dark maison-extrabold">
             WHO ARE WE?
           </h1>
           <div className="gomake-impact-bg who-we-are text-white py-5">
@@ -84,13 +84,13 @@ class GoMakeImpact extends Component {
                                 transportation to mobile payments and food delivery, we endeavor to improve the livelihoods of our consumers, drivers
                                 and merchant partners alike. To date, we have impacted 260M lives in over 50 cities in Indonesia through 1M+ partners.
                                 But we’re just getting started! */}
-                GOJEK is a Super App. It’s one app for ordering food, commuting,
+                Gojek is a Super App. It’s one app for ordering food, commuting,
                 digital payments, shopping, hyper-local delivery, getting a
                 massage and two dozen services. It is Indonesia’s first and
                 fastest growing unicorn building an on-demand empire. A total of
                 1,000,000 driver partners collectively cover an average distance
-                of 16.5 million kilometers each day, making GOJEK Indonesia’s de
-                facto transportation partner. GOJEK is a verb. GOJEK is a way of
+                of 16.5 million kilometers each day, making Gojek Indonesia’s de
+                facto transportation partner. Gojek is a verb. Gojek is a way of
                 life. It is quite simply the Operating System of Indonesia. And
                 we’re just getting started...
               </p>
@@ -140,18 +140,18 @@ class GoMakeImpact extends Component {
               <img
                 className="img-fluid"
                 src="../../images/gomakeimpact/test.png"
-                alt="Impact on scale - GO-JEK"
+                alt="Impact on scale - Gojek"
               />
             </picture>
             <div className="position-absolute text-white text-center">
-              <h1 className="text-uppercase mt-5 pt-5 pb-3 raleway-extrabold custom-letter-spacing text-max">
+              <h1 className="text-uppercase mt-5 pt-5 pb-3 maison-extrabold custom-letter-spacing text-max">
                 Want to build Southeast Asia?
               </h1>
               <Link
                 to="jobs"
                 spy={true}
                 smooth={true}
-                className="btn btn-success btn-lg text-uppercase raleway-bold"
+                className="btn btn-success btn-lg text-uppercase maison-bold"
                 offset={-50}
               >
                 see our job openings
@@ -162,7 +162,7 @@ class GoMakeImpact extends Component {
         {/* <!-- End Go-Jek people --> */}
         {/* Careers section */}
         <section id="jobs">
-          <h1 className="text-uppercase text-center h1 py-lg-5 py-md-3 pt-4 pb-3 text-dark raleway-extrabold custom-letter-spacing">
+          <h1 className="text-uppercase text-center h1 py-lg-5 py-md-3 pt-4 pb-3 text-dark maison-extrabold custom-letter-spacing">
             Drive impact at scale
           </h1>
           <div className="job-openings pt-5" id="super-jobs">
@@ -189,7 +189,7 @@ class GoMakeImpact extends Component {
             <img
               className="img-fluid"
               src="../images/gomakeimpact/careers-bg.png"
-              alt="Impact on scale - GO-JEK"
+              alt="Impact on scale - Gojek"
             />
           </div>
         </section>

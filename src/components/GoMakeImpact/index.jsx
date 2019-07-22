@@ -28,7 +28,7 @@ class Card extends Component {
     render() {
         return (
             <section id="goTroops">
-                <h1 className="raleway-bold text-center h3 py-lg-5 py-md-3 pt-4 pb-3 text-dark" >
+                <h1 className="maison-bold text-center h3 py-lg-5 py-md-3 pt-4 pb-3 text-dark" >
                     Some of our internal rockstars driving #ImpactAtScale
                 </h1>
                 <div className="row no-gutters">
@@ -52,19 +52,19 @@ class Card extends Component {
                                         <img src="" alt="" className="img-fluid" id="employee-image" />
                                     </div>
                                     <div className="col-lg-6 py-md-3">
-                                        <h1 id="employee-name" className="raleway-bold pb-3 mb-0"></h1>
+                                        <h1 id="employee-name" className="maison-bold pb-3 mb-0"></h1>
                                         <div className="embed-responsive embed-responsive-4by3">
                                             <iframe id="iframe-src" className="embed-responsive-item" src="" />
                                         </div>
                                     </div>
                                     <div className="col-lg-3 pt-md-4 pb-3 text-center">
-                                        <h3 className="pt-lg-5 pt-0 raleway-bold text-dark text-left" id="heading">
+                                        <h3 className="pt-lg-5 pt-0 maison-bold text-dark text-left" id="heading">
                                         </h3>
                                         <hr className="" />
                                         <p id="description" className="roboto-regular  text-left">  </p>
                                         <a
                                             href="#"
-                                            className="btn custom-btn text-center raleway-bold text-uppercase font-md btn-success w-100" id="blog-link" target="_blank">
+                                            className="btn custom-btn text-center maison-bold text-uppercase font-md btn-success w-100" id="blog-link" target="_blank">
 
                                         </a>
                                     </div>

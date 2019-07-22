@@ -19,13 +19,13 @@ class Slide extends Component {
 
 		return(
             <div className="card bg-white">
-                <div className="card-img-top light-green-bg font-xl-l raleway-bold text-white py-2">Employee Stories</div>
+                <div className="card-img-top light-green-bg font-xl-l maison-bold text-white py-2">Employee Stories</div>
                 <img className="card-img-top" src={ img } alt={data.employeeName} />
                 <div className="card-body px-3 font-xs-l">
                     <p className="text-dark">
                         {data.testimonial}
 					</p>
-                    <h5 className="text-green raleway-bold">{data.employeeName}</h5>
+                    <h5 className="text-green maison-bold">{data.employeeName}</h5>
                 </div>
 			</div>
 		);

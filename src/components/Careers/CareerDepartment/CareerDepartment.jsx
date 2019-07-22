@@ -18,22 +18,22 @@ class CareerDepartment extends Component {
     const departmentData = [
       {
         label: 'Engineering',
-        imageLink: '../../images/careers/department/Engineering-new.png',
+        imageLink: '../../images/careers/department/Engineering.png',
         departmentName: 'engineering',
       },
       {
         label: 'People & Culture',
-        imageLink: '../../images/careers/department/people-and-culture-new.png',
+        imageLink: '../../images/careers/department/people-and-culture.png',
         departmentName: 'people-and-culture',
       },
       {
         label: 'Science',
-        imageLink: '../../images/careers/department/science-new.png',
+        imageLink: '../../images/careers/department/science.png',
         departmentName: 'science',
       },
       {
         label: 'Product',
-        imageLink: '../../images/careers/department/product-new.png',
+        imageLink: '../../images/careers/department/product.png',
         departmentName: 'product',
       },
       // {
@@ -43,12 +43,12 @@ class CareerDepartment extends Component {
       // },
       {
         label: 'Program Management',
-        imageLink: '../../images/careers/department/Productmanagement-new.png',
+        imageLink: '../../images/careers/department/Productmanagement.png',
         departmentName: 'program-management',
       },
       {
         label: 'Design',
-        imageLink: '../../images/careers/department/design-new.png',
+        imageLink: '../../images/careers/department/design.png',
         departmentName: 'design',
       },
       // {
@@ -70,7 +70,7 @@ class CareerDepartment extends Component {
           className={
             this.props.color !== undefined
               ? 'text-center text-white neosans-regular font-xl-x my-5 text-white'
-              : 'text-center text-success raleway-bold Fmy-5 text-success'
+              : 'text-center text-success maison-bold Fmy-5 text-success'
           }
         >
           Choose a Department

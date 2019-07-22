@@ -10,16 +10,16 @@ class Events extends Component {
     return (
       <div className="first-section">
         <Helmet>
-          <title> GOJEK Tech Events </title>
+          <title> Gojek Tech Events </title>
           <meta
             data-react-helmet="true"
             property="og:title"
-            content="GOJEK Tech Events"
+            content="Gojek Tech Events"
           />
           <meta
             data-react-helmet="true"
             name="twitter:title"
-            content="GOJEK Tech Events"
+            content="Gojek Tech Events"
           />
         </Helmet>
 

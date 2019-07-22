@@ -294,7 +294,7 @@ class allpositions extends Component {
       <div className="first-section">
         <Helmet >
           <title>
-            GOJEK Careers: Check out the current job openings at GOJEK Tech
+            Gojek Careers: Check out the current job openings at Gojek Tech
           </title>
           <meta
             data-react-helmet="true"
@@ -304,7 +304,7 @@ class allpositions extends Component {
           <meta
             data-react-helmet="true"
             name="description"
-            content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+            content="Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
           />
 
           {/* Twitter meta tags */}
@@ -321,12 +321,12 @@ class allpositions extends Component {
           <meta
             data-react-helmet="true"
             name="twitter:title"
-            content="GOJEK Careers: Check out the current job openings at GOJEK Tech"
+            content="Gojek Careers: Check out the current job openings at Gojek Tech"
           />
           <meta
             data-react-helmet="true"
             name="twitter:description"
-            content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+            content="Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
           />
           <meta
             data-react-helmet="true"
@@ -338,7 +338,7 @@ class allpositions extends Component {
           <meta
             data-react-helmet="true"
             property="og:title"
-            content="GOJEK Careers: Check out the current job openings at GOJEK Tech"
+            content="Gojek Careers: Check out the current job openings at Gojek Tech"
           />
           <meta data-react-helmet="true" property="og:type" content="website" />
           <meta
@@ -354,12 +354,12 @@ class allpositions extends Component {
           <meta
             data-react-helmet="true"
             property="og:description"
-            content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+            content="Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
           />
         </Helmet>
 
         <div className="container">
-          <h1 className="text-center text-black font-xl-x raleway-bold pt-5">
+          <h1 className="text-center text-black font-xl-x maison-bold pt-5">
             {this.state.inputText === '' &&
             this.state.placeSelected === 'All' &&
             this.state.departmentSelected === 'All'
@@ -456,7 +456,7 @@ class allpositions extends Component {
               style={{ height: '50vh' }}
             >
               <i className="fa text-green fa-spinner fa-2x fa-spin" />&nbsp;
-              <p className="font-xl-l raleway-bold mb-0">Loading...</p>{' '}
+              <p className="font-xl-l maison-bold mb-0">Loading...</p>{' '}
             </div>
           )}
           {this.state.inputText === '' &&
@@ -486,7 +486,7 @@ class allpositions extends Component {
               <hr />
               <div className="d-flex flex-row flex-wrap align-items-center px-2">
                 {this.state.inputText.trimLeft() !== '' && (
-                  <h6 className="raleway-bold font-xl-l">
+                  <h6 className="maison-bold font-xl-l">
                     '{this.state.inputText}'
                   </h6>
                 )}

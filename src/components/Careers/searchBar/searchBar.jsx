@@ -52,7 +52,7 @@ class SearchBar extends Component {
     return (
       <section>
         <div className="container pt-5 px-5">
-          <h1 className="font-xl-x raleway-bold text-center text-md-left">
+          <h1 className="font-xl-x maison-bold text-center text-md-left">
             Help Build<br /> a <span className="text-green">SuperApp</span>
           </h1>
           <div className="d-flex flex-row flex-wrap pt-4">
@@ -80,7 +80,7 @@ class SearchBar extends Component {
               <p className="roboto-bold text-uppercase mb-0">Where?</p>
               <div className="dropdown position-relative">
                 <button
-                  className="btn form-control custom-search  py-3  btn-block bg-white dropdown-toggle custom-dropdown text-left neosans-regular py-2  "
+                  className="btn form-control custom-search  py-3  btn-block bg-white dropdown-toggle custom-dropdown text-left  py-2  "
                   type="button"
                   id="dropdownMenuButton"
                   data-toggle="dropdown"
@@ -153,7 +153,7 @@ class SearchBar extends Component {
               </div>
             )}
           <div className="pt-2">
-            <Link to="/all-open-positions?d=engineering" className="">
+            <Link to="/all-open-positions" className="">
               <u className=" text-green">I'd like to view all open positions</u>
             </Link>
           </div>
@@ -176,7 +176,7 @@ class SearchBar extends Component {
       //         } `
       //       }
       //     >
-      //       <h6 className="text-success raleway-extrabold font-xl-l mb-0">
+      //       <h6 className="text-success maison-extrabold font-xl-l mb-0">
       //         Search&nbsp;
       //       </h6>
       //     </div>
@@ -292,7 +292,7 @@ class SearchBar extends Component {
       //               this.onClickPositionFromSearch(searchResult[0])
       //             }
       //             type="button"
-      //             className="btn bg-success btn-sm ml-auto text-white raleway-extrabold "
+      //             className="btn bg-success btn-sm ml-auto text-white maison-extrabold "
       //           >
       //             Search<i className="fa fa-search pl-3" />
       //           </button>

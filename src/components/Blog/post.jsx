@@ -21,7 +21,7 @@ const Card = (post, src) => {
 
   return (
     <div className="card medium-blog border-0">
-      <p className="card-text text-success blog-date raleway-bold text-center text-md-left">
+      <p className="card-text text-success blog-date maison-bold text-center text-md-left">
         <Moment className="roboto-bold text-uppercase" format="MMMM DD, YYYY">
           {post.post.pubDate}
         </Moment>
@@ -31,7 +31,7 @@ const Card = (post, src) => {
         src={post.post.thumbnail}
       />
       <div className="card-body px-0 text-center text-md-left text-black">
-        <h5 className="card-title  raleway-bold">
+        <h5 className="card-title  maison-bold">
           <a
             className="text-dark font-lg transparent-outline-link"
             target="_blank"
@@ -55,7 +55,7 @@ const Card = (post, src) => {
 class Post extends Component {
   render() {
     const { posts } = this.props
-    console.log('sdfdsfsdfdsfdsf', posts)
+    // console.log('sdfdsfsdfdsfdsf', posts)
     var settings = {
       slidesToShow: 3,
       slidesToScroll: 1,
@@ -90,7 +90,7 @@ class Post extends Component {
 
               return (
                 post.title !==
-                  'GOJEK acquires AirCTO, expands operations in India' && (
+                  'Gojek acquires AirCTO, expands operations in India' && (
                   <div className="col-md-4 col-lg-4" key={post.title}>
                     <Card post={post} key={key} src="blog" />
                   </div>
@@ -110,7 +110,7 @@ class Post extends Component {
             if (key < postCount) {
               return (
                 post.title !==
-                  'GOJEK acquires AirCTO, expands operations in India' && (
+                  'Gojek acquires AirCTO, expands operations in India' && (
                   <Card post={post} key={key} src="home" />
                 )
               )

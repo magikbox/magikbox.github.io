@@ -23,7 +23,7 @@ class Articles extends Component {
     return (
       <div>
         <div className="container py-5 px-0">
-          <div className="d-flex flex-row flex-wrap raleway-bold text-white">
+          <div className="d-flex flex-row flex-wrap maison-bold text-white">
             <div className="col-12 col-md-6 d-flex flex-row flex-wrap px-0">
               <div className="ml-auto px-0  my-1 my-md-0 position-relative">
                 <a
@@ -32,7 +32,7 @@ class Articles extends Component {
                 >
                   <img
                     className="img-fluid"
-                    src="../../images/careers/ask-for-code-new.png"
+                    src="../../images/careers/ask-for-code.png"
                   />
                   <h6 className="font-lg position-absolute text-white article-position">
                     Why We <br />Ask for<br />Code
@@ -46,7 +46,7 @@ class Articles extends Component {
                 >
                   <img
                     className="img-fluid"
-                    src="../../images/careers/full-stack-engineer-new.png"
+                    src="../../images/careers/full-stack-engineer.png"
                   />
                   <h6 className="font-lg position-absolute text-white article-position">
                     Who is a<br />Full Stack <br />Engineer?
@@ -61,7 +61,7 @@ class Articles extends Component {
               >
                 <img
                   className="img-fluid"
-                  src="../../images/careers/recruiting-devs-new.png"
+                  src="../../images/careers/recruiting-devs.png"
                 />
                 <h6 className="font-lg position-absolute text-white article-position">
                   How We Go<br />about Recruiting<br />a Developer

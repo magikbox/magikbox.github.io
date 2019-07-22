@@ -30,7 +30,7 @@ class Card extends Component {
                 <div className="card border-0">
                     {
                         data.mainBanner === false &&
-                        <p className="card-text text-success blog-date raleway-bold py-sm-2 ">
+                        <p className="card-text text-success blog-date maison-bold py-sm-2 ">
                             {data.date}
                         </p>
                     }
@@ -46,11 +46,11 @@ class Card extends Component {
                     <div className="card-body px-0 text-center text-md-left text-black mb-3">
                         {
                             data.mainBanner === true &&
-                            <p className="card-text text-success blog-date raleway-bold py-sm-2 ">
+                            <p className="card-text text-success blog-date maison-bold py-sm-2 ">
                                 {data.date}
                             </p>
                         }
-                        <h5 className="card-title  raleway-bold">
+                        <h5 className="card-title  maison-bold">
                             <a className="  font-lg text-black " target="_blank" href={data.link}>
                                 {data.name}
                             </a>
@@ -60,7 +60,7 @@ class Card extends Component {
                         </p>
                         {
                             data.tags &&
-                            <span className="text-success raleway-bold py-sm-2">
+                            <span className="text-success maison-bold py-sm-2">
                             TAGS:
                         </span>
                         }
@@ -69,7 +69,7 @@ class Card extends Component {
                             data.tags &&
                             data.tags.map(
                                 (tag, i) => {
-                                    return <span key={i} className="raleway-bold text-black font-xs">&nbsp;{tag}&nbsp;</span>
+                                    return <span key={i} className="maison-bold text-black font-xs">&nbsp;{tag}&nbsp;</span>
                                 }
                             )
                         }

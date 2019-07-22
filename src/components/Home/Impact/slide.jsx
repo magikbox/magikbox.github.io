@@ -35,7 +35,7 @@ class Slide extends Component {
                     </a>
                 </div>
                 <div className="card-body  text-md-left text-center">
-                    <p className="raleway-bold text-black font-lg">{data.heading}</p>
+                    <p className="maison-bold text-black font-lg">{data.heading}</p>
                     <p className="roboto-regular font-sm">{data.text}</p>
                 </div>
             </div>

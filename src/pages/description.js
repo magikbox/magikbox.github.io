@@ -22,7 +22,7 @@ class Description extends Component {
       <div className="py-5 my-5 py-md-2 my-md-0">
         {job !== undefined && (
           <Helmet preserved>
-            <title>{'GOJEK Careers: ' + job.text}</title>
+            <title>{'Gojek Careers: ' + job.text}</title>
 
             <meta
               data-react-helmet="true"
@@ -32,7 +32,7 @@ class Description extends Component {
             <meta
               data-react-helmet="true"
               name="description"
-              content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+              content="Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
             />
 
             {/* Twitter meta tags */}
@@ -49,7 +49,7 @@ class Description extends Component {
             <meta
               data-react-helmet="true"
               name="twitter:title"
-              content={'GOJEK Careers: ' + job.text}
+              content={'Gojek Careers: ' + job.text}
             />
             <meta
               data-react-helmet="true"
@@ -66,7 +66,7 @@ class Description extends Component {
             <meta
               data-react-helmet="true"
               property="og:title"
-              content={'GOJEK Careers: ' + job.text}
+              content={'Gojek Careers: ' + job.text}
             />
             <meta
               data-react-helmet="true"

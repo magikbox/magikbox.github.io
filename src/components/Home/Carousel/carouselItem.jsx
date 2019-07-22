@@ -32,7 +32,7 @@ class CarouselItem extends Component {
               target="_blank"
               style={borderStyle}
             >
-              <span className="font-lg raleway-bold py-1">{data.linkText}</span>
+              <span className="font-lg maison-bold py-1">{data.linkText}</span>
             </a>
           </p>
         </div>

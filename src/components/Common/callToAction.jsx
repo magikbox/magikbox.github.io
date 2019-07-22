@@ -11,12 +11,12 @@ class CallToAction extends Component {
 				<div className="container-fluid">
 					<div className="row justify-content-center">
 						<div className="col-lg-12">
-							<h3 className={"px-2 text-center font-xl-l raleway-extrabold " + (theme === 'green' ? 'text-white' : 'text-dark')} >{ this.props.text }</h3>
+							<h3 className={"px-2 text-center font-xl-l maison-extrabold " + (theme === 'green' ? 'text-white' : 'text-dark')} >{ this.props.text }</h3>
 
 							<div className="text-center pt-3">
 								<a 
 									href="/careers#openPositions" 
-									className={"btn custom-btn text-center raleway-bold text-uppercase font-md " + (theme === 'green' ? 'bg-white text-green challenging-button' : 'btn-success')}>
+									className={"btn custom-btn text-center maison-bold text-uppercase font-md " + (theme === 'green' ? 'bg-white text-green challenging-button' : 'btn-success')}>
 									{ this.props.btnText }
 								</a>
 							</div>

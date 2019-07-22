@@ -26,36 +26,36 @@ class SuperApp extends Component {
     return (
       <div className="first-section">
         <Helmet>
-          <title>GOJEK: SuperApp</title>
+          <title>Gojek: SuperApp</title>
           <meta
             data-react-helmet="true"
             property="og:title"
-            content="GOJEK: On-Demand Services for Transport, Payment, Food Delivery, etc."
+            content="Gojek: On-Demand Services for Transport, Payment, Food Delivery, etc."
           />
           <meta
             data-react-helmet="true"
             property="og:title"
-            content="GOJEK: On-Demand Services for Transport, Payment, Food Delivery, etc."
+            content="Gojek: On-Demand Services for Transport, Payment, Food Delivery, etc."
           />
           <meta
             data-react-helmet="true"
             name="twitter:title"
-            content="GOJEK: On-Demand Services for Transport, Payment, Food Delivery, etc."
+            content="Gojek: On-Demand Services for Transport, Payment, Food Delivery, etc."
           />
           <meta
             data-react-helmet="true"
             name="description"
-            content="GOJEK is a Super App. It's one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia's first and fastest growing unicorn building an on-demand empire."
+            content="Gojek is a Super App. It's one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia's first and fastest growing unicorn building an on-demand empire."
           />
           <meta
             data-react-helmet="true"
             name="twitter:description"
-            content="GOJEK is a Super App. It's one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia's first and fastest growing unicorn building an on-demand empire."
+            content="Gojek is a Super App. It's one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia's first and fastest growing unicorn building an on-demand empire."
           />
           <meta
             data-react-helmet="true"
             property="og:description"
-            content="GOJEK is a Super App. It's one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia's first and fastest growing unicorn building an on-demand empire."
+            content="Gojek is a Super App. It's one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia's first and fastest growing unicorn building an on-demand empire."
           />
         </Helmet>
         <section id="home">
@@ -81,7 +81,7 @@ class SuperApp extends Component {
                 What is a SUPER APP?
               </h2>
               <h1 className="section-head text-center text-md-left">
-                GOJEK. A Super App.
+                Gojek. A Super App.
                 <br />One App. Many use cases.
               </h1>
               <p className="section-desc text-center text-md-left">
@@ -170,11 +170,11 @@ class SuperApp extends Component {
                   Billion
                 </h1>
                 <p className="section-desc">
-                  The GO-PAY ecosystem processes $6.3 billion of annualised
+                  The GoPay ecosystem processes $6.3 billion of annualised
                   Gross Transaction Value.
                 </p>
                 <p className="section-desc">
-                  GOJEK’s payments platform is the leading digital payments
+                  Gojek’s payments platform is the leading digital payments
                   service in Indonesia
                 </p>
                 <p className="section-desc">
@@ -214,10 +214,10 @@ class SuperApp extends Component {
             <div className="col-12 pb-0 pb-md-5 d-block d-md-none text-center">
               <h1 className="section-head text-body pt-5">$6.3 Billion</h1>
               <p className="section-desc">
-                The GO-PAY ecosystem processes $6.3 billion of annualised Gross
+                The GoPay ecosystem processes $6.3 billion of annualised Gross
                 Transaction Value.
                 <br />
-                GOJEK’s payments platform is the leading digital payments
+                Gojek’s payments platform is the leading digital payments
                 service in Indonesia
               </p>
               <p className="section-desc">
@@ -300,7 +300,7 @@ class SuperApp extends Component {
                 Billion
               </h1>
               <p className="section-desc text-white">
-                GO-FOOD processes $2 billion in annualised Gross Transaction
+                GoFood processes $2 billion in annualised Gross Transaction
                 Value, making it the largest food delivery service in Southeast
                 Asia.
               </p>
@@ -331,11 +331,11 @@ class SuperApp extends Component {
                 merchants
               </h1>
               <p className="section-desc">
-                We have more than 300,000+ merchants on the GO-FOOD platform.{' '}
+                We have more than 300,000+ merchants on the GoFood platform.{' '}
               </p>
               <p className="section-desc">
                 80% of these are small mom and pop shops that rely heavily on
-                GO-FOOD for revenues.
+                GoFood for revenues.
               </p>
               <p className="section-desc">
                 <strong>
@@ -433,10 +433,10 @@ class SuperApp extends Component {
                   <span className="section-numb font-weight-bold">1 </span>in{' '}
                   <span className="section-numb font-weight-bold">2</span> Have
                   The
-                  <br />GOJEK Super App.
+                  <br />Gojek Super App.
                 </h1>
                 <p className="section-desc">
-                  GOJEK has been downloaded more than 125 million times in
+                  Gojek has been downloaded more than 125 million times in
                   Indonesia.<br /> One in two have it installed.<br />
                   To make this all work, we run one of the largest jruby, Java
                   and go clusters in Asia.
@@ -483,7 +483,7 @@ class SuperApp extends Component {
                 </p>
                 <p className="section-desc">
                   {' '}
-                  GOJEK has contributed about IDR 8.2 trillion annually to the
+                  Gojek has contributed about IDR 8.2 trillion annually to the
                   Indonesian economy through the income of Driver Partners.{' '}
                   <br />
                   <small>

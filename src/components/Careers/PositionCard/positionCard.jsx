@@ -196,7 +196,7 @@ class PositionCard extends Component {
                               zIndex: '99',
                               // paddingBottom: '53px',
                             }}
-                            className="w-100 bg-green py-4 text-center position-fixed  raleway-bold font-sm"
+                            className="w-100 bg-green py-4 text-center position-fixed  maison-bold font-sm"
                           >
                             <a
                               className="text-white"
@@ -354,7 +354,7 @@ class PositionCard extends Component {
             )
           })}
           {this.props.jobsData.length === 0 && (
-            <h6 className="raleway-bold mx-auto font-xl-l">No Results Found</h6>
+            <h6 className="maison-bold mx-auto font-xl-l">No Results Found</h6>
           )}
         </div>
 

@@ -13,40 +13,40 @@ class About extends Component {
     return (
       <div className="first-section">
         <Helmet>
-          <title>GOJEK-Tech</title>
+          <title>Gojek-Tech</title>
           <meta
             data-react-helmet="true"
             property="og:title"
-            content="GOJEK-Tech"
+            content="Gojek-Tech"
           />
           <meta
             data-react-helmet="true"
             property="og:title"
-            content="GOJEK-Tech"
+            content="Gojek-Tech"
           />
           <meta
             data-react-helmet="true"
             name="twitter:title"
-            content="GOJEK-Tech"
+            content="Gojek-Tech"
           />
           <meta
             data-react-helmet="true"
             name="description"
-            content="GOJEK is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest growing unicorn building an on-demand empire."
+            content="Gojek is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest growing unicorn building an on-demand empire."
           />
           <meta
             data-react-helmet="true"
             name="twitter:description"
-            content="GOJEK is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest growing unicorn building an on-demand empire."
+            content="Gojek is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest growing unicorn building an on-demand empire."
           />
           <meta
             data-react-helmet="true"
             property="og:description"
-            content="GOJEK is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest growing unicorn building an on-demand empire."
+            content="Gojek is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest growing unicorn building an on-demand empire."
           />
         </Helmet>
         <div className="bg-green text-center ">
-          <h1 className="h1 py-5 raleway-bold font-xl-x text-uppercase text-white">
+          <h1 className="h1 py-5 maison-bold font-xl-x text-uppercase text-white">
             Gojek is indonesia’s <br /> first unicorn
           </h1>
 
@@ -252,7 +252,7 @@ class About extends Component {
               By mid-2015
             </h2>
             <h4 className=" roboto-regular font-xl-l aboutFont">
-              Orders scaled from <strong>3,000 to 100,000 </strong>a day. GOJEK
+              Orders scaled from <strong>3,000 to 100,000 </strong>a day. Gojek
               was becoming indispensable. By end of 2015 - systems were crashing
               because of a major spike in volumes
             </h4>
@@ -458,7 +458,7 @@ class About extends Component {
               Happy Driver Partners
             </h2>
             <h4 className=" roboto-regular font-xl-l aboutFont">
-              Driver incomes increased by 150% making GOJEK a reliable partner{' '}
+              Driver incomes increased by 150% making Gojek a reliable partner{' '}
             </h4>
           </div>
         </div>
@@ -563,7 +563,7 @@ class About extends Component {
               The big rewrite began in 2016
             </h2>
             <h4 className="roboto-regular font-xl-l aboutFont">
-              “No project has a budget and impact as big as this in GOJEK’s
+              “No project has a budget and impact as big as this in Gojek's
               history” - From Nadiem’s internal mail..
             </h4>
             <a
@@ -623,7 +623,7 @@ class About extends Component {
               Employment opportunities.
             </h2>
             <h4 className=" roboto-regular font-xl-l aboutFont">
-              GOJEK employs more than 30,000 people with disabilities.
+              Gojek employs more than 30,000 people with disabilities.
             </h4>
             <a
               href="https://www.youtube.com/watch?v=tu-5s8KhzvQ&feature=youtu.be"
@@ -684,7 +684,7 @@ class About extends Component {
               As of 2018
             </h2>
             <h4 className=" roboto-regular font-xl-l aboutFont">
-              GOJEK does 100+ million orders across 18+ products Total order
+              Gojek does 100+ million orders across 18+ products Total order
               volume growth - 6600x{' '}
             </h4>
           </div>

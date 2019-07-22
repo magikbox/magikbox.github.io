@@ -16,18 +16,15 @@ $link-hover-decoration: none !default;
 @import '~video-react/styles/scss/video-react';
 
 // Font classes
-.raleway-regular {
-  // font-family: $ralewayRegular;
+.maison-regular {
   font-family: $maisonNeueRegular;
 }
 
-.raleway-bold {
+.maison-bold {
   font-family: $maisonNeueBold;
-  // font-family: $ralewayBold;
 }
-.raleway-extrabold {
+.maison-extrabold {
   font-family: $maisonNeueExtraBold;
-  // font-family: $ralewayExtraBold;
 }
 
 .roboto-bold {
@@ -408,46 +405,6 @@ button.navbar-toggler {
   // -moz-box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.32);
   // box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.32);
   border: 2px solid #e1e1e1;
-}
-
-.singapore-banner {
-  background: url(/../images/careers/singapore-banner.png) no-repeat center;
-  background-size: cover;
-}
-
-.bengaluru-banner {
-  background: url(/../images/careers/bangalore-banner.png) no-repeat center;
-  background-size: cover;
-}
-
-.jakarta-banner {
-  background: url(/../images/careers/jakarta-banner.png) no-repeat center;
-  background-size: cover;
-}
-
-.bangkok-banner,
-.bali-banner,
-.manila-banner,
-.gurugram-banner {
-  background: url(/../images/careers/job-illustration.png) no-repeat center;
-  background-size: cover;
-}
-
-// .bali-banner,
-// .manila-banner {
-//   background: url(/../images/careers/ho-chi-minh-city-banner.png) no-repeat
-//     center;
-//   background-size: cover;
-// }
-
-.philippines-banner {
-  background: url(/../images/careers/philippines-banner.png) no-repeat center;
-  background-size: cover;
-}
-
-.job-illustration-banner {
-  background: url(/../images/careers/job-illustration.png) no-repeat center;
-  background-size: cover;
 }
 
 .custom-tabs-highlight {

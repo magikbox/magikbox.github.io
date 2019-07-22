@@ -12,32 +12,32 @@ class Blog extends Component {
       <div className="first-section">
         <Helmet>
           <title>
-            Insightful articles by GOJEK about why they do what they do
+            Insightful articles by Gojek about why they do what they do
           </title>
           <meta
             data-react-helmet="true"
             property="og:title"
-            content="Insightful articles by GOJEK about why they do what they do"
+            content="Insightful articles by Gojek about why they do what they do"
           />
           <meta
             data-react-helmet="true"
             name="twitter:title"
-            content="Insightful articles by GOJEK about why they do what they do"
+            content="Insightful articles by Gojek about why they do what they do"
           />
           <meta
             data-react-helmet="true"
             name="description"
-            content="The blog section provides valuable information on GOJEK's work culture, their engineering ideals and insights on what makes a person an excellent developer."
+            content="The blog section provides valuable information on Gojek's work culture, their engineering ideals and insights on what makes a person an excellent developer."
           />
           <meta
             data-react-helmet="true"
             name="twitter:description"
-            content="The blog section provides valuable information on GOJEK's work culture, their engineering ideals and insights on what makes a person an excellent developer."
+            content="The blog section provides valuable information on Gojek's work culture, their engineering ideals and insights on what makes a person an excellent developer."
           />
           <meta
             data-react-helmet="true"
             property="og:description"
-            content="The blog section provides valuable information on GOJEK's work culture, their engineering ideals and insights on what makes a person an excellent developer."
+            content="The blog section provides valuable information on Gojek's work culture, their engineering ideals and insights on what makes a person an excellent developer."
           />
         </Helmet>
 

@@ -17,7 +17,7 @@ class Card extends Component {
 					<p className="mb-0">
 						<span className=" h2 font-xl mb-0 text-gray">{data.content}</span>
 						<br />
-						<span className="raleway-bold">{data.caption}</span>
+						<span className="maison-bold">{data.caption}</span>
 					</p>
 				</div>
 			);

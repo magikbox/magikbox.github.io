@@ -51,7 +51,7 @@ class Slide extends Component {
                 </div>
                 <div className="card-body bg-white text-black">
                     <p className="font-sm roboto-regular">
-                        <span className="font-lg raleway-bold">
+                        <span className="font-lg maison-bold">
                             {data.heading}
                         </span>
                         <br /> {data.text}

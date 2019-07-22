@@ -9,32 +9,32 @@ class OpenSource extends Component {
       <div className="first-section">
         <Helmet>
           <title>
-            Contributions by GOJEK towards free and open source software
+            Contributions by Gojek towards free and open source software
           </title>
           <meta
             data-react-helmet="true"
             property="og:title"
-            content="Contributions by GOJEK towards free and open source software"
+            content="Contributions by Gojek towards free and open source software"
           />
           <meta
             data-react-helmet="true"
             name="twitter:title"
-            content="Contributions by GOJEK towards free and open source software"
+            content="Contributions by Gojek towards free and open source software"
           />
           <meta
             data-react-helmet="true"
             name="description"
-            content="GOJEK understands and appreciates the value of free and open source software. Check out some of our contributions towards the community on our GitHub page."
+            content="Gojek understands and appreciates the value of free and open source software. Check out some of our contributions towards the community on our GitHub page."
           />
           <meta
             data-react-helmet="true"
             name="twitter:description"
-            content="GOJEK understands and appreciates the value of free and open source software. Check out some of our contributions towards the community on our GitHub page."
+            content="Gojek understands and appreciates the value of free and open source software. Check out some of our contributions towards the community on our GitHub page."
           />
           <meta
             data-react-helmet="true"
             property="og:description"
-            content="GOJEK understands and appreciates the value of free and open source software. Check out some of our contributions towards the community on our GitHub page."
+            content="Gojek understands and appreciates the value of free and open source software. Check out some of our contributions towards the community on our GitHub page."
           />
         </Helmet>
 

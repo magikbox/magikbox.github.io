@@ -6,14 +6,14 @@ class GojekBlog extends Component {
     return (
       <section className="first-section pt-3">
         <Helmet>
-          <title> Why we ask for code- GO-JEK Product + Tech </title>
+          <title> Why we ask for code- Gojek Product + Tech </title>
           <meta data-react-helmet="true"
             property="og:title"
-            content="Why we ask for code- GO-JEK Product + Tech"
+            content="Why we ask for code- Gojek Product + Tech"
           />
           <meta data-react-helmet="true"
             name="twitter:title"
-            content="Why we ask for code- GO-JEK Product + Tech"
+            content="Why we ask for code- Gojek Product + Tech"
           />
         </Helmet>
         <div className="container">
@@ -23,7 +23,7 @@ class GojekBlog extends Component {
                 {' '}
                 October 4, 2018
               </p> */}
-              <h1 className="text-md-left pt-4 text-black raleway-bold ">
+              <h1 className="text-md-left pt-4 text-black maison-bold ">
                 Why we ask for code
               </h1>
               <h6 className="roboto-regular pb-4 font-md ">
@@ -59,7 +59,7 @@ class GojekBlog extends Component {
                 </p>
 
                 <p className="pt-2 ">
-                  At GOJEK, we’re looking for programmers who code for the
+                  At Gojek, we’re looking for programmers who code for the
                   challenge and sheer pleasure of it. This means we’re only
                   targeting about 0.5% of the programmers in the job market.
                   Operationally, when we have thousands of applicants per
@@ -89,7 +89,7 @@ class GojekBlog extends Component {
                 </p>
 
                 <p className="pt-2">
-                  This is important to us, because EVERYONE at GOJEK codes.
+                  This is important to us, because EVERYONE at Gojek codes.
                   Seniority does not preclude you from the basics of the job.
                   Because we believe,<span className="roboto-bold">
                     “Leaders who code are better judges of technical skill in
@@ -169,11 +169,11 @@ class GojekBlog extends Component {
                 </p>
 
                 <p className="py-2">
-                  We have no dearth of technical problems at GOJEK, and are
+                  We have no dearth of technical problems at Gojek, and are
                   looking for hackers with strong, hands-on engineering skills
-                  to join our team. The same team that has helped GOJEK become a
+                  to join our team. The same team that has helped Gojek become a
                   Super App with an ecosystem aided by 2 million driver partners
-                  and 400,000 merchant partners. But why GOJEK? My colleague
+                  and 400,000 merchant partners. But why Gojek? My colleague
                   explains. Visit <a href = "http://superapp.is" target="_blank" >superapp.is</a> and help us move Southeast Asia.
                 </p>
               </div>

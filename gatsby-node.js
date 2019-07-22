@@ -41,16 +41,16 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
 
         // Create image post pages.
-        const postTemplate = path.resolve(`src/templates/job.js`)
-        _.each(result.data.allJobsJson.edges, edge => {
-          createPage({
-            path: `careers/${slug(edge.node.positionSlug)}/`,
-            component: slash(postTemplate),
-            context: {
-              positionSlug: edge.node.positionSlug
-            },
-          })
-        })
+        // const postTemplate = path.resolve(`src/templates/job.js`)
+        // _.each(result.data.allJobsJson.edges, edge => {
+        //   createPage({
+        //     path: `careers/${slug(edge.node.positionSlug)}/`,
+        //     component: slash(postTemplate),
+        //     context: {
+        //       positionSlug: edge.node.positionSlug
+        //     },
+        //   })
+        // })
 
         return
       })

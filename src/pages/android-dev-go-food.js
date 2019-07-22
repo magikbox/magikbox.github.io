@@ -8,7 +8,7 @@ const SecondPage = () => (
         <div className="section-wrapper">
           <div className="section go-food-section">
             <div className="posting-headline">
-              <h2>Android Engineer, GO-FOOD</h2>
+              <h2>Android Engineer, GoFood</h2>
               <div className="posting-categories">
                 <div className="category-label">Bengaluru, Gurugram |</div>
                 <div className="category-label">
@@ -38,24 +38,24 @@ const SecondPage = () => (
         <div className="section-wrapper">
           <div className="section go-food-section">
             <div>
-              <b>About GO-FOOD</b>
+              <b>About GoFood</b>
             </div>
             <div>
-              GO-FOOD is the food vertical of GOJEK, which enables user order
+              GoFood is the food vertical of Gojek, which enables user order
               food from restaurants via it’s Android and IOS app.
             </div>
             <div>
               <br />
             </div>
             <div>
-              The mission of GO-FOOD as a product is to provide it’s customers
+              The mission of GoFood as a product is to provide it’s customers
               with the best possible selection of food at the most affordable
-              price. GO-FOOD is also a market place for restaurants to list
-              their food items and increase their sales. GO-FOOD also has it’s
+              price. GoFood is also a market place for restaurants to list
+              their food items and increase their sales. GoFood also has it’s
               own fleet of drivers with an app where they can accept food orders
               and earn their daily income out food delivery. So overall it’s an
               ecosystem consisting of consumers, merchants and drivers which
-              GO-FOOD manages with the ultimate aim of providing best user
+              GoFood manages with the ultimate aim of providing best user
               experience to consumers and growth for merchants and drivers.
             </div>
             <div>
@@ -66,9 +66,9 @@ const SecondPage = () => (
             </div>
             <div>
               We currently have a team of 40+ engineers across 3 different
-              locations Bangalore, Gurgaon and Jakarta. GO-FOOD being one of the
+              locations Bangalore, Gurgaon and Jakarta. GoFood being one of the
               largest online food delivery applications, the scale at which this
-              team operates is phenomenal. GO-FOOD has more than 300k merchants
+              team operates is phenomenal. GoFood has more than 300k merchants
               and more than 20 millions dishes listed on it’s platform.
             </div>
             <div>
@@ -79,10 +79,10 @@ const SecondPage = () => (
             </div>
             <div>
               Passionate, entrepreneurial developers with a drive for developing
-              and deploying applications at scale, to join our GO-FOOD Team in
+              and deploying applications at scale, to join our GoFood Team in
               Bangalore. In this role you will be responsible to design, develop
               and deploy Android applications aimed at improving customer
-              experience on GO-FOOD. You will also be responsible for the
+              experience on GoFood. You will also be responsible for the
               overall UX and high reliability of Android application.&nbsp;
             </div>
           </div>
@@ -96,7 +96,7 @@ const SecondPage = () => (
                   </li>
                   <li>
                     Work cross-functionally with product, engineering and design
-                    teams across GOJEK.
+                    teams across Gojek.
                   </li>
                   <li>
                     Collaborate with internal teams to build and iterate on
@@ -164,14 +164,14 @@ const SecondPage = () => (
                   rel="noopener noreferrer"
                   className="postings-link"
                 >
-                  GOJEK is a Super App
+                  Gojek is a Super App
                 </a>
               </b>
               <b>&nbsp;</b>and a growth-stage startup with a social mission to
               improve the welfare and livelihoods of workers in various informal
-              sectors in Indonesia. GOJEK champions 3 essential values: speed,
+              sectors in Indonesia. Gojek champions 3 essential values: speed,
               innovation and social impact.&nbsp;Since it launched in 2010,
-              GOJEK has evolved into an on-demand mobile platform and a
+              Gojek has evolved into an on-demand mobile platform and a
               cutting-edge app providing a range services that include
               transportation, logistics, mobile payments, food delivery and more
               and that impacts millions of lives in Indonesia and beyond.
@@ -191,7 +191,7 @@ const SecondPage = () => (
               <br />
             </div>
             <div>
-              GOJEK is a verb. GOJEK is a way of life. It is quite simply the
+              Gojek is a verb. Gojek is a way of life. It is quite simply the
               operating system of Indonesia. 250+ engineers spread across
               Jakarta, Singapore and India make software decisions that impacts
               about 260 million people in the country.{' '}
@@ -202,7 +202,7 @@ const SecondPage = () => (
                   target="_blank"
                   className="postings-link"
                 >
-                  GOJEK Tech team
+                  Gojek Tech team
                 </a>&nbsp;
               </b>comprises of developers, data scientists, designers and
               product managers who work on product innovation, mining data and

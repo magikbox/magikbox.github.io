@@ -75,7 +75,7 @@ class EmployeeStories extends Component {
 
     return (
       <section className="gray-bg py-5">
-        <h1 className="font-xl-l text-black py-3 text-center raleway-extrabold">
+        <h1 className="font-xl-l text-black py-3 text-center maison-extrabold">
           {employeeStories.heading}
         </h1>
 

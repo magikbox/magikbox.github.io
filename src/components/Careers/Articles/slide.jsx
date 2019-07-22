@@ -21,7 +21,7 @@ class Slide extends Component {
                 <a href={data.link} target="_blank" style={ pStyle }>
                     
                     <div className="card-body  text-md-left text-center d-flex align-items-center justify-content-center" style={ bgStyle }>
-                        <p className="raleway-bold text-black font-lg text-white">{data.title}</p>
+                        <p className="maison-bold text-black font-lg text-white">{data.title}</p>
                     </div>
                 </a>
             </div>

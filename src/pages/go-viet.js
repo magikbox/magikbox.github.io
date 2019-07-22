@@ -7,32 +7,32 @@ class GojekViet extends Component {
       <section className="first-section pt-3">
         <Helmet>
           <title>
-            Backed by GOJEK, GO-VIET launches its services in Vietnam
+            Backed by Gojek, GO-VIET launches its services in Vietnam
           </title>
           <meta
             data-react-helmet="true"
             property="og:title"
-            content="Backed by GOJEK, GO-VIET launches its services in Vietnam"
+            content="Backed by Gojek, GO-VIET launches its services in Vietnam"
           />
           <meta
             data-react-helmet="true"
             name="twitter:title"
-            content="Backed by GOJEK, GO-VIET launches its services in Vietnam"
+            content="Backed by Gojek, GO-VIET launches its services in Vietnam"
           />
           <meta
             data-react-helmet="true"
             name="description"
-            content="Owing to the great success of GOJEK in Indonesia, GO-VIET will try and replicate the same in Vietnam."
+            content="Owing to the great success of Gojek in Indonesia, GO-VIET will try and replicate the same in Vietnam."
           />
           <meta
             data-react-helmet="true"
             name="twitter:description"
-            content="Owing to the great success of GOJEK in Indonesia, GO-VIET will try and replicate the same in Vietnam."
+            content="Owing to the great success of Gojek in Indonesia, GO-VIET will try and replicate the same in Vietnam."
           />
           <meta
             data-react-helmet="true"
             property="og:description"
-            content="Owing to the great success of GOJEK in Indonesia, GO-VIET will try and replicate the same in Vietnam."
+            content="Owing to the great success of Gojek in Indonesia, GO-VIET will try and replicate the same in Vietnam."
           />
         </Helmet>
         <div className="container">
@@ -41,7 +41,7 @@ class GojekViet extends Component {
               <p className="text-success blog-date roboto-bold py-sm-2 ">
                 August 1, 2018
               </p>
-              <h5 className="text-center text-md-left text-black pb-4 raleway-bold font-lg">
+              <h5 className="text-center text-md-left text-black pb-4 maison-bold font-lg">
                 GO-VIET expands services to 12 districts in HO CHI MINH city as
                 the app becomes available for public download
               </h5>
@@ -62,7 +62,7 @@ class GojekViet extends Component {
                   the first time.{' '}
                 </li>
                 <li className="text-dark">
-                  The GO-VIET app was developed using cutting edge GOJEK
+                  The GO-VIET app was developed using cutting edge Gojek
                   technology
                 </li>
                 <li className="text-dark">
@@ -73,7 +73,7 @@ class GojekViet extends Component {
               </ul>
 
               <p className="pt-4">
-                GO-VIET, the on-demand multi-service app backed by GOJEK, is set
+                GO-VIET, the on-demand multi-service app backed by Gojek, is set
                 to expand its coverage to 12 districts across Ho Chi Minh City
                 on Wednesday, August 1st, as the app becomes available for
                 public download on the Apple App Store & Google Play for the
@@ -107,18 +107,18 @@ class GojekViet extends Component {
                 range of users ahead of its full launch, which will take place
                 within the next few weeks. The company has successfully
                 on-boarded thousands of drivers in an effort to provide Ho Chi
-                Minh City with a comprehensive service based on GOJEK’s market
+                Minh City with a comprehensive service based on Gojek’s market
                 leading technology
               </p>
               <p>
-                GO-VIET will be the first of GOJEK’s international operations to
+                GO-VIET will be the first of Gojek’s international operations to
                 launch. The brand was developed in Vietnam and benefits from a
                 Vietnamese founding management team with extensive knowledge of
                 Vietnamese consumers, drivers and other stakeholders.
               </p>
 
               <p>
-                The launch of GO-VIET will see GOJEK’s world-class technology
+                The launch of GO-VIET will see Gojek’s world-class technology
                 come to Vietnam, as part of the company’s US$500 million
                 international expansion plan that will see it enter Vietnam,
                 Thailand, Singapore and Philippines. The announcement followed
@@ -127,7 +127,7 @@ class GojekViet extends Component {
                 others.
               </p>
               <p>
-                With more than 98 million+ app downloads in Indonesia, GOJEK's
+                With more than 98 million+ app downloads in Indonesia, Gojek's
                 platform powers the Indonesian equivalents of Indian taxi
                 aggregators, food delivery start-ups, hyperlocal start-ups,
                 digital wallet start-ups and home service based start-ups, all
@@ -138,7 +138,7 @@ class GojekViet extends Component {
               <p>
                 GO-VIET is an on-demand multi-service app that aims to make
                 improve life for people across Vietnam. The company is managed
-                by a local Vietnamese founding team, with GOJEK providing
+                by a local Vietnamese founding team, with Gojek providing
                 world-class technology, knowledge and expertise as well as
                 investment. GO-VIET will provide a range of services for
                 Vietnamese people, including transportation, logistics,
@@ -149,9 +149,9 @@ class GojekViet extends Component {
                 inclusion.
               </p>
 
-              <h4 className="pt-5 pb-3">About GOJEK</h4>
+              <h4 className="pt-5 pb-3">About Gojek</h4>
               <p>
-                GOJEK is a Super App. It’s one app for ordering food, commuting,
+                Gojek is a Super App. It’s one app for ordering food, commuting,
                 digital payments, shopping, hyper-local delivery, getting a
                 massage and two dozen services. It is Indonesia’s first and
                 fastest growing unicorn building an on-demand empire.{' '}
@@ -162,11 +162,11 @@ class GojekViet extends Component {
                 runs the equivalent of three Indian unicorns rolled into one.
                 GO-FOOD alone does more orders in Indonesia than all Indian food
                 tech startups combined. 3 years since the mobile app launched,
-                GOJEK does more rides than India’s largest taxi-sharing service.
+                Gojek does more rides than India’s largest taxi-sharing service.
               </p>
               <p className="pb-5">
-                GOJEK Tech is the product development and training centre of
-                GOJEK. The tech team comprises of developers, data scientists,
+                Gojek Tech is the product development and training centre of
+                Gojek. The tech team comprises of developers, data scientists,
                 designers and product managers who work on product innovation,
                 mining data and crafting consumer experiences. The average age
                 of the team is 29 and it runs one of the largest jruby, Java and

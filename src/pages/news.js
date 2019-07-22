@@ -10,32 +10,32 @@ class News extends Component {
       <div className="first-section">
         <Helmet>
           <title>
-            Keep yourself updated with the latest news | GOJEK Tech News
+            Keep yourself updated with the latest news | Gojek Tech News
           </title>
           <meta
             data-react-helmet="true"
             property="og:title"
-            content="Keep yourself updated with the latest news | GOJEK Tech News"
+            content="Keep yourself updated with the latest news | Gojek Tech News"
           />
           <meta
             data-react-helmet="true"
             name="twitter:title"
-            content="Keep yourself updated with the latest news | GOJEK Tech News"
+            content="Keep yourself updated with the latest news | Gojek Tech News"
           />
           <meta
             data-react-helmet="true"
             name="description"
-            content="Read on to know more about the technological innovations and major business decisions made by GOJEK for providing an unforgettable experience to their clients."
+            content="Read on to know more about the technological innovations and major business decisions made by Gojek for providing an unforgettable experience to their clients."
           />
           <meta
             data-react-helmet="true"
             name="twitter:description"
-            content="Read on to know more about the technological innovations and major business decisions made by GOJEK for providing an unforgettable experience to their clients."
+            content="Read on to know more about the technological innovations and major business decisions made by Gojek for providing an unforgettable experience to their clients."
           />
           <meta
             data-react-helmet="true"
             property="og:description"
-            content="Read on to know more about the technological innovations and major business decisions made by GOJEK for providing an unforgettable experience to their clients."
+            content="Read on to know more about the technological innovations and major business decisions made by Gojek for providing an unforgettable experience to their clients."
           />
         </Helmet>
 

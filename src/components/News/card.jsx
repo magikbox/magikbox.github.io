@@ -53,10 +53,10 @@ class Card extends Component {
               />
             </a>
             <div className="card-body px-0 text-center text-md-left text-black">
-              <p className="card-text text-success blog-date raleway-bold py-sm-2 ">
+              <p className="card-text text-success blog-date maison-bold py-sm-2 ">
                 {data.date}
               </p>
-              <h5 className="card-title  raleway-bold">
+              <h5 className="card-title  maison-bold">
                 <a
                   className="  font-lg text-black "
                   target="_blank"

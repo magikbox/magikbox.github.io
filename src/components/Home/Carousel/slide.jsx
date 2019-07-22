@@ -17,7 +17,7 @@ class Slide extends Component {
 							<br /> { data.secondLine }
 							<br />
 						<a className="banner-link text-white" href = { data.link } target="_blank" style={borderStyle}>
-						<span className="font-lg raleway-bold py-1">
+						<span className="font-lg maison-bold py-1">
 							{ data.linkText }
 								</span>
 						</a>

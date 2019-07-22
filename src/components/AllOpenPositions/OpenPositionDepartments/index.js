@@ -59,7 +59,7 @@ class OpenPositionDepartments extends Component {
                   >
                     <div>
                       <p
-                        className={`raleway-bold font-xl-l mb-0 ${
+                        className={`maison-bold font-xl-l mb-0 ${
                           getSlug(department.deptName) ===
                           this.props.location.search.split('&')[0].split('=')[1]
                             ? 'text-black'

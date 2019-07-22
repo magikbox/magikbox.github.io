@@ -25,7 +25,7 @@ class Layout extends Component {
       },
       {
         id: '2',
-        name: 'GO-TROOPS',
+        name: 'GoTroops',
         link: 'goTroops',
         type: 'link',
         src: 'gomakeimpact',
@@ -85,7 +85,7 @@ class Layout extends Component {
     return (
       <div>
         <Helmet>
-          <title>GOJEK</title>
+          <title>Gojek</title>
           <meta
             data-react-helmet="true"
             content="yes"
@@ -148,10 +148,10 @@ class Layout extends Component {
           />
           <link
             rel="shortcut icon"
-            href="/../images/favicon.ico"
+            href="/../images/favicon.png"
             type="image/x-icon "
           />
-          <link rel="icon" href="/../images/favicon.ico" type="image/x-icon" />
+          <link rel="icon" href="/../images/favicon.png" type="image/x-icon" />
         </Helmet>
         {location.pathname !== '/gomakeimpact/' &&
           location.pathname !== '/superapp/' && (

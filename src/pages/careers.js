@@ -8,7 +8,6 @@ import EmployeeStories from '../components/Careers/EmployeeStories/index'
 import CountBanner from '../components/Careers/CountBanner/CountBanner'
 import CareerDepartment from '../components/Careers/CareerDepartment/CareerDepartment'
 import SearchBar from '../components/Careers/searchBar/searchBar'
-import jobs from '../../data/jobs.json'
 import { Link } from 'react-scroll'
 import axios from 'axios'
 import Slider from 'react-slick'
@@ -249,27 +248,27 @@ class Careers extends Component {
       <div className="first-section">
         <Helmet>
           <title>
-            GOJEK Careers: Check out the current job openings at GOJEK Tech
+            Gojek Careers: Check out the current job openings at Gojek Tech
           </title>
           <meta
             property="og:title"
-            content="GOJEK Careers: Check out the current job openings at GOJEK Tech"
+            content="Gojek Careers: Check out the current job openings at Gojek Tech"
           />
           <meta
             name="twitter:title"
-            content="GOJEK Careers: Check out the current job openings at GOJEK Tech"
+            content="Gojek Careers: Check out the current job openings at Gojek Tech"
           />
           <meta
             name="description"
-            content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+            content="Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
           />
           <meta
             name="twitter:description"
-            content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+            content="Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
           />
           <meta
             property="og:description"
-            content="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+            content="Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
           />
         </Helmet>
 

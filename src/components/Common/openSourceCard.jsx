@@ -10,7 +10,7 @@ class Card extends Component {
                 <div className="card border-0 mb-4 flex-row opensource-card">
                     <img className="align-self-center p-3" src={"../images/open-source-projects/" + data.name + ".png"} alt="logo img" />
                     <div className="card-body">
-                        <h3 className="raleway-bold mb-0 font-sm-l opensource-card-title text-capitalize">
+                        <h3 className="maison-bold mb-0 font-sm-l opensource-card-title text-capitalize">
                             {data.name}
                         </h3>
                         <p className="opensource-card-description mb-auto roboto-regular" style={{ color: "#686868" }}>{ data.description }</p>

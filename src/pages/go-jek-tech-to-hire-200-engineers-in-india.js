@@ -6,16 +6,16 @@ class GojekViet extends Component {
     return (
       <section className="first-section pt-3">
         <Helmet>
-          <title> GOJEK Tech to hire 200 engineers in India </title>
+          <title> Gojek Tech to hire 200 engineers in India </title>
           <meta
             data-react-helmet="true"
             property="og:title"
-            content="GOJEK Tech to hire 200 engineers in India"
+            content="Gojek Tech to hire 200 engineers in India"
           />
           <meta
             data-react-helmet="true"
             name="twitter:title"
-            content="GOJEK Tech to hire 200 engineers in India"
+            content="Gojek Tech to hire 200 engineers in India"
           />
         </Helmet>
         <div className="container">
@@ -25,8 +25,8 @@ class GojekViet extends Component {
                 {' '}
                 October 4, 2018
               </p>
-              <h5 className="text-center text-md-left text-black pb-4 raleway-bold font-lg">
-                GOJEK Tech to hire 200 engineers in India to work on its ‘Super
+              <h5 className="text-center text-md-left text-black pb-4 maison-bold font-lg">
+                Gojek Tech to hire 200 engineers in India to work on its ‘Super
                 App’
               </h5>
             </div>
@@ -44,7 +44,7 @@ class GojekViet extends Component {
                   and is hiring new talent to meet unprecedented demand
                 </li>
                 <li className="text-dark">
-                  GOJEK currently does significantly more food delivery orders
+                  Gojek currently does significantly more food delivery orders
                   than India’s largest food-tech startup
                 </li>
                 <li className="text-dark">
@@ -55,24 +55,24 @@ class GojekViet extends Component {
               </ul>
 
               <p className="pt-4">
-                GOJEK, Southeast Asia’s first unicorn and the fastest growing
+                Gojek, Southeast Asia’s first unicorn and the fastest growing
                 start-up headquartered in Indonesia, plans to hire 200 engineers
                 in Bangalore to support its expanding portfolio of products in
                 food delivery, taxi-sharing, logistics, digital payments and
                 multiple services.
               </p>
               <p>
-                GOJEK is a Super App. It’s a portal to the internet for a
+                Gojek is a Super App. It’s a portal to the internet for a
                 mobile-first generation in Indonesia. It’s one app for ordering
                 food, commuting, digital payments, shopping, hyper-local
                 delivery, getting a massage and two dozen services.
               </p>
               <p>
-                GOJEK currently does more food delivery orders than India’s
+                Gojek currently does more food delivery orders than India’s
                 largest food-tech startup. The startup also does more completed
-                rides than India’s largest ride-sharing service. GO-PAY is
+                rides than India’s largest ride-sharing service. GoPay is
                 Indonesia's largest digital wallet and does comparable volumes
-                to India’s largest digital wallet. GOJEK will be hiring key
+                to India’s largest digital wallet. Gojek will be hiring key
                 engineering talent to cater to its 18 products that reach more
                 than 70+ million users in Indonesia.
               </p>
@@ -80,21 +80,21 @@ class GojekViet extends Component {
                 “Our total completed order volumes have grown 6600x in the past
                 36 months. We’re witnessing unprecedented scale and one of the
                 rare hyper-growth startups in the world today. Indonesians are
-                increasingly using GOJEK because of the convenience of having a
+                increasingly using Gojek because of the convenience of having a
                 ‘Super App’ that offers multiple services in one app. We’re also
                 able to ward off competition because of the sheer range of
-                services we offer in one app. GOJEK is now a verb in Indonesia
+                services we offer in one app. Gojek is now a verb in Indonesia
                 and a lean team of about 250 engineers have helped build a brand
                 that impacts the overall growth of the country. With expansion
                 plans across Southeast Asia underway, we’re looking for
                 passionate, opinionated engineers who are interested in working
                 for a brand that’s the face of SouthEast Asia,” said Sidu
-                Ponnappa, Head of Data Engineering & India Head at GOJEK.
+                Ponnappa, Head of Data Engineering & India Head at Gojek.
               </p>
               <p>
                 The team will also get a chance to strategise on new products &
                 services and be empowered to make critical decisions that can
-                add to GOJEK’s reach in SouthEast Asia. GOJEK will be hiring
+                add to Gojek’s reach in SouthEast Asia. Gojek will be hiring
                 Data Scientists, Full-stack engineers, Data Engineers, Product
                 Managers, UI/UX designers and Backend Engineers.
               </p>
@@ -108,7 +108,7 @@ class GojekViet extends Component {
               </p>
 
               <p className="pb-5">
-                With more than 105 million app downloads, GOJEK's platform
+                With more than 105 million app downloads, Gojek's platform
                 powers the Indonesian equivalents of Indian taxi aggregators,
                 food delivery start-ups, hyperlocal start-ups, digital wallet
                 start-ups and home service based start-ups, all in one, at a

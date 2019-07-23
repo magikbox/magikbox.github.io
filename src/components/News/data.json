@@ -3,7 +3,19 @@
     "heading": "In the News",
     "data": [
       {
-        "id": "20",
+        "id": "22",
+        "link":
+          "https://www.marketing-interactive.com/gojek-revamps-logo-shares-insights-to-new-look-and-creative-challenges/",
+        "image": "../../images/news/gojek-revamps-logo.png",
+        "name":
+          "Gojek revamps logo, shares insights to new look and creative challenges",
+        "date": "JULY 22 2019 ",
+        "text":
+          "Gojek has unveiled a new visual identity, swapping the Ojek (bike taxis in Bahasa Indonesia) logomark for “Solv”, a nearly-rounded ring encircling a dot. The rebrand seeks to reflect the company’s evolution “from a Jakarta-based ride-hailing service to Southeast Asia’s leading Super App”, said a press release.",
+        "mainBanner": true
+      },
+      {
+        "id": "21",
         "link":
           "https://blog.gojekengineering.com/visa-and-gojek-join-hands-for-financial-inclusion-in-se-asia-613366120e0e",
         "image": "../../images/news/visa-gojek.jpg",
@@ -11,7 +23,7 @@
         "date": "JULY 17 2019 ",
         "text":
           "Visa, the world’s leading digital payments technology company has invested in Gojek, Southeast Asia’s leading mobile on-demand service and payments platform, as part of the latter’s ongoing Series F fundraising round. The two companies will work together to provide greater options on cashless payments and more seamless experiences for consumers across Indonesia and Southeast Asia.",
-        "mainBanner": true
+        "mainBanner": false
       },
       {
         "id": "20",

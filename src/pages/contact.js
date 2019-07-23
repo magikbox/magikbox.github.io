@@ -88,7 +88,7 @@ class Contact extends Component {
 
           <div className="container">
             <section>
-              <div className="row py-3">
+              <div className="row ">
                 <div className="col-md-5 bg-green">
                   <h5 className="h5 text-uppercase maison-extrabold text-white text-center pt-5 pb-4 contact">
                     Careers

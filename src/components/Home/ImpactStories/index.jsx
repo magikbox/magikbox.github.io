@@ -57,7 +57,7 @@ class ImpactStories extends Component {
             className="row impact-slider lg-controls-dark custom-controls-dark slick-dotted"
           >
             {impactStories.data.map((sliderItem, key) => (
-              <Slide data={sliderItem} key={key} />
+              <Slide data={sliderItem} key={key} targetId="impactModal" />
             ))}
           </Slider>
         </div>

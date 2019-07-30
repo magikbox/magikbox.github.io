@@ -51,8 +51,8 @@ class About extends Component {
           </h1>
 
           <img
-            className="img-fluid "
-            src="../images/about/about-us-banner.png"
+            className="w-25 "
+            src="../images/about/about-us-banner.svg"
           />
 
           <div className="py-5">
@@ -71,11 +71,11 @@ class About extends Component {
           className=" pt-5 d-flex flex-row flex-wrap justify-content-center align-items-center section"
         >
           <div
-            className=" pt-5 col-lg-4 col-md-5 col-8 wow fadeIn"
+            className=" pt-5 col-lg-4 col-md-5 col-8 wow fadeIn text-center"
             data-wow-duration="1s"
             data-wow-delay="0.3s"
           >
-            <img className="img-fluid" src="../images/about/local-ojeks.png" />
+            <img className="w-50" src="../images/about/local-ojeks.svg" />
           </div>
           <div
             className=" pt-5 col-lg-4 col-md-5 col-8 text-center text-md-left wow fadeIn"
@@ -93,6 +93,7 @@ class About extends Component {
           </div>
         </div>
         <div style={{ height: '150px' }} className="position-relative">
+
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className=" position-absolute about-path-test path-left"
@@ -123,7 +124,7 @@ class About extends Component {
 
           <img
             className="img-fluid circle-width "
-            src="../images/about/ellipse-1-left-bike.png"
+            src="../images/about/Side1.svg"
           />
         </div>
 
@@ -148,8 +149,8 @@ class About extends Component {
             data-wow-delay="0.3s"
           >
             <img
-              className="img-fluid"
-              src="../images/about/customer-care.png"
+              className="w-75"
+              src="../images/about/customer-care.svg"
             />
           </div>
         </div>
@@ -195,7 +196,7 @@ class About extends Component {
           >
             <img
               className="img-fluid"
-              src="../images/about/automated-machine.png"
+              src="../images/about/automated-machine.svg"
             />
           </div>
           <div
@@ -262,14 +263,14 @@ class About extends Component {
             data-wow-duration="1s"
             data-wow-delay="0.3s"
           >
-            <img className="img-fluid" src="../images/about/scaled-order.png" />
+            <img className="img-fluid" src="../images/about/increased-orders.svg" />
           </div>
         </div>
 
         <div style={{ height: '150px' }} className="position-relative">
           <img
             className="img-fluid circle-width position-absolute"
-            src="../images/about/ellipse-1-copy-2.png"
+            src="../images/about/Side1.svg"
           />
 
           <svg
@@ -310,8 +311,8 @@ class About extends Component {
             data-wow-delay="0.3s"
           >
             <img
-              className="img-fluid"
-              src="../images/about/niranjan-paranjape.png"
+              className="w-75"
+              src="../images/about/niranjan-paranjape.svg"
             />
           </div>
           <div
@@ -393,7 +394,7 @@ class About extends Component {
           >
             <img
               className="img-fluid"
-              src="../images/about/300000-orders.png"
+              src="../images/about/300000-orders.svg"
             />
           </div>
         </div>
@@ -402,7 +403,7 @@ class About extends Component {
           <img
             className="img-fluid circle-width position-absolute"
             style={{ right: '0' }}
-            src="../images/about/ellipse-1-right-bike.png"
+            src="../images/about/Side2.svg"
           />
 
           <svg
@@ -446,7 +447,7 @@ class About extends Component {
           >
             <img
               className="img-fluid"
-              src="../images/about/driver-partners.png"
+              src="../images/about/driver-partners.svg"
             />
           </div>
           <div
@@ -517,7 +518,7 @@ class About extends Component {
             data-wow-duration="1s"
             data-wow-delay="0.3s"
           >
-            <img className="img-fluid" src="../images/about/issue.png" />
+            <img className="img-fluid" src="../images/about/issue.svg" />
           </div>
         </div>
 
@@ -580,7 +581,7 @@ class About extends Component {
             data-wow-duration="1s"
             data-wow-delay="0.3s"
           >
-            <img className="img-fluid" src="../images/about/big-rewrite.png" />
+            <img className="img-fluid" src="../images/about/big-rewrite.svg" />
           </div>
         </div>
 
@@ -639,7 +640,7 @@ class About extends Component {
             data-wow-duration="2s"
             data-wow-delay="0.4s"
           >
-            <img className="img-fluid" src="../images/about/employees.png" />
+            <img className="w-75" src="../images/about/employees.svg" />
           </div>
         </div>
         <div style={{ height: '150px' }} className="position-relative">
@@ -695,7 +696,7 @@ class About extends Component {
           >
             <img
               className="img-fluid"
-              src="../images/about/10-million-orders.png"
+              src="../images/about/10-million-orders.svg"
             />
           </div>
         </div>

@@ -24,13 +24,16 @@ class SearchBar extends Component {
   onEnterPosition = result => {
     if (result.length > 0) {
       this.props.props.history.push(
-        `/all-open-positions?d=${getSlug(
-          result[0].categories.department
-        )}&t=${getSlug(result[0].categories.team)}&p=${result[0].id}`
+        {
+          pathname: `/all-open-positions`,
+          search: `?d=${getSlug(result[0].categories.department)}&t=${getSlug(
+            result[0].categories.team
+          )}&p=${result[0].id}`,
+          state: { jobSelected: result[0] },
+        }`/all-open-positions`
       )
     }
   }
-
 
   render() {
     if (typeof localStorage !== 'undefined') {
@@ -133,9 +136,8 @@ class SearchBar extends Component {
                         pathname: `/all-open-positions`,
                         search: `?d=${getSlug(
                           data.categories.department
-                        )}&t=${getSlug(data.categories.team)}&p=${
-                          data.id
-                        }`,
+                        )}&t=${getSlug(data.categories.team)}&p=${data.id}`,
+                        state: { jobSelected: data },
                       }}
                       key={i}
                       // onClick={() => this.onClickPositionFromSearch(data)}

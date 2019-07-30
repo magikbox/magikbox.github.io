@@ -25,10 +25,15 @@ class allpositions extends Component {
       placeSelected: 'All',
       departmentSelected: 'All',
       reformatedData: [],
+      jobSelected: null,
     }
   }
 
   componentDidMount() {
+    console.log('this.porops', this.props)
+    if(this.props.location.state&&this.props.location.state.jobSelected!==null){
+      this.setState({jobSelected:this.props.location.state.jobSelected})
+    }
     if (typeof window !== `undefined`) {
       window.addEventListener('scroll', this.handleScroll)
     }
@@ -289,12 +294,15 @@ class allpositions extends Component {
 
   render() {
     const { siteMetadata: metaData } = this.props.data.site
-
+    const { jobSelected } = this.state
+    console.log('jobsssssss', jobSelected)
     return (
       <div className="first-section">
-        <Helmet >
+        <Helmet>
           <title>
-            Gojek Careers: Check out the current job openings at Gojek Tech
+            {jobSelected !== null
+              ? jobSelected.text !== undefined && jobSelected.text
+              : 'Gojek Careers: Check out the current job openings at Gojek Tech'}
           </title>
           <meta
             data-react-helmet="true"
@@ -304,7 +312,11 @@ class allpositions extends Component {
           <meta
             data-react-helmet="true"
             name="description"
-            content="Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+            content={
+              jobSelected !== null
+                ? jobSelected.descriptionPlain
+                : "Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+            }
           />
 
           {/* Twitter meta tags */}
@@ -321,12 +333,20 @@ class allpositions extends Component {
           <meta
             data-react-helmet="true"
             name="twitter:title"
-            content="Gojek Careers: Check out the current job openings at Gojek Tech"
+            content={
+              jobSelected !== null
+                ? jobSelected.text
+                : 'Gojek Careers: Check out the current job openings at Gojek Tech'
+            }
           />
           <meta
             data-react-helmet="true"
             name="twitter:description"
-            content="Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+            content={
+              jobSelected !== null
+                ? jobSelected.descriptionPlain
+                : "Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+            }
           />
           <meta
             data-react-helmet="true"
@@ -338,7 +358,11 @@ class allpositions extends Component {
           <meta
             data-react-helmet="true"
             property="og:title"
-            content="Gojek Careers: Check out the current job openings at Gojek Tech"
+            content={
+              jobSelected !== null
+                ? jobSelected.text
+                : 'Gojek Careers: Check out the current job openings at Gojek Tech'
+            }
           />
           <meta data-react-helmet="true" property="og:type" content="website" />
           <meta
@@ -354,7 +378,11 @@ class allpositions extends Component {
           <meta
             data-react-helmet="true"
             property="og:description"
-            content="Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+            content={
+              jobSelected !== null
+                ? jobSelected.descriptionPlain
+                : "Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+            }
           />
         </Helmet>
 
@@ -464,6 +492,10 @@ class allpositions extends Component {
           this.state.departmentSelected === 'All' ? (
             <div style={{ minHeight: '50vh' }}>
               <OpenPositionDepartments
+                jobSelected={job => {
+                  console.log('jobselectedsdfdsf', job)
+                  this.setState({ jobSelected: job })
+                }}
                 departmentSelected={this.state.departmentSelected}
                 {...this.props}
                 reformatedData={this.state.reformatedData}
@@ -495,6 +527,10 @@ class allpositions extends Component {
                 </p>
               </div>
               <PositionCard
+                jobSelected={job => {
+                  console.log('jobselectedsdfdsf', job)
+                  this.setState({ jobSelected: job })
+                }}
                 {...this.props}
                 jobsData={this.getAfterSearchPositions()}
               />

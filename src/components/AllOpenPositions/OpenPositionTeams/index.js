@@ -35,7 +35,6 @@ class OpenPositionTeams extends Component {
       <div className="py-4">
         <div className="d-none d-md-block">
           <div className="d-flex flex-row flex-wrap px-2">
-            
             {this.props.teams.map((team, i) => {
               return (
                 <Link
@@ -144,6 +143,9 @@ class OpenPositionTeams extends Component {
             this.props.location.search.split('=')[2].split('&')[0]) ===
             undefined && i == 0 ? (
             <PositionCard
+              jobSelected={job => {
+                this.props.jobSelected(job)
+              }}
               {...this.props}
               key={i}
               jobsData={this.props.teams[0].data}
@@ -153,6 +155,9 @@ class OpenPositionTeams extends Component {
               this.props.location.search.split('=')[2].split('&')[0] ===
                 getSlug(team.teamName) && (
                 <PositionCard
+                  jobSelected={job => {
+                    this.props.jobSelected(job)
+                  }}
                   {...this.props}
                   key={i}
                   jobsData={this.props.teams[i].data}

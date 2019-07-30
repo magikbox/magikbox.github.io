@@ -154,7 +154,8 @@ class PositionCard extends Component {
                                   }),
                                     this.setState({
                                       visible: false,
-                                    })
+                                    }),
+                                    this.props.jobSelected(null)
                                 }}
                                 className="fa scroll ml-auto pr-4 fa-minus fa-2x pt-1 mt-auto text-green "
                               />
@@ -185,7 +186,7 @@ class PositionCard extends Component {
                           </div>
                           {
                             <div className="pl-4 pt-5">
-                              <Description  {...this.props} job={job} />
+                              <Description {...this.props} job={job} />
                             </div>
                           }
                           <div
@@ -246,7 +247,8 @@ class PositionCard extends Component {
                         //
                         this.setState({
                           visible: true,
-                        })
+                        }),
+                        this.props.jobSelected(job)
                       {
                         this.props.location.search.split('=')[3] !== job.id &&
                           this.getCurrentWidth() > 480 &&
@@ -279,7 +281,8 @@ class PositionCard extends Component {
                           }),
                             this.setState({
                               visible: false,
-                            })
+                            }),
+                            this.props.jobSelected(null)
                         }}
                         className="fa scroll ml-auto pr-5 fa-minus  mt-auto text-green "
                       />

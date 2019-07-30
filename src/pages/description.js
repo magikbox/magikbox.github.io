@@ -21,7 +21,7 @@ class Description extends Component {
     return (
       <div className="py-5 my-5 py-md-2 my-md-0">
         {job !== undefined && (
-          <Helmet preserved>
+          <Helmet>
             <title>{'Gojek Careers: ' + job.text}</title>
 
             <meta

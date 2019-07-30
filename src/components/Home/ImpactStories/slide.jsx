@@ -18,26 +18,27 @@ class Slide extends Component {
   handleClick(video) {
     var iframe = document.getElementById('iframeYoutube')
     iframe.src = 'https://www.youtube.com/embed/' + video
-    $('#impactModal').modal('show')
+    $(`#${this.props.targetId}`).modal('show')
   }
 
   render() {
     const { data } = this.props
+    const trimmedString = `${data.text.substring(0, 150)}...`
 
     return (
       <div className="card rounded-0 border-0">
         <div className="">
           <a onClick={() => this.handleClick(data.video)}>
             <img
-              className="img-fluid w-100 w-100"
+              className="img-fluid w-100 w-100 scroll"
               alt={data.alt}
               src={`../images/${data.image}`}
             />
           </a>
         </div>
         <div className="card-body  text-md-left text-center">
-          <p className="maison-bold text-black font-lg">{data.heading}</p>
-          <p className="roboto-regular font-sm">{data.text}</p>
+          <p onClick={() => this.handleClick(data.video)} className="maison-bold text-black font-lg scroll">{data.heading}</p>
+          <p className="roboto-regular font-sm dsfdsf">{trimmedString}</p>
         </div>
       </div>
     )

@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "image": "../../images/youtube-stories/youtube-1.jpg",
+      "alt": "How to Prepare for Jobs that Don't Exist - Sidu Ponnappa",
+      "heading": "How to Prepare for Jobs that Don't Exist - Sidu Ponnappa",
+      "text":
+        "The future is getting stranger and reality is a harsh mistress. The extent of automation and reduced human intervention in creating software underscores the need for today's programmers to continuously learn, read and hone their craft. Watch the video for more",
+      "video": "EJDUelBbQ8I"
+    },
+    {
+      "id": "2",
+      "image": "../../images/youtube-stories/youtube-2.jpg",
+      "alt": "Gojek x Google Next 2018 - Ajey Gore",
+      "heading": "Gojek x Google Next 2018 - Ajey Gore",
+      "text":
+        "Despite the disability Mr. Sumani has, he is still consistent in helping other people. Let us learn from Mr. Sumani that no matter what our weakness may be, we should always be willing to  contribute to our surroundings..",
+      "video": "hZRqN8VGYdg"
+    },
+    {
+      "id": "3",
+      "image": "../../images/youtube-stories/youtube-3.jpg",
+      "alt":
+        "Tech in Asia Singapore 2018 'How to Experiment with Product Improvements' - Crystal Widjaja",
+      "heading":
+        "Tech in Asia Singapore 2018 'How to Experiment with Product Improvements' - Crystal Widjaja",
+      "text":
+        "Debuting on stage with a scooter in Google Cloud Next '18, Ajey (our CTO) shared how GO-JEK scaled its impact with the help of Google technology. Ajey shared how Google Maps enabled our driver partners to pick up customers accurately and provide accurate estimates of food delivery times.",
+      "video": "WRUSryfaxhk"
+    },
+    {
+      "id": "4",
+      "image": "../../images/youtube-stories/youtube-4.jpg",
+      "alt": "Tech Challenges at Gojek",
+      "heading": "Tech Challenges at Gojek",
+      "text":
+        "At Gojek, the breadth of technologies as well as the (rapidly growing) volume of data makes every single day challenging. If you’re passionate about technology and are looking for something unpredictable and challenging, Gojek is THE place for you.",
+      "video": "b3lNub89opc"
+    },
+    {
+      "id": "5",
+      "image": "../../images/youtube-stories/youtube-5.jpg",
+      "alt": "CODE AT SCALE - Shobhit Srivastava",
+      "heading": "CODE AT SCALE - Shobhit Srivastava",
+      "text":
+        "#CODEATSCALE - Watch how Shobhit, our Product Engineer, takes us through his journey into changing people's lives at Gojek.",
+      "video": "z1bKs6JDBJA"
+    },
+    {
+      "id": "5",
+      "image": "../../images/youtube-stories/youtube-6.jpg",
+      "alt": "DESIGN AT SCALE - Fatema Raja",
+      "heading": "DESIGN AT SCALE - Fatema Raja",
+      "text":
+        "#DESIGNATSCALE - At Gojek, design is used to drive impact at scale. With over 100 million downloads and over 100 million monthly orders, the app depends on design-thinking to continue evolving. See how Fatema, our Product Designer, discovered this as she joined the company.",
+      "video": "ZwchVpZvPAM"
+    }
+  ]
+}

@@ -5,7 +5,7 @@ import Moment from 'react-moment'
 
 // Card for showing blog post
 const Card = (post, src) => {
-  var maxLength = 100 // maximum number of characters to extract
+  var maxLength = 10 // maximum number of characters to extract
 
   var stripedHtml = $('<div>')
     .html(post.post.description)
@@ -27,8 +27,10 @@ const Card = (post, src) => {
         </Moment>
       </p>
       <img
-        className="card-img-top img-fluid blog-card-img"
+        className="card-img-top img-fluid blog-card-img scroll"
         src={post.post.thumbnail}
+        onClick={() => window.open(post.post.link, '_blank')}
+        // href={post.post.link}
       />
       <div className="card-body px-0 text-center text-md-left text-black">
         <h5 className="card-title  maison-bold">

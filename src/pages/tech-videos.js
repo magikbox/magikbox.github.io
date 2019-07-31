@@ -13,31 +13,31 @@ class Videos extends Component {
     return (
       <div className="first-section">
         <Helmet>
-          <title>Videos by Gojek about why they do</title>
+          <title>Videos by Gojek</title>
           <meta
             data-react-helmet="true"
             property="og:title"
-            content="Videos by Gojek about why they do"
+            content="Videos by Gojek"
           />
           <meta
             data-react-helmet="true"
             name="twitter:title"
-            content="Videos by Gojek about why they do"
+            content="Videos by Gojek"
           />
           <meta
             data-react-helmet="true"
             name="description"
-            content="This section provides videos on Gojek's work culture, their engineering ideals and insights on what makes a person an excellent developer."
+            content="This section provides videos on Gojek's work culture."
           />
           <meta
             data-react-helmet="true"
             name="twitter:description"
-            content="This section provides videos on Gojek's work culture, their engineering ideals and insights on what makes a person an excellent developer."
+            content="This section provides videos on Gojek's work culture."
           />
           <meta
             data-react-helmet="true"
             property="og:description"
-            content="This section provides videos on Gojek's work culture, their engineering ideals and insights on what makes a person an excellent developer."
+            content="This section provides videos on Gojek's work culture."
           />
         </Helmet>
 

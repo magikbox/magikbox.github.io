@@ -6,23 +6,21 @@ import CallToAction from '../components/Common/callToAction'
 import Posts from '../components/Blog/posts'
 import Heading from '../components/Blog/heading'
 
-class Blog extends Component {
+class Articles extends Component {
   render() {
     return (
       <div className="first-section">
         <Helmet>
-          <title>
-            Insightful articles by Gojek about why they do what they do
-          </title>
+          <title>Insightful articles on how we do what we do</title>
           <meta
             data-react-helmet="true"
             property="og:title"
-            content="Insightful articles by Gojek about why they do what they do"
+            content="Insightful articles on how we do what we do"
           />
           <meta
             data-react-helmet="true"
             name="twitter:title"
-            content="Insightful articles by Gojek about why they do what they do"
+            content="Insightful articles on how we do what we do"
           />
           <meta
             data-react-helmet="true"
@@ -56,4 +54,4 @@ class Blog extends Component {
   }
 }
 
-export default Blog
+export default Articles

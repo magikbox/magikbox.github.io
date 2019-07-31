@@ -36,14 +36,14 @@ class Slide extends Component {
             />
           </a>
         </div>
-        <div className="card-body  text-md-left text-center">
+        <div className="card-body  text-md-left text-center px-0">
           <p
             onClick={() => this.handleClick(data.video)}
             className="maison-bold text-black font-lg scroll"
           >
             {data.heading}
           </p>
-          <p className="roboto-regular font-sm dsfdsf">{trimmedString}</p>
+          <p className="roboto-regular font-sm ">{trimmedString}</p>
         </div>
       </div>
     )

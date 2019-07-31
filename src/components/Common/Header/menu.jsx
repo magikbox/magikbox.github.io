@@ -37,7 +37,11 @@ class Menu extends Component {
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                 {data.options.map((item, i) => {
                   return (
-                    <a key={i} className="dropdown-item navbar-dropdown-item text-muted" href={item.link}>
+                    <a
+                      key={i}
+                      className="dropdown-item navbar-dropdown-item text-muted"
+                      href={item.link}
+                    >
                       {item.name}
                     </a>
                   )
@@ -48,16 +52,23 @@ class Menu extends Component {
             <a
               className={
                 data.type === 'button'
-                  ? 'header-btn btn btn-success rounded-1 maison-bold green-apply-btn'
+                  ? `header-btn btn btn-success rounded-1 maison-bold green-apply-btn`
                   : 'nav-link'
               }
               href={data.link}
+              target={data.type === 'externalLink' ? '_blank' : null}
             >
               {data.name}
               {currentPage === data.link ? (
                 <span className="sr-only">(current)</span>
               ) : (
                 ''
+              )}
+              {data.type === 'externalLink' && (
+                <img width="18px"
+                  className="img-fluid pb-1"
+                  src="../../../../images/logo-gif.gif"
+                />
               )}
             </a>
           ))}

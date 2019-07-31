@@ -55,6 +55,84 @@
       "text":
         "#DESIGNATSCALE - At Gojek, design is used to drive impact at scale. With over 100 million downloads and over 100 million monthly orders, the app depends on design-thinking to continue evolving. See how Fatema, our Product Designer, discovered this as she joined the company.",
       "video": "ZwchVpZvPAM"
+    },
+    {
+      "id": "6",
+      "image": "../../images/youtube-stories/youtube-7.jpg",
+      "alt": "CREATE AT SCALE - Arlinda Juwitasari",
+      "heading": "CREATE AT SCALE - Arlinda Juwitasari",
+      "text":
+        "#CREATEATSCALE - A personal experience inspires Arlinda to build products for millions of GO-JEK drivers. Check out what motivates this young Product Manager to drive impact at scale",
+      "video": "pSBgUP-k594"
+    },
+    {
+      "id": "7",
+      "image": "../../images/youtube-stories/youtube-8.jpg",
+      "alt": "Meet The Head of GO-LIFE : Dayu Dara",
+      "heading": "Meet The Head of GO-LIFE : Dayu Dara",
+      "text":
+        "Winston Churchill once said that failure isn’t fatal: it is the courage to continue that counts. SVP at GOJEK, Head of GO-LIFE, Dayu Dara Permata, doesn’t stop when she failed to pursue medical school. She would never have guessed that her failure led to the beginning of something great.",
+      "video": "u8tVM6MgaLA"
+    },
+    {
+      "id": "8",
+      "image": "../../images/youtube-stories/youtube-9.jpg",
+      "alt":
+        "GOJEK x DSW 'AI-Powered Business: How Go-Jek Empowers Many People’s Life' - Kevin Aluwi",
+      "heading":
+        "GOJEK x DSW 'AI-Powered Business: How Go-Jek Empowers Many People’s Life' - Kevin Aluwi",
+      "text":
+        "Kevin Aluwi explained how the data could open up opportunities to build the country and help the people at Data Science Weekend 2018",
+      "video": "KaZuoM9KQC8"
+    },
+    {
+      "id": "8",
+      "image": "../../images/youtube-stories/youtube-10.jpg",
+      "alt": "Engineer's Life at GO-JEK",
+      "heading": "Engineer's Life at GO-JEK",
+      "text":
+        "Taufan Aero (Tech Lead, Back-End), Bherly (Tech Lead, iOS) and Crystal Widjaja (VP Business Intelligence) will share their experience working at GO-JEK. ",
+      "video": "Jj7PK05_Ow4"
+    },
+    {
+      "id": "9",
+      "image": "../../images/youtube-stories/youtube-11.jpg",
+      "alt": "How Does Business Intelligence Work? Muhammad Adrian💡 GO-LEARN",
+      "heading":
+        "How Does Business Intelligence Work? Muhammad Adrian💡 GO-LEARN",
+      "text":
+        "The term Business Intelligence might sound foreign to some people. What is Business Intelligence? What do they do, and what are their roles? Watch GO-LEARN video with Muhammad Adrian (Head of Driver Growth and Performance) to understand what actually Business Intelligence is.",
+      "video": "HR5wFOolalQ"
+    },
+    {
+      "id": "10",
+      "image": "../../images/youtube-stories/youtube-12.jpg",
+      "alt": "The Principles of User Interface. Reza Novriansyah💡 GO-LEARN",
+      "heading":
+        "The Principles of User Interface. Reza Novriansyah💡 GO-LEARN",
+      "text":
+        "What does User Interface (UI) do other than making the look of an application more beautiful and nicer? Reza Novriansyah (UXD Interaction Designer at GO-JEK) believes that UI designers also have to understand the User Experience (UX), such as the product or media platform that users use, who is the product for, what is the problem, and what is the solution.",
+      "video": "sXlEQtWdL_0"
+    },
+    {
+      "id": "11",
+      "image": "../../images/youtube-stories/youtube-13.jpg",
+      "alt":
+        "Understanding Data Science and Why It’s So Important. Misrab Faizullah-Khan💡GO-LEARN",
+      "heading":
+        "Understanding Data Science and Why It’s So Important. Misrab Faizullah-Khan💡GO-LEARN",
+      "text":
+        "Lately, data science is very booming because of every decision making that a company make should be based on data. However, from the hype of data science has its upsize and downsize. In this video, Misrab Faizullah-Khan (VP of Data Science at GO-JEK) will provide a brief understanding of the data science and why it is important for GO-JEK. He will also share a few reference for those of you who want to get into the world of data science.",
+      "video": "jI6KVAq9sUE"
+    },
+    {
+      "id": "12",
+      "image": "../../images/youtube-stories/youtube-14.jpg",
+      "alt": "Giri Hariztio - It's Not About You",
+      "heading": "Giri Hariztio - It's Not About You",
+      "text":
+        "One of the most important things to remember about working is that you don't work only for yourself, but for other people as well.",
+      "video": "yZsKCjrzq10"
     }
   ]
 }

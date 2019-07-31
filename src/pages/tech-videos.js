@@ -13,33 +13,31 @@ class Videos extends Component {
     return (
       <div className="first-section">
         <Helmet>
-          <title>
-            Insightful articles by Gojek about why they do what they do
-          </title>
+          <title>Videos by Gojek about why they do</title>
           <meta
             data-react-helmet="true"
             property="og:title"
-            content="Insightful articles by Gojek about why they do what they do"
+            content="Videos by Gojek about why they do"
           />
           <meta
             data-react-helmet="true"
             name="twitter:title"
-            content="Insightful articles by Gojek about why they do what they do"
+            content="Videos by Gojek about why they do"
           />
           <meta
             data-react-helmet="true"
             name="description"
-            content="The blog section provides valuable information on Gojek's work culture, their engineering ideals and insights on what makes a person an excellent developer."
+            content="This section provides videos on Gojek's work culture, their engineering ideals and insights on what makes a person an excellent developer."
           />
           <meta
             data-react-helmet="true"
             name="twitter:description"
-            content="The blog section provides valuable information on Gojek's work culture, their engineering ideals and insights on what makes a person an excellent developer."
+            content="This section provides videos on Gojek's work culture, their engineering ideals and insights on what makes a person an excellent developer."
           />
           <meta
             data-react-helmet="true"
             property="og:description"
-            content="The blog section provides valuable information on Gojek's work culture, their engineering ideals and insights on what makes a person an excellent developer."
+            content="This section provides videos on Gojek's work culture, their engineering ideals and insights on what makes a person an excellent developer."
           />
         </Helmet>
 

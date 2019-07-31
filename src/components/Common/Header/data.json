@@ -43,7 +43,7 @@
       {
         "id": "52",
         "name": "Videos",
-        "link": "/videos"
+        "link": "/tech-videos"
       }
     ]
   },
@@ -53,7 +53,12 @@
     "link": "/contact/",
     "type": "link"
   },
-
+  {
+    "id": "11",
+    "name": "News Letter ",
+    "link": "http://bit.ly/3182uQG",
+    "type": "externalLink"
+  },
   {
     "id": "10",
     "name": "SuperApp",

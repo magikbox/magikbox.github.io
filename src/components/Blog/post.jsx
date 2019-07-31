@@ -5,7 +5,7 @@ import Moment from 'react-moment'
 
 // Card for showing blog post
 const Card = (post, src) => {
-  var maxLength = 10 // maximum number of characters to extract
+  var maxLength = 100 // maximum number of characters to extract
 
   var stripedHtml = $('<div>')
     .html(post.post.description)
@@ -14,10 +14,10 @@ const Card = (post, src) => {
   // trim the string to the maximum length
   var trimmedString = stripedHtml.substr(0, maxLength)
   //re-trim if we are in the middle of a word
-  trimmedString = trimmedString.substr(
+  trimmedString = `${trimmedString.substr(
     0,
     Math.min(trimmedString.length, trimmedString.lastIndexOf(' '))
-  )
+  )}...`
 
   return (
     <div className="card medium-blog border-0">

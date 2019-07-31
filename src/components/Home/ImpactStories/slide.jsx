@@ -10,7 +10,7 @@ class Slide extends Component {
   }
 
   componentDidMount() {
-    $('#impactModal').on('hidden.bs.modal', function() {
+    $(`#${this.props.targetId}`).on('hidden.bs.modal', function() {
       $('#iframeYoutube').attr('src', '#')
     })
   }
@@ -37,7 +37,12 @@ class Slide extends Component {
           </a>
         </div>
         <div className="card-body  text-md-left text-center">
-          <p onClick={() => this.handleClick(data.video)} className="maison-bold text-black font-lg scroll">{data.heading}</p>
+          <p
+            onClick={() => this.handleClick(data.video)}
+            className="maison-bold text-black font-lg scroll"
+          >
+            {data.heading}
+          </p>
           <p className="roboto-regular font-sm dsfdsf">{trimmedString}</p>
         </div>
       </div>

@@ -46,12 +46,12 @@ class About extends Component {
           />
         </Helmet>
         <div className="bg-green text-center ">
-          <h1 className="h1 py-5 maison-bold font-xl-x text-uppercase text-white">
+          <h1 className="h1 pt-5 pb-3 maison-bold font-xl-x text-uppercase text-white">
             Gojek is indonesia’s <br /> first unicorn
           </h1>
 
           <img
-            className="w-25 "
+            className="w-50 "
             src="../images/about/about-us-banner.svg"
           />
 

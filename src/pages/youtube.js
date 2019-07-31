@@ -10,7 +10,6 @@ import data from '../components/Blog/data.json'
 
 class Youtube extends Component {
   render() {
-    console.log(':datadatadatadata', data)
     return (
       <div className="first-section">
         <Helmet>
@@ -60,7 +59,7 @@ class Youtube extends Component {
           id="youtubeVideo"
           tabIndex="-1"
           role="dialog"
-          aria-labelledby="impactModalLabel"
+          aria-labelledby="youtubeModalLabel"
         >
           <div
             className="modal-dialog modal-lg modal-dialog-centered"

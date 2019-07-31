@@ -37,13 +37,13 @@
     "options": [
       {
         "id": "51",
-        "name": "Post",
-        "link": "/blog"
+        "name": "Articles",
+        "link": "/articles"
       },
       {
         "id": "52",
-        "name": "Youtube",
-        "link": "/youtube"
+        "name": "Videos",
+        "link": "/videos"
       }
     ]
   },

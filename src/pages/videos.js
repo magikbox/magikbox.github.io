@@ -8,7 +8,7 @@ import Heading from '../components/Blog/heading'
 import Slide from '../components/Home/ImpactStories/slide'
 import data from '../components/Blog/data.json'
 
-class Youtube extends Component {
+class Videos extends Component {
   render() {
     return (
       <div className="first-section">
@@ -82,7 +82,7 @@ class Youtube extends Component {
 
         <CallToAction
           theme="green"
-          text="Build the tech that powers an entire country. Soon: Singapore, Thailand, Vietnam & Philippines."
+          text="Build the tech that powers an entire country."
           btnText="APPLY NOW"
           link="/careers/"
         />
@@ -91,4 +91,4 @@ class Youtube extends Component {
   }
 }
 
-export default Youtube
+export default Videos

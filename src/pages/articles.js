@@ -47,7 +47,7 @@ class Blog extends Component {
 
         <CallToAction
           theme="green"
-          text="Build the tech that powers an entire country. Soon: Singapore, Thailand, Vietnam & Philippines."
+          text="Build the tech that powers an entire country."
           btnText="APPLY NOW"
           link="/careers/"
         />

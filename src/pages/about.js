@@ -87,7 +87,7 @@ class About extends Component {
             </h2>
             <h4 className=" roboto-regular font-xl-l aboutFont">
               {' '}
-              GO - JEK started with a mission to improve the livelihoods of
+              Gojek started with a mission to improve the livelihoods of
               local ojeks (motorcycle taxis)
             </h4>
           </div>

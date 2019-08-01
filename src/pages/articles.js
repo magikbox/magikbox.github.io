@@ -11,31 +11,31 @@ class Articles extends Component {
     return (
       <div className="first-section">
         <Helmet>
-          <title>Insightful articles on how we do what we do</title>
+          <title>Everything you wanted to know about Gojek and how we do what we do.</title>
           <meta
             data-react-helmet="true"
             property="og:title"
-            content="Insightful articles on how we do what we do"
+            content="Everything you wanted to know about Gojek and how we do what we do."
           />
           <meta
             data-react-helmet="true"
             name="twitter:title"
-            content="Insightful articles on how we do what we do"
+            content="Everything you wanted to know about Gojek and how we do what we do."
           />
           <meta
             data-react-helmet="true"
             name="description"
-            content="The blog section provides valuable information on Gojek's work culture, their engineering ideals and insights on what makes a person an excellent developer."
+            content="The blog section provides valuable information on Gojek's engineering ideals, our culture, and insights on where we failed and what we learnt in the process."
           />
           <meta
             data-react-helmet="true"
             name="twitter:description"
-            content="The blog section provides valuable information on Gojek's work culture, their engineering ideals and insights on what makes a person an excellent developer."
+            content="The blog section provides valuable information on Gojek's engineering ideals, our culture, and insights on where we failed and what we learnt in the process."
           />
           <meta
             data-react-helmet="true"
             property="og:description"
-            content="The blog section provides valuable information on Gojek's work culture, their engineering ideals and insights on what makes a person an excellent developer."
+            content="The blog section provides valuable information on Gojek's engineering ideals, our culture, and insights on where we failed and what we learnt in the process."
           />
         </Helmet>
 

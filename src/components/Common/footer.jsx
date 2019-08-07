@@ -41,7 +41,7 @@ class Footer extends Component {
                 <div className="col-md-2 d-none d-md-block font-xs">
                   <ul className="list-unstyled">
                     <li className="pb-4 ">
-                      <a href="/blog/">Blog</a>
+                      <a href="/articles/">Blog</a>
                     </li>
 
                     <li className="pb-4 ">

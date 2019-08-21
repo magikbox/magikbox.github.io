@@ -181,7 +181,7 @@ const SecondPage = () => (
             </div>
             <div>
               The company has grown significantly in the last 36 months, the
-              startup’s total order volumes has grown to 6600x and diversified
+              startup’s total order volumes has grown to 1100x and diversified
               into 18 verticals and has expanded into multiple countries in
               Southeast Asia. As our organisation matures, we are looking for
               experienced program managers to bring more order, structure and

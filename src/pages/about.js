@@ -686,7 +686,7 @@ class About extends Component {
             </h2>
             <h4 className=" roboto-regular font-xl-l aboutFont">
               Gojek does 100+ million orders across 18+ products Total order
-              volume growth - 6600x{' '}
+              volume growth - 1100x{' '}
             </h4>
           </div>
           <div

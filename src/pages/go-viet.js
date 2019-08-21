@@ -158,7 +158,7 @@ class GojekViet extends Component {
               </p>
               <p>
                 In the last 36 months, the startup’s total order volumes has
-                grown to 6600x and diversified into 18 verticals. The company
+                grown to 1100x and diversified into 18 verticals. The company
                 runs the equivalent of three Indian unicorns rolled into one.
                 GO-FOOD alone does more orders in Indonesia than all Indian food
                 tech startups combined. 3 years since the mobile app launched,

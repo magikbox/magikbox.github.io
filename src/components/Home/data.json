@@ -80,7 +80,7 @@
       },
       {
         "type": "text",
-        "content": "6600x",
+        "content": "1100x",
         "caption": "total order volume growth in 3 years",
         "theme": "developer-bg",
         "justify": "around",
@@ -128,7 +128,7 @@
     "responsiveData": [
       {
         "image": "../../images/gojek-work/gojek-growth-new.jpg",
-        "heading": "6600x",
+        "heading": "1100x",
         "text": "total order volume growth in 3 years",
         "alt": "Gojek Growth",
         "imageTheme": "dark-green",

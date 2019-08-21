@@ -77,7 +77,7 @@ class GojekViet extends Component {
                 than 70+ million users in Indonesia.
               </p>
               <p>
-                “Our total completed order volumes have grown 6600x in the past
+                “Our total completed order volumes have grown 1100x in the past
                 36 months. We’re witnessing unprecedented scale and one of the
                 rare hyper-growth startups in the world today. Indonesians are
                 increasingly using Gojek because of the convenience of having a

@@ -131,7 +131,7 @@ class SuperApp extends Component {
             <div className="col-md-5 ml-0 ml-md-5 text-center text-md-left py-0 py-md-5">
               <h1 className="section-head pt-5 pt-md-0 text-white">
                 {' '}
-                <span className="section-numb font-weight-bold">6600x</span>
+                <span className="section-numb font-weight-bold">1100x</span>
               </h1>
 
               <p className="section-desc text-white">
@@ -170,8 +170,8 @@ class SuperApp extends Component {
                   Billion
                 </h1>
                 <p className="section-desc">
-                  The GoPay ecosystem processes $6.3 billion of annualised
-                  Gross Transaction Value.
+                  The GoPay ecosystem processes $6.3 billion of annualised Gross
+                  Transaction Value.
                 </p>
                 <p className="section-desc">
                   Gojek’s payments platform is the leading digital payments

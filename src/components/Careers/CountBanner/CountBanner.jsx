@@ -52,7 +52,7 @@ class CountBanner extends Component {
     }
     const count = [
       {
-        heading: '6600x',
+        heading: '1100x',
         subHeading: 'total order volume growth in 3 years',
       },
       {

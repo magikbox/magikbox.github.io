@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-import $ from 'jquery'
-// import Modal from './modal';
+import React, { Component } from "react"
+import $ from "jquery"
 
 class Slide extends Component {
   constructor(props) {
@@ -10,23 +9,24 @@ class Slide extends Component {
   }
 
   componentDidMount() {
-    $('#impactModal').on('hidden.bs.modal', function() {
-      $('#iframeYoutube').attr('src', '#')
+    $("#impactModal").on("hidden.bs.modal", function() {
+      $("#iframeYoutube").attr("src", "#")
     })
   }
 
   handleClick(video) {
-    var iframe = document.getElementById('iframeYoutube')
-    iframe.src = 'https://www.youtube.com/embed/' + video
-    $('#impactModal').modal('show')
+    var iframe = document.getElementById("iframeYoutube")
+    iframe.src = "https://www.youtube.com/embed/" + video
+    $("#impactModal").modal("show")
   }
 
   render() {
     const { data } = this.props
+
     return (
       <div className="card rounded-0 border-0">
         <div className="">
-          <a onClick={() => this.handleClick(data.video)}>
+          <a type="button" onClick={() => this.handleClick(data.video)}>
             <img
               className="img-fluid w-100 w-100"
               alt={data.alt}
@@ -34,8 +34,8 @@ class Slide extends Component {
             />
           </a>
         </div>
-        <div className="card-body  text-md-left text-center ">
-          <p className="maison-bold text-black font-lg">{data.heading}</p>
+        <div className="card-body  text-md-left text-center">
+          <p className="raleway-bold text-black font-lg">{data.heading}</p>
           <p className="roboto-regular font-sm">{data.text}</p>
         </div>
       </div>

@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react"
 
-const NotFoundPage = () => (
-	 < div className="first-section " >
-	 	<img src="../images//404.png" className="img-fluid"/>
-	</div >
-);
+import Layout from "../components/layout"
+
+const NotFoundPage = props => (
+  <Layout location={props.location}>
+    <div className="first-section ">
+      <img alt="404" src="../images//404.png" className="img-fluid" />
+    </div>
+  </Layout>
+)
 
 export default NotFoundPage

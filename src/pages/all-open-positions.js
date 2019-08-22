@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
-import { Helmet } from 'react-helmet'
-import PositionCard from '../components/Careers/PositionCard/positionCard'
-import axios from 'axios'
-import OpenPositionDepartments from '../components/AllOpenPositions/OpenPositionDepartments'
-import MetaTags from 'react-meta-tags'
+import React, { Component } from "react"
+import { Helmet } from "react-helmet"
+import PositionCard from "../components/Careers/PositionCard/positionCard"
+import axios from "axios"
+import OpenPositionDepartments from "../components/AllOpenPositions/OpenPositionDepartments"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import Select from "react-select"
 
-var Scroll = require('react-scroll')
+var Scroll = require("react-scroll")
 var scroll = Scroll.animateScroll
 var scroller = Scroll.scroller
 
@@ -18,24 +20,19 @@ class allpositions extends Component {
       teams: [],
       positions: [],
       jobsData: [],
-      locationName: 'All',
-      scrollTop: 'd-none ',
-      inputText: '',
+      locationName: "All",
+      scrollTop: "d-none ",
+      inputText: "",
       places: [],
-      placeSelected: 'All',
-      departmentSelected: 'All',
+      placeSelected: "All",
+      departmentSelected: "All",
       reformatedData: [],
-      jobSelected: null,
     }
   }
 
   componentDidMount() {
-    console.log('this.porops', this.props)
-    if(this.props.location.state&&this.props.location.state.jobSelected!==null){
-      this.setState({jobSelected:this.props.location.state.jobSelected})
-    }
     if (typeof window !== `undefined`) {
-      window.addEventListener('scroll', this.handleScroll)
+      window.addEventListener("scroll", this.handleScroll)
     }
     let departments = this.state.departments
     let places = this.state.places
@@ -69,11 +66,11 @@ class allpositions extends Component {
       const top = window.pageYOffset
       if (top > 50) {
         this.setState({
-          scrollTop: ' d-block ',
+          scrollTop: " d-block ",
         })
       } else {
         this.setState({
-          scrollTop: ' d-none ',
+          scrollTop: " d-none ",
         })
       }
     }
@@ -133,32 +130,31 @@ class allpositions extends Component {
     returnData.push(
       response.data.filter((data, i) => {
         if (
-          data.description !== '' &&
+          data.description !== "" &&
           data.lists.length !== 0 &&
-          (data.lists && data.lists[0] && data.lists[0].content !== '') &&
-          (data.lists && data.lists[1] && data.lists[1].content !== '') &&
+          (data.lists && data.lists[0] && data.lists[0].content !== "") &&
+          (data.lists && data.lists[1] && data.lists[1].content !== "") &&
           ![
-            'Digital',
-            'Finance',
-            'Strategic Finance',
-            'Community',
-            'Legal',
-            'Government Relations',
-            'Expansion',
-            'Growth',
-            'Accounting and Finance',
-            'Business Operations',
-            'Research and Insights',
-            'Business Operations - Community',
-            'International Operations - Expansion',
-            'Business operations - Growth',
-            'Marketing and Communications - Digital',
+            "Digital",
+            "Finance",
+            "Strategic Finance",
+            "Community",
+            "Legal",
+            "Government Relations",
+            "Expansion",
+            "Growth",
+            "Accounting and Finance",
+            "Business Operations - Community",
+            "Marketplace",
+            "International Operations - Expansion",
+            "Business operations - Growth",
+            "Marketing and Communications - Digital",
           ].includes(data.categories.team) &&
           ![
-            'b8984973-1b9a-410d-9366-4fe0cc17c954',
-            'df136a0b-932d-41e9-80ae-106d20554445',
+            "b8984973-1b9a-410d-9366-4fe0cc17c954",
+            "df136a0b-932d-41e9-80ae-106d20554445",
           ].includes(data.id) &&
-          !['University'].includes(data.categories.department)
+          !["Corporate", "University"].includes(data.categories.department)
         ) {
           return data
         }
@@ -192,19 +188,19 @@ class allpositions extends Component {
           },
           () => {
             if (
-              window.location.search.split('&')[2] &&
-              window.location.search.split('&')[2].split('=')[1]
+              window.location.search.split("&")[2] &&
+              window.location.search.split("&")[2].split("=")[1]
             ) {
               scroller.scrollTo(
-                `${window.location.search.split('&')[2].split('=')[1]}`,
+                `${window.location.search.split("&")[2].split("=")[1]}`,
                 {
-                  smooth: 'easeInOutQuint',
+                  smooth: "easeInOutQuint",
                   offset: -100,
                 }
               )
             } else {
-              scroller.scrollTo(`${window.location.search.split('=')[1]}`, {
-                smooth: 'easeInOutQuint',
+              scroller.scrollTo(`${window.location.search.split("=")[1]}`, {
+                smooth: "easeInOutQuint",
                 offset: -100,
               })
             }
@@ -225,16 +221,42 @@ class allpositions extends Component {
           teams: this.getTeamsbyDepartment(positionGroups[i]),
         })
     }
+
     return returnData
   }
 
   // this method will return the location and department dropdowns
   getLocationAndDepartment = (stateSlug, updateState) => {
+    let options = [
+      {
+        label: "All",
+        value: "All",
+      },
+    ]
+    this.state[stateSlug].map((place, i) => {
+      options.push({
+        label: place,
+        value: place,
+      })
+    })
     return (
       <React.Fragment>
-        <div className="dropdown position-relative">
+        <Select
+          className="basic-single    btn-block bg-white dropdown-toggle custom-dropdown text-left neosans-regular   "
+          classNamePrefix="select"
+          defaultValue={{
+            label: this.state[updateState],
+            value: this.state[updateState],
+          }}
+          onChange={ev => this.setState({ [updateState]: ev.value })}
+          isClearable={false}
+          isSearchable={true}
+          name="color"
+          options={options}
+        />
+        {/* <div className="dropdown position-relative">
           <button
-            className="btn form-control custom-search  py-2  btn-block bg-white dropdown-toggle custom-dropdown text-left roboto-regular py-2  "
+            className="btn form-control custom-search  py-2  btn-block bg-white dropdown-toggle custom-dropdown text-left neosans-regular py-2  "
             type="button"
             id="dropdownMenuButton"
             data-toggle="dropdown"
@@ -245,14 +267,14 @@ class allpositions extends Component {
           </button>
           <i
             className="fa fa-chevron-down position-absolute text-green"
-            style={{ right: '10px', top: '10px' }}
+            style={{ right: "10px", top: "10px" }}
           />
           <div
             className="dropdown-menu w-100"
             aria-labelledby="dropdownMenuButton"
           >
             <button
-              onClick={() => this.setState({ [updateState]: 'All' })}
+              onClick={() => this.setState({ [updateState]: "All" })}
               className="dropdown-item"
               type="button"
             >
@@ -272,161 +294,79 @@ class allpositions extends Component {
             })}
           </div>
         </div>
+      */}
       </React.Fragment>
     )
   }
 
   // this method will return the filtered jobs
   getAfterSearchPositions = () => {
-    const returnData = this.state.jobsData.data.filter((job, i) => {
-      if (
-        job.text.toLowerCase().includes(this.state.inputText.toLowerCase()) &&
-        (this.state.departmentSelected === 'All' ||
-          this.state.departmentSelected === job.categories.department) &&
-        (this.state.placeSelected === 'All' ||
-          this.state.placeSelected === job.categories.location)
-      ) {
-        return job
-      }
-    })
+    const returnData =
+      this.state.jobsData.length !== 0 &&
+      this.state.jobsData.data.filter((job, i) => {
+        if (
+          job.text.toLowerCase().includes(this.state.inputText.toLowerCase()) &&
+          (this.state.departmentSelected === "All" ||
+            this.state.departmentSelected === job.categories.department) &&
+          (this.state.placeSelected === "All" ||
+            this.state.placeSelected === job.categories.location)
+        ) {
+          return job
+        }
+      })
     return returnData
   }
 
   render() {
-    const { siteMetadata: metaData } = this.props.data.site
-    const { jobSelected } = this.state
-    console.log('jobsssssss', jobSelected)
     return (
-      <div className="first-section">
-        <Helmet>
-          <title>
-            {jobSelected !== null
-              ? jobSelected.text !== undefined && jobSelected.text
-              : 'Gojek Careers: Check out the current job openings at Gojek Tech'}
-          </title>
-          <meta
-            data-react-helmet="true"
-            content="yes"
-            name="apple-mobile-web-app-capable"
-          />
-          <meta
-            data-react-helmet="true"
-            name="description"
-            content={
-              jobSelected !== null
-                ? jobSelected.descriptionPlain
-                : "Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-            }
-          />
-
-          {/* Twitter meta tags */}
-          <meta
-            data-react-helmet="true"
-            name="twitter:card"
-            content="summary"
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:site"
-            content={metaData.twitter}
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:title"
-            content={
-              jobSelected !== null
-                ? jobSelected.text
-                : 'Gojek Careers: Check out the current job openings at Gojek Tech'
-            }
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:description"
-            content={
-              jobSelected !== null
-                ? jobSelected.descriptionPlain
-                : "Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-            }
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:image"
-            content={metaData.siteImage}
-          />
-
-          {/* og meta tags */}
-          <meta
-            data-react-helmet="true"
-            property="og:title"
-            content={
-              jobSelected !== null
-                ? jobSelected.text
-                : 'Gojek Careers: Check out the current job openings at Gojek Tech'
-            }
-          />
-          <meta data-react-helmet="true" property="og:type" content="website" />
-          <meta
-            data-react-helmet="true"
-            property="og:url"
-            content={metaData.siteUrl}
-          />
-          <meta
-            data-react-helmet="true"
-            property="og:image"
-            content={metaData.siteImage}
-          />
-          <meta
-            data-react-helmet="true"
-            property="og:description"
-            content={
-              jobSelected !== null
-                ? jobSelected.descriptionPlain
-                : "Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-            }
-          />
-        </Helmet>
-
-        <div className="container">
-          <h1 className="text-center text-black font-xl-x maison-bold pt-5">
-            {this.state.inputText === '' &&
-            this.state.placeSelected === 'All' &&
-            this.state.departmentSelected === 'All'
-              ? 'All Open Positions'
-              : 'Search Results'}
-          </h1>
-          <p
-            onClick={() =>
-              this.setState(prevState => {
-                return {
-                  filters: !prevState.filters,
-                }
-              })
-            }
-            className="d-md-none text-green roboto-bold font-md pl-2"
-          >
-            <i className="fa fa-filter" />&nbsp;Filters
-          </p>
-          {this.state.filters && (
-            <React.Fragment>
-              <div className="col-md-3 col-12 px-2 pt-3 pt-md-0  ">
-                {' '}
-                <p className="roboto-bold text-uppercase mb-1">Location:</p>
-                {this.getLocationAndDepartment('places', 'placeSelected')}
-              </div>
-              <div className="col-md-3 col-12 px-2 pt-3 pt-md-0  ">
-                {' '}
-                <p className="roboto-bold text-uppercase mb-1">Department:</p>
-                {this.getLocationAndDepartment(
-                  'departments',
-                  'departmentSelected'
-                )}
-              </div>
-            </React.Fragment>
-          )}
-          <div className="d-flex flex-row flex-wrap pb-5 pt-3">
-            <div className="col-md-6 col-12 px-2  pt-md-0 ">
-              <p className="roboto-bold text-uppercase mb-1">Search:</p>
-              {/* <div className="position-relative border-focus-none">
+      <Layout location={this.props.location}>
+        <SEO
+          title="GOJEK Careers: Check out the current job openings at GOJEK Tech"
+          description="GOJEK is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+        />
+        <div className="first-section">
+          <div className="container">
+            <h1 className="text-center text-black font-xl-x raleway-bold pt-5">
+              {this.state.inputText === "" &&
+              this.state.placeSelected === "All" &&
+              this.state.departmentSelected === "All"
+                ? "All Open Positions"
+                : "Search Results"}
+            </h1>
+            <p
+              onClick={() =>
+                this.setState(prevState => {
+                  return {
+                    filters: !prevState.filters,
+                  }
+                })
+              }
+              className="d-md-none text-green roboto-bold font-md pl-2"
+            >
+              <i className="fa fa-filter" />
+              &nbsp;Filters
+            </p>
+            {this.state.filters && (
+              <React.Fragment>
+                <div className="col-md-3 col-12 px-2 pt-3 pt-md-0  ">
+                  {" "}
+                  <p className="roboto-bold text-uppercase mb-1">Location:</p>
+                  {this.getLocationAndDepartment("places", "placeSelected")}
+                </div>
+                <div className="col-md-3 col-12 px-2 pt-3 pt-md-0  ">
+                  {" "}
+                  <p className="roboto-bold text-uppercase mb-1">Department:</p>
+                  {this.getLocationAndDepartment(
+                    "departments",
+                    "departmentSelected"
+                  )}
+                </div>
+              </React.Fragment>
+            )}
+            <div className="d-flex flex-row flex-wrap pb-5 pt-3">
+              <div className="col-md-6 col-12 px-2  pt-md-0 ">
+                <p className="roboto-bold text-uppercase mb-1">Search:</p>
+                {/* <div className="position-relative border-focus-none">
                 <input
                   style={{
                     boxShadow: 'none',
@@ -447,123 +387,109 @@ class allpositions extends Component {
                   style={{ right: '0px', top: '4px',fontSize:'20px' }}
                 />
               </div> */}
-              <div className="position-relative">
-                <input
-                  onChange={ev => this.setState({ inputText: ev.target.value })}
-                  type="text"
-                  name="keyword"
-                  value={this.state.inputText}
-                  className="form-control py-2 custom-search"
-                  id="keyword"
-                  placeholder="eg.. Android Engineer"
-                  autoComplete="off"
-                />
-                <i
-                  className="fa fa-search position-absolute text-green"
-                  style={{ right: '10px', top: '10px' }}
-                />
+                <div className="position-relative">
+                  <input
+                    onChange={ev =>
+                      this.setState({ inputText: ev.target.value })
+                    }
+                    style={{height:'38px'}}
+                    type="text"
+                    name="keyword"
+                    value={this.state.inputText}
+                    className="form-control py-4 py-md-2 custom-search"
+                    id="keyword"
+                    placeholder="eg.. Android Engineer"
+                    autoComplete="off"
+                  />
+                  <i
+                    className="fa fa-search position-absolute text-green"
+                    style={{ right: "10px", top: "11px" }}
+                  />
+                </div>
+              </div>
+              <div className="col-md-3 col-12 pl-0 pt-3 pt-md-0  d-none d-md-block">
+                {" "}
+                <p className="roboto-bold text-uppercase mb-1">Location:</p>
+                {this.getLocationAndDepartment("places", "placeSelected")}
+              </div>
+              <div className="col-md-3 col-12 pl-0 pr-2 pt-3 pt-md-0  d-none d-md-block">
+                {" "}
+                <p className="roboto-bold text-uppercase mb-1">Department:</p>
+                {this.getLocationAndDepartment(
+                  "departments",
+                  "departmentSelected"
+                )}
               </div>
             </div>
-            <div className="col-md-3 col-12 pl-0 pt-3 pt-md-0  d-none d-md-block">
-              {' '}
-              <p className="roboto-bold text-uppercase mb-1">Location:</p>
-              {this.getLocationAndDepartment('places', 'placeSelected')}
-            </div>
-            <div className="col-md-3 col-12 pl-0 pr-2 pt-3 pt-md-0  d-none d-md-block">
-              {' '}
-              <p className="roboto-bold text-uppercase mb-1">Department:</p>
-              {this.getLocationAndDepartment(
-                'departments',
-                'departmentSelected'
-              )}
-            </div>
+            {this.state.reformatedData.length === 0 && (
+              <div
+                className="d-flex flex-row justify-content-center align-items-center"
+                style={{ height: "50vh" }}
+              >
+                <i className="fa text-green fa-spinner fa-2x fa-spin" />
+                &nbsp;
+                <p className="font-xl-l raleway-bold mb-0">Loading...</p>{" "}
+              </div>
+            )}
+            {this.state.inputText === "" &&
+            this.state.placeSelected === "All" &&
+            this.state.departmentSelected === "All" ? (
+              <div style={{ minHeight: "50vh" }}>
+                <OpenPositionDepartments
+                  departmentSelected={this.state.departmentSelected}
+                  {...this.props}
+                  reformatedData={this.state.reformatedData}
+                />
+              </div>
+            ) : (
+              <div style={{ minHeight: "50vh" }}>
+                <div className="d-flex flex-row flex-wrap d-md-none">
+                  {this.state.placeSelected !== "All" && (
+                    <p className="roboto-bold mb-0 font-md">
+                      Location:{this.state.placeSelected}
+                    </p>
+                  )}
+                  {this.state.departmentSelected !== "All" && (
+                    <p className="roboto-bold mb-0 ml-auto font-md">
+                      Department:{this.state.departmentSelected}
+                    </p>
+                  )}
+                </div>
+                <hr />
+                <div className="d-flex flex-row flex-wrap align-items-center px-2">
+                  {" "}
+                  {this.state.inputText.trimLeft() !== "" && (
+                    <h6 className="raleway-bold font-xl-l">
+                      '{this.state.inputText}'
+                    </h6>
+                  )}
+                  <p className="text-green ml-auto">
+                    {this.getAfterSearchPositions().length + ` `}Openings
+                  </p>
+                </div>
+                <PositionCard
+                  {...this.props}
+                  jobsData={this.getAfterSearchPositions()}
+                />
+              </div>
+            )}
           </div>
-          {this.state.reformatedData.length === 0 && (
-            <div
-              className="d-flex flex-row justify-content-center align-items-center"
-              style={{ height: '50vh' }}
-            >
-              <i className="fa text-green fa-spinner fa-2x fa-spin" />&nbsp;
-              <p className="font-xl-l maison-bold mb-0">Loading...</p>{' '}
-            </div>
-          )}
-          {this.state.inputText === '' &&
-          this.state.placeSelected === 'All' &&
-          this.state.departmentSelected === 'All' ? (
-            <div style={{ minHeight: '50vh' }}>
-              <OpenPositionDepartments
-                jobSelected={job => {
-                  console.log('jobselectedsdfdsf', job)
-                  this.setState({ jobSelected: job })
+          <div className={" scrolltop  "}>
+            <div className="scroll-icon position-absolute scroll  text-secondary">
+              <i
+                onClick={() => {
+                  scroll.scrollToTop()
                 }}
-                departmentSelected={this.state.departmentSelected}
-                {...this.props}
-                reformatedData={this.state.reformatedData}
+                className={
+                  this.state.scrollTop + " fa fa-2x fa-arrow-circle-up"
+                }
               />
             </div>
-          ) : (
-            <div style={{ minHeight: '50vh' }}>
-              <div className="d-flex flex-row flex-wrap d-md-none">
-                {this.state.placeSelected !== 'All' && (
-                  <p className="roboto-bold mb-0 font-md">
-                    Location:{this.state.placeSelected}
-                  </p>
-                )}
-                {this.state.departmentSelected !== 'All' && (
-                  <p className="roboto-bold mb-0 ml-auto font-md">
-                    Department:{this.state.departmentSelected}
-                  </p>
-                )}
-              </div>
-              <hr />
-              <div className="d-flex flex-row flex-wrap align-items-center px-2">
-                {this.state.inputText.trimLeft() !== '' && (
-                  <h6 className="maison-bold font-xl-l">
-                    '{this.state.inputText}'
-                  </h6>
-                )}
-                <p className="text-green ml-auto">
-                  {this.getAfterSearchPositions().length + ` `}Openings
-                </p>
-              </div>
-              <PositionCard
-                jobSelected={job => {
-                  console.log('jobselectedsdfdsf', job)
-                  this.setState({ jobSelected: job })
-                }}
-                {...this.props}
-                jobsData={this.getAfterSearchPositions()}
-              />
-            </div>
-          )}
-        </div>
-        <div className={' scrolltop  '}>
-          <div className="scroll-icon position-absolute scroll  text-secondary">
-            <i
-              onClick={() => {
-                scroll.scrollToTop()
-              }}
-              className={this.state.scrollTop + ' fa fa-2x fa-arrow-circle-up'}
-            />
           </div>
         </div>
-      </div>
+      </Layout>
     )
   }
 }
 
 export default allpositions
-
-export const query = graphql`
-  query SiteTitleQuery2 {
-    site {
-      siteMetadata {
-        title
-        description
-        siteUrl
-        siteImage
-        twitter
-      }
-    }
-  }
-`

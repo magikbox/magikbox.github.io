@@ -1,22 +1,22 @@
-import React, { Component } from 'react'
-import data from '../data.json'
-import { Link } from 'react-router-dom'
-import { getSlug } from '../../Common/utils/getSlug.js'
-var Scroll = require('react-scroll')
-var scroller = Scroll.scroller
+import React, { Component } from "react"
+import { Link } from "@reach/router"
+import { getSlug } from "../../Common/utils/getSlug"
+// var Scroll = require('react-scroll')
+// var scroller = Scroll.scroller
+import Select from "react-select"
 
 class SearchBar extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      locationName: 'Location',
+      locationName: "Location",
     }
   }
 
   getCurrentWidth = () => {
     let screenWidth = null
-    if (typeof screen !== `undefined`) {
-      screenWidth = screen.width
+    if (typeof window !== `undefined`) {
+      screenWidth = window.screen.width
     }
     return screenWidth
   }
@@ -24,39 +24,51 @@ class SearchBar extends Component {
   onEnterPosition = result => {
     if (result.length > 0) {
       this.props.props.history.push(
-        {
-          pathname: `/all-open-positions`,
-          search: `?d=${getSlug(result[0].categories.department)}&t=${getSlug(
-            result[0].categories.team
-          )}&p=${result[0].id}`,
-          state: { jobSelected: result[0] },
-        }`/all-open-positions`
+        `/all-open-positions?d=${getSlug(
+          result[0].categories.department
+        )}&t=${getSlug(result[0].categories.team)}&p=${result[0].id}`
       )
     }
   }
 
   render() {
-    if (typeof localStorage !== 'undefined') {
+    if (typeof localStorage !== "undefined") {
       localStorage.setItem(
-        'source',
-        this.props.source === undefined ? 'gojek.io' : this.props.source
+        "source",
+        this.props.source === undefined ? "gojek.io" : this.props.source
       )
     }
 
-    const { places, searchResult } = this.props
-    const locations = [
-      'Bengaluru',
-      'Jakarta',
-      'Bangkok',
-      'Singapore',
-      'Ho Chi Minh City',
+    let options = [
+      {
+        label: "All",
+        value: "All",
+      },
     ]
+
+    this.props.places.map((data, i) => {
+      options.push({
+        label: data,
+        value: data,
+        index: i,
+      })
+    })
+
+    // const { places, searchResult } = this.props
+    // const locations = [
+    //   'Bengaluru',
+    //   'Jakarta',
+    //   'Bangkok',
+    //   'Singapore',
+    //   'Ho Chi Minh City',
+    // ]
 
     return (
       <section>
         <div className="container pt-5 px-5">
-          <h1 className="font-xl-x maison-bold text-center text-md-left">
-            Help Build<br /> a <span className="text-green">SuperApp</span>
+          <h1 className="font-xl-x raleway-bold text-center text-md-left">
+            Help Build
+            <br /> a <span className="text-green">SuperApp</span>
           </h1>
           <div className="d-flex flex-row flex-wrap pt-4">
             <div className="col-md-8 col-12 pl-0 order-2 order-md-1">
@@ -68,22 +80,40 @@ class SearchBar extends Component {
                 name="keyword"
                 value={this.props.inputText}
                 onChange={ev => this.props.onChangeInputText(ev)}
-                className="form-control   custom-search  py-3  "
+                className="form-control   custom-search  py-4 py-md-3  "
                 id="keyword"
                 autoComplete="off"
                 placeholder="Ex: Full Stack, Android, iOS, Product, Design, Engineer"
                 onKeyUp={ev =>
-                  ev.key === 'Enter'
+                  ev.key === "Enter"
                     ? this.onEnterPosition(this.props.searchResult)
-                    : ''
+                    : ""
                 }
               />
             </div>
             <div className="col-md-4 col-12 pl-0 pt-3 pt-md-0 order-1 order-md-2">
               <p className="roboto-bold text-uppercase mb-0">Where?</p>
-              <div className="dropdown position-relative">
+              <Select
+                className="basic-single   btn-block bg-white dropdown-toggle custom-dropdown text-left neosans-regular "
+                classNamePrefix="select"
+                defaultValue={{
+                  label: "All",
+                  value: "All",
+                }}
+                isOpen={"true"}
+                onChange={ev =>
+                  this.props.onClickLocation(
+                    ev.value,
+                    ev.value === "All" ? -1 : ev.index
+                  )
+                }
+                isClearable={false}
+                isSearchable={true}
+                options={options}
+              />
+              {/* <div className="dropdown position-relative">
                 <button
-                  className="btn form-control custom-search  py-3  btn-block bg-white dropdown-toggle custom-dropdown text-left  py-2  "
+                  className="btn form-control custom-search  py-3  btn-block bg-white dropdown-toggle custom-dropdown text-left neosans-regular   "
                   type="button"
                   id="dropdownMenuButton"
                   data-toggle="dropdown"
@@ -94,14 +124,14 @@ class SearchBar extends Component {
                 </button>
                 <i
                   className="fa fa-chevron-down position-absolute text-green"
-                  style={{ right: '10px', top: '16px' }}
+                  style={{ right: "10px", top: "16px" }}
                 />
                 <div
                   className="dropdown-menu w-100"
                   aria-labelledby="dropdownMenuButton"
                 >
                   <button
-                    onClick={() => this.props.onClickLocation('All', -1)}
+                    onClick={() => this.props.onClickLocation("All", -1)}
                     className="dropdown-item "
                     type="button"
                   >
@@ -121,6 +151,7 @@ class SearchBar extends Component {
                   })}
                 </div>
               </div>
+             */}
             </div>
           </div>
           {this.props.searchResult !== null &&
@@ -132,20 +163,17 @@ class SearchBar extends Component {
                 {this.props.searchResult.map((data, i) => {
                   return (
                     <Link
-                      to={{
-                        pathname: `/all-open-positions`,
-                        search: `?d=${getSlug(
-                          data.categories.department
-                        )}&t=${getSlug(data.categories.team)}&p=${data.id}`,
-                        state: { jobSelected: data },
-                      }}
+                      to={`/all-open-positions?d=${getSlug(
+                        data.categories.department
+                      )}&t=${getSlug(data.categories.team)}&p=${data.id}`}
                       key={i}
                       // onClick={() => this.onClickPositionFromSearch(data)}
                       className="text-left bg-white-hover-gray border-0 py-2 col-12 scroll"
                     >
                       <span className="roboto-regular font-sm text-dark ">
                         {data.text}
-                      </span>&nbsp;
+                      </span>
+                      &nbsp;
                       <span className="roboto-bold text-success font-sm">
                         {data.categories.location}
                       </span>
@@ -155,7 +183,7 @@ class SearchBar extends Component {
               </div>
             )}
           <div className="pt-2">
-            <Link to="/all-open-positions" className="">
+            <Link to="/all-open-positions?d=engineering" className="">
               <u className=" text-green">I'd like to view all open positions</u>
             </Link>
           </div>
@@ -178,7 +206,7 @@ class SearchBar extends Component {
       //         } `
       //       }
       //     >
-      //       <h6 className="text-success maison-extrabold font-xl-l mb-0">
+      //       <h6 className="text-success raleway-extrabold font-xl-l mb-0">
       //         Search&nbsp;
       //       </h6>
       //     </div>
@@ -294,7 +322,7 @@ class SearchBar extends Component {
       //               this.onClickPositionFromSearch(searchResult[0])
       //             }
       //             type="button"
-      //             className="btn bg-success btn-sm ml-auto text-white maison-extrabold "
+      //             className="btn bg-success btn-sm ml-auto text-white raleway-extrabold "
       //           >
       //             Search<i className="fa fa-search pl-3" />
       //           </button>

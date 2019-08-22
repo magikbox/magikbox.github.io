@@ -2,7 +2,7 @@
   "data": {
     "heading": "We take Open Source seriously",
     "content":
-      "Open Source Software is at the heart of Gojek. Without it, none of our achievements would have ever been possible. Today, we actively maintain a host of Free and Open Source Software projects as we understand their importance to the community. For a full list of our contributions, please checkout our GitHub.",
+      "Open Source Software is at the heart of GO-JEK. Without it, none of our achievements would have ever been possible. Today, we actively maintain a host of Free and Open Source Software projects as we understand their importance to the community. For a full list of our contributions, please checkout our GitHub.",
     "projects": [
       {
         "id": "1",
@@ -62,7 +62,7 @@
       {
         "id": "9",
         "name": "kubehandler",
-        "link": "https://github.com/gojektech/kubehandler",
+        "link": "https://github.com/gojektech/palantir",
         "description": "A framework for writing Kubernetes controllers"
       },
       {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-scroll'
 import { Helmet } from 'react-helmet'
+import SEO from '../components/seo'
 
 class About extends Component {
   componentDidMount() {
@@ -12,48 +13,18 @@ class About extends Component {
   render() {
     return (
       <div className="first-section">
-        <Helmet>
-          <title>Gojek-Tech</title>
-          <meta
-            data-react-helmet="true"
-            property="og:title"
-            content="Gojek-Tech"
-          />
-          <meta
-            data-react-helmet="true"
-            property="og:title"
-            content="Gojek-Tech"
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:title"
-            content="Gojek-Tech"
-          />
-          <meta
-            data-react-helmet="true"
-            name="description"
-            content="Gojek is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest growing unicorn building an on-demand empire."
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:description"
-            content="Gojek is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest growing unicorn building an on-demand empire."
-          />
-          <meta
-            data-react-helmet="true"
-            property="og:description"
-            content="Gojek is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest growing unicorn building an on-demand empire."
-          />
-        </Helmet>
+        <SEO
+          title="Gojek-Tech"
+          description="Gojek is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest growing unicorn building an on-demand empire."
+          url="https://www.gojek.io"
+        />
+
         <div className="bg-green text-center ">
           <h1 className="h1 pt-5 pb-3 maison-bold font-xl-x text-uppercase text-white">
             Gojek is indonesia’s <br /> first unicorn
           </h1>
 
-          <img
-            className="w-50 "
-            src="../images/about/about-us-banner.svg"
-          />
+          <img className="w-50 " src="../images/about/about-us-banner.svg" />
 
           <div className="py-5">
             <Link
@@ -87,13 +58,12 @@ class About extends Component {
             </h2>
             <h4 className=" roboto-regular font-xl-l aboutFont">
               {' '}
-              Gojek started with a mission to improve the livelihoods of
-              local ojeks (motorcycle taxis)
+              Gojek started with a mission to improve the livelihoods of local
+              ojeks (motorcycle taxis)
             </h4>
           </div>
         </div>
         <div style={{ height: '150px' }} className="position-relative">
-
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className=" position-absolute about-path-test path-left"
@@ -148,10 +118,7 @@ class About extends Component {
             data-wow-duration="1s"
             data-wow-delay="0.3s"
           >
-            <img
-              className="w-75"
-              src="../images/about/customer-care.svg"
-            />
+            <img className="w-75" src="../images/about/customer-care.svg" />
           </div>
         </div>
 
@@ -263,7 +230,10 @@ class About extends Component {
             data-wow-duration="1s"
             data-wow-delay="0.3s"
           >
-            <img className="img-fluid" src="../images/about/increased-orders.svg" />
+            <img
+              className="img-fluid"
+              src="../images/about/increased-orders.svg"
+            />
           </div>
         </div>
 
@@ -700,6 +670,36 @@ class About extends Component {
             />
           </div>
         </div>
+        <section className={'bg-green p-5 p-md-3 p-lg-5'}>
+          <div className="container-fluid">
+            <div className="row justify-content-center">
+              <div className="col-lg-8 text-center">
+                <h3
+                  className={
+                    'h3 text-white text-center font-lg roboto-black text-uppercase                  '
+                  }
+                >
+                  About Us
+                </h3>
+                <p className="text-white roboto-regular font-xl-l aboutFont">
+                  Gojek is a Super App. It’s one app for ordering food,
+                  commuting, digital payments, shopping, hyper-local delivery,
+                  getting a massage and two dozen services. It is Indonesia’s
+                  first and fastest growing unicorn building an on-demand empire
+                  across Southeast Asia.{' '}
+                </p>
+                <p className="text-white roboto-regular font-xl-l aboutFont">
+                  As of 2018, Gojek processed more than $9 billion annualized
+                  gross transaction value (GTV) across all markets where it
+                  operates - in Singapore, Thailand and Vietnam. The Gojek app
+                  was launched in 2015, and is now the largest consumer
+                  transactional technology group on a GTV-basis in Southeast
+                  Asia.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     )
   }

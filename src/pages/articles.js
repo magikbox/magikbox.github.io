@@ -5,39 +5,19 @@ import OpenSourceprojects from '../components/OpenSource/index'
 import CallToAction from '../components/Common/callToAction'
 import Posts from '../components/Blog/posts'
 import Heading from '../components/Blog/heading'
+import SEO from '../components/seo'
 
 class Articles extends Component {
   render() {
     return (
       <div className="first-section">
-        <Helmet>
-          <title>Everything you wanted to know about Gojek and how we do what we do.</title>
-          <meta
-            data-react-helmet="true"
-            property="og:title"
-            content="Everything you wanted to know about Gojek and how we do what we do."
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:title"
-            content="Everything you wanted to know about Gojek and how we do what we do."
-          />
-          <meta
-            data-react-helmet="true"
-            name="description"
-            content="The blog section provides valuable information on Gojek's engineering ideals, our culture, and insights on where we failed and what we learnt in the process."
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:description"
-            content="The blog section provides valuable information on Gojek's engineering ideals, our culture, and insights on where we failed and what we learnt in the process."
-          />
-          <meta
-            data-react-helmet="true"
-            property="og:description"
-            content="The blog section provides valuable information on Gojek's engineering ideals, our culture, and insights on where we failed and what we learnt in the process."
-          />
-        </Helmet>
+        <SEO
+          title={
+            'Everything you wanted to know about Gojek and how we do what we do.'
+          }
+          description="The blog section provides valuable information on Gojek's engineering ideals, our culture, and insights on where we failed and what we learnt in the process."
+          url="https://www.gojek.io"
+        />
 
         <Heading heading="Read what we do" />
 

@@ -21,19 +21,15 @@ class SearchBar extends Component {
     return screenWidth
   }
 
-  onEnterPosition = result => {
-    if (result.length > 0) {
-      this.props.props.history.push(
-        {
-          pathname: `/all-open-positions`,
-          search: `?d=${getSlug(result[0].categories.department)}&t=${getSlug(
-            result[0].categories.team
-          )}&p=${result[0].id}`,
-          state: { jobSelected: result[0] },
-        }`/all-open-positions`
-      )
-    }
-  }
+  // onEnterPosition = result => {
+  //   if (result.length > 0) {
+  //     this.props.props.history.push({
+  //       pathname: `/job-description`,
+  //       search: `?p=${result[0].id}`,
+  //       target: '_blank',
+  //     })
+  //   }
+  // }
 
   render() {
     if (typeof localStorage !== 'undefined') {
@@ -72,11 +68,11 @@ class SearchBar extends Component {
                 id="keyword"
                 autoComplete="off"
                 placeholder="Ex: Full Stack, Android, iOS, Product, Design, Engineer"
-                onKeyUp={ev =>
-                  ev.key === 'Enter'
-                    ? this.onEnterPosition(this.props.searchResult)
-                    : ''
-                }
+                // onKeyUp={ev =>
+                //   ev.key === 'Enter'
+                //     ? this.onEnterPosition(this.props.searchResult)
+                //     : ''
+                // }
               />
             </div>
             <div className="col-md-4 col-12 pl-0 pt-3 pt-md-0 order-1 order-md-2">
@@ -133,12 +129,11 @@ class SearchBar extends Component {
                   return (
                     <Link
                       to={{
-                        pathname: `/all-open-positions`,
-                        search: `?d=${getSlug(
-                          data.categories.department
-                        )}&t=${getSlug(data.categories.team)}&p=${data.id}`,
+                        pathname: `/job-description`,
+                        search: `?p=${data.id}`,
                         state: { jobSelected: data },
                       }}
+                      target="_blank"
                       key={i}
                       // onClick={() => this.onClickPositionFromSearch(data)}
                       className="text-left bg-white-hover-gray border-0 py-2 col-12 scroll"

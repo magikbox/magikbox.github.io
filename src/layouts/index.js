@@ -8,6 +8,7 @@ import Footer from '../components/Common/footer'
 import data from '../components/Common/Header/data.json'
 
 import './style.scss'
+import SEO from '../components/seo';
 
 class Layout extends Component {
   render() {
@@ -84,75 +85,12 @@ class Layout extends Component {
     const showHeaderFooter = true
     return (
       <div>
-        <Helmet>
-          <title>Gojek</title>
-          <meta
-            data-react-helmet="true"
-            content="yes"
-            name="apple-mobile-web-app-capable"
-          />
-          <meta
-            data-react-helmet="true"
-            name="description"
-            content={metaData.description}
-          />
-
-          {/* Twitter meta tags */}
-          <meta
-            data-react-helmet="true"
-            name="twitter:card"
-            content="summary"
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:site"
-            content={metaData.twitter}
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:title"
-            content={metaData.title}
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:description"
-            content={metaData.description}
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:image"
-            content={metaData.siteImage}
-          />
-
-          {/* og meta tags */}
-          <meta
-            data-react-helmet="true"
-            property="og:title"
-            content={metaData.title}
-          />
-          <meta data-react-helmet="true" property="og:type" content="website" />
-          <meta
-            data-react-helmet="true"
-            property="og:url"
-            content={metaData.siteUrl}
-          />
-          <meta
-            data-react-helmet="true"
-            property="og:image"
-            content={metaData.siteImage}
-          />
-          <meta
-            data-react-helmet="true"
-            property="og:description"
-            content={metaData.description}
-          />
-          <link
-            rel="shortcut icon"
-            href="/../images/favicon.png"
-            type="image/x-icon "
-          />
-          <link rel="icon" href="/../images/favicon.png" type="image/x-icon" />
-        </Helmet>
+         <SEO
+          title="Gojek"
+          description={metaData.description}
+          url="https://www.gojek.io"
+        />
+       
         {location.pathname !== '/gomakeimpact/' &&
           location.pathname !== '/superapp/' && (
             <Header

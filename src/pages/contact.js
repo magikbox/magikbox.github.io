@@ -2,39 +2,17 @@ import React, { Component } from 'react'
 import { Helmet } from 'react-helmet'
 
 import CallToAction from '../components/Common/callToAction'
+import SEO from '../components/seo'
 
 class Contact extends Component {
   render() {
     return (
       <div className="first-section">
-        <Helmet>
-          <title>Gojek: Contact Us</title>
-          <meta
-            data-react-helmet="true"
-            property="og:title"
-            content="Gojek: Contact Us"
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:title"
-            content="Gojek: Contact Us"
-          />
-          <meta
-            data-react-helmet="true"
-            name="description"
-            content="Feel free to contact us for any queries regarding job openings or any other queries."
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:description"
-            content="Feel free to contact us for any queries regarding job openings or any other queries."
-          />
-          <meta
-            data-react-helmet="true"
-            property="og:description"
-            content="Feel free to contact us for any queries regarding job openings or any other queries."
-          />
-        </Helmet>
+        <SEO
+          title={'Gojek: Contact Us'}
+          description="Feel free to contact us for any queries regarding job openings or any other queries."
+          url="https://www.gojek.io"
+        />
 
         <section className="first-section">
           <div className="container-fluid">

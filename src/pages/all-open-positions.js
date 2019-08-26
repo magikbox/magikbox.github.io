@@ -4,6 +4,7 @@ import PositionCard from '../components/Careers/PositionCard/positionCard'
 import axios from 'axios'
 import OpenPositionDepartments from '../components/AllOpenPositions/OpenPositionDepartments'
 import MetaTags from 'react-meta-tags'
+import SEO from '../components/seo';
 
 var Scroll = require('react-scroll')
 var scroll = Scroll.animateScroll
@@ -31,8 +32,11 @@ class allpositions extends Component {
 
   componentDidMount() {
     console.log('this.porops', this.props)
-    if(this.props.location.state&&this.props.location.state.jobSelected!==null){
-      this.setState({jobSelected:this.props.location.state.jobSelected})
+    if (
+      this.props.location.state &&
+      this.props.location.state.jobSelected !== null
+    ) {
+      this.setState({ jobSelected: this.props.location.state.jobSelected })
     }
     if (typeof window !== `undefined`) {
       window.addEventListener('scroll', this.handleScroll)
@@ -298,94 +302,14 @@ class allpositions extends Component {
     console.log('jobsssssss', jobSelected)
     return (
       <div className="first-section">
-        <Helmet>
-          <title>
-            {jobSelected !== null
-              ? jobSelected.text !== undefined && jobSelected.text
-              : 'Gojek Careers: Check out the current job openings at Gojek Tech'}
-          </title>
-          <meta
-            data-react-helmet="true"
-            content="yes"
-            name="apple-mobile-web-app-capable"
-          />
-          <meta
-            data-react-helmet="true"
-            name="description"
-            content={
-              jobSelected !== null
-                ? jobSelected.descriptionPlain
-                : "Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-            }
-          />
-
-          {/* Twitter meta tags */}
-          <meta
-            data-react-helmet="true"
-            name="twitter:card"
-            content="summary"
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:site"
-            content={metaData.twitter}
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:title"
-            content={
-              jobSelected !== null
-                ? jobSelected.text
-                : 'Gojek Careers: Check out the current job openings at Gojek Tech'
-            }
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:description"
-            content={
-              jobSelected !== null
-                ? jobSelected.descriptionPlain
-                : "Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-            }
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:image"
-            content={metaData.siteImage}
-          />
-
-          {/* og meta tags */}
-          <meta
-            data-react-helmet="true"
-            property="og:title"
-            content={
-              jobSelected !== null
-                ? jobSelected.text
-                : 'Gojek Careers: Check out the current job openings at Gojek Tech'
-            }
-          />
-          <meta data-react-helmet="true" property="og:type" content="website" />
-          <meta
-            data-react-helmet="true"
-            property="og:url"
-            content={metaData.siteUrl}
-          />
-          <meta
-            data-react-helmet="true"
-            property="og:image"
-            content={metaData.siteImage}
-          />
-          <meta
-            data-react-helmet="true"
-            property="og:description"
-            content={
-              jobSelected !== null
-                ? jobSelected.descriptionPlain
-                : "Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-            }
-          />
-        </Helmet>
-
+        <SEO
+          title={
+            'Gojek Careers: Check out the current job openings at Gojek Tech'
+          }
+          description="Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
+          url="https://www.gojek.io"
+        />
+      
         <div className="container">
           <h1 className="text-center text-black font-xl-x maison-bold pt-5">
             {this.state.inputText === '' &&

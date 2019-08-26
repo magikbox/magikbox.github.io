@@ -4,6 +4,7 @@ import Parser from 'html-react-parser'
 import { Helmet } from 'react-helmet'
 import { getShareButton } from '../components/Careers/PositionCard/positionCard.jsx'
 import MetaTags from 'react-meta-tags'
+import SEO from '../components/seo.js'
 
 class Description extends Component {
   constructor(props) {
@@ -15,90 +16,10 @@ class Description extends Component {
   }
 
   render() {
-    const { job } = this.props;
+    const { job } = this.props
 
-    const { siteMetadata: metaData } = this.props.data.site
     return (
       <div className="py-5 my-5 py-md-2 my-md-0">
-        {job !== undefined && (
-          <Helmet>
-            <title>{'Gojek Careers: ' + job.text}</title>
-
-            <meta
-              data-react-helmet="true"
-              content="yes"
-              name="apple-mobile-web-app-capable"
-            />
-            <meta
-              data-react-helmet="true"
-              name="description"
-              content="Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-            />
-
-            {/* Twitter meta tags */}
-            <meta
-              data-react-helmet="true"
-              name="twitter:card"
-              content="summary"
-            />
-            <meta
-              data-react-helmet="true"
-              name="twitter:site"
-              content={metaData.twitter}
-            />
-            <meta
-              data-react-helmet="true"
-              name="twitter:title"
-              content={'Gojek Careers: ' + job.text}
-            />
-            <meta
-              data-react-helmet="true"
-              name="twitter:description"
-              content={job.descriptionPlain}
-            />
-            <meta
-              data-react-helmet="true"
-              name="twitter:image"
-              content={metaData.siteImage}
-            />
-
-            {/* og meta tags */}
-            <meta
-              data-react-helmet="true"
-              property="og:title"
-              content={'Gojek Careers: ' + job.text}
-            />
-            <meta
-              data-react-helmet="true"
-              property="og:type"
-              content="website"
-            />
-            <meta
-              data-react-helmet="true"
-              property="og:url"
-              content={metaData.siteUrl}
-            />
-            <meta
-              data-react-helmet="true"
-              property="og:image"
-              content={metaData.siteImage}
-            />
-            <meta
-              data-react-helmet="true"
-              property="og:description"
-              content={job.descriptionPlain}
-            />
-          </Helmet>
-          // <MetaTags>
-          //   <title>{'GOJEK Careers: ' + job.text}</title>
-          //   <meta property="og:title" content={'GOJEK Careers: ' + job.text} />
-          //   <meta name="twitter:title" content={'GOJEK Careers: ' + job.text} />
-          //   <meta name="description" content={job.descriptionPlain} />
-          //   <meta name="twitter:description" content={job.descriptionPlain} />
-          //   <meta property="og:description" content={job.descriptionPlain} />
-          // </MetaTags>
-        )}
-
         {<div className="pt-5 d-md-none">{getShareButton(job)}</div>}
         <p className="  roboto-bold text-black font-sm">Overview</p>
         {job !== undefined && (
@@ -278,16 +199,3 @@ class Description extends Component {
 
 export default Description
 
-export const query = graphql`
-  query SiteTitleQuery1 {
-    site {
-      siteMetadata {
-        title
-        description
-        siteUrl
-        siteImage
-        twitter
-      }
-    }
-  }
-`

@@ -23506,9 +23506,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      'div',
 	      null,
 	      _react2.default.createElement(_seo2.default, {
-	        title: metaData.title,
+	        title: 'Gojek',
 	        description: metaData.description,
-	        url: metaData.siteUrl
+	        url: 'https://www.gojek.io'
 	      }),
 	      location.pathname !== '/gomakeimpact/' && location.pathname !== '/superapp/' && _react2.default.createElement(_index2.default, {
 	        siteTitle: metaData.title,
@@ -28394,43 +28394,48 @@ return /******/ (function(modules) { // webpackBootstrap
 	      title = _ref.title,
 	      url = _ref.url;
 	
-	  return _react2.default.createElement(_reactHelmet2.default, {
-	    title: title,
-	    meta: [{
-	      name: 'description',
-	      content: description
-	    }, {
-	      name: 'twitter:card',
-	      content: description
-	    }, {
-	      name: 'twitter:title',
-	      content: title
-	    }, {
-	      name: 'twitter:site',
-	      content: '@gojektech'
-	    }, {
-	      name: 'twitter:image',
-	      content: 'https://www.gojek.io/images/Go-Jek.png'
-	    }, {
-	      name: 'twitter:description',
-	      content: description
-	    }, {
-	      property: 'og:title',
-	      content: title
-	    }, {
-	      property: 'og:url',
-	      content: { url: url }
-	    }, {
-	      property: 'og:image',
-	      content: 'https://www.gojek.io/images/Go-Jek.png'
-	    }, {
-	      property: 'og:description',
-	      content: description
-	    }, {
-	      property: 'og:type',
-	      content: 'website'
-	    }]
-	  });
+	  return _react2.default.createElement(
+	    _react2.default.Fragment,
+	    null,
+	    _react2.default.createElement(_reactHelmet2.default, {
+	      title: title,
+	      meta: [{
+	        name: 'description',
+	        content: description
+	      }, {
+	        name: 'twitter:card',
+	        content: description
+	      }, {
+	        name: 'twitter:title',
+	        content: title
+	      }, {
+	        name: 'twitter:site',
+	        content: '@gojektech'
+	      }, {
+	        name: 'twitter:image',
+	        content: 'https://www.gojek.io/images/Go-Jek.png'
+	      }, {
+	        name: 'twitter:description',
+	        content: description
+	      }, {
+	        property: 'og:title',
+	        content: title
+	      }, {
+	        property: 'og:url',
+	        content: { url: url }
+	      }, {
+	        property: 'og:image',
+	        content: 'https://www.gojek.io/images/Go-Jek.png'
+	      }, {
+	        property: 'og:description',
+	        content: description
+	      }, {
+	        property: 'og:type',
+	        content: 'website'
+	      }]
+	    }),
+	    _react2.default.createElement('link', { rel: 'icon', href: './../images/favicon.png', type: 'image/x-icon' })
+	  );
 	} /**
 	   * SEO component that queries for data with
 	   *  Gatsby's useStaticQuery React hook
@@ -28525,8 +28530,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      'div',
 	      { className: 'first-section' },
 	      _react2.default.createElement(_seo2.default, {
-	        title: 'GOJEK-Tech',
-	        description: 'GOJEK is a Super App. It\u2019s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia\u2019s first and fastest growing unicorn building an on-demand empire.',
+	        title: 'Gojek-Tech',
+	        description: 'Gojek is a Super App. It\u2019s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia\u2019s first and fastest growing unicorn building an on-demand empire.',
 	        url: 'https://www.gojek.io'
 	      }),
 	      _react2.default.createElement(
@@ -28534,15 +28539,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        { className: 'bg-green text-center ' },
 	        _react2.default.createElement(
 	          'h1',
-	          { className: 'h1 py-5 raleway-bold font-xl-x text-uppercase text-white' },
+	          { className: 'h1 pt-5 pb-3 maison-bold font-xl-x text-uppercase text-white' },
 	          'Gojek is indonesia\u2019s ',
 	          _react2.default.createElement('br', null),
 	          ' first unicorn'
 	        ),
-	        _react2.default.createElement('img', {
-	          className: 'img-fluid ',
-	          src: '../images/about/about-us-banner.png'
-	        }),
+	        _react2.default.createElement('img', { className: 'w-50 ', src: '../images/about/about-us-banner.svg' }),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'py-5' },
@@ -28567,11 +28569,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _react2.default.createElement(
 	          'div',
 	          {
-	            className: ' pt-5 col-lg-4 col-md-5 col-8 wow fadeIn',
+	            className: ' pt-5 col-lg-4 col-md-5 col-8 wow fadeIn text-center',
 	            'data-wow-duration': '1s',
 	            'data-wow-delay': '0.3s'
 	          },
-	          _react2.default.createElement('img', { className: 'img-fluid', src: '../images/about/local-ojeks.png' })
+	          _react2.default.createElement('img', { className: 'w-50', src: '../images/about/local-ojeks.svg' })
 	        ),
 	        _react2.default.createElement(
 	          'div',
@@ -28589,7 +28591,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            'h4',
 	            { className: ' roboto-regular font-xl-l aboutFont' },
 	            ' ',
-	            'GO - JEK started with a mission to improve the livelihoods of local ojeks (motorcycle taxis)'
+	            'Gojek started with a mission to improve the livelihoods of local ojeks (motorcycle taxis)'
 	          )
 	        )
 	      ),
@@ -28635,7 +28637,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        ),
 	        _react2.default.createElement('img', {
 	          className: 'img-fluid circle-width ',
-	          src: '../images/about/ellipse-1-left-bike.png'
+	          src: '../images/about/Side1.svg'
 	        })
 	      ),
 	      _react2.default.createElement(
@@ -28668,10 +28670,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            'data-wow-duration': '1s',
 	            'data-wow-delay': '0.3s'
 	          },
-	          _react2.default.createElement('img', {
-	            className: 'img-fluid',
-	            src: '../images/about/customer-care.png'
-	          })
+	          _react2.default.createElement('img', { className: 'w-75', src: '../images/about/customer-care.svg' })
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -28730,7 +28729,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          },
 	          _react2.default.createElement('img', {
 	            className: 'img-fluid',
-	            src: '../images/about/automated-machine.png'
+	            src: '../images/about/automated-machine.svg'
 	          })
 	        ),
 	        _react2.default.createElement(
@@ -28818,7 +28817,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	              null,
 	              '3,000 to 100,000 '
 	            ),
-	            'a day. GOJEK was becoming indispensable. By end of 2015 - systems were crashing because of a major spike in volumes'
+	            'a day. Gojek was becoming indispensable. By end of 2015 - systems were crashing because of a major spike in volumes'
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -28828,7 +28827,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	            'data-wow-duration': '1s',
 	            'data-wow-delay': '0.3s'
 	          },
-	          _react2.default.createElement('img', { className: 'img-fluid', src: '../images/about/scaled-order.png' })
+	          _react2.default.createElement('img', {
+	            className: 'img-fluid',
+	            src: '../images/about/increased-orders.svg'
+	          })
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -28836,7 +28838,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        { style: { height: '150px' }, className: 'position-relative' },
 	        _react2.default.createElement('img', {
 	          className: 'img-fluid circle-width position-absolute',
-	          src: '../images/about/ellipse-1-copy-2.png'
+	          src: '../images/about/Side1.svg'
 	        }),
 	        _react2.default.createElement(
 	          'svg',
@@ -28890,8 +28892,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            'data-wow-delay': '0.3s'
 	          },
 	          _react2.default.createElement('img', {
-	            className: 'img-fluid',
-	            src: '../images/about/niranjan-paranjape.png'
+	            className: 'w-75',
+	            src: '../images/about/niranjan-paranjape.svg'
 	          })
 	        ),
 	        _react2.default.createElement(
@@ -29003,7 +29005,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          },
 	          _react2.default.createElement('img', {
 	            className: 'img-fluid',
-	            src: '../images/about/300000-orders.png'
+	            src: '../images/about/300000-orders.svg'
 	          })
 	        )
 	      ),
@@ -29013,7 +29015,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _react2.default.createElement('img', {
 	          className: 'img-fluid circle-width position-absolute',
 	          style: { right: '0' },
-	          src: '../images/about/ellipse-1-right-bike.png'
+	          src: '../images/about/Side2.svg'
 	        }),
 	        _react2.default.createElement(
 	          'svg',
@@ -29069,7 +29071,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          },
 	          _react2.default.createElement('img', {
 	            className: 'img-fluid',
-	            src: '../images/about/driver-partners.png'
+	            src: '../images/about/driver-partners.svg'
 	          })
 	        ),
 	        _react2.default.createElement(
@@ -29087,7 +29089,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _react2.default.createElement(
 	            'h4',
 	            { className: ' roboto-regular font-xl-l aboutFont' },
-	            'Driver incomes increased by 150% making GOJEK a reliable partner',
+	            'Driver incomes increased by 150% making Gojek a reliable partner',
 	            ' '
 	          )
 	        )
@@ -29166,7 +29168,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            'data-wow-duration': '1s',
 	            'data-wow-delay': '0.3s'
 	          },
-	          _react2.default.createElement('img', { className: 'img-fluid', src: '../images/about/issue.png' })
+	          _react2.default.createElement('img', { className: 'img-fluid', src: '../images/about/issue.svg' })
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -29230,7 +29232,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _react2.default.createElement(
 	            'h4',
 	            { className: 'roboto-regular font-xl-l aboutFont' },
-	            '\u201CNo project has a budget and impact as big as this in GOJEK\u2019s history\u201D - From Nadiem\u2019s internal mail..'
+	            '\u201CNo project has a budget and impact as big as this in Gojek\'s history\u201D - From Nadiem\u2019s internal mail..'
 	          ),
 	          _react2.default.createElement(
 	            'a',
@@ -29252,7 +29254,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            'data-wow-duration': '1s',
 	            'data-wow-delay': '0.3s'
 	          },
-	          _react2.default.createElement('img', { className: 'img-fluid', src: '../images/about/big-rewrite.png' })
+	          _react2.default.createElement('img', { className: 'img-fluid', src: '../images/about/big-rewrite.svg' })
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -29313,7 +29315,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _react2.default.createElement(
 	            'h4',
 	            { className: ' roboto-regular font-xl-l aboutFont' },
-	            'GOJEK employs more than 30,000 people with disabilities.'
+	            'Gojek employs more than 30,000 people with disabilities.'
 	          ),
 	          _react2.default.createElement(
 	            'a',
@@ -29335,7 +29337,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            'data-wow-duration': '2s',
 	            'data-wow-delay': '0.4s'
 	          },
-	          _react2.default.createElement('img', { className: 'img-fluid', src: '../images/about/employees.png' })
+	          _react2.default.createElement('img', { className: 'w-75', src: '../images/about/employees.svg' })
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -29399,7 +29401,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _react2.default.createElement(
 	            'h4',
 	            { className: ' roboto-regular font-xl-l aboutFont' },
-	            'GOJEK does 100+ million orders across 18+ products Total order volume growth - 6600x',
+	            'Gojek does 100+ million orders across 18+ products Total order volume growth - 1100x',
 	            ' '
 	          )
 	        ),
@@ -29412,7 +29414,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          },
 	          _react2.default.createElement('img', {
 	            className: 'img-fluid',
-	            src: '../images/about/10-million-orders.png'
+	            src: '../images/about/10-million-orders.svg'
 	          })
 	        )
 	      ),
@@ -29733,6 +29735,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  allpositions.prototype.componentDidMount = function componentDidMount() {
 	    var _this2 = this;
 	
+	    console.log('this.porops', this.props);
 	    if (this.props.location.state && this.props.location.state.jobSelected !== null) {
 	      this.setState({ jobSelected: this.props.location.state.jobSelected });
 	    }
@@ -29790,6 +29793,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var metaData = this.props.data.site.siteMetadata;
 	    var jobSelected = this.state.jobSelected;
 	
+	    console.log('jobsssssss', jobSelected);
 	    return _react2.default.createElement(
 	      'div',
 	      { className: 'first-section' },
@@ -29922,6 +29926,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          { style: { minHeight: '50vh' } },
 	          _react2.default.createElement(_OpenPositionDepartments2.default, _extends({
 	            jobSelected: function jobSelected(job) {
+	              console.log('jobselectedsdfdsf', job);
 	              _this3.setState({ jobSelected: job });
 	            },
 	            departmentSelected: this.state.departmentSelected
@@ -29967,6 +29972,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          ),
 	          _react2.default.createElement(_positionCard2.default, _extends({
 	            jobSelected: function jobSelected(job) {
+	              console.log('jobselectedsdfdsf', job);
 	              _this3.setState({ jobSelected: job });
 	            }
 	          }, this.props, {
@@ -36333,16 +36339,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  Description.prototype.render = function render() {
 	    var job = this.props.job;
 	
-	    // const { siteMetadata: metaData } = this.props.data.site
 	
 	    return _react2.default.createElement(
 	      'div',
 	      { className: 'py-5 my-5 py-md-2 my-md-0' },
-	      job !== undefined && _react2.default.createElement(_seo2.default, {
-	        title: 'Gojek Careers: ' + job.text,
-	        description: job.descriptionPlain,
-	        url: window.location.href
-	      }),
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'pt-5 d-md-none' },
@@ -36547,21 +36547,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	}(_react.Component);
 	
 	exports.default = Description;
-	
-	// export const query = graphql`
-	//   query SiteTitleQuery1 {
-	//     site {
-	//       siteMetadata {
-	//         title
-	//         description
-	//         siteUrl
-	//         siteImage
-	//         twitter
-	//       }
-	//     }
-	//   }
-	// `
-	
 	module.exports = exports['default'];
 
 /***/ }),
@@ -37796,7 +37781,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  // If debug isn't set in LS, and we're in Electron, try to load $DEBUG
 	  if (!r && typeof process !== 'undefined' && 'env' in process) {
-	    r = ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/magikbox.github.io/public"}).DEBUG;
+	    r = ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/new/magikbox.github.io/public"}).DEBUG;
 	  }
 	
 	  return r;
@@ -38229,7 +38214,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *   $ DEBUG_COLORS=no DEBUG_DEPTH=10 DEBUG_SHOW_HIDDEN=enabled node script.js
 	 */
 	
-	exports.inspectOpts = Object.keys(({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/magikbox.github.io/public"})).filter(function (key) {
+	exports.inspectOpts = Object.keys(({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/new/magikbox.github.io/public"})).filter(function (key) {
 	  return /^debug_/i.test(key);
 	}).reduce(function (obj, key) {
 	  // camel-case
@@ -38239,7 +38224,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    .replace(/_([a-z])/g, function (_, k) { return k.toUpperCase() });
 	
 	  // coerce string value into JS value
-	  var val = ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/magikbox.github.io/public"})[key];
+	  var val = ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/new/magikbox.github.io/public"})[key];
 	  if (/^(yes|on|true|enabled)$/i.test(val)) val = true;
 	  else if (/^(no|off|false|disabled)$/i.test(val)) val = false;
 	  else if (val === 'null') val = null;
@@ -38256,7 +38241,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *   $ DEBUG_FD=3 node script.js 3>debug.log
 	 */
 	
-	var fd = parseInt(({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/magikbox.github.io/public"}).DEBUG_FD, 10) || 2;
+	var fd = parseInt(({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/new/magikbox.github.io/public"}).DEBUG_FD, 10) || 2;
 	
 	if (1 !== fd && 2 !== fd) {
 	  util.deprecate(function(){}, 'except for stderr(2) and stdout(1), any other usage of DEBUG_FD is deprecated. Override debug.log if you want to use a different log function (https://git.io/debug_fd)')()
@@ -38338,9 +38323,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (null == namespaces) {
 	    // If you set a process.env field to null or undefined, it gets cast to the
 	    // string 'null' or 'undefined'. Just delete instead.
-	    delete ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/magikbox.github.io/public"}).DEBUG;
+	    delete ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/new/magikbox.github.io/public"}).DEBUG;
 	  } else {
-	    ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/magikbox.github.io/public"}).DEBUG = namespaces;
+	    ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/new/magikbox.github.io/public"}).DEBUG = namespaces;
 	  }
 	}
 	
@@ -38352,7 +38337,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	
 	function load() {
-	  return ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/magikbox.github.io/public"}).DEBUG;
+	  return ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/new/magikbox.github.io/public"}).DEBUG;
 	}
 	
 	/**
@@ -42111,7 +42096,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var proxy = config.proxy;
 	    if (!proxy && proxy !== false) {
 	      var proxyEnv = protocol.slice(0, -1) + '_proxy';
-	      var proxyUrl = ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/magikbox.github.io/public"})[proxyEnv] || ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/magikbox.github.io/public"})[proxyEnv.toUpperCase()];
+	      var proxyUrl = ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/new/magikbox.github.io/public"})[proxyEnv] || ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/new/magikbox.github.io/public"})[proxyEnv.toUpperCase()];
 	      if (proxyUrl) {
 	        var parsedProxyUrl = url.parse(proxyUrl);
 	        proxy = {
@@ -42751,7 +42736,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  // If debug isn't set in LS, and we're in Electron, try to load $DEBUG
 	  if (!r && typeof process !== 'undefined' && 'env' in process) {
-	    r = ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/magikbox.github.io/public"}).DEBUG;
+	    r = ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/new/magikbox.github.io/public"}).DEBUG;
 	  }
 	
 	  return r;
@@ -43064,7 +43049,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *   $ DEBUG_COLORS=no DEBUG_DEPTH=10 DEBUG_SHOW_HIDDEN=enabled node script.js
 	 */
 	
-	exports.inspectOpts = Object.keys(({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/magikbox.github.io/public"})).filter(function (key) {
+	exports.inspectOpts = Object.keys(({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/new/magikbox.github.io/public"})).filter(function (key) {
 	  return /^debug_/i.test(key);
 	}).reduce(function (obj, key) {
 	  // camel-case
@@ -43074,7 +43059,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    .replace(/_([a-z])/g, function (_, k) { return k.toUpperCase() });
 	
 	  // coerce string value into JS value
-	  var val = ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/magikbox.github.io/public"})[key];
+	  var val = ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/new/magikbox.github.io/public"})[key];
 	  if (/^(yes|on|true|enabled)$/i.test(val)) val = true;
 	  else if (/^(no|off|false|disabled)$/i.test(val)) val = false;
 	  else if (val === 'null') val = null;
@@ -43164,9 +43149,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (null == namespaces) {
 	    // If you set a process.env field to null or undefined, it gets cast to the
 	    // string 'null' or 'undefined'. Just delete instead.
-	    delete ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/magikbox.github.io/public"}).DEBUG;
+	    delete ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/new/magikbox.github.io/public"}).DEBUG;
 	  } else {
-	    ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/magikbox.github.io/public"}).DEBUG = namespaces;
+	    ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/new/magikbox.github.io/public"}).DEBUG = namespaces;
 	  }
 	}
 	
@@ -43178,7 +43163,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	
 	function load() {
-	  return ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/magikbox.github.io/public"}).DEBUG;
+	  return ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/new/magikbox.github.io/public"}).DEBUG;
 	}
 	
 	/**
@@ -43219,7 +43204,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	
 	module.exports = (function () {
-		if ('FORCE_COLOR' in ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/magikbox.github.io/public"})) {
+		if ('FORCE_COLOR' in ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/new/magikbox.github.io/public"})) {
 			return true;
 		}
 	
@@ -43244,15 +43229,15 @@ return /******/ (function(modules) { // webpackBootstrap
 			return true;
 		}
 	
-		if ('COLORTERM' in ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/magikbox.github.io/public"})) {
+		if ('COLORTERM' in ({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/new/magikbox.github.io/public"})) {
 			return true;
 		}
 	
-		if (({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/magikbox.github.io/public"}).TERM === 'dumb') {
+		if (({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/new/magikbox.github.io/public"}).TERM === 'dumb') {
 			return false;
 		}
 	
-		if (/^screen|^xterm|^vt100|color|ansi|cygwin|linux/i.test(({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/magikbox.github.io/public"}).TERM)) {
+		if (/^screen|^xterm|^vt100|color|ansi|cygwin|linux/i.test(({"NODE_ENV":"production","PUBLIC_DIR":"/var/go-jek/source go-jek/new/magikbox.github.io/public"}).TERM)) {
 			return true;
 		}
 	
@@ -43270,7 +43255,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 338 */
 /***/ (function(module, exports) {
 
-	module.exports = {"_args":[["axios@0.18.0","/var/go-jek/source go-jek/magikbox.github.io"]],"_from":"axios@0.18.0","_id":"axios@0.18.0","_inBundle":false,"_integrity":"sha1-MtU+SFHv3AoRmTts0AB4nXDAUQI=","_location":"/axios","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"axios@0.18.0","name":"axios","escapedName":"axios","rawSpec":"0.18.0","saveSpec":null,"fetchSpec":"0.18.0"},"_requiredBy":["/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.18.0.tgz","_spec":"0.18.0","_where":"/var/go-jek/source go-jek/magikbox.github.io","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.3.0","is-buffer":"^1.1.5"},"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"bundlesize":"^0.5.7","coveralls":"^2.11.9","es6-promise":"^4.0.5","grunt":"^1.0.1","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.0.0","grunt-contrib-nodeunit":"^1.0.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^19.0.0","grunt-karma":"^2.0.0","grunt-ts":"^6.0.0-beta.3","grunt-webpack":"^1.0.18","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^1.3.0","karma-chrome-launcher":"^2.0.0","karma-coverage":"^1.0.0","karma-firefox-launcher":"^1.0.0","karma-jasmine":"^1.0.2","karma-jasmine-ajax":"^0.1.13","karma-opera-launcher":"^1.0.0","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^1.1.0","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.7","karma-webpack":"^1.7.0","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","sinon":"^1.17.4","typescript":"^2.0.3","url-search-params":"^0.6.1","webpack":"^1.13.1","webpack-dev-server":"^1.14.1"},"homepage":"https://github.com/axios/axios","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test && bundlesize","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","version":"0.18.0"}
+	module.exports = {"_args":[["axios@0.18.0","/var/go-jek/source go-jek/new/magikbox.github.io"]],"_from":"axios@0.18.0","_id":"axios@0.18.0","_inBundle":false,"_integrity":"sha1-MtU+SFHv3AoRmTts0AB4nXDAUQI=","_location":"/axios","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"axios@0.18.0","name":"axios","escapedName":"axios","rawSpec":"0.18.0","saveSpec":null,"fetchSpec":"0.18.0"},"_requiredBy":["/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.18.0.tgz","_spec":"0.18.0","_where":"/var/go-jek/source go-jek/new/magikbox.github.io","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.3.0","is-buffer":"^1.1.5"},"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"bundlesize":"^0.5.7","coveralls":"^2.11.9","es6-promise":"^4.0.5","grunt":"^1.0.1","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.0.0","grunt-contrib-nodeunit":"^1.0.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^19.0.0","grunt-karma":"^2.0.0","grunt-ts":"^6.0.0-beta.3","grunt-webpack":"^1.0.18","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^1.3.0","karma-chrome-launcher":"^2.0.0","karma-coverage":"^1.0.0","karma-firefox-launcher":"^1.0.0","karma-jasmine":"^1.0.2","karma-jasmine-ajax":"^0.1.13","karma-opera-launcher":"^1.0.0","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^1.1.0","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.7","karma-webpack":"^1.7.0","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","sinon":"^1.17.4","typescript":"^2.0.3","url-search-params":"^0.6.1","webpack":"^1.13.1","webpack-dev-server":"^1.14.1"},"homepage":"https://github.com/axios/axios","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test && bundlesize","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","version":"0.18.0"}
 
 /***/ }),
 /* 339 */
@@ -76402,7 +76387,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      'div',
 	      { className: 'first-section' },
 	      _react2.default.createElement(_seo2.default, {
-	        title: 'Gojek Careers: Check out the current job openings at Gojek Tech',
+	        title: "Gojek Careers: Check out the current job openings at Gojek Tech",
 	        description: 'Gojek is hiring the best and brightest of tech minds to build one of the world\'s most versatile and agile on-demand service apps.',
 	        url: 'https://www.gojek.io'
 	      }),
@@ -79076,10 +79061,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _callToAction2 = _interopRequireDefault(_callToAction);
 	
-	var _seo = __webpack_require__(194);
-	
-	var _seo2 = _interopRequireDefault(_seo);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -79101,11 +79082,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _react2.default.createElement(
 	      'div',
 	      { className: 'first-section' },
-	      _react2.default.createElement(_seo2.default, {
-	        title: 'Gojek Tech Events',
-	        description: 'Gojek Tech Events',
-	        url: 'https://www.gojek.io'
-	      }),
+	      _react2.default.createElement(
+	        _reactHelmet.Helmet,
+	        null,
+	        _react2.default.createElement(
+	          'title',
+	          null,
+	          ' Gojek Tech Events '
+	        ),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          property: 'og:title',
+	          content: 'Gojek Tech Events'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          name: 'twitter:title',
+	          content: 'Gojek Tech Events'
+	        })
+	      ),
 	      _react2.default.createElement(_heading2.default, null),
 	      _react2.default.createElement(_events2.default, null),
 	      _react2.default.createElement(_callToAction2.default, {
@@ -79804,10 +79799,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _reactHelmet = __webpack_require__(62);
 	
-	var _seo = __webpack_require__(194);
-	
-	var _seo2 = _interopRequireDefault(_seo);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -79829,11 +79820,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _react2.default.createElement(
 	      'section',
 	      { className: 'first-section pt-3' },
-	      _react2.default.createElement(_seo2.default, {
-	        title: 'Gojek Tech to hire 200 engineers in India',
-	        description: 'Gojek Tech to hire 200 engineers in India',
-	        url: 'https://www.gojek.io'
-	      }),
+	      _react2.default.createElement(
+	        _reactHelmet.Helmet,
+	        null,
+	        _react2.default.createElement(
+	          'title',
+	          null,
+	          ' Gojek Tech to hire 200 engineers in India '
+	        ),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          property: 'og:title',
+	          content: 'Gojek Tech to hire 200 engineers in India'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          name: 'twitter:title',
+	          content: 'Gojek Tech to hire 200 engineers in India'
+	        })
+	      ),
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'container' },
@@ -79943,10 +79948,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _reactHelmet = __webpack_require__(62);
 	
-	var _seo = __webpack_require__(194);
-	
-	var _seo2 = _interopRequireDefault(_seo);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -79968,11 +79969,40 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _react2.default.createElement(
 	      'section',
 	      { className: 'first-section pt-3' },
-	      _react2.default.createElement(_seo2.default, {
-	        title: 'Backed by Gojek, GO-VIET launches its services in Vietnam',
-	        description: 'Owing to the great success of Gojek in Indonesia, GO-VIET will try and replicate the same in Vietnam.',
-	        url: 'https://www.gojek.io'
-	      }),
+	      _react2.default.createElement(
+	        _reactHelmet.Helmet,
+	        null,
+	        _react2.default.createElement(
+	          'title',
+	          null,
+	          'Backed by Gojek, GO-VIET launches its services in Vietnam'
+	        ),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          property: 'og:title',
+	          content: 'Backed by Gojek, GO-VIET launches its services in Vietnam'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          name: 'twitter:title',
+	          content: 'Backed by Gojek, GO-VIET launches its services in Vietnam'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          name: 'description',
+	          content: 'Owing to the great success of Gojek in Indonesia, GO-VIET will try and replicate the same in Vietnam.'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          name: 'twitter:description',
+	          content: 'Owing to the great success of Gojek in Indonesia, GO-VIET will try and replicate the same in Vietnam.'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          property: 'og:description',
+	          content: 'Owing to the great success of Gojek in Indonesia, GO-VIET will try and replicate the same in Vietnam.'
+	        })
+	      ),
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'container' },
@@ -80108,7 +80138,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 535 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	exports.__esModule = true;
 	
@@ -80117,10 +80147,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _react2 = _interopRequireDefault(_react);
 	
 	var _reactHelmet = __webpack_require__(62);
-	
-	var _seo = __webpack_require__(194);
-	
-	var _seo2 = _interopRequireDefault(_seo);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -80131,104 +80157,107 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var GojekExpansion = function (_Component) {
-	  _inherits(GojekExpansion, _Component);
+	    _inherits(GojekExpansion, _Component);
 	
-	  function GojekExpansion() {
-	    _classCallCheck(this, GojekExpansion);
+	    function GojekExpansion() {
+	        _classCallCheck(this, GojekExpansion);
 	
-	    return _possibleConstructorReturn(this, _Component.apply(this, arguments));
-	  }
+	        return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+	    }
 	
-	  GojekExpansion.prototype.render = function render() {
-	    return _react2.default.createElement(
-	      'section',
-	      { className: 'first-section pt-3' },
-	      _react2.default.createElement(_seo2.default, {
-	        title: 'Gojek expands to Thailand, Vietnam, Singapore and Philippines',
-	        description: 'After Indonesia, Gojek is expanding to other South East Asian countries to provide their citizens with its exceptional service and employment opportunities.',
-	        url: 'https://www.gojek.io'
-	      }),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'container' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'row' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'heading col-md-12 px-md-0' },
+	    GojekExpansion.prototype.render = function render() {
+	        return _react2.default.createElement(
+	            "section",
+	            { className: "first-section pt-3" },
 	            _react2.default.createElement(
-	              'p',
-	              { className: 'text-success blog-date roboto-bold py-sm-2 ' },
-	              'JUNE 25, 2018'
-	            ),
-	            _react2.default.createElement(
-	              'h5',
-	              { className: 'text-center text-md-left text-black pb-4  maison-bold font-lg' },
-	              'Gojek announces the launch of locally founded companies in Vietnam and Thailand'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'px-4 px-md-0 font-xs-l roboto-regular' },
-	            _react2.default.createElement('img', {
-	              className: 'img-fluid',
-	              src: '../images/news/press-release.jpg',
-	              width: '100%'
-	            }),
-	            _react2.default.createElement(
-	              'p',
-	              { className: 'pt-4' },
-	              'Gojek today announces the launch of two locally founded companies in Vietnam and Thailand that will form the first wave of its international expansion. The companies will be run by local founding management teams, with Gojek providing knowledge and expertise as well as technology and investment.'
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'GO-VIET, the brand being introduced in Vietnam, will enter its beta testing phase in July, which will involve a select number of drivers and consumers, before it goes to full launch in the next few months. GET, the brand being introduced in Thailand, will launch soon afterwards following consultation with local stakeholders including government, drivers and consumers. Both companies will initially launch ride-hailing and on-demand logistics services before moving on to food delivery and payments.'
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'The international expansion follows many months of planning by the company after its latest fundraising round, which saw backing from Astra International, Warburg Pincus, KKR, Meituan-Dianping, Tencent, Google and Temasek among others. USD$500 million of the funds raised were set aside for international expansion, as the company aims to increase its presence in Southeast Asia. Gojek is also planning new operations in Singapore and the Philippines.'
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              _react2.default.createElement(
-	                'b',
+	                _reactHelmet.Helmet,
 	                null,
-	                ' Gojek CEO and Founder Nadiem Makarim,'
-	              ),
-	              ' said: \u201COur strategy is to combine the world-class technology developed by Gojek, with the in-depth market knowledge and expertise of the local teams, to create local businesses that really understand consumers. We believe that these in-country teams have the knowledge and experience to make the businesses in Vietnam and Thailand a huge success. They may be using different brands, but they will be operating under the same values system that has made Gojek the market leader in Indonesia. It\u2019s not just about growth, it\u2019s about finding ways to have a positive impact on as many people as possible.\u201D'
+	                _react2.default.createElement(
+	                    "title",
+	                    null,
+	                    "Gojek expands to Thailand, Vietnam, Singapore and Philippines"
+	                ),
+	                _react2.default.createElement("meta", { "data-react-helmet": "true", property: "og:title", content: "Gojek expands to Thailand, Vietnam, Singapore and Philippines" }),
+	                _react2.default.createElement("meta", { "data-react-helmet": "true", name: "twitter:title", content: "Gojek expands to Thailand, Vietnam, Singapore and Philippines" }),
+	                _react2.default.createElement("meta", { "data-react-helmet": "true", name: "description", content: "After Indonesia, Gojek is expanding to other South East Asian countries to provide their citizens with its exceptional service and employment opportunities." }),
+	                _react2.default.createElement("meta", { "data-react-helmet": "true", name: "twitter:description", content: "After Indonesia, Gojek is expanding to other South East Asian countries to provide their citizens with its exceptional service and employment opportunities." }),
+	                _react2.default.createElement("meta", { "data-react-helmet": "true", property: "og:description", content: "After Indonesia, Gojek is expanding to other South East Asian countries to provide their citizens with its exceptional service and employment opportunities." })
 	            ),
 	            _react2.default.createElement(
-	              'p',
-	              null,
-	              '\u201CWe have been working with them for several months now and are excited about continuing to do so as they launch their services and make their presence felt in their respective countries. Ultimately, we want to make sure consumers and drivers feel the benefit of a more competitive industry.\u201D'
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              { className: 'pb-5' },
-	              _react2.default.createElement(
-	                'b',
-	                null,
-	                ' ',
-	                'Vu Duc Chief Executive Officer and Co-Founder of GO-VIET',
-	                ' '
-	              ),
-	              'said: \u201CGojek is a pioneering technology company with an extensive ecosystem of 18 diverse services, backed by a strong group of strategic investors. The company\u2019s support is ideal, not just because of its tech and operational knowhow, but also because we share the same core values \u2013 the desire to make a positive impact on communities by improving living standards and income for families as well as bringing benefits for smallmedium and micro businesses.\u201D'
+	                "div",
+	                { className: "container" },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "row" },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "heading col-md-12 px-md-0" },
+	                        _react2.default.createElement(
+	                            "p",
+	                            { className: "text-success blog-date roboto-bold py-sm-2 " },
+	                            "JUNE 25, 2018"
+	                        ),
+	                        _react2.default.createElement(
+	                            "h5",
+	                            { className: "text-center text-md-left text-black pb-4  maison-bold font-lg" },
+	                            "Gojek announces the launch of locally founded companies in Vietnam and Thailand"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "px-4 px-md-0 font-xs-l roboto-regular" },
+	                        _react2.default.createElement("img", { className: "img-fluid", src: "../images/news/press-release.jpg", width: "100%" }),
+	                        _react2.default.createElement(
+	                            "p",
+	                            { className: "pt-4" },
+	                            "Gojek today announces the launch of two locally founded companies in Vietnam and Thailand that will form the first wave of its international expansion. The companies will be run by local founding management teams, with Gojek providing knowledge and expertise as well as technology and investment."
+	                        ),
+	                        _react2.default.createElement(
+	                            "p",
+	                            null,
+	                            "GO-VIET, the brand being introduced in Vietnam, will enter its beta testing phase in July, which will involve a select number of drivers and consumers, before it goes to full launch in the next few months. GET, the brand being introduced in Thailand, will launch soon afterwards following consultation with local stakeholders including government, drivers and consumers. Both companies will initially launch ride-hailing and on-demand logistics services before moving on to food delivery and payments."
+	                        ),
+	                        _react2.default.createElement(
+	                            "p",
+	                            null,
+	                            "The international expansion follows many months of planning by the company after its latest fundraising round, which saw backing from Astra International, Warburg Pincus, KKR, Meituan-Dianping, Tencent, Google and Temasek among others. USD$500 million of the funds raised were set aside for international expansion, as the company aims to increase its presence in Southeast Asia. Gojek is also planning new operations in Singapore and the Philippines."
+	                        ),
+	                        _react2.default.createElement(
+	                            "p",
+	                            null,
+	                            _react2.default.createElement(
+	                                "b",
+	                                null,
+	                                " Gojek CEO and Founder Nadiem Makarim,"
+	                            ),
+	                            " said: \u201COur strategy is to combine the world-class technology developed by Gojek, with the in-depth market knowledge and expertise of the local teams, to create local businesses that really understand consumers. We believe that these in-country teams have the knowledge and experience to make the businesses in Vietnam and Thailand a huge success. They may be using different brands, but they will be operating under the same values system that has made Gojek the market leader in Indonesia. It\u2019s not just about growth, it\u2019s about finding ways to have a positive impact on as many people as possible.\u201D"
+	                        ),
+	                        _react2.default.createElement(
+	                            "p",
+	                            null,
+	                            "\u201CWe have been working with them for several months now and are excited about continuing to do so as they launch their services and make their presence felt in their respective countries. Ultimately, we want to make sure consumers and drivers feel the benefit of a more competitive industry.\u201D"
+	                        ),
+	                        _react2.default.createElement(
+	                            "p",
+	                            { className: "pb-5" },
+	                            _react2.default.createElement(
+	                                "b",
+	                                null,
+	                                " Vu Duc Chief Executive Officer and Co-Founder of GO-VIET "
+	                            ),
+	                            "said: \u201CGojek is a pioneering technology company with an extensive ecosystem of 18 diverse services, backed by a strong group of strategic investors. The company\u2019s support is ideal, not just because of its tech and operational knowhow, but also because we share the same core values \u2013 the desire to make a positive impact on communities by improving living standards and income for families as well as bringing benefits for smallmedium and micro businesses.\u201D"
+	                        )
+	                    )
+	                )
 	            )
-	          )
-	        )
-	      )
-	    );
-	  };
+	        );
+	    };
 	
-	  return GojekExpansion;
+	    return GojekExpansion;
 	}(_react.Component);
 	
 	exports.default = GojekExpansion;
-	module.exports = exports['default'];
+	module.exports = exports["default"];
 
 /***/ }),
 /* 536 */
@@ -80256,10 +80285,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _videoReact = __webpack_require__(539);
 	
-	var _seo = __webpack_require__(194);
-	
-	var _seo2 = _interopRequireDefault(_seo);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -80281,11 +80306,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _react2.default.createElement(
 	      'div',
 	      { className: 'first-section' },
-	      _react2.default.createElement(_seo2.default, {
-	        title: 'Gojek - Gomakeimpact ',
-	        description: 'Gojek is a Super App. It\u2019s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia\u2019s first and fastest growing unicorn building an on-demand empire.',
-	        url: 'https://www.gojek.io'
-	      }),
+	      _react2.default.createElement(
+	        _reactHelmet.Helmet,
+	        null,
+	        _react2.default.createElement(
+	          'title',
+	          null,
+	          ' Gojek - Gomakeimpact '
+	        ),
+	        _react2.default.createElement('meta', {
+	          content: 'yes',
+	          name: 'apple-mobile-web-app-capable'
+	        }),
+	        _react2.default.createElement('meta', {
+	          name: 'description',
+	          content: 'Gojek is a Super App. It\u2019s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia\u2019s first and fastest growing unicorn building an on-demand empire.'
+	        })
+	      ),
 	      _react2.default.createElement(
 	        'section',
 	        { className: 'first-section' },
@@ -87780,10 +87817,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _reactHelmet = __webpack_require__(62);
 	
-	var _seo = __webpack_require__(194);
-	
-	var _seo2 = _interopRequireDefault(_seo);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -87805,11 +87838,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _react2.default.createElement(
 	      'section',
 	      { className: 'first-section pt-3' },
-	      _react2.default.createElement(_seo2.default, {
-	        title: 'Google, JD.com, and Tencent lead first closing of Gojek\u2019s Series F funding round',
-	        description: 'Google, JD.com, and Tencent lead first closing of Gojek\u2019s Series F funding round',
-	        url: 'https://www.gojek.io'
-	      }),
+	      _react2.default.createElement(
+	        _reactHelmet.Helmet,
+	        null,
+	        _react2.default.createElement(
+	          'title',
+	          null,
+	          ' ',
+	          'Google, JD.com, and Tencent lead first closing of Gojek\u2019s Series F funding round',
+	          ' '
+	        ),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          property: 'og:title',
+	          content: 'Google, JD.com, and Tencent lead first closing of Gojek\u2019s Series F funding round'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          name: 'twitter:title',
+	          content: 'Google, JD.com, and Tencent lead first closing of Gojek\u2019s Series F funding round'
+	        })
+	      ),
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'container' },
@@ -88153,7 +88202,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      'div',
 	      null,
 	      _react2.default.createElement(_seo2.default, {
-	        title: 'Gojek: On-Demand Services for Transport, Payment, Food Delivery etc.',
+	        title: ' Gojek: On-Demand Services for Transport, Payment, Food Delivery etc.',
 	        description: 'Gojek is a Super App. It\'s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia\'s first and fastest growing unicorn building an on-demand empire.',
 	        url: 'https://www.gojek.io'
 	      }),
@@ -89677,6 +89726,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.setState({
 	      jobData: this.props.location.state && this.props.location.state.job
 	    });
+	    console.log('this.props', this.props);
 	    // axios
 	    //   .get(
 	    //     `https://api.lever.co/v0/postings/gojek/${
@@ -89688,19 +89738,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	    //   })
 	  };
 	
+	  JobDescription.prototype.getUrl = function getUrl() {
+	    if (typeof window !== 'undefined') {
+	      return window.location.href;
+	    }
+	  };
+	
 	  JobDescription.prototype.render = function render() {
 	    var jobData = this.state.jobData;
 	
-	    console.log('jobDatajobDatajobData', jobData);
-	    return jobData !== null && _react2.default.createElement(
+	
+	    return _react2.default.createElement(
 	      'div',
 	      { className: 'py-5 my-5 py-md-2 my-md-0' },
 	      _react2.default.createElement(_seo2.default, {
-	        title: 'Gojek Careers: ' + jobData.text,
-	        description: jobData.descriptionPlain,
-	        url: window.location.href
+	        title: 'Gojek Careers: Business Intelligence Engineer',
+	        description: 'A Business Intelligence Engineer’s objective is to facilitate the flow of quality data to the data warehouse and maintain its integrity and reliability so that analysts and business users can use reliable data to make decisions. BigQuery is our current data warehouse solution where we gather the data from all of GOJEK’s microservices for better data discovery experience and to get new insight for business analysis. We use Airflow as a scheduler and dependency management solution for all BI jobs at various frequencies. Plus Google Deployment Manager and Docker for provisioning and application management solution.',
+	        url: this.getUrl()
 	      }),
-	      _react2.default.createElement(
+	      jobData !== null && _react2.default.createElement(
 	        'div',
 	        { className: ' col-12 col-md-8 mx-auto mt-4 mb-0 px-2 pt-5' },
 	        this.getCurrentWidth() < 768 ? _react2.default.createElement(
@@ -89902,10 +89958,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _news2 = _interopRequireDefault(_news);
 	
-	var _seo = __webpack_require__(194);
-	
-	var _seo2 = _interopRequireDefault(_seo);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -89927,11 +89979,40 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _react2.default.createElement(
 	      'div',
 	      { className: 'first-section' },
-	      _react2.default.createElement(_seo2.default, {
-	        title: 'Keep yourself updated with the latest news | Gojek Tech News',
-	        description: 'Read on to know more about the technological innovations and major business decisions made by Gojek for providing an unforgettable experience to their clients.',
-	        url: 'https://www.gojek.io'
-	      }),
+	      _react2.default.createElement(
+	        _reactHelmet.Helmet,
+	        null,
+	        _react2.default.createElement(
+	          'title',
+	          null,
+	          'Keep yourself updated with the latest news | Gojek Tech News'
+	        ),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          property: 'og:title',
+	          content: 'Keep yourself updated with the latest news | Gojek Tech News'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          name: 'twitter:title',
+	          content: 'Keep yourself updated with the latest news | Gojek Tech News'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          name: 'description',
+	          content: 'Read on to know more about the technological innovations and major business decisions made by Gojek for providing an unforgettable experience to their clients.'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          name: 'twitter:description',
+	          content: 'Read on to know more about the technological innovations and major business decisions made by Gojek for providing an unforgettable experience to their clients.'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          property: 'og:description',
+	          content: 'Read on to know more about the technological innovations and major business decisions made by Gojek for providing an unforgettable experience to their clients.'
+	        })
+	      ),
 	      _react2.default.createElement(_heading2.default, null),
 	      _react2.default.createElement(_news2.default, null)
 	    );
@@ -90230,10 +90311,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _index2 = _interopRequireDefault(_index);
 	
-	var _seo = __webpack_require__(194);
-	
-	var _seo2 = _interopRequireDefault(_seo);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -90255,11 +90332,40 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _react2.default.createElement(
 	      'div',
 	      { className: 'first-section' },
-	      _react2.default.createElement(_seo2.default, {
-	        title: 'Contributions by Gojek towards free and open source software',
-	        description: 'Gojek understands and appreciates the value of free and open source software. Check out some of our contributions towards the community on our GitHub page.',
-	        url: 'https://www.gojek.io'
-	      }),
+	      _react2.default.createElement(
+	        _reactHelmet.Helmet,
+	        null,
+	        _react2.default.createElement(
+	          'title',
+	          null,
+	          'Contributions by Gojek towards free and open source software'
+	        ),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          property: 'og:title',
+	          content: 'Contributions by Gojek towards free and open source software'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          name: 'twitter:title',
+	          content: 'Contributions by Gojek towards free and open source software'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          name: 'description',
+	          content: 'Gojek understands and appreciates the value of free and open source software. Check out some of our contributions towards the community on our GitHub page.'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          name: 'twitter:description',
+	          content: 'Gojek understands and appreciates the value of free and open source software. Check out some of our contributions towards the community on our GitHub page.'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          property: 'og:description',
+	          content: 'Gojek understands and appreciates the value of free and open source software. Check out some of our contributions towards the community on our GitHub page.'
+	        })
+	      ),
 	      _react2.default.createElement(_index2.default, null)
 	    );
 	  };
@@ -90336,10 +90442,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _CareerDepartment2 = _interopRequireDefault(_CareerDepartment);
 	
-	var _seo = __webpack_require__(194);
-	
-	var _seo2 = _interopRequireDefault(_seo);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -90367,11 +90469,45 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _react2.default.createElement(
 	      'div',
 	      { className: 'first-section' },
-	      _react2.default.createElement(_seo2.default, {
-	        title: 'Gojek: On-Demand Services for Transport, Payment, Food Delivery, etc.',
-	        description: 'Gojek is a Super App. It\'s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia\'s first and fastest growing unicorn building an on-demand empire.',
-	        url: 'https://www.gojek.io'
-	      }),
+	      _react2.default.createElement(
+	        _reactHelmet.Helmet,
+	        null,
+	        _react2.default.createElement(
+	          'title',
+	          null,
+	          'Gojek: SuperApp'
+	        ),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          property: 'og:title',
+	          content: 'Gojek: On-Demand Services for Transport, Payment, Food Delivery, etc.'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          property: 'og:title',
+	          content: 'Gojek: On-Demand Services for Transport, Payment, Food Delivery, etc.'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          name: 'twitter:title',
+	          content: 'Gojek: On-Demand Services for Transport, Payment, Food Delivery, etc.'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          name: 'description',
+	          content: 'Gojek is a Super App. It\'s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia\'s first and fastest growing unicorn building an on-demand empire.'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          name: 'twitter:description',
+	          content: 'Gojek is a Super App. It\'s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia\'s first and fastest growing unicorn building an on-demand empire.'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          property: 'og:description',
+	          content: 'Gojek is a Super App. It\'s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia\'s first and fastest growing unicorn building an on-demand empire.'
+	        })
+	      ),
 	      _react2.default.createElement(
 	        'section',
 	        { id: 'home' },
@@ -91306,10 +91442,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _data2 = _interopRequireDefault(_data);
 	
-	var _seo = __webpack_require__(194);
-	
-	var _seo2 = _interopRequireDefault(_seo);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -91331,11 +91463,40 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _react2.default.createElement(
 	      'div',
 	      { className: 'first-section' },
-	      _react2.default.createElement(_seo2.default, {
-	        title: 'Conference talks, Events we attend, and all our videos.',
-	        description: 'The Videos section has a list of conferences and events we\u2019ve attended and spoken in and all of our videos around culture, ad films, webinars.',
-	        url: 'https://www.gojek.io'
-	      }),
+	      _react2.default.createElement(
+	        _reactHelmet.Helmet,
+	        null,
+	        _react2.default.createElement(
+	          'title',
+	          null,
+	          'Conference talks, Events we attend, and all our videos.'
+	        ),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          property: 'og:title',
+	          content: 'Conference talks, Events we attend, and all our videos.'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          name: 'twitter:title',
+	          content: 'Conference talks, Events we attend, and all our videos.'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          name: 'description',
+	          content: 'The Videos section has a list of conferences and events we\u2019ve attended and spoken in and all of our videos around culture, ad films, webinars.'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          name: 'twitter:description',
+	          content: 'The Videos section has a list of conferences and events we\u2019ve attended and spoken in and all of our videos around culture, ad films, webinars.'
+	        }),
+	        _react2.default.createElement('meta', {
+	          'data-react-helmet': 'true',
+	          property: 'og:description',
+	          content: 'The Videos section has a list of conferences and events we\u2019ve attended and spoken in and all of our videos around culture, ad films, webinars.'
+	        })
+	      ),
 	      _react2.default.createElement(_heading2.default, { heading: 'See what we do' }),
 	      _react2.default.createElement(
 	        'div',
@@ -92166,13 +92327,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 657 */
 /***/ (function(module, exports) {
 
-	module.exports = {"assetsByChunkName":{"component---src-pages-full-stack-dev-go-food-js":["component---src-pages-full-stack-dev-go-food-js-1f8c694ce435d862f2cf.js","component---src-pages-full-stack-dev-go-food-js-1f8c694ce435d862f2cf.js.map"],"component---src-pages-job-description-js":["component---src-pages-job-description-js-7c5fdd29d9eb3f8d5f26.js","component---src-pages-job-description-js-7c5fdd29d9eb3f8d5f26.js.map"],"component---src-pages-google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round-js":["component---src-pages-google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round-js-8dc3a6884dfe59bd2be8.js","component---src-pages-google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round-js-8dc3a6884dfe59bd2be8.js.map"],"path---tech-videos":["path---tech-videos-a0e39f21c11f6a62c5ab.js","path---tech-videos-a0e39f21c11f6a62c5ab.js.map"],"path---full-stack-dev-go-food":["path---full-stack-dev-go-food-a0e39f21c11f6a62c5ab.js","path---full-stack-dev-go-food-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-index-js":["component---src-pages-index-js-382497c7e70f22d6723c.js","component---src-pages-index-js-382497c7e70f22d6723c.js.map"],"path---events":["path---events-a0e39f21c11f6a62c5ab.js","path---events-a0e39f21c11f6a62c5ab.js.map"],"path---open-source":["path---open-source-a0e39f21c11f6a62c5ab.js","path---open-source-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-superapp-js":["component---src-pages-superapp-js-8b6a0ed0ad3ce3cde118.js","component---src-pages-superapp-js-8b6a0ed0ad3ce3cde118.js.map"],"path---gojek-expansion":["path---gojek-expansion-a0e39f21c11f6a62c5ab.js","path---gojek-expansion-a0e39f21c11f6a62c5ab.js.map"],"path---articles":["path---articles-a0e39f21c11f6a62c5ab.js","path---articles-a0e39f21c11f6a62c5ab.js.map"],"path---":["path----f2255a827d4f1ea0e410.js","path----f2255a827d4f1ea0e410.js.map"],"component---src-pages-contact-js":["component---src-pages-contact-js-45809bbf12af38f389b0.js","component---src-pages-contact-js-45809bbf12af38f389b0.js.map"],"component---src-pages-news-js":["component---src-pages-news-js-6347b35e752e6a53d7f4.js","component---src-pages-news-js-6347b35e752e6a53d7f4.js.map"],"component---src-pages-gojek-expansion-js":["component---src-pages-gojek-expansion-js-6523dc3a5c12d1c030d3.js","component---src-pages-gojek-expansion-js-6523dc3a5c12d1c030d3.js.map"],"path---go-viet":["path---go-viet-a0e39f21c11f6a62c5ab.js","path---go-viet-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-go-viet-js":["component---src-pages-go-viet-js-eb984a0fd3474572b530.js","component---src-pages-go-viet-js-eb984a0fd3474572b530.js.map"],"path---job-description":["path---job-description-a0e39f21c11f6a62c5ab.js","path---job-description-a0e39f21c11f6a62c5ab.js.map"],"path---description":["path---description-a0e39f21c11f6a62c5ab.js","path---description-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-open-source-js":["component---src-pages-open-source-js-bc4a3ab255161cdaa43c.js","component---src-pages-open-source-js-bc4a3ab255161cdaa43c.js.map"],"component---src-pages-go-jek-tech-to-hire-200-engineers-in-india-js":["component---src-pages-go-jek-tech-to-hire-200-engineers-in-india-js-d8b58cfe75a530279772.js","component---src-pages-go-jek-tech-to-hire-200-engineers-in-india-js-d8b58cfe75a530279772.js.map"],"component---src-pages-android-dev-go-food-js":["component---src-pages-android-dev-go-food-js-a3c6322b732ee28f3624.js","component---src-pages-android-dev-go-food-js-a3c6322b732ee28f3624.js.map"],"component---src-layouts-index-js":["component---src-layouts-index-js-ee2c2e5f524741c10a63.js","component---src-layouts-index-js-ee2c2e5f524741c10a63.js.map"],"path---careers":["path---careers-a0e39f21c11f6a62c5ab.js","path---careers-a0e39f21c11f6a62c5ab.js.map"],"path---google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round":["path---google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round-a0e39f21c11f6a62c5ab.js","path---google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round-a0e39f21c11f6a62c5ab.js.map"],"path---index":["path---index-a0e39f21c11f6a62c5ab.js","path---index-a0e39f21c11f6a62c5ab.js.map"],"path---superapp":["path---superapp-a0e39f21c11f6a62c5ab.js","path---superapp-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-why-we-ask-for-code-js":["component---src-pages-why-we-ask-for-code-js-63ed4a6aff07afc73dc8.js","component---src-pages-why-we-ask-for-code-js-63ed4a6aff07afc73dc8.js.map"],"path---all-open-positions":["path---all-open-positions-b38bad74df52107d737d.js","path---all-open-positions-b38bad74df52107d737d.js.map"],"path---go-jek-tech-to-hire-200-engineers-in-india":["path---go-jek-tech-to-hire-200-engineers-in-india-a0e39f21c11f6a62c5ab.js","path---go-jek-tech-to-hire-200-engineers-in-india-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-404-js":["component---src-pages-404-js-a61aa8ed034f92e8b6cb.js","component---src-pages-404-js-a61aa8ed034f92e8b6cb.js.map"],"commons":["commons-85e13bb5f6671a9f7f77.js","build-js-styles.css","commons-85e13bb5f6671a9f7f77.js.map","build-js-styles.css.map"],"component---src-pages-careers-js":["component---src-pages-careers-js-24515922f016eca2b01d.js","component---src-pages-careers-js-24515922f016eca2b01d.js.map"],"component---src-pages-articles-js":["component---src-pages-articles-js-dbf9c67c9f5900bf40b7.js","component---src-pages-articles-js-dbf9c67c9f5900bf40b7.js.map"],"path---404-html":["path---404-html-a0e39f21c11f6a62c5ab.js","path---404-html-a0e39f21c11f6a62c5ab.js.map"],"path---contact":["path---contact-a0e39f21c11f6a62c5ab.js","path---contact-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-tech-videos-js":["component---src-pages-tech-videos-js-f5c3ee8853bb9d406515.js","component---src-pages-tech-videos-js-f5c3ee8853bb9d406515.js.map"],"component---src-pages-thank-you-js":["component---src-pages-thank-you-js-522971500bd3d51d5309.js","component---src-pages-thank-you-js-522971500bd3d51d5309.js.map"],"path---news":["path---news-a0e39f21c11f6a62c5ab.js","path---news-a0e39f21c11f6a62c5ab.js.map"],"path---thank-you":["path---thank-you-a0e39f21c11f6a62c5ab.js","path---thank-you-a0e39f21c11f6a62c5ab.js.map"],"app":["app-c74c6ea32d6a28495425.js","build-js-styles.css","app-c74c6ea32d6a28495425.js.map","build-js-styles.css.map"],"component---src-pages-all-open-positions-js":["component---src-pages-all-open-positions-js-6e21384b377ecf8e1554.js","component---src-pages-all-open-positions-js-6e21384b377ecf8e1554.js.map"],"component---src-pages-description-js":["component---src-pages-description-js-795bcd953135ccd4b71d.js","component---src-pages-description-js-795bcd953135ccd4b71d.js.map"],"path---android-dev-go-food":["path---android-dev-go-food-a0e39f21c11f6a62c5ab.js","path---android-dev-go-food-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-events-js":["component---src-pages-events-js-33e7c86e3e89f70301c8.js","component---src-pages-events-js-33e7c86e3e89f70301c8.js.map"],"path---404":["path---404-a0e39f21c11f6a62c5ab.js","path---404-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-gomakeimpact-js":["component---src-pages-gomakeimpact-js-df677eb84d854ce705d9.js","component---src-pages-gomakeimpact-js-df677eb84d854ce705d9.js.map"],"path---gomakeimpact":["path---gomakeimpact-a0e39f21c11f6a62c5ab.js","path---gomakeimpact-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-about-js":["component---src-pages-about-js-8e52e4a754927483ae74.js","component---src-pages-about-js-8e52e4a754927483ae74.js.map"],"path---about":["path---about-a0e39f21c11f6a62c5ab.js","path---about-a0e39f21c11f6a62c5ab.js.map"],"path---why-we-ask-for-code":["path---why-we-ask-for-code-a0e39f21c11f6a62c5ab.js","path---why-we-ask-for-code-a0e39f21c11f6a62c5ab.js.map"]}}
+	module.exports = {"assetsByChunkName":{"component---src-pages-full-stack-dev-go-food-js":["component---src-pages-full-stack-dev-go-food-js-1f8c694ce435d862f2cf.js","component---src-pages-full-stack-dev-go-food-js-1f8c694ce435d862f2cf.js.map"],"component---src-pages-job-description-js":["component---src-pages-job-description-js-234ead149ae0f2092932.js","component---src-pages-job-description-js-234ead149ae0f2092932.js.map"],"component---src-pages-google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round-js":["component---src-pages-google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round-js-79cbc87eb1574a07b51c.js","component---src-pages-google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round-js-79cbc87eb1574a07b51c.js.map"],"path---tech-videos":["path---tech-videos-a0e39f21c11f6a62c5ab.js","path---tech-videos-a0e39f21c11f6a62c5ab.js.map"],"path---full-stack-dev-go-food":["path---full-stack-dev-go-food-a0e39f21c11f6a62c5ab.js","path---full-stack-dev-go-food-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-index-js":["component---src-pages-index-js-15ad1044069dc120f905.js","component---src-pages-index-js-15ad1044069dc120f905.js.map"],"path---events":["path---events-a0e39f21c11f6a62c5ab.js","path---events-a0e39f21c11f6a62c5ab.js.map"],"path---open-source":["path---open-source-a0e39f21c11f6a62c5ab.js","path---open-source-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-superapp-js":["component---src-pages-superapp-js-bad837a0715b2db80da5.js","component---src-pages-superapp-js-bad837a0715b2db80da5.js.map"],"path---gojek-expansion":["path---gojek-expansion-a0e39f21c11f6a62c5ab.js","path---gojek-expansion-a0e39f21c11f6a62c5ab.js.map"],"path---articles":["path---articles-a0e39f21c11f6a62c5ab.js","path---articles-a0e39f21c11f6a62c5ab.js.map"],"path---":["path----f2255a827d4f1ea0e410.js","path----f2255a827d4f1ea0e410.js.map"],"component---src-pages-contact-js":["component---src-pages-contact-js-45809bbf12af38f389b0.js","component---src-pages-contact-js-45809bbf12af38f389b0.js.map"],"component---src-pages-news-js":["component---src-pages-news-js-4d4f01b21f16bae72b4c.js","component---src-pages-news-js-4d4f01b21f16bae72b4c.js.map"],"component---src-pages-gojek-expansion-js":["component---src-pages-gojek-expansion-js-b6ec81412aeae839892c.js","component---src-pages-gojek-expansion-js-b6ec81412aeae839892c.js.map"],"path---go-viet":["path---go-viet-a0e39f21c11f6a62c5ab.js","path---go-viet-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-go-viet-js":["component---src-pages-go-viet-js-1f1ae5510b3f562115e9.js","component---src-pages-go-viet-js-1f1ae5510b3f562115e9.js.map"],"path---job-description":["path---job-description-a0e39f21c11f6a62c5ab.js","path---job-description-a0e39f21c11f6a62c5ab.js.map"],"path---description":["path---description-a0e39f21c11f6a62c5ab.js","path---description-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-open-source-js":["component---src-pages-open-source-js-7cc449671c153ace9bd8.js","component---src-pages-open-source-js-7cc449671c153ace9bd8.js.map"],"component---src-pages-go-jek-tech-to-hire-200-engineers-in-india-js":["component---src-pages-go-jek-tech-to-hire-200-engineers-in-india-js-87aaede79587c54c4787.js","component---src-pages-go-jek-tech-to-hire-200-engineers-in-india-js-87aaede79587c54c4787.js.map"],"component---src-pages-android-dev-go-food-js":["component---src-pages-android-dev-go-food-js-a3c6322b732ee28f3624.js","component---src-pages-android-dev-go-food-js-a3c6322b732ee28f3624.js.map"],"component---src-layouts-index-js":["component---src-layouts-index-js-2cf7077440b1d8534744.js","component---src-layouts-index-js-2cf7077440b1d8534744.js.map"],"path---careers":["path---careers-a0e39f21c11f6a62c5ab.js","path---careers-a0e39f21c11f6a62c5ab.js.map"],"path---google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round":["path---google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round-a0e39f21c11f6a62c5ab.js","path---google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round-a0e39f21c11f6a62c5ab.js.map"],"path---index":["path---index-a0e39f21c11f6a62c5ab.js","path---index-a0e39f21c11f6a62c5ab.js.map"],"path---superapp":["path---superapp-a0e39f21c11f6a62c5ab.js","path---superapp-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-why-we-ask-for-code-js":["component---src-pages-why-we-ask-for-code-js-63ed4a6aff07afc73dc8.js","component---src-pages-why-we-ask-for-code-js-63ed4a6aff07afc73dc8.js.map"],"path---all-open-positions":["path---all-open-positions-b38bad74df52107d737d.js","path---all-open-positions-b38bad74df52107d737d.js.map"],"path---go-jek-tech-to-hire-200-engineers-in-india":["path---go-jek-tech-to-hire-200-engineers-in-india-a0e39f21c11f6a62c5ab.js","path---go-jek-tech-to-hire-200-engineers-in-india-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-404-js":["component---src-pages-404-js-a61aa8ed034f92e8b6cb.js","component---src-pages-404-js-a61aa8ed034f92e8b6cb.js.map"],"commons":["commons-baaf95151b6639001f3b.js","build-js-styles.css","commons-baaf95151b6639001f3b.js.map","build-js-styles.css.map"],"component---src-pages-careers-js":["component---src-pages-careers-js-c922eb83723e03c3cb3e.js","component---src-pages-careers-js-c922eb83723e03c3cb3e.js.map"],"component---src-pages-articles-js":["component---src-pages-articles-js-dbf9c67c9f5900bf40b7.js","component---src-pages-articles-js-dbf9c67c9f5900bf40b7.js.map"],"path---404-html":["path---404-html-a0e39f21c11f6a62c5ab.js","path---404-html-a0e39f21c11f6a62c5ab.js.map"],"path---contact":["path---contact-a0e39f21c11f6a62c5ab.js","path---contact-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-tech-videos-js":["component---src-pages-tech-videos-js-924197f452115293b5d7.js","component---src-pages-tech-videos-js-924197f452115293b5d7.js.map"],"component---src-pages-thank-you-js":["component---src-pages-thank-you-js-522971500bd3d51d5309.js","component---src-pages-thank-you-js-522971500bd3d51d5309.js.map"],"path---news":["path---news-a0e39f21c11f6a62c5ab.js","path---news-a0e39f21c11f6a62c5ab.js.map"],"path---thank-you":["path---thank-you-a0e39f21c11f6a62c5ab.js","path---thank-you-a0e39f21c11f6a62c5ab.js.map"],"app":["app-be9fc525d3ebea3f7b31.js","build-js-styles.css","app-be9fc525d3ebea3f7b31.js.map","build-js-styles.css.map"],"component---src-pages-all-open-positions-js":["component---src-pages-all-open-positions-js-a81fb1a1bffc3b12a2bc.js","component---src-pages-all-open-positions-js-a81fb1a1bffc3b12a2bc.js.map"],"component---src-pages-description-js":["component---src-pages-description-js-63688298ccee5262ef99.js","component---src-pages-description-js-63688298ccee5262ef99.js.map"],"path---android-dev-go-food":["path---android-dev-go-food-a0e39f21c11f6a62c5ab.js","path---android-dev-go-food-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-events-js":["component---src-pages-events-js-40aab5dfdef46d60b9a8.js","component---src-pages-events-js-40aab5dfdef46d60b9a8.js.map"],"path---404":["path---404-a0e39f21c11f6a62c5ab.js","path---404-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-gomakeimpact-js":["component---src-pages-gomakeimpact-js-78cf966d937557a0a538.js","component---src-pages-gomakeimpact-js-78cf966d937557a0a538.js.map"],"path---gomakeimpact":["path---gomakeimpact-a0e39f21c11f6a62c5ab.js","path---gomakeimpact-a0e39f21c11f6a62c5ab.js.map"],"component---src-pages-about-js":["component---src-pages-about-js-4111766a907dc5c3b75b.js","component---src-pages-about-js-4111766a907dc5c3b75b.js.map"],"path---about":["path---about-a0e39f21c11f6a62c5ab.js","path---about-a0e39f21c11f6a62c5ab.js.map"],"path---why-we-ask-for-code":["path---why-we-ask-for-code-a0e39f21c11f6a62c5ab.js","path---why-we-ask-for-code-a0e39f21c11f6a62c5ab.js.map"]}}
 
 /***/ }),
 /* 658 */
 /***/ (function(module, exports) {
 
-	module.exports = "{\"231608221292675\":\"app-c74c6ea32d6a28495425.js\",\"162898551421021\":\"component---src-pages-404-js-a61aa8ed034f92e8b6cb.js\",\"263791100135453\":\"component---src-pages-about-js-8e52e4a754927483ae74.js\",\"237803780973619\":\"component---src-pages-all-open-positions-js-6e21384b377ecf8e1554.js\",\"113575767065810\":\"component---src-pages-android-dev-go-food-js-a3c6322b732ee28f3624.js\",\"174759553322802\":\"component---src-pages-articles-js-dbf9c67c9f5900bf40b7.js\",\"169315112914517\":\"component---src-pages-careers-js-24515922f016eca2b01d.js\",\"70144966829960\":\"component---src-pages-contact-js-45809bbf12af38f389b0.js\",\"241633012269393\":\"component---src-pages-description-js-795bcd953135ccd4b71d.js\",\"246501157640856\":\"component---src-pages-events-js-33e7c86e3e89f70301c8.js\",\"10204246529493\":\"component---src-pages-full-stack-dev-go-food-js-1f8c694ce435d862f2cf.js\",\"108927308991742\":\"component---src-pages-go-jek-tech-to-hire-200-engineers-in-india-js-d8b58cfe75a530279772.js\",\"92410465712834\":\"component---src-pages-go-viet-js-eb984a0fd3474572b530.js\",\"78054644700745\":\"component---src-pages-gojek-expansion-js-6523dc3a5c12d1c030d3.js\",\"254980567246096\":\"component---src-pages-gomakeimpact-js-df677eb84d854ce705d9.js\",\"23127887786201\":\"component---src-pages-google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round-js-8dc3a6884dfe59bd2be8.js\",\"35783957827783\":\"component---src-pages-index-js-382497c7e70f22d6723c.js\",\"15790795893233\":\"component---src-pages-job-description-js-7c5fdd29d9eb3f8d5f26.js\",\"72776394686286\":\"component---src-pages-news-js-6347b35e752e6a53d7f4.js\",\"103869943198658\":\"component---src-pages-open-source-js-bc4a3ab255161cdaa43c.js\",\"53405171541913\":\"component---src-pages-superapp-js-8b6a0ed0ad3ce3cde118.js\",\"185666439750137\":\"component---src-pages-tech-videos-js-f5c3ee8853bb9d406515.js\",\"191758551331050\":\"component---src-pages-thank-you-js-522971500bd3d51d5309.js\",\"148557325655831\":\"component---src-pages-why-we-ask-for-code-js-63ed4a6aff07afc73dc8.js\",\"60335399758886\":\"path----f2255a827d4f1ea0e410.js\",\"254022195166212\":\"path---404-a0e39f21c11f6a62c5ab.js\",\"273950069227526\":\"path---about-a0e39f21c11f6a62c5ab.js\",\"157564850625504\":\"path---all-open-positions-b38bad74df52107d737d.js\",\"243477007410829\":\"path---android-dev-go-food-a0e39f21c11f6a62c5ab.js\",\"56932394960959\":\"path---articles-a0e39f21c11f6a62c5ab.js\",\"114387730673500\":\"path---careers-a0e39f21c11f6a62c5ab.js\",\"184662623972074\":\"path---contact-a0e39f21c11f6a62c5ab.js\",\"100196113611361\":\"path---description-a0e39f21c11f6a62c5ab.js\",\"44713349584700\":\"path---events-a0e39f21c11f6a62c5ab.js\",\"34529168199742\":\"path---full-stack-dev-go-food-a0e39f21c11f6a62c5ab.js\",\"162490353661900\":\"path---go-jek-tech-to-hire-200-engineers-in-india-a0e39f21c11f6a62c5ab.js\",\"90905148958094\":\"path---go-viet-a0e39f21c11f6a62c5ab.js\",\"54415708603595\":\"path---gojek-expansion-a0e39f21c11f6a62c5ab.js\",\"258607318251092\":\"path---gomakeimpact-a0e39f21c11f6a62c5ab.js\",\"132683815605878\":\"path---google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round-a0e39f21c11f6a62c5ab.js\",\"142629428675168\":\"path---index-a0e39f21c11f6a62c5ab.js\",\"97688410113182\":\"path---job-description-a0e39f21c11f6a62c5ab.js\",\"208863975630277\":\"path---news-a0e39f21c11f6a62c5ab.js\",\"52957437357582\":\"path---open-source-a0e39f21c11f6a62c5ab.js\",\"143509930356114\":\"path---superapp-a0e39f21c11f6a62c5ab.js\",\"31995104212233\":\"path---tech-videos-a0e39f21c11f6a62c5ab.js\",\"226791778578056\":\"path---thank-you-a0e39f21c11f6a62c5ab.js\",\"276731802361387\":\"path---why-we-ask-for-code-a0e39f21c11f6a62c5ab.js\",\"178698757827068\":\"path---404-html-a0e39f21c11f6a62c5ab.js\",\"114276838955818\":\"component---src-layouts-index-js-ee2c2e5f524741c10a63.js\"}"
+	module.exports = "{\"231608221292675\":\"app-be9fc525d3ebea3f7b31.js\",\"162898551421021\":\"component---src-pages-404-js-a61aa8ed034f92e8b6cb.js\",\"263791100135453\":\"component---src-pages-about-js-4111766a907dc5c3b75b.js\",\"237803780973619\":\"component---src-pages-all-open-positions-js-a81fb1a1bffc3b12a2bc.js\",\"113575767065810\":\"component---src-pages-android-dev-go-food-js-a3c6322b732ee28f3624.js\",\"174759553322802\":\"component---src-pages-articles-js-dbf9c67c9f5900bf40b7.js\",\"169315112914517\":\"component---src-pages-careers-js-c922eb83723e03c3cb3e.js\",\"70144966829960\":\"component---src-pages-contact-js-45809bbf12af38f389b0.js\",\"241633012269393\":\"component---src-pages-description-js-63688298ccee5262ef99.js\",\"246501157640856\":\"component---src-pages-events-js-40aab5dfdef46d60b9a8.js\",\"10204246529493\":\"component---src-pages-full-stack-dev-go-food-js-1f8c694ce435d862f2cf.js\",\"108927308991742\":\"component---src-pages-go-jek-tech-to-hire-200-engineers-in-india-js-87aaede79587c54c4787.js\",\"92410465712834\":\"component---src-pages-go-viet-js-1f1ae5510b3f562115e9.js\",\"78054644700745\":\"component---src-pages-gojek-expansion-js-b6ec81412aeae839892c.js\",\"254980567246096\":\"component---src-pages-gomakeimpact-js-78cf966d937557a0a538.js\",\"23127887786201\":\"component---src-pages-google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round-js-79cbc87eb1574a07b51c.js\",\"35783957827783\":\"component---src-pages-index-js-15ad1044069dc120f905.js\",\"15790795893233\":\"component---src-pages-job-description-js-234ead149ae0f2092932.js\",\"72776394686286\":\"component---src-pages-news-js-4d4f01b21f16bae72b4c.js\",\"103869943198658\":\"component---src-pages-open-source-js-7cc449671c153ace9bd8.js\",\"53405171541913\":\"component---src-pages-superapp-js-bad837a0715b2db80da5.js\",\"185666439750137\":\"component---src-pages-tech-videos-js-924197f452115293b5d7.js\",\"191758551331050\":\"component---src-pages-thank-you-js-522971500bd3d51d5309.js\",\"148557325655831\":\"component---src-pages-why-we-ask-for-code-js-63ed4a6aff07afc73dc8.js\",\"60335399758886\":\"path----f2255a827d4f1ea0e410.js\",\"254022195166212\":\"path---404-a0e39f21c11f6a62c5ab.js\",\"273950069227526\":\"path---about-a0e39f21c11f6a62c5ab.js\",\"157564850625504\":\"path---all-open-positions-b38bad74df52107d737d.js\",\"243477007410829\":\"path---android-dev-go-food-a0e39f21c11f6a62c5ab.js\",\"56932394960959\":\"path---articles-a0e39f21c11f6a62c5ab.js\",\"114387730673500\":\"path---careers-a0e39f21c11f6a62c5ab.js\",\"184662623972074\":\"path---contact-a0e39f21c11f6a62c5ab.js\",\"100196113611361\":\"path---description-a0e39f21c11f6a62c5ab.js\",\"44713349584700\":\"path---events-a0e39f21c11f6a62c5ab.js\",\"34529168199742\":\"path---full-stack-dev-go-food-a0e39f21c11f6a62c5ab.js\",\"162490353661900\":\"path---go-jek-tech-to-hire-200-engineers-in-india-a0e39f21c11f6a62c5ab.js\",\"90905148958094\":\"path---go-viet-a0e39f21c11f6a62c5ab.js\",\"54415708603595\":\"path---gojek-expansion-a0e39f21c11f6a62c5ab.js\",\"258607318251092\":\"path---gomakeimpact-a0e39f21c11f6a62c5ab.js\",\"132683815605878\":\"path---google-jdcom-and-tencent-lead-first-closing-of-gojeks-series-f-funding-round-a0e39f21c11f6a62c5ab.js\",\"142629428675168\":\"path---index-a0e39f21c11f6a62c5ab.js\",\"97688410113182\":\"path---job-description-a0e39f21c11f6a62c5ab.js\",\"208863975630277\":\"path---news-a0e39f21c11f6a62c5ab.js\",\"52957437357582\":\"path---open-source-a0e39f21c11f6a62c5ab.js\",\"143509930356114\":\"path---superapp-a0e39f21c11f6a62c5ab.js\",\"31995104212233\":\"path---tech-videos-a0e39f21c11f6a62c5ab.js\",\"226791778578056\":\"path---thank-you-a0e39f21c11f6a62c5ab.js\",\"276731802361387\":\"path---why-we-ask-for-code-a0e39f21c11f6a62c5ab.js\",\"178698757827068\":\"path---404-html-a0e39f21c11f6a62c5ab.js\",\"114276838955818\":\"component---src-layouts-index-js-2cf7077440b1d8534744.js\"}"
 
 /***/ })
 /******/ ])

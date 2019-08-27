@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "component---src-pages-full-stack-dev-go-food-js": [
-      "component---src-pages-full-stack-dev-go-food-js-215e57499c148e0528d6.js",
-      "component---src-pages-full-stack-dev-go-food-js-215e57499c148e0528d6.js.map"
+      "component---src-pages-full-stack-dev-go-food-js-1f8c694ce435d862f2cf.js",
+      "component---src-pages-full-stack-dev-go-food-js-1f8c694ce435d862f2cf.js.map"
     ],
     "component---src-pages-job-description-js": [
       "component---src-pages-job-description-js-9d503097d5b33b6ed152.js",
@@ -57,8 +57,8 @@
       "component---src-pages-news-js-dabdb886a21b05f62a50.js.map"
     ],
     "component---src-pages-gojek-expansion-js": [
-      "component---src-pages-gojek-expansion-js-b6b94fc6fea1d5e364ff.js",
-      "component---src-pages-gojek-expansion-js-b6b94fc6fea1d5e364ff.js.map"
+      "component---src-pages-gojek-expansion-js-b6ec81412aeae839892c.js",
+      "component---src-pages-gojek-expansion-js-b6ec81412aeae839892c.js.map"
     ],
     "path---go-viet": [
       "path---go-viet-a0e39f21c11f6a62c5ab.js",
@@ -125,9 +125,9 @@
       "component---src-pages-404-js-a61aa8ed034f92e8b6cb.js.map"
     ],
     "commons": [
-      "commons-9b40febd306294184741.js",
+      "commons-eb11b8d04dcaf39924e1.js",
       "build-js-styles.css",
-      "commons-9b40febd306294184741.js.map",
+      "commons-eb11b8d04dcaf39924e1.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-pages-careers-js": [

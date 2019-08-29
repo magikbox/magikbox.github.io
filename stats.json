@@ -49,8 +49,8 @@
       "component---src-pages-contact-js-23e7c6f96d109f6c6ce5.js.map"
     ],
     "component---src-pages-news-js": [
-      "component---src-pages-news-js-ea63cc6bb07d2ea9a086.js",
-      "component---src-pages-news-js-ea63cc6bb07d2ea9a086.js.map"
+      "component---src-pages-news-js-18885a75522929b05d19.js",
+      "component---src-pages-news-js-18885a75522929b05d19.js.map"
     ],
     "component---src-pages-gojek-expansion-js": [
       "component---src-pages-gojek-expansion-js-7f01d1ce1268d394bde4.js",
@@ -121,9 +121,9 @@
       "component---src-pages-404-js-a61aa8ed034f92e8b6cb.js.map"
     ],
     "commons": [
-      "commons-1293bf98070bf10e3626.js",
+      "commons-092cd42a2132c9a32539.js",
       "build-js-styles.css",
-      "commons-1293bf98070bf10e3626.js.map",
+      "commons-092cd42a2132c9a32539.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-pages-careers-js": [

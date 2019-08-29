@@ -17,8 +17,8 @@
       "path---full-stack-dev-go-food-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-ef1ee25360db84f2feba.js",
-      "component---src-pages-index-js-ef1ee25360db84f2feba.js.map"
+      "component---src-pages-index-js-610abc4ae6fbcef940c2.js",
+      "component---src-pages-index-js-610abc4ae6fbcef940c2.js.map"
     ],
     "path---events": [
       "path---events-a0e39f21c11f6a62c5ab.js",
@@ -49,8 +49,8 @@
       "component---src-pages-contact-js-23e7c6f96d109f6c6ce5.js.map"
     ],
     "component---src-pages-news-js": [
-      "component---src-pages-news-js-18885a75522929b05d19.js",
-      "component---src-pages-news-js-18885a75522929b05d19.js.map"
+      "component---src-pages-news-js-372881b252d2e12df474.js",
+      "component---src-pages-news-js-372881b252d2e12df474.js.map"
     ],
     "component---src-pages-gojek-expansion-js": [
       "component---src-pages-gojek-expansion-js-7f01d1ce1268d394bde4.js",
@@ -121,9 +121,9 @@
       "component---src-pages-404-js-a61aa8ed034f92e8b6cb.js.map"
     ],
     "commons": [
-      "commons-092cd42a2132c9a32539.js",
+      "commons-e03f5a056a4701858e85.js",
       "build-js-styles.css",
-      "commons-092cd42a2132c9a32539.js.map",
+      "commons-e03f5a056a4701858e85.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-pages-careers-js": [

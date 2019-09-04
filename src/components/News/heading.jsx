@@ -1,16 +1,18 @@
-import React from "react"
-import data from "./data.json"
+import React,  { Component } from 'react';
+import data from './data.json';
 
-const Heading = () => {
-  return (
-    <section className="bg-green first-section">
-      <div className="container">
-        <h1 className="h2 font-xl-x py-5 text-center text-white">
-          {data.news.heading}
-        </h1>
-      </div>
-    </section>
-  )
+class Heading extends Component {
+    render() {
+        
+        return(
+            <section className="bg-green first-section">
+                <div className="container">
+                    <h1 className="h2 font-xl-x py-5 text-center text-white">{data.news.heading}</h1>
+
+                </div>
+            </section>
+        )
+    }
 }
 
-export default Heading
+export default Heading;

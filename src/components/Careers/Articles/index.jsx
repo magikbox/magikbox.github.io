@@ -1,104 +1,92 @@
-import React from "react"
-// import Slider from 'react-slick'
+import React, { Component } from 'react'
+import Slider from 'react-slick'
 
-// import data from '../data.json'
-// import Card from './card'
-// import Slide from './slide'
+import data from '../data.json'
+import Card from './card'
+import Slide from './slide'
 
-const Articles = () => {
-  // const { articles } = data
+class Articles extends Component {
+  render() {
+    const { articles } = data
 
-  // var settings = {
-  //   responsive: [
-  //     {
-  //       breakpoint: 767,
-  //       slidesToShow: 1,
-  //       slidesToScroll: 1,
-  //       mobileFirst: true,
-  //     },
-  //   ],
-  // }
+    var settings = {
+      responsive: [
+        {
+          breakpoint: 767,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          mobileFirst: true,
+        },
+      ],
+    }
 
-  return (
-    <div>
-      <div className="container py-5 px-0">
-        <div className="d-flex flex-row flex-wrap raleway-bold text-white">
-          <div className="col-12 col-md-6 d-flex flex-row flex-wrap px-0">
-            <div className="ml-auto px-0  my-1 my-md-0 position-relative">
+    return (
+      <div>
+        <div className="container py-5 px-0">
+          <div className="d-flex flex-row flex-wrap maison-bold text-white">
+            <div className="col-12 col-md-6 d-flex flex-row flex-wrap px-0">
+              <div className="ml-auto px-0  my-1 my-md-0 position-relative">
+                <a
+                  href="https://blog.gojekengineering.com/why-we-ask-for-code-b276b45ea790"
+                  target="_blank"
+                >
+                  <img
+                    className="img-fluid"
+                    src="../../images/careers/ask-for-code.png"
+                  />
+                  <h6 className="font-lg position-absolute text-white article-position">
+                    Why We <br />Ask for<br />Code
+                  </h6>
+                </a>
+              </div>
+              <div className="ml-auto px-0  my-1 my-md-0 position-relative">
+                <a
+                  href="https://blog.gojekengineering.com/the-art-of-being-full-stack-5b88577188fd"
+                  target="_blank"
+                >
+                  <img
+                    className="img-fluid"
+                    src="../../images/careers/full-stack-engineer.png"
+                  />
+                  <h6 className="font-lg position-absolute text-white article-position">
+                    Who is a<br />Full Stack <br />Engineer?
+                  </h6>
+                </a>
+              </div>
+            </div>
+            <div className="col-12 col-md-6 px-0 my-1 my-md-0 position-relative">
               <a
-                href="https://blog.gojekengineering.com/why-we-ask-for-code-b276b45ea790"
+                href="https://blog.gojekengineering.com/go-jek-recruitment-process-58dbed5d8992"
                 target="_blank"
-                rel="noopener noreferrer"
               >
                 <img
-                  alt="ask-for-code"
                   className="img-fluid"
-                  src="../../images/careers/ask-for-code.png"
+                  src="../../images/careers/recruiting-devs.png"
                 />
                 <h6 className="font-lg position-absolute text-white article-position">
-                  Why We <br />
-                  Ask for
-                  <br />
-                  Code
+                  How We Go<br />about Recruiting<br />a Developer
                 </h6>
               </a>
             </div>
-            <div className="ml-auto px-0  my-1 my-md-0 position-relative">
-              <a
-                href="https://blog.gojekengineering.com/the-art-of-being-full-stack-5b88577188fd"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  alt="full-stack-engineer"
-                  className="img-fluid"
-                  src="../../images/careers/full-stack-engineer.png"
-                />
-                <h6 className="font-lg position-absolute text-white article-position">
-                  Who is a<br />
-                  Full Stack <br />
-                  Engineer?
-                </h6>
-              </a>
-            </div>
-          </div>
-          <div className="col-12 col-md-6 px-0 my-1 my-md-0 position-relative">
+
+            {/* <div className="row">  */}
             <a
-              href="https://blog.gojekengineering.com/go-jek-recruitment-process-58dbed5d8992"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/articles/"
+              className="btn-success btn text-uppercase mt-5 col-md-3 col-6 text-center mx-auto"
             >
-              <img
-                alt="recruiting-devs-1"
-                className="img-fluid"
-                src="../../images/careers/recruiting-devs-1.png"
-              />
-              <h6 className="font-lg position-absolute text-white article-position">
-                How We Go
-                <br />
-                about Recruiting
-                <br />a Developer
-              </h6>
+              {' '}
+              View all Blogs
             </a>
+            {/* </div> */}
           </div>
-
-          {/* <div className="row">  */}
-          <a
-            href="/blog/"
-            className="btn-success btn text-uppercase mt-5 col-md-3 col-6 text-center mx-auto"
-          >
-            {" "}
-            View all Blogs
-          </a>
-          {/* </div> */}
         </div>
-      </div>
 
-      {/* <Slider {...settings} className="d-md-none employee-stories justify-content-md-center pt-5 custom-controls-dark">
+        {/* <Slider {...settings} className="d-md-none employee-stories justify-content-md-center pt-5 custom-controls-dark">
                     {articles.data.map((article, key) => <Slide data={article} key={key} />)}
                 </Slider> */}
-    </div>
-  )
+      </div>
+    )
+  }
 }
 
 export default Articles

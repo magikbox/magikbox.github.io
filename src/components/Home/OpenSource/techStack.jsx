@@ -1,17 +1,14 @@
-import React from "react"
+import React, { Component } from 'react';
 
-const TechStack = props => {
-  const { data } = props
-  return (
-    <div className="col-md-2 col-4 pt-4 text-center">
-      <img
-        className="img-fluid mx-auto "
-        src={data.image}
-        title={data.title}
-        alt={data.title}
-      />
-    </div>
-  )
+class TechStack extends Component {
+    render() {
+        const { data } = this.props;
+        return(
+            <div className="col-md-2 col-4 pt-4 text-center">
+                <img className="img-fluid mx-auto " src={data.image} title={data.title} alt={data.title} />
+			</div>
+        );
+    }
 }
 
-export default TechStack
+export default TechStack;

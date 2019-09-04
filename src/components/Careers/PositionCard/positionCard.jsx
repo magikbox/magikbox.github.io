@@ -1,99 +1,70 @@
-/* eslint react/prop-types: 0 */
-import React, { Component } from "react"
-// import { Link } from '@reach/router'
-// import Parser from 'html-react-parser'
-import Modal from "react-responsive-modal"
-import Description from "../Description/Description"
-import { getSlug } from "../../Common/utils/getSlug"
-
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import Parser from 'html-react-parser'
+import Modal from 'react-responsive-modal'
+import Description from '../../../pages/description'
+import { getSlug } from '../../Common/utils/getSlug'
 import {
   FacebookShareButton,
   TwitterShareButton,
+  TelegramShareButton,
   WhatsappShareButton,
-  LinkedinShareButton,
   FacebookIcon,
   TwitterIcon,
+  TelegramIcon,
   WhatsappIcon,
-  LinkedinIcon,
-} from "react-share"
-import { navigate } from "@reach/router"
+} from 'react-share'
 
-var Scroll = require("react-scroll")
+var Scroll = require('react-scroll')
 var Element = Scroll.Element
 var scroller = Scroll.scroller
 
 export const getShareButton = job => (
-  <div className="d-flex flex-row pr-md-5 pr-2 align-items-center justify-content-end justify-content-md-start">
-    <p className="mb-0 font-weight-bold">Share: &nbsp;</p>
-    <FacebookShareButton
-      className="pl-1 border-focus-none"
-      url={window.location.href}
-      quote={job.text}
+  <div className="dropdown pr-5">
+    <button
+      className="btn btn-outline-success dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
     >
-      <FacebookIcon size={32} round={true} />
-    </FacebookShareButton>
-    <TwitterShareButton
-      className="pl-1 border-focus-none"
-      url={window.location.href}
-      quote={job.text}
-    >
-      <TwitterIcon size={32} round={true} />
-    </TwitterShareButton>
+      <i className="fa fa-share-alt" /> &nbsp; Share Job
+    </button>
+    {typeof window !== `undefined` &&
+      job !== undefined && (
+        <div
+          className="dropdown-menu py-0"
+          aria-labelledby="dropdownMenuButton"
+        >
+          <FacebookShareButton url={window.location.href} quote={job.text}>
+            <button className="px-3 border-focus-none dropdown-item text-left btn  btn-block b-0 text-primary bg-white">
+              <i className=" fa fa-facebook-f " />
+              &nbsp;&nbsp;Facebook
+            </button>
+          </FacebookShareButton>
+          <TwitterShareButton url={window.location.href} quote={job.text}>
+            <button className="px-3 border-focus-none dropdown-item text-left btn o btn-block text-info bg-white">
+              <i className=" fa fa-twitter " />
+              &nbsp;&nbsp;Twitter
+            </button>
+          </TwitterShareButton>
 
-    <WhatsappShareButton
-      className="pl-1 border-focus-none"
-      url={window.location.href}
-      quote={job.text}
-    >
-      <WhatsappIcon size={32} round={true} />
-    </WhatsappShareButton>
-    <LinkedinShareButton
-      className="pl-1 border-focus-none"
-      url={window.location.href}
-      quote={job.text}
-    >
-      <LinkedinIcon size={32} round={true} />
-    </LinkedinShareButton>
+          <WhatsappShareButton url={window.location.href} quote={job.text}>
+            <button className="px-3 border-focus-none dropdown-item text-left btn  btn-block text-success bg-white">
+              <i className=" fa fa-whatsapp " />
+              &nbsp;&nbsp;Whatsapp
+            </button>
+          </WhatsappShareButton>
+          <TelegramShareButton url={window.location.href} quote={job.text}>
+            <button className="px-3 border-focus-none  dropdown-item text-left btn  btn-block text-info bg-white">
+              <i className=" fa fa-telegram " />
+              &nbsp;&nbsp;Telegram
+            </button>
+          </TelegramShareButton>
+        </div>
+      )}
   </div>
-  // <div className="dropdown pr-5">
-  //   <button
-  //     className="btn btn-outline-success dropdown-toggle"
-  //     type="button"
-  //     id="dropdownMenuButton"
-  //     data-toggle="dropdown"
-  //     aria-haspopup="true"
-  //     aria-expanded="false"
-  //   >
-  //     <i className="fa fa-share-alt" /> &nbsp; Share Job
-  //   </button>
-  //   <div className="dropdown-menu py-0" aria-labelledby="dropdownMenuButton">
-  //     <FacebookShareButton url={window.location.href} quote={job.text}>
-  //       <button className="px-3 border-focus-none dropdown-item text-left btn  btn-block b-0 text-primary bg-white">
-  //         <i className=" fa fa-facebook-f " />
-  //         &nbsp;&nbsp;Facebook
-  //       </button>
-  //     </FacebookShareButton>
-  //     <TwitterShareButton url={window.location.href} quote={job.text}>
-  //       <button className="px-3 border-focus-none dropdown-item text-left btn o btn-block text-info bg-white">
-  //         <i className=" fa fa-twitter " />
-  //         &nbsp;&nbsp;Twitter
-  //       </button>
-  //     </TwitterShareButton>
-
-  //     <WhatsappShareButton url={window.location.href} quote={job.text}>
-  //       <button className="px-3 border-focus-none dropdown-item text-left btn  btn-block text-success bg-white">
-  //         <i className=" fa fa-whatsapp " />
-  //         &nbsp;&nbsp;Whatsapp
-  //       </button>
-  //     </WhatsappShareButton>
-  //     <TelegramShareButton url={window.location.href} quote={job.text}>
-  //       <button className="px-3 border-focus-none  dropdown-item text-left btn  btn-block text-info bg-white">
-  //         <i className=" fa fa-telegram " />
-  //         &nbsp;&nbsp;Telegram
-  //       </button>
-  //     </TelegramShareButton>
-  //   </div>
-  // </div>
 )
 
 class PositionCard extends Component {
@@ -106,39 +77,18 @@ class PositionCard extends Component {
 
   getCurrentWidth = () => {
     let screenWidth = null
-    if (typeof window !== `undefined`) {
-      screenWidth = window.screen.width
+    if (typeof screen !== `undefined`) {
+      screenWidth = screen.width
     }
     return screenWidth
   }
 
   getCurrentHeight = () => {
     let screenHeight = null
-    if (typeof window !== `undefined`) {
-      screenHeight = window.screen.height
+    if (typeof screen !== `undefined`) {
+      screenHeight = screen.height
     }
     return screenHeight
-  }
-
-  onClickCloseModal = (e, job) => {
-    e.stopPropagation()
-
-    //
-    // this.props.history.push({
-    //   pathname: `/all-open-positions`,
-    //   search: `?d=${getSlug(job.categories.department)}&t=${getSlug(
-    //     job.categories.team
-    //   )}`,
-    // })
-    navigate(
-      `/all-open-positions?d=${getSlug(job.categories.department)}&t=${getSlug(
-        job.categories.team
-      )}`
-    )
-    //
-    this.setState({
-      visible: false,
-    })
   }
 
   render() {
@@ -152,12 +102,12 @@ class PositionCard extends Component {
                 name={job.id}
                 key={i}
                 className={`${
-                  this.props.location.search.split("=")[3] === job.id
-                    ? "col-md-12"
-                    : "col-lg-4"
+                  this.props.location.search.split('=')[3] === job.id
+                    ? 'col-md-12'
+                    : 'col-lg-4'
                 }   col-12 col-md-6 mt-4 mb-0 px-2`}
               >
-                {this.props.location.search.split("=")[3] === job.id &&
+                {this.props.location.search.split('=')[3] === job.id &&
                 this.getCurrentWidth() < 768 ? (
                   <Modal
                     style={{
@@ -167,7 +117,7 @@ class PositionCard extends Component {
                     className="sdvsdv"
                     open={
                       this.state.visible ||
-                      this.props.location.search.split("=")[3] === job.id
+                      this.props.location.search.split('=')[3] === job.id
                     }
                     onClose={() => {}}
                     center
@@ -175,18 +125,17 @@ class PositionCard extends Component {
                     <div
                       style={{
                         maxHeight: this.getCurrentHeight(),
-                        overflowY: "scroll",
+                        overflowY: 'scroll',
                       }}
-                      className="charan"
                     >
-                      {this.props.location.search.split("=")[3] === job.id && (
+                      {this.props.location.search.split('=')[3] === job.id && (
                         <div className="">
                           <div
                             style={{
-                              top: "55px",
-                              left: "0",
-                              zIndex: "99",
-                              boxShadow: "1px 7px 14px -5px rgba(0,0,0,.32)",
+                              top: '55px',
+                              left: '0',
+                              zIndex: '99',
+                              boxShadow: '1px 7px 14px -5px rgba(0,0,0,.32)',
                             }}
                             className="w-100 position-fixed bg-white py-4 "
                           >
@@ -195,7 +144,19 @@ class PositionCard extends Component {
                                 {job.text}
                               </h6>
                               <i
-                                onClick={e => this.onClickCloseModal(e, job)}
+                                onClick={e => {
+                                  e.stopPropagation()
+                                  this.props.history.push({
+                                    pathname: `/all-open-positions`,
+                                    search: `?d=${getSlug(
+                                      job.categories.department
+                                    )}&t=${getSlug(job.categories.team)}`,
+                                  }),
+                                    this.setState({
+                                      visible: false,
+                                    }),
+                                    this.props.jobSelected(null)
+                                }}
                                 className="fa scroll ml-auto pr-4 fa-minus fa-2x pt-1 mt-auto text-green "
                               />
                             </div>
@@ -208,34 +169,49 @@ class PositionCard extends Component {
                                 {job.categories.team}
                               </span>
                             </div>
+                            {/* <a
+                              target="_blank"
+                              href={
+                                job.hostedUrl +
+                                `/apply?lever-source[]=${
+                                  typeof localStorage !== `undefined`
+                                    ? localStorage.getItem('source')
+                                    : 'gojek.io'
+                                }`
+                              }
+                              className="apply btn bg-green text-white px-5 apply ml-4 my-2"
+                            >
+                              APPLY NOW
+                            </a> */}
                           </div>
                           {
                             <div className="pl-4 pt-5">
-                              <Description job={job} />
+                              <Description {...this.props} job={job} />
                             </div>
                           }
                           <div
                             style={{
-                              bottom: "0",
-                              left: "0",
-                              zIndex: "99",
+                              // position: 'fixed',
+                              bottom: '0',
+                              left: '0',
+                              zIndex: '99',
+                              // paddingBottom: '53px',
                             }}
-                            className="w-100 bg-green py-4 text-center position-fixed  raleway-bold font-sm"
+                            className="w-100 bg-green py-4 text-center position-fixed  maison-bold font-sm"
                           >
                             <a
-                              rel="noopener noreferrer"
                               className="text-white"
                               target="_blank"
                               href={
                                 job.hostedUrl +
                                 `/apply?lever-source[]=${
                                   typeof localStorage !== `undefined`
-                                    ? localStorage.getItem("source")
-                                    : "gojek.io"
+                                    ? localStorage.getItem('source')
+                                    : 'gojek.io'
                                 }`
                               }
                             >
-                              APPLY FOR THIS JOB{" "}
+                              APPLY FOR THIS JOB{' '}
                             </a>
                           </div>
                         </div>
@@ -243,69 +219,70 @@ class PositionCard extends Component {
                     </div>
                   </Modal>
                 ) : (
+                  // <Modal
+                  //   visible={
+                  //     this.state.visible ||
+                  //     this.props.location.search.split('=')[3] === job.id
+                  //   }
+                  //   width={this.getCurrentWidth().toString()}
+                  //   height={this.getCurrentHeight().toString()}
+                  //   effect="fadeInUp"
+                  //   onClickAway={() => {
+                  //     this.setState({ visible: false })
+                  //   }}
+                  // >
+
+                  // </Modal>
+
                   <div
                     onClick={() => {
-                      //
-                      if (
-                        this.props.location.search.split("=")[3] !== job.id ||
-                        this.props.location.search.split("=").length === 3
-                      ) {
-                        navigate(
-                          `/all-open-positions?d=${getSlug(
-                            job.categories.department
-                          )}&t=${getSlug(job.categories.team)}&p=${job.id}`
-                        )
+                      // console.log('sdfdsfdsf')
+                      this.props.history.push({
+                        pathname: `/all-open-positions`,
+                        search: `?d=${getSlug(
+                          job.categories.department
+                        )}&t=${getSlug(job.categories.team)}&p=${job.id}`,
+                      }),
+                        //
+                        //
+                        this.setState({
+                          visible: true,
+                        }),
+                        this.props.jobSelected(job)
+                      {
+                        this.props.location.search.split('=')[3] !== job.id &&
+                          this.getCurrentWidth() > 480 &&
+                          scroller.scrollTo(job.id, {
+                            smooth: 'easeInOutQuint',
+                            offset: -200,
+                          })
                       }
-
-                      // this.props.history.push({
-                      //   pathname: `/all-open-positions`,
-                      //   search: `?d=${getSlug(
-                      //     job.categories.department
-                      //   )}&t=${getSlug(job.categories.team)}&p=${job.id}`,
-                      // })
-                      //
-                      this.setState({
-                        visible: true,
-                      })
-                      //
-                      this.props.location.search.split("=")[3] !== job.id &&
-                        this.getCurrentWidth() > 480 &&
-                        scroller.scrollTo(job.id, {
-                          smooth: "easeInOutQuint",
-                          offset: -200,
-                        })
                     }}
                     style={{
                       minHeight:
-                        this.getCurrentWidth() >= 768 ? "95px" : "90px",
-                      borderRadius: "10px",
+                        this.getCurrentWidth() >= 768 ? '95px' : '90px',
+                      borderRadius: '10px',
                     }}
                     className={` scroll  d-flex flex-column flex-wrap justify-content-center careers-position careers-position-unhighlight ${
-                      this.props.location.search.split("=")[3] === job.id
-                        ? "border-success pt-3"
-                        : ""
+                      this.props.location.search.split('=')[3] === job.id
+                        ? 'border-success pt-3'
+                        : ''
                     }`}
                   >
-                    {this.props.location.search.split("=")[3] === job.id && (
+                    {this.props.location.search.split('=')[3] === job.id && (
                       <i
                         onClick={e => {
                           e.stopPropagation()
-                          //
-                          navigate(
-                            `/all-open-positions?d=${getSlug(
+                          this.props.history.push({
+                            pathname: `/all-open-positions`,
+                            search: `?d=${getSlug(
                               job.categories.department
-                            )}&t=${getSlug(job.categories.team)}`
-                          )
-                          // this.props.history.push({
-                          //   pathname: `/all-open-positions`,
-                          //   search: `?d=${getSlug(
-                          //     job.categories.department
-                          //   )}&t=${getSlug(job.categories.team)}`,
-                          // })
-                          //
-                          this.setState({
-                            visible: false,
-                          })
+                            )}&t=${getSlug(job.categories.team)}`,
+                          }),
+                            this.setState({
+                              visible: false,
+                            }),
+                            this.props.jobSelected(null)
                         }}
                         className="fa scroll ml-auto pr-5 fa-minus  mt-auto text-green "
                       />
@@ -323,20 +300,19 @@ class PositionCard extends Component {
                       </span>
                     </div>
                     {/* </Link> */}
-                    {this.props.location.search.split("=")[3] === job.id && (
+                    {this.props.location.search.split('=')[3] === job.id && (
                       <div>
                         {
                           <div className="pl-4 pt-3">
                             <div className="row justify-content-between align-items-center pl-4">
                               <a
-                                rel="noopener noreferrer"
                                 target="_blank"
                                 href={
                                   job.hostedUrl +
                                   `/apply?lever-source[]=${
                                     typeof localStorage !== `undefined`
-                                      ? localStorage.getItem("source")
-                                      : "gojek.io"
+                                      ? localStorage.getItem('source')
+                                      : 'gojek.io'
                                   }`
                                 }
                                 className="apply btn btn-success px-5 apply  my-2"
@@ -350,25 +326,27 @@ class PositionCard extends Component {
                                 </div>
                               }
                             </div>
-                            <Description job={job} />
+
+                            {/* // <button className="btn btn-primary">sdf</button> */}
+                            {/* {console.log('sdfdsfdfdsf', window.location.href)} */}
+                            <Description {...this.props} job={job} />
                             <div className="d-block text-center" />
                           </div>
                         }
                         <div className="w-100 text-center">
                           <a
-                            rel="noopener noreferrer"
                             target="_blank"
                             href={
                               job.hostedUrl +
                               `/apply?lever-source[]=${
                                 typeof localStorage !== `undefined`
-                                  ? localStorage.getItem("source")
-                                  : "gojek.io"
+                                  ? localStorage.getItem('source')
+                                  : 'gojek.io'
                               }`
                             }
                             className="apply btn btn-success px-5 apply col-6 col-md-4  my-5"
                           >
-                            APPLY FOR THIS JOB{" "}
+                            APPLY FOR THIS JOB{' '}
                           </a>
                         </div>
                       </div>
@@ -379,7 +357,7 @@ class PositionCard extends Component {
             )
           })}
           {this.props.jobsData.length === 0 && (
-            <h6 className="raleway-bold mx-auto font-xl-l">No Results Found</h6>
+            <h6 className="maison-bold mx-auto font-xl-l">No Results Found</h6>
           )}
         </div>
 

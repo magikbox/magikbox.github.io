@@ -1,40 +1,45 @@
-import React from "react"
+import React, { Component } from 'react'
 
-const Slide = props => {
-  const { data } = props
+class Slide extends Component {
+  render() {
+    const { data } = this.props
 
-  var text = []
+    var text = []
 
-  const heading = data.heading.split("|")
+    const heading = data.heading.split('|')
 
-  heading.forEach((element, index) => {
-    text.push(
-      <span
-        key={index}
-        className={`${element === "Walk the Talk" ? "pl-5 pl-md-0" : ""}`}
-      >
-        {element} <br />
-      </span>
-    )
-  })
-
-  return (
-    <div className="principles-card">
-      <img className="card-img-top img-fluid" src={data.image} alt={data.alt} />
-      <div className="card-body px-0">
-        <a
-          className="text-dark transparent-outline-link"
-          href={data.link}
-          target="_blank"
-          rel="noopener noreferrer"
+    heading.forEach((element, index) => {
+      text.push(
+        <span
+          key={index}
+          className={`${element === 'Walk the Talk' ? 'pl-5 pl-md-0' : ''}`}
         >
-          <h4 className="card-title font-md raleway-bold ">{text}</h4>
-        </a>
+          {element} <br />
+        </span>
+      )
+    })
 
-        <p className="font-xs-l">{data.text}</p>
+    return (
+      <div className="principles-card">
+        <img
+          className="card-img-top img-fluid"
+          src={data.image}
+          alt={data.alt}
+        />
+        <div className="card-body px-0">
+          <a
+            className="text-dark transparent-outline-link"
+            href={data.link}
+            target="_blank"
+          >
+            <h4 className="card-title font-md maison-bold ">{text}</h4>
+          </a>
+
+          <p className="font-xs-l">{data.text}</p>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default Slide

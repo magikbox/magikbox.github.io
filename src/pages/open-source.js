@@ -1,21 +1,21 @@
-import React, { Component } from "react"
-import OpenSourceprojects from "../components/OpenSource/index"
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import React, { Component } from 'react'
+import { Helmet } from 'react-helmet'
+
+import OpenSourceprojects from '../components/OpenSource/index'
+import SEO from '../components/seo'
 
 class OpenSource extends Component {
   render() {
     return (
-      <Layout location={this.props.location}>
-        <SEO
-          title="Contributions by GOJEK towards free and open source software"
-          description="GOJEK understands and appreciates the value of free and open source software. Check out some of our contributions towards the community on our GitHub page."
+      <div className="first-section">
+        <SEO isDynamic={false}
+          title="Contributions by Gojek towards free and open source software"
+          description="Gojek understands and appreciates the value of free and open source software. Check out some of our contributions towards the community on our GitHub page."
+          url="https://gojek.io"
         />
-        <div className="first-section">
-     
-          <OpenSourceprojects />
-        </div>
-      </Layout>
+
+        <OpenSourceprojects />
+      </div>
     )
   }
 }

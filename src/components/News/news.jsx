@@ -1,22 +1,25 @@
-import React from "react"
+import React, { Component } from 'react'
 
-import data from "./data.json"
-import Card from "./card"
+import data from './data.json'
+import Card from './card'
 
-const LatestNews = () => {
-  const { news } = data
+class LatestNews extends Component {
+  render() {
+    const { news } = data
+    const { type } = this.props
 
-  return (
-    <section className="py-5 ">
-      <div className="container">
-        <div className="row">
-          {news.data.map((latestNews, key) => (
-            <Card data={latestNews} key={key} />
-          ))}
+    return (
+      <section className="py-4 ">
+        <div className="container">
+          <div className="row">
+            {news.data[type].map((latestNews, key) => (
+              <Card data={latestNews} key={key} />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-  )
+      </section>
+    )
+  }
 }
 
 export default LatestNews

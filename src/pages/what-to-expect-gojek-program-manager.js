@@ -1,8 +1,18 @@
 import React from 'react'
 import '../layouts/full-stack-dev-go-food.scss'
+import SEO from '../components/seo'
 
 const ProgramManager = () => (
   <div className="container">
+    <SEO
+      isDynamic={false}
+      title="On-site interviews: What to expect - Gojek Program Manager"
+      description="Program management at Gojek is cross-functional by nature. To that
+      end, we’ve designed an interview loop that will allow you to meet
+      with various teams including Program Management, and
+      cross-functional stakeholders."
+      url="https://gojek.io"
+    />
     <div className="content-wrapper">
       <div className="content job-posting-section">
         <div className="section-wrapper">
@@ -57,7 +67,10 @@ const ProgramManager = () => (
                 <ul className="go-food-list">
                   <li>
                     Take a look at our{' '}
-                    <a href="https://blog.gojekengineering.com/" target="_blank">
+                    <a
+                      href="https://blog.gojekengineering.com/"
+                      target="_blank"
+                    >
                       blog.
                     </a>
                   </li>

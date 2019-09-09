@@ -85,11 +85,11 @@ class Layout extends Component {
     const showHeaderFooter = true
     return (
       <div>
-        <SEO isDynamic={false}
+        {/* <SEO isDynamic={false}
           description="Gojek is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest growing unicorn building an on-demand empire."
           title="Gojek Tech"
           url="https://gojek.io"
-        />
+        /> */}
 
         {location.pathname !== '/gomakeimpact/' &&
           location.pathname !== '/superapp/' && (

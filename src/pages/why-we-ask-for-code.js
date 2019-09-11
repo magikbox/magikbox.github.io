@@ -1,21 +1,17 @@
 import React, { Component } from 'react'
 import { Helmet } from 'react-helmet'
+import SEO from '../components/seo'
 
 class GojekBlog extends Component {
   render() {
     return (
       <section className="first-section pt-3">
-        <Helmet>
-          <title> Why we ask for code- Gojek Product + Tech </title>
-          <meta data-react-helmet="true"
-            property="og:title"
-            content="Why we ask for code- Gojek Product + Tech"
-          />
-          <meta data-react-helmet="true"
-            name="twitter:title"
-            content="Why we ask for code- Gojek Product + Tech"
-          />
-        </Helmet>
+        <SEO isDynamic={false}
+          title="Why we ask for code- Gojek Product + Tech"
+          description="Gojek is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest growing unicorn building an on-demand empire."
+          url="https://gojek.io"
+        />
+
         <div className="container">
           <div className="row">
             <div className="heading col-md-12 px-md-0">
@@ -174,7 +170,11 @@ class GojekBlog extends Component {
                   to join our team. The same team that has helped Gojek become a
                   Super App with an ecosystem aided by 2 million driver partners
                   and 400,000 merchant partners. But why Gojek? My colleague
-                  explains. Visit <a href = "http://superapp.is" target="_blank" >superapp.is</a> and help us move Southeast Asia.
+                  explains. Visit{' '}
+                  <a href="http://superapp.is" target="_blank">
+                    superapp.is
+                  </a>{' '}
+                  and help us move Southeast Asia.
                 </p>
               </div>
             </div>

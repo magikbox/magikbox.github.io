@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Helmet } from 'react-helmet'
 import { Link } from 'react-scroll'
 import banner from '../components/videos/banner.mp4'
 import superApp from '../components/videos/superApp.mp4'
@@ -14,6 +13,7 @@ import superApp1million from '../components/videos/superapp-1-million.mp4'
 import superAppFirst from '../components/videos/superapp-first.mp4'
 import '../layouts/superApp.css'
 import CareerDepartment from '../components/Careers/CareerDepartment/CareerDepartment'
+import SEO from '../components/seo'
 
 class SuperApp extends Component {
   componentWillMount() {
@@ -25,39 +25,12 @@ class SuperApp extends Component {
   render() {
     return (
       <div className="first-section">
-        <Helmet>
-          <title>Gojek: SuperApp</title>
-          <meta
-            data-react-helmet="true"
-            property="og:title"
-            content="Gojek: On-Demand Services for Transport, Payment, Food Delivery, etc."
-          />
-          <meta
-            data-react-helmet="true"
-            property="og:title"
-            content="Gojek: On-Demand Services for Transport, Payment, Food Delivery, etc."
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:title"
-            content="Gojek: On-Demand Services for Transport, Payment, Food Delivery, etc."
-          />
-          <meta
-            data-react-helmet="true"
-            name="description"
-            content="Gojek is a Super App. It's one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia's first and fastest growing unicorn building an on-demand empire."
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:description"
-            content="Gojek is a Super App. It's one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia's first and fastest growing unicorn building an on-demand empire."
-          />
-          <meta
-            data-react-helmet="true"
-            property="og:description"
-            content="Gojek is a Super App. It's one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia's first and fastest growing unicorn building an on-demand empire."
-          />
-        </Helmet>
+        <SEO isDynamic={false}
+          title="Gojek: On-Demand Services for Transport, Payment, Food Delivery, etc."
+          description="Gojek is a Super App. It's one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia's first and fastest growing unicorn building an on-demand empire."
+          url="https://gojek.io"
+        />
+
         <section id="home">
           <div className="d-none d-md-block embed-responsive embed-responsive-16by9 embed-video">
             <video width="100%" height="100%" autoPlay loop muted>

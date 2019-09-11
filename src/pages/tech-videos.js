@@ -7,39 +7,17 @@ import Posts from '../components/Blog/posts'
 import Heading from '../components/Blog/heading'
 import Slide from '../components/Home/ImpactStories/slide'
 import data from '../components/Blog/data.json'
+import SEO from '../components/seo'
 
 class Videos extends Component {
   render() {
     return (
       <div className="first-section">
-        <Helmet>
-          <title>Conference talks, Events we attend, and all our videos.</title>
-          <meta
-            data-react-helmet="true"
-            property="og:title"
-            content="Conference talks, Events we attend, and all our videos."
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:title"
-            content="Conference talks, Events we attend, and all our videos."
-          />
-          <meta
-            data-react-helmet="true"
-            name="description"
-            content="The Videos section has a list of conferences and events we’ve attended and spoken in and all of our videos around culture, ad films, webinars."
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:description"
-            content="The Videos section has a list of conferences and events we’ve attended and spoken in and all of our videos around culture, ad films, webinars."
-          />
-          <meta
-            data-react-helmet="true"
-            property="og:description"
-            content="The Videos section has a list of conferences and events we’ve attended and spoken in and all of our videos around culture, ad films, webinars."
-          />
-        </Helmet>
+        <SEO isDynamic={false}
+          title="Conference talks, Events we attend, and all our videos."
+          description="The Videos section has a list of conferences and events we’ve attended and spoken in and all of our videos around culture, ad films, webinars."
+          url="https://gojek.io"
+        />
 
         <Heading heading="See what we do" />
         <div className="container">

@@ -97,289 +97,263 @@ class PositionCard extends Component {
         <div className="d-flex flex-row flex-wrap pb-5">
           {this.props.jobsData.map((job, i) => {
             return (
-              <Link
-                to={{
-                  pathname: '/job-description',
-                  search: `?p=${job.id}`,
-                  state: { job },
-                }}
-                // target="_blank"
-                className="col-lg-4 col-12 col-md-6 mt-4 mb-0 px-2"
+              <Element
+                id={job.id}
+                name={job.id}
+                key={i}
+                className={`${
+                  this.props.location.search.split('=')[3] === job.id
+                    ? 'col-md-12'
+                    : 'col-lg-4'
+                }   col-12 col-md-6 mt-4 mb-0 px-2`}
               >
-                <div
-                  style={{
-                    minHeight: this.getCurrentWidth() >= 768 ? '95px' : '90px',
-                    borderRadius: '10px',
-                  }}
-                  className={` scroll  d-flex flex-column flex-wrap justify-content-center careers-position careers-position-unhighlight ${
-                    this.props.location.search.split('=')[3] === job.id
-                      ? 'border-success pt-3'
-                      : ''
-                  }`}
-                >
-                  <h6 className=" px-4 roboto-regular font-sm text-dark ">
-                    {job.text}
-                  </h6>
-                  <div className="d-flex flex-row flex-wrap roboto-black font-xs text-uppercase">
-                    <span className="pl-4  text-green  col-">
-                      {job.categories.location}
-                    </span>
-                    <span className="pl-4  text-black  col-">
-                      {job.categories.team}
-                    </span>
+                {this.props.location.search.split('=')[3] === job.id &&
+                this.getCurrentWidth() < 768 ? (
+                  <Modal
+                    style={{
+                      width: this.getCurrentWidth().toString(),
+                      height: this.getCurrentHeight().toString(),
+                    }}
+                    className="sdvsdv"
+                    open={
+                      this.state.visible ||
+                      this.props.location.search.split('=')[3] === job.id
+                    }
+                    onClose={() => {}}
+                    center
+                  >
+                    <div
+                      style={{
+                        maxHeight: this.getCurrentHeight(),
+                        overflowY: 'scroll',
+                      }}
+                    >
+                      {this.props.location.search.split('=')[3] === job.id && (
+                        <div className="">
+                          <div
+                            style={{
+                              top: '55px',
+                              left: '0',
+                              zIndex: '99',
+                              boxShadow: '1px 7px 14px -5px rgba(0,0,0,.32)',
+                            }}
+                            className="w-100 position-fixed bg-white py-4 "
+                          >
+                            <div className="d-flex flex-row ">
+                              <h6 className=" px-4 roboto-regular font-md  text-dark ">
+                                {job.text}
+                              </h6>
+                              <i
+                                onClick={e => {
+                                  e.stopPropagation()
+                                  this.props.history.push({
+                                    pathname: `/all-open-positions`,
+                                    search: `?d=${getSlug(
+                                      job.categories.department
+                                    )}&t=${getSlug(job.categories.team)}`,
+                                  }),
+                                    this.setState({
+                                      visible: false,
+                                    }),
+                                    this.props.jobSelected(null)
+                                }}
+                                className="fa scroll ml-auto pr-4 fa-minus fa-2x pt-1 mt-auto text-green "
+                              />
+                            </div>
+
+                            <div className="d-flex flex-row flex-wrap roboto-black font-xs text-uppercase">
+                              <span className="pl-4  text-green  col-">
+                                {job.categories.location}
+                              </span>
+                              <span className="pl-4  text-black  col-">
+                                {job.categories.team}
+                              </span>
+                            </div>
+                            {/* <a
+                              target="_blank"
+                              href={
+                                job.hostedUrl +
+                                `/apply?lever-source[]=${
+                                  typeof localStorage !== `undefined`
+                                    ? localStorage.getItem('source')
+                                    : 'gojek.io'
+                                }`
+                              }
+                              className="apply btn bg-green text-white px-5 apply ml-4 my-2"
+                            >
+                              APPLY NOW
+                            </a> */}
+                          </div>
+                          {
+                            <div className="pl-4 pt-5">
+                              <Description {...this.props} job={job} />
+                            </div>
+                          }
+                          <div
+                            style={{
+                              // position: 'fixed',
+                              bottom: '0',
+                              left: '0',
+                              zIndex: '99',
+                              // paddingBottom: '53px',
+                            }}
+                            className="w-100 bg-green py-4 text-center position-fixed  maison-bold font-sm"
+                          >
+                            <a
+                              className="text-white"
+                              target="_blank"
+                              href={
+                                job.hostedUrl +
+                                `/apply?lever-source[]=${
+                                  typeof localStorage !== `undefined`
+                                    ? localStorage.getItem('source')
+                                    : 'gojek.io'
+                                }`
+                              }
+                            >
+                              APPLY FOR THIS JOB{' '}
+                            </a>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </Modal>
+                ) : (
+                  // <Modal
+                  //   visible={
+                  //     this.state.visible ||
+                  //     this.props.location.search.split('=')[3] === job.id
+                  //   }
+                  //   width={this.getCurrentWidth().toString()}
+                  //   height={this.getCurrentHeight().toString()}
+                  //   effect="fadeInUp"
+                  //   onClickAway={() => {
+                  //     this.setState({ visible: false })
+                  //   }}
+                  // >
+
+                  // </Modal>
+
+                  <div
+                    onClick={() => {
+                      // console.log('sdfdsfdsf')
+                      this.props.history.push({
+                        pathname: `/all-open-positions`,
+                        search: `?d=${getSlug(
+                          job.categories.department
+                        )}&t=${getSlug(job.categories.team)}&p=${job.id}`,
+                      }),
+                        //
+                        //
+                        this.setState({
+                          visible: true,
+                        }),
+                        this.props.jobSelected(job)
+                      {
+                        this.props.location.search.split('=')[3] !== job.id &&
+                          this.getCurrentWidth() > 480 &&
+                          scroller.scrollTo(job.id, {
+                            smooth: 'easeInOutQuint',
+                            offset: -200,
+                          })
+                      }
+                    }}
+                    style={{
+                      minHeight:
+                        this.getCurrentWidth() >= 768 ? '95px' : '90px',
+                      borderRadius: '10px',
+                    }}
+                    className={` scroll  d-flex flex-column flex-wrap justify-content-center careers-position careers-position-unhighlight ${
+                      this.props.location.search.split('=')[3] === job.id
+                        ? 'border-success pt-3'
+                        : ''
+                    }`}
+                  >
+                    {this.props.location.search.split('=')[3] === job.id && (
+                      <i
+                        onClick={e => {
+                          e.stopPropagation()
+                          this.props.history.push({
+                            pathname: `/all-open-positions`,
+                            search: `?d=${getSlug(
+                              job.categories.department
+                            )}&t=${getSlug(job.categories.team)}`,
+                          }),
+                            this.setState({
+                              visible: false,
+                            }),
+                            this.props.jobSelected(null)
+                        }}
+                        className="fa scroll ml-auto pr-5 fa-minus  mt-auto text-green "
+                      />
+                    )}
+                    {/* <Link to={{}} className=""> */}
+                    <h6 className=" px-4 roboto-regular font-sm text-dark ">
+                      {job.text}
+                    </h6>
+                    <div className="d-flex flex-row flex-wrap roboto-black font-xs text-uppercase">
+                      <span className="pl-4  text-green  col-">
+                        {job.categories.location}
+                      </span>
+                      <span className="pl-4  text-black  col-">
+                        {job.categories.team}
+                      </span>
+                    </div>
+                    {/* </Link> */}
+                    {this.props.location.search.split('=')[3] === job.id && (
+                      <div>
+                        {
+                          <div className="pl-4 pt-3">
+                            <div className="row justify-content-between align-items-center pl-4">
+                              <a
+                                target="_blank"
+                                href={
+                                  job.hostedUrl +
+                                  `/apply?lever-source[]=${
+                                    typeof localStorage !== `undefined`
+                                      ? localStorage.getItem('source')
+                                      : 'gojek.io'
+                                  }`
+                                }
+                                className="apply btn btn-success px-5 apply  my-2"
+                              >
+                                APPLY NOW
+                              </a>
+
+                              {
+                                <div className="d-none d-md-block">
+                                  {getShareButton(job)}
+                                </div>
+                              }
+                            </div>
+
+                            {/* // <button className="btn btn-primary">sdf</button> */}
+                            {/* {console.log('sdfdsfdfdsf', window.location.href)} */}
+                            <Description {...this.props} job={job} />
+                            <div className="d-block text-center" />
+                          </div>
+                        }
+                        <div className="w-100 text-center">
+                          <a
+                            target="_blank"
+                            href={
+                              job.hostedUrl +
+                              `/apply?lever-source[]=${
+                                typeof localStorage !== `undefined`
+                                  ? localStorage.getItem('source')
+                                  : 'gojek.io'
+                              }`
+                            }
+                            className="apply btn btn-success px-5 apply col-6 col-md-4  my-5"
+                          >
+                            APPLY FOR THIS JOB{' '}
+                          </a>
+                        </div>
+                      </div>
+                    )}
                   </div>
-                </div>
-              </Link>
-              // <Element
-              //   id={job.id}
-              //   name={job.id}
-              //   key={i}
-              //   onClick={() =>
-              //     this.props.history.push({
-              //       pathname: `/all-open-positions`,
-              //       search: `?d=${getSlug(
-              //         job.categories.department
-              //       )}&t=${getSlug(job.categories.team)}`,
-              //       target: '_blank',
-              //     })
-              //   }
-              //   className={`${
-              //     this.props.location.search.split('=')[3] === job.id
-              //       ? 'col-md-12'
-              //       : 'col-lg-4'
-              //   }   col-12 col-md-6 mt-4 mb-0 px-2`}
-              // >
-              //   {this.props.location.search.split('=')[3] === job.id &&
-              //   this.getCurrentWidth() < 768 ? (
-              //     <Modal
-              //       style={{
-              //         width: this.getCurrentWidth().toString(),
-              //         height: this.getCurrentHeight().toString(),
-              //       }}
-              //       className="sdvsdv"
-              //       open={
-              //         this.state.visible ||
-              //         this.props.location.search.split('=')[3] === job.id
-              //       }
-              //       onClose={() => {}}
-              //       center
-              //     >
-              //       <div
-              //         style={{
-              //           maxHeight: this.getCurrentHeight(),
-              //           overflowY: 'scroll',
-              //         }}
-              //       >
-              //         {this.props.location.search.split('=')[3] === job.id && (
-              //           <div className="">
-              //             <div
-              //               style={{
-              //                 top: '55px',
-              //                 left: '0',
-              //                 zIndex: '99',
-              //                 boxShadow: '1px 7px 14px -5px rgba(0,0,0,.32)',
-              //               }}
-              //               className="w-100 position-fixed bg-white py-4 "
-              //             >
-              //               <div className="d-flex flex-row ">
-              //                 <h6 className=" px-4 roboto-regular font-md  text-dark ">
-              //                   {job.text}
-              //                 </h6>
-              //                 <i
-              //                   onClick={e => {
-              //                     e.stopPropagation()
-              //                     this.props.history.push({
-              //                       pathname: `/all-open-positions`,
-              //                       search: `?d=${getSlug(
-              //                         job.categories.department
-              //                       )}&t=${getSlug(job.categories.team)}`,
-              //                     }),
-              //                       this.setState({
-              //                         visible: false,
-              //                       }),
-              //                       this.props.jobSelected(null)
-              //                   }}
-              //                   className="fa scroll ml-auto pr-4 fa-minus fa-2x pt-1 mt-auto text-green "
-              //                 />
-              //               </div>
-
-              //               <div className="d-flex flex-row flex-wrap roboto-black font-xs text-uppercase">
-              //                 <span className="pl-4  text-green  col-">
-              //                   {job.categories.location}
-              //                 </span>
-              //                 <span className="pl-4  text-black  col-">
-              //                   {job.categories.team}
-              //                 </span>
-              //               </div>
-              //               {/* <a
-              //                 target="_blank"
-              //                 href={
-              //                   job.hostedUrl +
-              //                   `/apply?lever-source[]=${
-              //                     typeof localStorage !== `undefined`
-              //                       ? localStorage.getItem('source')
-              //                       : 'gojek.io'
-              //                   }`
-              //                 }
-              //                 className="apply btn bg-green text-white px-5 apply ml-4 my-2"
-              //               >
-              //                 APPLY NOW
-              //               </a> */}
-              //             </div>
-              //             {
-              //               <div className="pl-4 pt-5">
-              //                 <Description {...this.props} job={job} />
-              //               </div>
-              //             }
-              //             <div
-              //               style={{
-              //                 // position: 'fixed',
-              //                 bottom: '0',
-              //                 left: '0',
-              //                 zIndex: '99',
-              //                 // paddingBottom: '53px',
-              //               }}
-              //               className="w-100 bg-green py-4 text-center position-fixed  maison-bold font-sm"
-              //             >
-              //               <a
-              //                 className="text-white"
-              //                 target="_blank"
-              //                 href={
-              //                   job.hostedUrl +
-              //                   `/apply?lever-source[]=${
-              //                     typeof localStorage !== `undefined`
-              //                       ? localStorage.getItem('source')
-              //                       : 'gojek.io'
-              //                   }`
-              //                 }
-              //               >
-              //                 APPLY FOR THIS JOB{' '}
-              //               </a>
-              //             </div>
-              //           </div>
-              //         )}
-              //       </div>
-              //     </Modal>
-              //   ) : (
-              //     <div
-              //       onClick={() => {
-              //         // console.log('sdfdsfdsf')
-              //         this.props.history.push({
-              //           pathname: `/all-open-positions`,
-              //           search: `?d=${getSlug(
-              //             job.categories.department
-              //           )}&t=${getSlug(job.categories.team)}&p=${job.id}`,
-              //         }),
-              //           //
-              //           //
-              //           this.setState({
-              //             visible: true,
-              //           }),
-              //           this.props.jobSelected(job)
-              //         {
-              //           this.props.location.search.split('=')[3] !== job.id &&
-              //             this.getCurrentWidth() > 480 &&
-              //             scroller.scrollTo(job.id, {
-              //               smooth: 'easeInOutQuint',
-              //               offset: -200,
-              //             })
-              //         }
-              //       }}
-              //       style={{
-              //         minHeight:
-              //           this.getCurrentWidth() >= 768 ? '95px' : '90px',
-              //         borderRadius: '10px',
-              //       }}
-              //       className={` scroll  d-flex flex-column flex-wrap justify-content-center careers-position careers-position-unhighlight ${
-              //         this.props.location.search.split('=')[3] === job.id
-              //           ? 'border-success pt-3'
-              //           : ''
-              //       }`}
-              //     >
-              //       {this.props.location.search.split('=')[3] === job.id && (
-              //         <i
-              //           onClick={e => {
-              //             e.stopPropagation()
-              //             this.props.history.push({
-              //               pathname: `/all-open-positions`,
-              //               search: `?d=${getSlug(
-              //                 job.categories.department
-              //               )}&t=${getSlug(job.categories.team)}`,
-              //             }),
-              //               this.setState({
-              //                 visible: false,
-              //               }),
-              //               this.props.jobSelected(null)
-              //           }}
-              //           className="fa scroll ml-auto pr-5 fa-minus  mt-auto text-green "
-              //         />
-              //       )}
-              //       {/* <Link to={{}} className=""> */}
-              //       <h6 className=" px-4 roboto-regular font-sm text-dark ">
-              //         {job.text}
-              //       </h6>
-              //       <div className="d-flex flex-row flex-wrap roboto-black font-xs text-uppercase">
-              //         <span className="pl-4  text-green  col-">
-              //           {job.categories.location}
-              //         </span>
-              //         <span className="pl-4  text-black  col-">
-              //           {job.categories.team}
-              //         </span>
-              //       </div>
-              //       {this.props.location.search.split('=')[3] === job.id && (
-              //         <div>
-              //           {
-              //             <div className="pl-4 pt-3">
-              //               <div className="row justify-content-between align-items-center pl-4">
-              //                 <a
-              //                   target="_blank"
-              //                   href={
-              //                     job.hostedUrl +
-              //                     `/apply?lever-source[]=${
-              //                       typeof localStorage !== `undefined`
-              //                         ? localStorage.getItem('source')
-              //                         : 'gojek.io'
-              //                     }`
-              //                   }
-              //                   className="apply btn btn-success px-5 apply  my-2"
-              //                 >
-              //                   APPLY NOW
-              //                 </a>
-
-              //                 {
-              //                   <div className="d-none d-md-block">
-              //                     {getShareButton(job)}
-              //                   </div>
-              //                 }
-              //               </div>
-
-              //               {/* // <button className="btn btn-primary">sdf</button> */}
-              //               {/* {console.log('sdfdsfdfdsf', window.location.href)} */}
-              //               <Description {...this.props} job={job} />
-              //               <div className="d-block text-center" />
-              //             </div>
-              //           }
-              //           <div className="w-100 text-center">
-              //             <a
-              //               target="_blank"
-              //               href={
-              //                 job.hostedUrl +
-              //                 `/apply?lever-source[]=${
-              //                   typeof localStorage !== `undefined`
-              //                     ? localStorage.getItem('source')
-              //                     : 'gojek.io'
-              //                 }`
-              //               }
-              //               className="apply btn btn-success px-5 apply col-6 col-md-4  my-5"
-              //             >
-              //               APPLY FOR THIS JOB{' '}
-              //             </a>
-              //           </div>
-              //         </div>
-              //       )}
-              //     </div>
-              //   )}
-              // </Element>
+                )}
+              </Element>
             )
           })}
           {this.props.jobsData.length === 0 && (

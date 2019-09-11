@@ -7,61 +7,78 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+// import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
+// import { Helmet, HelmetProvider } from 'react-helmet-async'
 
-function SEO({ description, title, url }) {
+function SEO({ description, title, url, isDynamic }) {
   return (
     <React.Fragment>
-      <Helmet
-        title={title}
-        meta={[
-          {
-            name: `description`,
-            content: description,
-          },
-          {
-            name: `twitter:card`,
-            content: description,
-          },
-          {
-            name: `twitter:title`,
-            content: title,
-          },
-          {
-            name: 'twitter:site',
-            content: '@gojektech',
-          },
-          {
-            name: 'twitter:image',
-            content: 'https://www.gojek.io/images/Go-Jek.png',
-          },
-          {
-            name: `twitter:description`,
-            content: description,
-          },
-          {
-            property: `og:title`,
-            content: title,
-          },
-          {
-            property: 'og:url',
-            content: { url },
-          },
-          {
-            property: 'og:image',
-            content: 'https://www.gojek.io/images/Go-Jek.png',
-          },
-          {
-            property: `og:description`,
-            content: description,
-          },
-          {
-            property: `og:type`,
-            content: `website`,
-          },
-        ]}
-      />
-      <link rel="icon" href="./../images/favicon.png" type="image/x-icon" />
+      <Helmet>
+        <title>{title}</title>
+        <meta
+          data-react-helmet={isDynamic}
+          content="yes"
+          name="apple-mobile-web-app-capable"
+        />
+        <meta
+          data-react-helmet={isDynamic}
+          property={`description`}
+          content={title}
+        />
+        <meta
+          data-react-helmet={isDynamic}
+          property="twitter:title"
+          content={title}
+        />
+        <meta
+          data-react-helmet={isDynamic}
+          property={`twitter:card`}
+          content={title}
+        />
+        <meta
+          data-react-helmet={isDynamic}
+          property={`twitter:site`}
+          content="@gojektech"
+        />
+        <meta
+          data-react-helmet={isDynamic}
+          property={`twitter:image`}
+          content="https://www.gojek.io/images/Go-Jek.png"
+        />
+        <meta
+          data-react-helmet={isDynamic}
+          property="twitter:description"
+          content={description}
+        />
+        <meta
+          data-react-helmet={isDynamic}
+          property="og:title"
+          content={title}
+        />
+        <meta data-react-helmet={isDynamic} property="og:url" content={url} />
+        <meta
+          data-react-helmet={isDynamic}
+          property="og:image"
+          content="https://www.gojek.io/images/Go-Jek.png"
+        />
+        <meta
+          data-react-helmet={isDynamic}
+          property="og:description"
+          content={description}
+        />
+        <meta
+          data-react-helmet={isDynamic}
+          property="og:type"
+          content={'website'}
+        />
+        <link
+          rel="shortcut icon"
+          href="/../images/favicon.png"
+          type="image/x-icon "
+        />
+        <link rel="icon" href="./../images/favicon.png" type="image/x-icon" />
+      </Helmet>
     </React.Fragment>
   )
 }

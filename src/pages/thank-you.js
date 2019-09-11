@@ -2,15 +2,18 @@ import React, { Component } from 'react'
 import CallToAction from '../components/Common/callToAction'
 import Articles from '../components/Careers/Articles/index'
 import { Helmet } from 'react-helmet'
+import SEO from '../components/seo';
 
 class ThankYou extends Component {
   render() {
-   
     return (
       <div>
-        <Helmet>
-          <title> Gojek Tech</title>
-        </Helmet>
+        <SEO isDynamic={false}
+          title="Gojek Tech"
+          description="Gojek is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest growing unicorn building an on-demand empire."
+          url="https://gojek.io"
+        />
+       
 
         <section className="first-section">
           <img

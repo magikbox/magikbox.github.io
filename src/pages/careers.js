@@ -11,7 +11,7 @@ import SearchBar from '../components/Careers/searchBar/searchBar'
 import { Link } from 'react-scroll'
 import axios from 'axios'
 import Slider from 'react-slick'
-import SEO from '../components/seo';
+import SEO from '../components/seo'
 
 var Scroll = require('react-scroll')
 var scroller = Scroll.scroller
@@ -247,15 +247,11 @@ class Careers extends Component {
 
     return (
       <div className="first-section">
-          <SEO
-          title={
-         "Gojek Careers: Check out the current job openings at Gojek Tech"
-          }
+        <SEO isDynamic={false}
+          title="Gojek Careers: Check out the current job openings at Gojek Tech"
           description="Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-          url="https://www.gojek.io"
+          url="https://gojek.io"
         />
-
-      
 
         {/* Main banner image */}
         <SearchBar

@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet'
 import PositionCard from '../components/Careers/PositionCard/positionCard'
 import axios from 'axios'
 import OpenPositionDepartments from '../components/AllOpenPositions/OpenPositionDepartments'
-import MetaTags from 'react-meta-tags'
 import SEO from '../components/seo';
 
 var Scroll = require('react-scroll')
@@ -31,7 +30,7 @@ class allpositions extends Component {
   }
 
   componentDidMount() {
-    console.log('this.porops', this.props)
+    // console.log('this.porops', this.props)
     if (
       this.props.location.state &&
       this.props.location.state.jobSelected !== null
@@ -299,17 +298,15 @@ class allpositions extends Component {
   render() {
     const { siteMetadata: metaData } = this.props.data.site
     const { jobSelected } = this.state
-    console.log('jobsssssss', jobSelected)
+    // console.log('jobsssssss', jobSelected)
     return (
       <div className="first-section">
-        <SEO
-          title={
-            'Gojek Careers: Check out the current job openings at Gojek Tech'
-          }
+        <SEO isDynamic={false}
           description="Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
-          url="https://www.gojek.io"
+          title="Gojek Careers: Check out the current job openings at Gojek Tech"
+          url="https://gojek.io"
         />
-      
+
         <div className="container">
           <h1 className="text-center text-black font-xl-x maison-bold pt-5">
             {this.state.inputText === '' &&
@@ -417,7 +414,7 @@ class allpositions extends Component {
             <div style={{ minHeight: '50vh' }}>
               <OpenPositionDepartments
                 jobSelected={job => {
-                  console.log('jobselectedsdfdsf', job)
+                  // console.log('jobselectedsdfdsf', job)
                   this.setState({ jobSelected: job })
                 }}
                 departmentSelected={this.state.departmentSelected}
@@ -452,7 +449,7 @@ class allpositions extends Component {
               </div>
               <PositionCard
                 jobSelected={job => {
-                  console.log('jobselectedsdfdsf', job)
+                  // console.log('jobselectedsdfdsf', job)
                   this.setState({ jobSelected: job })
                 }}
                 {...this.props}

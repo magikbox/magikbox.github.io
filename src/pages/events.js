@@ -1,27 +1,19 @@
 import React, { Component } from 'react'
-import { Helmet } from 'react-helmet'
 
 import Heading from '../components/Events/heading'
 import LatestEvents from '../components/Events/events'
 import CallToAction from '../components/Common/callToAction'
+import SEO from '../components/seo'
 
 class Events extends Component {
   render() {
     return (
       <div className="first-section">
-        <Helmet>
-          <title> Gojek Tech Events </title>
-          <meta
-            data-react-helmet="true"
-            property="og:title"
-            content="Gojek Tech Events"
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:title"
-            content="Gojek Tech Events"
-          />
-        </Helmet>
+        <SEO isDynamic={false}
+          title={`Gojek Tech Events`}
+          description={`Gojek Tech Events`}
+          url="https://gojek.io"
+        />
 
         <Heading />
         <LatestEvents />

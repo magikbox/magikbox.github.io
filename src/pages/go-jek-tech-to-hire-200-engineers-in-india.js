@@ -1,24 +1,18 @@
 import React, { Component } from 'react'
 import { Helmet } from 'react-helmet'
+import SEO from '../components/seo';
 
 class GojekViet extends Component {
   render() {
     return (
       <section className="first-section pt-3">
-         
-        <Helmet>
-          <title> Gojek Tech to hire 200 engineers in India </title>
-          <meta
-            data-react-helmet="true"
-            property="og:title"
-            content="Gojek Tech to hire 200 engineers in India"
-          />
-          <meta
-            data-react-helmet="true"
-            name="twitter:title"
-            content="Gojek Tech to hire 200 engineers in India"
-          />
-        </Helmet>
+        <SEO isDynamic={false}
+          title={` Gojek Tech to hire 200 engineers in India `}
+          description={`Gojek Tech to hire 200 engineers in India to work on its ‘Super
+          App’`}
+          url="https://gojek.io"
+        />
+
         <div className="container">
           <div className="row">
             <div className="heading col-md-12 px-md-0">

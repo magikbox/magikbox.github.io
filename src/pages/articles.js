@@ -11,13 +11,12 @@ class Articles extends Component {
   render() {
     return (
       <div className="first-section">
-        <SEO
-          title={
-            'Everything you wanted to know about Gojek and how we do what we do.'
-          }
+        <SEO isDynamic={false}
+          title="Everything you wanted to know about Gojek and how we do what we do."
           description="The blog section provides valuable information on Gojek's engineering ideals, our culture, and insights on where we failed and what we learnt in the process."
-          url="https://www.gojek.io"
+          url="https://gojek.io"
         />
+       
 
         <Heading heading="Read what we do" />
 

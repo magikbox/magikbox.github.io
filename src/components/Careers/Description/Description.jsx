@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import data from '../data.json'
 import Parser from 'html-react-parser'
-import { Helmet } from 'react-helmet'
 import { getShareButton } from '../PositionCard/positionCard.jsx';
 
 class Description extends Component {

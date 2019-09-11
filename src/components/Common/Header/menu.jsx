@@ -15,7 +15,7 @@ class Menu extends Component {
           ((currentPage === '/gojek-expansion/' ||
             currentPage === '/go-viet/') &&
             data.name === 'News')
-            ? 'active'
+            ? ' active'
             : '')
         }
       >

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Helmet } from 'react-helmet'
 
 import CallToAction from '../components/Common/callToAction'
 import SEO from '../components/seo'
@@ -8,10 +7,10 @@ class Contact extends Component {
   render() {
     return (
       <div className="first-section">
-        <SEO
-          title={'Gojek: Contact Us'}
+        <SEO isDynamic={false}
+          title="Gojek: Contact Us"
           description="Feel free to contact us for any queries regarding job openings or any other queries."
-          url="https://www.gojek.io"
+          url="https://gojek.io"
         />
 
         <section className="first-section">
@@ -33,7 +32,7 @@ class Contact extends Component {
           <section className="my-md-5 py-md-0 py-5">
             <div className="row">
               <div className="col-md-4">
-                <p className="font-md text-green text-uppercase   maison-bold place pb-1">
+                <p className="font-md text-green    maison-bold place pb-1">
                   Gojek Head Office (Jakarta):
                 </p>
                 <p className="roboto-regular address text-black">
@@ -45,7 +44,7 @@ class Contact extends Component {
                 </p>
               </div>
               <div className="col-md-4">
-                <p className="font-md text-green text-uppercase  maison-bold place pb-4">
+                <p className="font-md text-green mb-0  maison-bold place pb-4">
                   Gojek Singapore:
                 </p>
                 <p className="roboto-regular address text-black">
@@ -53,12 +52,19 @@ class Contact extends Component {
                 </p>
               </div>
               <div className="col-md-4">
-                <p className="font-md text-green text-uppercase  maison-bold place pb-4">
+                <p className="font-md text-green mb-0  maison-bold place pb-4">
                   Gojek India:
                 </p>
+                <b className="text-black">Bengaluru:</b>
                 <p className="roboto-regular address text-black">
-                  4th & 6th Floor Tower B,<br /> Diamond District, HAL Old
-                  Airport Road,<br /> Bengaluru, <br />Karnataka 560008
+                  2nd, 4th & 6th Floor, Tower B,
+                  <br />Diamond District, HAL Old Airport Road,
+                  <br /> Bengaluru, <br />Karnataka 560008
+                </p>
+                <b className="text-black">Gurgaon:</b>
+                <p className="roboto-regular address text-black">
+                  1st Floor, Tower A, Building 8A,<br />DLF Cyber Hub, DLF Cyber
+                  City,<br />DLF Phase 3,<br />Gurgaon 122002
                 </p>
               </div>
             </div>
@@ -87,10 +93,10 @@ class Contact extends Component {
                     Mail
                   </p>
                   <a
-                    href="mailto:contact@gojek.io"
+                    href="mailto:work@go-jek.com"
                     className="text-green roboto-regular font-md"
                   >
-                    <u>work@gojek.io</u>
+                    <u>work@go-jek.com</u>
                   </a>
 
                   <p className="pt-4 text-uppercase mb-0 roboto-black contact">

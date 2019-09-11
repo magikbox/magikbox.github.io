@@ -8,7 +8,7 @@ import Footer from '../components/Common/footer'
 import data from '../components/Common/Header/data.json'
 
 import './style.scss'
-import SEO from '../components/seo';
+import SEO from '../components/seo'
 
 class Layout extends Component {
   render() {
@@ -85,12 +85,12 @@ class Layout extends Component {
     const showHeaderFooter = true
     return (
       <div>
-         <SEO
-          title="Gojek"
-          description={metaData.description}
-          url="https://www.gojek.io"
+        <SEO isDynamic={false}
+          description="Gojek is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest growing unicorn building an on-demand empire."
+          title="Gojek Tech"
+          url="https://gojek.io"
         />
-       
+
         {location.pathname !== '/gomakeimpact/' &&
           location.pathname !== '/superapp/' && (
             <Header

@@ -13,10 +13,10 @@ class About extends Component {
   render() {
     return (
       <div className="first-section">
-        <SEO
-          title="Gojek-Tech"
+        <SEO isDynamic={false}
           description="Gojek is a Super App. It’s one app for ordering food, commuting, digital payments, shopping, hyper-local delivery, getting a massage and two dozen services. It is Indonesia’s first and fastest growing unicorn building an on-demand empire."
-          url="https://www.gojek.io"
+          title="Gojek Tech"
+          url="https://gojek.io"
         />
 
         <div className="bg-green text-center ">
@@ -681,14 +681,14 @@ class About extends Component {
                 >
                   About Us
                 </h3>
-                <p className="text-white roboto-regular font-xl-l aboutFont">
+                <p className="text-white roboto-regular  font-sm">
                   Gojek is a Super App. It’s one app for ordering food,
                   commuting, digital payments, shopping, hyper-local delivery,
                   getting a massage and two dozen services. It is Indonesia’s
                   first and fastest growing unicorn building an on-demand empire
                   across Southeast Asia.{' '}
                 </p>
-                <p className="text-white roboto-regular font-xl-l aboutFont">
+                <p className="text-white roboto-regular  font-sm">
                   As of 2018, Gojek processed more than $9 billion annualized
                   gross transaction value (GTV) across all markets where it
                   operates - in Singapore, Thailand and Vietnam. The Gojek app

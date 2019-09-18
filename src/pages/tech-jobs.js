@@ -264,7 +264,7 @@ class TechJobs extends React.Component {
         let errorMessage = err.response.data
           ? err.response.status === 409
             ? `We've already received a submission from you earlier. If you think, it was not you then please send an email to atif.haider@go-jek.com for any questions.`
-            : err.response.data.response
+            : Object.values(err.response.data.errors).join(', ')
           : 'Error submitting your application'
         if (err.response)
           this.setState({

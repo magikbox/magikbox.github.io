@@ -167,6 +167,18 @@
       ],
       "newsCoverage": [
         {
+          "id": "25",
+          "link":
+            "https://www.channelnewsasia.com/news/asia/indonesia-gojek-goplay-video-streaming-platform-11944246",
+          "image": "../../images/news/raid-hailer.png",
+          "name":
+            "Indonesian ride-hailer Gojek takes on Netflix with video-streaming platform",
+          "date": "SEP 26 2019 ",
+          "text":
+            "JAKARTA: Indonesian ride-hailing and payments firm Gojek on Thursday (Sep 26) launched a video streaming service featuring original movies and TV shows, as the firm makes a big push into online content in Southeast Asia's largest economy, its entertainment chief said.",
+          "mainBanner": true
+        },
+        {
           "id": "24",
           "link":
             "https://yourstory.com/2019/09/techie-tuesday-go-jek-sidu-ponnappa",
@@ -176,7 +188,7 @@
           "date": "SEP 24 2019 ",
           "text":
             "This week on Techie Tuesday, we feature Sidu Ponnappa, MD of Gojek India Engineering Centre. His entrepreneurial journey has many lessons for anyone aspiring to strike out on their own - of success, innovations, technology, and more.",
-          "mainBanner": true
+          "mainBanner": false
         },
         {
           "id": "21",
@@ -299,6 +311,18 @@
       ],
       "allMedia": [
         {
+          "id": "25",
+          "link":
+            "https://www.channelnewsasia.com/news/asia/indonesia-gojek-goplay-video-streaming-platform-11944246",
+          "image": "../../images/news/raid-hailer.png",
+          "name":
+            "Indonesian ride-hailer Gojek takes on Netflix with video-streaming platform",
+          "date": "SEP 26 2019 ",
+          "text":
+            "JAKARTA: Indonesian ride-hailing and payments firm Gojek on Thursday (Sep 26) launched a video streaming service featuring original movies and TV shows, as the firm makes a big push into online content in Southeast Asia's largest economy, its entertainment chief said.",
+          "mainBanner": true
+        },
+        {
           "id": "24",
           "link":
             "https://yourstory.com/2019/09/techie-tuesday-go-jek-sidu-ponnappa",
@@ -308,7 +332,7 @@
           "date": "SEP 24 2019 ",
           "text":
             "This week on Techie Tuesday, we feature Sidu Ponnappa, MD of Gojek India Engineering Centre. His entrepreneurial journey has many lessons for anyone aspiring to strike out on their own - of success, innovations, technology, and more.",
-          "mainBanner": true
+          "mainBanner": false
         },
         {
           "id": "23",

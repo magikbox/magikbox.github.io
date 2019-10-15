@@ -4,6 +4,18 @@
     "data": {
       "pressRelease": [
         {
+          "id": "24",
+          "link":
+            "https://blog.gojekengineering.com/gojek-appoints-ex-nasa-engineer-george-do-as-chief-information-security-officer-94a78c783231",
+          "image": "../../images/news/george-deo.jpeg",
+          "name":
+            "Gojek appoints ex-NASA engineer George Do as Chief Information Security Officer",
+          "date": "OCT 15 2019 ",
+          "text":
+            "George Do has been appointed Chief Information Security Officer (CISO) at Gojek, where he will be responsible for the security of the company, including its portfolio of apps, products and services, as well as overall information security strategy and management of governance, risk and compliance.",
+          "mainBanner": true
+        },
+        {
           "id": "23",
           "link":
             "https://blog.gojekengineering.com/gojek-launches-gogames-for-gamers-in-indonesia-989b33255245",
@@ -12,7 +24,7 @@
           "date": "SEP 10 2019 ",
           "text":
             "Gojek, Southeast Asia’s leading mobile on-demand services and payments platform, today announced the launch of GoGames, the latest service available on the Gojek app in Indonesia, designed especially for gamers.",
-          "mainBanner": true
+          "mainBanner": false
         },
         {
           "id": "22",
@@ -311,6 +323,18 @@
       ],
       "allMedia": [
         {
+          "id": "24",
+          "link":
+            "https://blog.gojekengineering.com/gojek-appoints-ex-nasa-engineer-george-do-as-chief-information-security-officer-94a78c783231",
+          "image": "../../images/news/george-deo.jpeg",
+          "name":
+            "Gojek appoints ex-NASA engineer George Do as Chief Information Security Officer",
+          "date": "OCT 15 2019 ",
+          "text":
+            "George Do has been appointed Chief Information Security Officer (CISO) at Gojek, where he will be responsible for the security of the company, including its portfolio of apps, products and services, as well as overall information security strategy and management of governance, risk and compliance.",
+          "mainBanner": true
+        },
+        {
           "id": "25",
           "link":
             "https://www.channelnewsasia.com/news/asia/indonesia-gojek-goplay-video-streaming-platform-11944246",
@@ -320,7 +344,7 @@
           "date": "SEP 26 2019 ",
           "text":
             "JAKARTA: Indonesian ride-hailing and payments firm Gojek on Thursday (Sep 26) launched a video streaming service featuring original movies and TV shows, as the firm makes a big push into online content in Southeast Asia's largest economy, its entertainment chief said.",
-          "mainBanner": true
+          "mainBanner": false
         },
         {
           "id": "24",

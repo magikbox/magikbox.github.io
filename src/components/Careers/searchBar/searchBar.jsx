@@ -123,7 +123,8 @@ class SearchBar extends Component {
               </div>
             </div>
           </div>
-          {this.props.searchResult.length === 0 &&
+          {this.props.searchResult !== null &&
+            this.props.searchResult.length === 0 &&
             this.props.inputText !== '' && (
               <h5 className="text-center text-green bg-gray border-0 py-2 col-12 scroll  font-weight-bold search-result">
                 No jobs found.

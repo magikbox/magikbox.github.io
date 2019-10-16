@@ -3,11 +3,23 @@ import { Helmet } from 'react-helmet'
 import PositionCard from '../components/Careers/PositionCard/positionCard'
 import axios from 'axios'
 import OpenPositionDepartments from '../components/AllOpenPositions/OpenPositionDepartments'
-import SEO from '../components/seo';
+import SEO from '../components/seo'
+import { getReformattedPlaces } from '../components/Careers/searchBar/searchBar'
 
 var Scroll = require('react-scroll')
 var scroll = Scroll.animateScroll
 var scroller = Scroll.scroller
+
+const restrictedDepartments = [
+  'University',
+  'Corporate',
+  'Finance',
+  'Payment & Financial Services',
+  'Operations',
+  'Corporate Strategy',
+  'Food Lifestyle',
+  'Risk & Compliance Corporate Affairs',
+]
 
 class allpositions extends Component {
   constructor(props) {
@@ -56,13 +68,23 @@ class allpositions extends Component {
             locationCount = locationCount + 1
           }
           if (departmentCount === 0) {
-            departments.push(response.data[i].categories.department)
+            if (
+              !restrictedDepartments.includes(
+                response.data[i].categories.department
+              )
+            ) {
+              departments.push(response.data[i].categories.department)
+            }
           }
           if (locationCount === 0) {
             places.push(response.data[i].categories.location)
           }
         }
-        this.getPositions(departments, places, this.getFilterdata(response))
+        this.getPositions(
+          departments,
+          getReformattedPlaces(places),
+          this.getFilterdata(response)
+        )
       })
   }
 
@@ -161,7 +183,7 @@ class allpositions extends Component {
             'b8984973-1b9a-410d-9366-4fe0cc17c954',
             'df136a0b-932d-41e9-80ae-106d20554445',
           ].includes(data.id) &&
-          !['University'].includes(data.categories.department)
+          !restrictedDepartments.includes(data.categories.department)
         ) {
           return data
         }
@@ -301,7 +323,8 @@ class allpositions extends Component {
     // console.log('jobsssssss', jobSelected)
     return (
       <div className="first-section">
-        <SEO isDynamic={false}
+        <SEO
+          isDynamic={false}
           description="Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
           title="Gojek Careers: Check out the current job openings at Gojek Tech"
           url="https://gojek.io"

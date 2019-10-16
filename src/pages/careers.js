@@ -29,7 +29,10 @@ class Careers extends Component {
       locationName: 'All',
       inputText: '',
       places: [],
-      searchResult: null,
+      searchResult: {
+        result: null,
+        options: null,
+      },
       jobResponseData: null,
     }
 
@@ -147,39 +150,89 @@ class Careers extends Component {
 
   onChangeInputText = ev => {
     const targetvalue = ev.target.value
-    this.setState({
-      inputText: targetvalue,
-      searchResult: this.state.jobResponseData.data.filter((data, i) => {
+    this.setState(
+      {
+        inputText: targetvalue,
+        searchResult: {
+          ...this.state.searchResult,
+          result: this.state.jobResponseData.data.filter((data, i) => {
+            if (
+              data.text.toLowerCase().includes(targetvalue.toLowerCase()) &&
+              targetvalue !== '' &&
+              ((this.state.locationName &&
+                this.state.locationName.toLowerCase() === 'all') ||
+                data.categories.location === this.state.locationName)
+            ) {
+              return data
+            }
+          }),
+        },
+      },
+      () => {
         if (
-          data.text.toLowerCase().includes(targetvalue.toLowerCase()) &&
-          targetvalue !== '' &&
-          ((this.state.locationName &&
-            this.state.locationName.toLowerCase() === 'all') ||
-            data.categories.location === this.state.locationName)
+          this.state.searchResult.result.length === 0 &&
+          this.state.locationName !== 'All'
         ) {
-          return data
+          this.setState({
+            searchResult: {
+              ...this.state.searchResult,
+              options: this.state.jobResponseData.data.filter((data, i) => {
+                if (
+                  data.text.toLowerCase().includes(targetvalue.toLowerCase()) &&
+                  targetvalue !== ''
+                ) {
+                  return data
+                }
+              }),
+            },
+          })
         }
-      }),
-    })
+      }
+    )
   }
 
   onClickLocation = name => {
-    this.setState({
-      locationName: name,
-      searchResult: this.state.jobResponseData.data.filter((data, i) => {
+    this.setState(
+      {
+        locationName: name,
+        searchResult: {
+          ...this.state.searchResult,
+          result: this.state.jobResponseData.data.filter((data, i) => {
+            if (
+              data.text
+                .toLowerCase()
+                .toLowerCase()
+                .includes(this.state.inputText.toLowerCase()) &&
+              this.state.inputText !== '' &&
+              (data.categories.location.toLowerCase() === name.toLowerCase() ||
+                name.toLowerCase() === 'all')
+            ) {
+              return data
+            }
+          }),
+        },
+      },
+      () => {
         if (
-          data.text
-            .toLowerCase()
-            .toLowerCase()
-            .includes(this.state.inputText.toLowerCase()) &&
-          this.state.inputText !== '' &&
-          (data.categories.location.toLowerCase() === name.toLowerCase() ||
-            name.toLowerCase() === 'all')
+          this.state.searchResult.result.length === 0 &&
+          this.state.locationName !== 'All'
         ) {
-          return data
+          this.setState({
+            searchResult: {
+              ...this.state.searchResult,
+              options: this.state.jobResponseData.data.filter((data, i) => {
+                if (
+                  data.text.toLowerCase().includes(this.state.inputText.toLowerCase()) &&
+                  this.state.inputText !== ''
+                ) {
+                  return data
+                }
+              }),
+            },
+          })
         }
-      }),
-    })
+      }
+    )
   }
 
   componentWillMount() {
@@ -247,7 +300,8 @@ class Careers extends Component {
 
     return (
       <div className="first-section">
-        <SEO isDynamic={false}
+        <SEO
+          isDynamic={false}
           title="Gojek Careers: Check out the current job openings at Gojek Tech"
           description="Gojek is hiring the best and brightest of tech minds to build one of the world's most versatile and agile on-demand service apps."
           url="https://gojek.io"
@@ -262,12 +316,6 @@ class Careers extends Component {
           onClickLocation={name => this.onClickLocation(name)}
           locationName={this.state.locationName}
           inputText={this.state.inputText}
-          textColor={`${
-            this.state.searchResult !== null &&
-            this.state.searchResult.length !== 0
-              ? ' text-dark '
-              : ' text-white '
-          }`}
           source="gojek.io"
         />
         <CountBanner props={this.props} bannerImage="careers-second-banner" />

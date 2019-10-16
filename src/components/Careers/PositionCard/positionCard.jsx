@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import Parser from 'html-react-parser'
 import Modal from 'react-responsive-modal'
+import { ElementLink } from 'react-scroll'
+
 import Description from '../../../pages/description'
 import { getSlug } from '../../Common/utils/getSlug'
 import {
@@ -91,15 +92,40 @@ class PositionCard extends Component {
     return screenHeight
   }
 
+  onClickPosition = job => {
+    // console.log(
+    //   "this.props.location.search.split('=')[3]",
+    //   this.props.location.search.split('=')[3] !== job.id &&
+    //   this.getCurrentWidth() > 480 
+    // )
+
+    this.props.history.push({
+      pathname: `/all-open-positions`,
+      search: `?d=${getSlug(job.categories.department)}&t=${getSlug(
+        job.categories.team
+      )}&p=${job.id}`,
+    })
+    //
+    //
+    this.setState({
+      visible: true,
+    }),
+      this.props.jobSelected(job)
+    this.props.location.search.split('=')[3] !== job.id &&
+      this.getCurrentWidth() > 480 &&
+      scroller.scrollTo(job.id, {
+        smooth: 'easeInOutQuint',
+        offset: -200,
+      })
+  }
+
   render() {
     return (
       <div>
         <div className="d-flex flex-row flex-wrap pb-5">
           {this.props.jobsData.map((job, i) => {
             return (
-              <Element
-                id={job.id}
-                name={job.id}
+              <div
                 key={i}
                 className={`${
                   this.props.location.search.split('=')[3] === job.id
@@ -236,27 +262,7 @@ class PositionCard extends Component {
 
                   <div
                     onClick={() => {
-                      // console.log('sdfdsfdsf')
-                      this.props.history.push({
-                        pathname: `/all-open-positions`,
-                        search: `?d=${getSlug(
-                          job.categories.department
-                        )}&t=${getSlug(job.categories.team)}&p=${job.id}`,
-                      }),
-                        //
-                        //
-                        this.setState({
-                          visible: true,
-                        }),
-                        this.props.jobSelected(job)
-                      {
-                        this.props.location.search.split('=')[3] !== job.id &&
-                          this.getCurrentWidth() > 480 &&
-                          scroller.scrollTo(job.id, {
-                            smooth: 'easeInOutQuint',
-                            offset: -200,
-                          })
-                      }
+                      this.onClickPosition(job)
                     }}
                     style={{
                       minHeight:
@@ -288,17 +294,19 @@ class PositionCard extends Component {
                       />
                     )}
                     {/* <Link to={{}} className=""> */}
-                    <h6 className=" px-4 roboto-regular font-sm text-dark ">
-                      {job.text}
-                    </h6>
-                    <div className="d-flex flex-row flex-wrap roboto-black font-xs text-uppercase">
-                      <span className="pl-4  text-green  col-">
-                        {job.categories.location}
-                      </span>
-                      <span className="pl-4  text-black  col-">
-                        {job.categories.team}
-                      </span>
-                    </div>
+                    <Element id={job.id} name={job.id}>
+                      <h6 className=" px-4 roboto-regular font-sm text-dark ">
+                        {job.text}
+                      </h6>
+                      <div className="d-flex flex-row flex-wrap roboto-black font-xs text-uppercase">
+                        <span className="pl-4  text-green  col-">
+                          {job.categories.location}
+                        </span>
+                        <span className="pl-4  text-black  col-">
+                          {job.categories.team}
+                        </span>
+                      </div>
+                    </Element>
                     {/* </Link> */}
                     {this.props.location.search.split('=')[3] === job.id && (
                       <div>
@@ -353,7 +361,7 @@ class PositionCard extends Component {
                     )}
                   </div>
                 )}
-              </Element>
+              </div>
             )
           })}
           {this.props.jobsData.length === 0 && (

@@ -12,6 +12,11 @@ import { Link } from 'react-scroll'
 import axios from 'axios'
 import Slider from 'react-slick'
 import SEO from '../components/seo'
+import {
+  restrictedDepartments,
+  restrictedTeams,
+  restrictedIds,
+} from './all-open-positions'
 
 var Scroll = require('react-scroll')
 var scroller = Scroll.scroller
@@ -72,28 +77,9 @@ class Careers extends Component {
           data.lists.length !== 0 &&
           (data.lists && data.lists[0] && data.lists[0].content !== '') &&
           (data.lists && data.lists[1] && data.lists[1].content !== '') &&
-          ![
-            'Digital',
-            'Finance',
-            'Strategic Finance',
-            'Community',
-            'Legal',
-            'Government Relations',
-            'Expansion',
-            'Growth',
-            'Accounting and Finance',
-            'Business Operations',
-            'Research and Insights',
-            'Business Operations - Community',
-            'International Operations - Expansion',
-            'Business operations - Growth',
-            'Marketing and Communications - Digital',
-          ].includes(data.categories.team) &&
-          ![
-            'b8984973-1b9a-410d-9366-4fe0cc17c954',
-            'df136a0b-932d-41e9-80ae-106d20554445',
-          ].includes(data.id) &&
-          !['University'].includes(data.categories.department)
+          !restrictedTeams.includes(data.categories.team) &&
+          !restrictedIds.includes(data.id) &&
+          !restrictedDepartments.includes(data.categories.department)
         ) {
           return data
         }
@@ -222,7 +208,9 @@ class Careers extends Component {
               ...this.state.searchResult,
               options: this.state.jobResponseData.data.filter((data, i) => {
                 if (
-                  data.text.toLowerCase().includes(this.state.inputText.toLowerCase()) &&
+                  data.text
+                    .toLowerCase()
+                    .includes(this.state.inputText.toLowerCase()) &&
                   this.state.inputText !== ''
                 ) {
                   return data

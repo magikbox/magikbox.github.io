@@ -10,7 +10,7 @@ var Scroll = require('react-scroll')
 var scroll = Scroll.animateScroll
 var scroller = Scroll.scroller
 
-const restrictedDepartments = [
+export const restrictedDepartments = [
   'University',
   'Corporate',
   'Finance',
@@ -19,6 +19,34 @@ const restrictedDepartments = [
   'Corporate Strategy',
   'Food Lifestyle',
   'Risk & Compliance Corporate Affairs',
+  'Risk & Compliance',
+  'Food',
+  'Lifestyle',
+  'Corporate Affairs',
+  'Logistics',
+]
+
+export const restrictedTeams = [
+  'Digital',
+  'Finance',
+  'Strategic Finance',
+  'Community',
+  'Legal',
+  'Government Relations',
+  'Expansion',
+  'Growth',
+  'Accounting and Finance',
+  'Business Operations',
+  'Research and Insights',
+  'Business Operations - Community',
+  'International Operations - Expansion',
+  'Business operations - Growth',
+  'Marketing and Communications - Digital',
+]
+
+export const restrictedIds = [
+  'b8984973-1b9a-410d-9366-4fe0cc17c954',
+  'df136a0b-932d-41e9-80ae-106d20554445',
 ]
 
 class allpositions extends Component {
@@ -73,11 +101,13 @@ class allpositions extends Component {
                 response.data[i].categories.department
               )
             ) {
-              departments.push(response.data[i].categories.department)
+              response.data[i].categories.department !== undefined &&
+                departments.push(response.data[i].categories.department)
             }
           }
           if (locationCount === 0) {
-            places.push(response.data[i].categories.location)
+            response.data[i].categories.location !== undefined &&
+              places.push(response.data[i].categories.location)
           }
         }
         this.getPositions(
@@ -162,27 +192,8 @@ class allpositions extends Component {
           data.lists.length !== 0 &&
           (data.lists && data.lists[0] && data.lists[0].content !== '') &&
           (data.lists && data.lists[1] && data.lists[1].content !== '') &&
-          ![
-            'Digital',
-            'Finance',
-            'Strategic Finance',
-            'Community',
-            'Legal',
-            'Government Relations',
-            'Expansion',
-            'Growth',
-            'Accounting and Finance',
-            'Business Operations',
-            'Research and Insights',
-            'Business Operations - Community',
-            'International Operations - Expansion',
-            'Business operations - Growth',
-            'Marketing and Communications - Digital',
-          ].includes(data.categories.team) &&
-          ![
-            'b8984973-1b9a-410d-9366-4fe0cc17c954',
-            'df136a0b-932d-41e9-80ae-106d20554445',
-          ].includes(data.id) &&
+          !restrictedTeams.includes(data.categories.team) &&
+          !restrictedIds.includes(data.id) &&
           !restrictedDepartments.includes(data.categories.department)
         ) {
           return data
@@ -192,11 +203,14 @@ class allpositions extends Component {
     const fd = {
       data: returnData[0],
     }
+    console.log('sddsdsffd', fd)
+
     return fd
   }
 
   // this method is used to set the positions array by department wise
   getPositions = (departments, places, jobsData) => {
+    console.log('sdddsfdfdf', jobsData)
     this.setState(
       {
         jobsData: jobsData,
@@ -320,7 +334,6 @@ class allpositions extends Component {
   render() {
     const { siteMetadata: metaData } = this.props.data.site
     const { jobSelected } = this.state
-    // console.log('jobsssssss', jobSelected)
     return (
       <div className="first-section">
         <SEO
@@ -437,7 +450,6 @@ class allpositions extends Component {
             <div style={{ minHeight: '50vh' }}>
               <OpenPositionDepartments
                 jobSelected={job => {
-                  // console.log('jobselectedsdfdsf', job)
                   this.setState({ jobSelected: job })
                 }}
                 departmentSelected={this.state.departmentSelected}
@@ -472,7 +484,6 @@ class allpositions extends Component {
               </div>
               <PositionCard
                 jobSelected={job => {
-                  // console.log('jobselectedsdfdsf', job)
                   this.setState({ jobSelected: job })
                 }}
                 {...this.props}

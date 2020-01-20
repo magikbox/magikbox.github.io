@@ -20,6 +20,10 @@
       "component---src-pages-index-js-d0d6b5cf4417f2b01585.js",
       "component---src-pages-index-js-d0d6b5cf4417f2b01585.js.map"
     ],
+    "component---src-pages-the-secret-sauce-behind-search-personalisation-js": [
+      "component---src-pages-the-secret-sauce-behind-search-personalisation-js-302506e4b3b72458952c.js",
+      "component---src-pages-the-secret-sauce-behind-search-personalisation-js-302506e4b3b72458952c.js.map"
+    ],
     "path---events": [
       "path---events-a0e39f21c11f6a62c5ab.js",
       "path---events-a0e39f21c11f6a62c5ab.js.map"
@@ -57,8 +61,8 @@
       "component---src-pages-contact-js-e57238b01c0d3188d1d7.js.map"
     ],
     "component---src-pages-news-js": [
-      "component---src-pages-news-js-1fd391eaccce5d906ca4.js",
-      "component---src-pages-news-js-1fd391eaccce5d906ca4.js.map"
+      "component---src-pages-news-js-cdbf364dc2cdaa5813f0.js",
+      "component---src-pages-news-js-cdbf364dc2cdaa5813f0.js.map"
     ],
     "component---src-pages-gojek-expansion-js": [
       "component---src-pages-gojek-expansion-js-e655c421a6db8585c1b2.js",
@@ -146,6 +150,10 @@
       "component---src-pages-articles-js-311c9f41acb99335d4df.js",
       "component---src-pages-articles-js-311c9f41acb99335d4df.js.map"
     ],
+    "path---the-secret-sauce-behind-search-personalisation": [
+      "path---the-secret-sauce-behind-search-personalisation-a0e39f21c11f6a62c5ab.js",
+      "path---the-secret-sauce-behind-search-personalisation-a0e39f21c11f6a62c5ab.js.map"
+    ],
     "path---404-html": [
       "path---404-html-a0e39f21c11f6a62c5ab.js",
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
@@ -175,17 +183,17 @@
       "path---news-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-opl-js": [
-      "component---src-pages-opl-js-6f6d4198055b5d0482f1.js",
-      "component---src-pages-opl-js-6f6d4198055b5d0482f1.js.map"
+      "component---src-pages-opl-js-5eacd5bf656f6e0bb0b4.js",
+      "component---src-pages-opl-js-5eacd5bf656f6e0bb0b4.js.map"
     ],
     "path---thank-you": [
       "path---thank-you-a0e39f21c11f6a62c5ab.js",
       "path---thank-you-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-0f2c0c9767be2dac1b88.js",
+      "app-a1bc4b5845904ad892e8.js",
       "build-js-styles.css",
-      "app-0f2c0c9767be2dac1b88.js.map",
+      "app-a1bc4b5845904ad892e8.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-pages-all-open-positions-js": [

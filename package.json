@@ -20,6 +20,7 @@
     "html-react-parser": "^0.6.3",
     "jquery": "^3.3.1",
     "lodash": "^4.17.10",
+    "node-sass": "^4.13.0",
     "popper.js": "^1.14.3",
     "react": "^16.6.3",
     "react-awesome-modal": "^2.0.5",

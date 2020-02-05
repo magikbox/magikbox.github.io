@@ -1,0 +1,82 @@
+{
+  "data": {
+    "heading": "We take Open Source seriously",
+    "content":
+      "Open Source Software is at the heart of Gojek. Without it, none of our achievements would have ever been possible. Today, we actively maintain a host of Free and Open Source Software projects as we understand their importance to the community. For a full list of our contributions, please checkout our GitHub.",
+    "projects": [
+      {
+        "id": "12",
+        "name": "Kingsly",
+        "link": "https://github.com/gojek/kingsly",
+        "description": "Your own x.509 cert manager"
+      },
+      {
+        "id": "11",
+        "name": "heimdall",
+        "link": "https://github.com/gojektech/heimdall",
+        "description": "An enhanced HTTP client for Go"
+      },
+      {
+        "id": "10",
+        "name": "ziggurat",
+        "link": "https://github.com/gojektech/ziggurat",
+        "description":
+          "A stream processing framework to build stateless applications on Kafka"
+      },
+      {
+        "id": "9",
+        "name": "palantir",
+        "link": "https://github.com/gojektech/palantir",
+        "description": "Yet Another Go Config Library"
+      },
+      {
+        "id": "8",
+        "name": "proctor",
+        "link": "https://github.com/gojektech/proctor",
+        "description": "A Developer-Friendly Automation Orchestrator"
+      },
+      {
+        "id": "7",
+        "name": "valkyrie",
+        "link": "https://github.com/gojektech/valkyrie",
+        "description": "Go wrapper for handling zero or more errors"
+      },
+      {
+        "id": "6",
+        "name": "wrest",
+        "link": "https://github.com/gojektech/wrest",
+        "description": "A fluent, easy-to-use, object oriented Ruby HTTP/R..."
+      },
+      {
+        "id": "5",
+        "name": "statsd-docker",
+        "link": "https://github.com/gojektech/statsd-docker",
+        "description": "Dockerized version of StatsD with console backend."
+      },
+      {
+        "id": "4",
+        "name": "consul-envoy-xds",
+        "link": "https://github.com/gojektech/consul-envoy-xds",
+        "description": "Envoy XDS backed by Consul"
+      },
+      {
+        "id": "3",
+        "name": "probed",
+        "link": "https://github.com/gojektech/probed",
+        "description": "A unix daemon to perform health check on proxy bac..."
+      },
+      {
+        "id": "2",
+        "name": "kubehandler",
+        "link": "https://github.com/gojektech/kubehandler",
+        "description": "A framework for writing Kubernetes controllers"
+      },
+      {
+        "id": "1",
+        "name": "bulwark",
+        "link": "https://github.com/gojektech/bulwark",
+        "description": "Hystrix for Clojurists"
+      }
+    ]
+  }
+}

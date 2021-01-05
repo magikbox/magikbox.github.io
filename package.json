@@ -6,7 +6,7 @@
   "dependencies": {
     "@fullpage/react-fullpage": "0.0.7",
     "animate.css": "^3.7.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bluebird": "^3.5.1",
     "gatsby": "^1.9.271",
     "gatsby-link": "^1.6.44",
